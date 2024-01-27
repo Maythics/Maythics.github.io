@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2024/01/27/mathematical_physics_1/"/>
+  <link rel="canonical" href="http://example.com/2024/01/27/mathematical/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,22 +33,20 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>数理方法笔记---复变函数与积分变换部分 - Hexo</title>
-  <meta name="keywords" content="tag1,tag2,null">
+  <title>数理方法笔记---PDE部分 - Hexo</title>
+  <meta name="keywords" content="null">
   <meta desc name="description" content="yesyes - John Doe - Hexo">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="数理方法笔记---复变函数与积分变换部分">
-<meta property="og:url" content="http://example.com/2024/01/27/mathematical_physics_1/index.html">
+<meta property="og:title" content="数理方法笔记---PDE部分">
+<meta property="og:url" content="http://example.com/2024/01/27/mathematical/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Mathematical PhysicsBased on Qiao Gu’s and Liang’s. Complex FunctionBasic DefinitionsFor a complex function $f(z)&#x3D;f(x+iy)&#x3D;u(x,y)+iv(x,y)$, and an interior point $z&#x3D;x+iy$ in its domain.">
+<meta property="og:description" content="Mathematical PhysicsPartial Differential EquationThe Classes of PDEWe only discuss PDE with two variables. Basic PDE ExampleWhat matters is to find the characteristics of a PDE (constant coefficient):">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-01-27T02:00:22.000Z">
-<meta property="article:modified_time" content="2024-01-27T11:18:03.355Z">
+<meta property="article:published_time" content="2024-01-27T14:05:02.000Z">
+<meta property="article:modified_time" content="2024-01-27T14:28:20.645Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="tag1">
-<meta property="article:tag" content="tag2">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2447,7 +2445,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/27/mathematical_physics_1/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/27/mathematical/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2468,7 +2466,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        数理方法笔记---复变函数与积分变换部分
+        数理方法笔记---PDE部分
       </h1>
       <div class='new-meta-box'>
         
@@ -2485,21 +2483,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  <div class='new-meta-item category'>
-    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/branch1/">branch1</a>
-    
-      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/branch1/" itemprop="url"><span itemprop="name">branch1</span></a>
-      </span>
-    
-  </div>
-
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-01-27T10:00:22+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-01-27T22:05:02+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：Jan 27, 2024</p>
@@ -2525,121 +2513,101 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="Mathematical-Physics"><a href="#Mathematical-Physics" class="headerlink" title="Mathematical Physics"></a>Mathematical Physics</h1><p>Based on Qiao Gu’s and Liang’s.</p>
-<h2 id="Complex-Function"><a href="#Complex-Function" class="headerlink" title="Complex Function"></a>Complex Function</h2><h3 id="Basic-Definitions"><a href="#Basic-Definitions" class="headerlink" title="Basic Definitions"></a>Basic Definitions</h3><p>For a complex function $f(z)&#x3D;f(x+iy)&#x3D;u(x,y)+iv(x,y)$, and an interior point $z&#x3D;x+iy$ in its domain. It’s derivable at $z$ if and only if $u$ and $v$ are all differentiable at $(x,y)$ and the function satisfy Cauchy-Riemann condition at that point.</p>
-<p>C-R condition:<br>$$\frac{\partial u}{\partial x}&#x3D;\frac{\partial v}{\partial y}$$<br>$$<br>\frac{\partial u}{\partial y}&#x3D;-\frac{\partial v}{\partial x}<br>$$</p>
-<p>Also, we have the polar coordinate version C-R condition:</p>
-<p>$$<br>\frac{\partial u}{\partial \rho}&#x3D;\frac{1}{\rho}\frac{\partial v}{\partial \phi}<br>$$</p>
-<p>$$<br>\frac{1}{\rho}\frac{\partial u}{\partial \phi}&#x3D;-\frac{\partial v}{\partial \rho}<br>$$</p>
-<p>If function $f(z)$ is differentiable at any point in a neighborhood of $z_0$, then we call it a holomorphic function at $z_0$. (equivalent to <strong>analytic</strong> because of some mathematical reason)</p>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>$\mathtt{Q}$: If you know the function is holomorphic, but you only have the $f(x,y)$ form, how to quickly gain the compact $f(z)$ form?</p>
-<p>$\mathtt{A}$: There’s a clever trick for form-reshaping: let all $y$ in $f(x,y)$ be zero and let $x$ in $f(x,y)$ be $z$, then you get the answer! You probably wonder why, and the reason behind is the uniqueness of a power series. For an analytic function, its power series’ form is unique, so that when $z$ is real ($z&#x3D;x+i0$), the expression of power series shall remain.</p>
-<h3 id="Harmonic-functions"><a href="#Harmonic-functions" class="headerlink" title="Harmonic functions"></a>Harmonic functions</h3><p>The real and imaginary parts of a holomorphic function are all harmonic, which can be easily verified by operating C-R condition.</p>
-<h3 id="Taylor-Series"><a href="#Taylor-Series" class="headerlink" title="Taylor Series"></a>Taylor Series</h3><p>Know that the Taylor series is unique, and wherever the function is holomorphic, it can be expanded. Thus the convergent radius must be the distance between the nearest singularity and the central point for expansion. (If not, the small neighborhoods at the fringe could combine and expanded the convergent circle into a larger one, contradiction)</p>
-<h3 id="Laurent-Series"><a href="#Laurent-Series" class="headerlink" title="Laurent Series"></a>Laurent Series</h3><p>Laurent theorem’s statement: If function $f(z)$ is holomorphic in a disk ${R_1 &lt; |z-z_0| &lt; R_2}$, then it could be expressed in the form<br>$$<br>f(z)&#x3D;\sum_{n&#x3D;-\infty}^{\infty} C_n (z-z_0)^n<br>$$<br>$$<br>C_n:&#x3D;\frac{1}{2\pi i}\oint_{C_R} \frac{f(\xi)}{(\xi-z_0)^{n+1}} d\xi<br>$$<br>The theorem is complicated as you can see, but the theorem itself is not the key point. The key advantage is the uniqueness of Laurent series, which implies that no  matter how you get the expanded series’ expression, it’s unique and correct. Thus you can apply the formula of geometric power series to get the result, etc. Besides, the Laurent theorem is almost the <strong>Residue theorem</strong>.</p>
-<h3 id="Integrals"><a href="#Integrals" class="headerlink" title="Integrals"></a>Integrals</h3><p>To simplify the framework, you only need to remember the <strong>Residue Theorem</strong>, because Cauchy Formula and Cauchy Theorem are all special case of Residue Theorem.<br>$$<br>\oint_l f(z)dz&#x3D;2\pi i \sum_{j&#x3D;1}^{n} \text{Res}f(b_j)<br>$$</p>
-<p>where $b_j$ are isolated singularities, and the function must be analytic inside of $l$ except at these singularities.</p>
-<p>Note that Residue Theorem works as well for essential singularities! The only obstacle is how to calculate the Residue there though.</p>
-<h4 id="Jordan’s-Lemma"><a href="#Jordan’s-Lemma" class="headerlink" title="Jordan’s Lemma"></a>Jordan’s Lemma</h4><p>If $g(z)$ is continuous outside a sufficient large circle in $z$-plane and $\lim_{z\to\infty} g(z)&#x3D;0$, then for $\alpha&gt;0$ we have:<br>$$<br>\lim_{R\to\infty}\int_{\Gamma_R} g(z)e^{i\alpha z}dz&#x3D;0<br>$$<br>where $\Gamma_R$ is an <em>arc</em> with radius $R$.</p>
-<h4 id="Useful-Variable-Changes"><a href="#Useful-Variable-Changes" class="headerlink" title="Useful Variable Changes"></a>Useful Variable Changes</h4><p>When the integral interval is $0\to 2\pi$, let $z&#x3D;e^{ix}$<br>When the integral interval is $-\infty\to\infty$ then let $z&#x3D;x$ and apply Jordan’s Lemma. ($zf(z)\rightrightarrows 0$)<br>When the integral interval is $0\to\infty$, first convert it to $-\infty\to\infty$.<br>For $\int_0^\infty F(x)\cos mx dx$ or so, first consider $\text{Re}\int_0^{\infty} F(z) e^{imz}dz$. ($F(z)\rightrightarrows 0$). If you don’t convert trigonometrical functions (boundless) into exponential functions, the Residue Theorem is not allowed to use! Because the validness is guaranteed by Jordan’s Lemma which require exponential form.</p>
-<h2 id="Fourier-Theory"><a href="#Fourier-Theory" class="headerlink" title="Fourier Theory"></a>Fourier Theory</h2><h3 id="Fourier-Integral"><a href="#Fourier-Integral" class="headerlink" title="Fourier Integral"></a>Fourier Integral</h3><p>$$<br>f(x)&#x3D;\int_0^\infty [A(\omega)\cos\omega x+B(\omega) \sin\omega x]d\omega<br>$$ where<br>$$<br>A(\omega)&#x3D;\frac{1}{\pi}\int_{-\infty}^\infty f(x)\cos\omega x dx<br>$$<br>$$<br>B(\omega)&#x3D;\frac{1}{\pi}\int_{-\infty}^\infty f(x)\sin\omega x dx<br>$$</p>
-<p>Q: why is the interval like this?<br>A: $f(x)&#x3D;\int_0^\infty\cdots$,comes from the Fourier series $\sum\limits_0^\infty$.<br>$A(\omega),B(\omega)&#x3D;\int_{-\infty}^{\infty}$ comes from $\lim\limits_{L\rightarrow\infty}\int_{-L}^L$.</p>
-<h4 id="An-Example"><a href="#An-Example" class="headerlink" title="An Example"></a>An Example</h4><p>Dirichlet integral :<br>considering<br> the function below and its Fourier integral<br>$$<br>f(x)&#x3D;\begin{cases}<br>  0,&amp;(|x|\leq1)\<br>  1,&amp;(|x|&gt;1)<br>\end{cases}<br>$$ we get $$<br>\int_0^\infty\frac{\sin\omega}{\omega}d\omega&#x3D;\frac{\pi}{2}<br>$$</p>
-<p>This could be derived later by FT more generally.</p>
-<h3 id="Fourier-Transfom"><a href="#Fourier-Transfom" class="headerlink" title="Fourier Transfom"></a>Fourier Transfom</h3><p>$$<br>F(\omega)&#x3D;\int_{-\infty}^\infty f(x) e^{-i\omega x}dx<br>$$<br>$$<br>f(x)&#x3D;\frac{1}{2\pi}\int_{-\infty}^\infty F(\omega) e^{i\omega x}d\omega<br>$$</p>
-<h4 id="Property"><a href="#Property" class="headerlink" title="Property"></a>Property</h4><ul>
-<li><p>Linear</p>
+    <h1 id="Mathematical-Physics"><a href="#Mathematical-Physics" class="headerlink" title="Mathematical Physics"></a>Mathematical Physics</h1><h2 id="Partial-Differential-Equation"><a href="#Partial-Differential-Equation" class="headerlink" title="Partial Differential Equation"></a>Partial Differential Equation</h2><h3 id="The-Classes-of-PDE"><a href="#The-Classes-of-PDE" class="headerlink" title="The Classes of PDE"></a>The Classes of PDE</h3><p>We only discuss PDE with two variables.</p>
+<h4 id="Basic-PDE-Example"><a href="#Basic-PDE-Example" class="headerlink" title="Basic PDE Example"></a>Basic PDE Example</h4><p>What matters is to find the characteristics of a PDE (<strong>constant</strong> coefficient):<br>$$<br>\mathcal{L}(u)&#x3D;0<br>$$ where $$<br>\mathcal{L}&#x3D;a\frac{\partial^2 }{\partial x^2}+2b\frac{\partial^2 }{\partial x\partial y}+c\frac{\partial^2 }{\partial y^2}<br>$$<br>If we find the characteristic, then the equation become <strong>single variable equation</strong> of the characteristic.<br>To achieve this, we factorize the above equation:</p>
+<p>$$<br>\mathcal{L}&#x3D;\left(\frac{b+\sqrt{\Delta }}{c^{1&#x2F;2}}\dfrac{\partial }{\partial x}+c^{1&#x2F;2}\dfrac{\partial }{\partial y}\right) \left(\frac{b-\sqrt{\Delta }}{c^{1&#x2F;2}}\dfrac{\partial }{\partial x}+c^{1&#x2F;2}\dfrac{\partial }{\partial y}\right)<br>$$</p>
+<p>where $\Delta:&#x3D;b^2-ac$<br>Note that the two factors are commutative, hence if $\Delta\neq 0$, the two factors implies two characteristics separately.<br>If $\Delta &#x3D;0$, there’s only one characteristic line.<br>And the characteristic is given by<br>$$<br>\frac{dy}{dx}&#x3D;\frac{b\pm \sqrt{\Delta}}{a}<br>$$<br>Because any $x, y$ with this relation (i.e. $y(x)$) would imply $\mathcal{L}&#x3D;0$ and the $u(x,y)$ actually becomes $u(x,y(x))$, single valued.</p>
+<p>To achieve the <strong>canonical form</strong> of the second order PDE, we import such variables:$\xi&#x3D;\sqrt{c}x-\frac{b}{\sqrt{c}}y;\eta &#x3D;\frac{1}{\sqrt{c}}y$.<br>$$<br>\mathcal{L}&#x3D;\left(\frac{b+\sqrt{\Delta }}{c^{1&#x2F;2}}\sqrt{c}\frac{\partial }{\partial \xi}+c^{1&#x2F;2}\frac{-b}{\sqrt{c}}\frac{\partial }{\partial \xi}+c^{1&#x2F;2}\frac{1}{\sqrt{c}}\frac{\partial}{\partial \eta}\right)\times<br>$$<br>$$<br>\left(\frac{b-\sqrt{\Delta }}{c^{1&#x2F;2}}\sqrt{c}\frac{\partial }{\partial \xi}+c^{1&#x2F;2}\frac{-b}{\sqrt{c}}\frac{\partial }{\partial \xi}+c^{1&#x2F;2}\frac{1}{\sqrt{c}}\frac{\partial}{\partial \eta}\right)<br>$$<br>$$<br>&#x3D;\left(\sqrt{\Delta}\frac{\partial}{\partial \xi}+\partial \eta \right)\left(-\sqrt{\Delta}\frac{\partial}{\partial \xi}+\partial \eta \right)&#x3D;-\Delta \frac{\partial^2}{\partial \xi^2}+\frac{\partial^2}{\partial \eta^2}<br>$$</p>
+<h4 id="Systematic-Process"><a href="#Systematic-Process" class="headerlink" title="Systematic Process"></a>Systematic Process</h4><p>The equation is:<br>$$<br>\mathcal{L}(u)&#x3D;g<br>$$ where:<br>$$<br>\mathcal{L}&#x3D;a\frac{\partial^2 }{\partial x^2}+2b\frac{\partial^2 }{\partial x\partial y}+c\frac{\partial^2 }{\partial y^2}+d\frac{\partial }{\partial x}+e\frac{\partial }{\partial y}+f<br>$$<br>Attention: $a$ to $g$ are all functions of $x$ and $y$, they’re <strong>not constant</strong> generally.<br>Replacing the variables by:<br>$$<br>\xi &#x3D;\xi (x,y) \quad \eta&#x3D;\eta (x,y)<br>$$<br>Apply <em>Chain Rule</em> and calculate, we got:<br>$$<br>\left(A\frac{\partial^2 }{\partial \xi^2}+2B\frac{\partial^2 }{\partial \xi\partial \eta}+C\frac{\partial^2 }{\partial \eta^2}+D\frac{\partial }{\partial \xi}+E\frac{\partial }{\partial \eta}+F\right)(u)&#x3D;G<br>$$<br>where $A$ and $C$ have the same form:<br>$$<br>a(\frac{\partial W}{\partial x})^2+2b\frac{\partial W}{\partial x}\frac{\partial W}{\partial y}+c(\frac{\partial W }{\partial y})^2<br>$$<br>In $A$’s case $W&#x3D;\xi$, in $C$’s case $W&#x3D;\eta$.</p>
+<p>Suppose the solution is $W(x,y)&#x3D;\text{const}$, then by <strong>Implicit Function</strong> theorem, $y’&#x3D;-\frac{\partial W &#x2F; \partial x}{\partial W &#x2F; \partial y}$, so that the equation above will be:<br>$$<br>a{y’}^2-2by’+c&#x3D;0 \qquad\therefore y’&#x3D;\frac{b\pm \sqrt{\Delta}}{a}<br>$$<br>If you successfully solve the last differential equation we got $\xi(x,y)&#x3D;\text{const}$ and $\eta(x,y)&#x3D;\text{const}$, which are exactly two characteristics.</p>
+<ol>
+<li><p>If there are two solutions and they are real, that’s typical <em>hyperbola</em> type equation, hence we get:<br>$$<br>\frac{\partial^2 u}{\partial \xi\partial \eta}&#x3D;\dots<br>$$<br>or you may as well adjust it to $\frac{\partial^2 u}{\partial \alpha^2}-\frac{\partial^2 u}{\partial \beta^2}&#x3D;\dots$ by letting $\alpha&#x3D;\frac{1}{2}(\xi+\eta)$ and $\beta&#x3D;\frac{1}{2}(\xi-\eta)$.</p>
 </li>
-<li><p>$\frac{d}{dx}f(x)\rightarrow i\omega F(\omega)$</p>
+<li><p>If there’s only one solution (i.e. <em>parabolic</em>), then another characteristic can be chosen by yourself, as long as it’s independent with the previous one. The one you chose randomly namely is $\eta$, then the equation be like:<br>$$<br>\frac{\partial^2 u}{\partial \eta^2}&#x3D;\dots<br>$$</p>
 </li>
-<li><p>$xf(x)\rightarrow i\frac{d}{d\omega}F(\omega)$</p>
+<li><p>If the solutions $\notin \mathbb{R}$, then extract the $ W$ ‘s <strong>real</strong> and <strong>imaginary</strong> part to be $\xi$ and $\eta$ separately. (it can be proved by simply plugging in that such arrangement is indeed the appropriate solution) And we get <em>elliptical</em> equation:<br>$$<br>\frac{\partial^2 u}{\partial \xi^2}+\frac{\partial^2 u}{\partial \eta^2}&#x3D;\dots<br>$$</p>
 </li>
-<li><p>$\int f(x)dx\rightarrow\frac{F(\omega)}{i\omega}$</p>
-</li>
-<li><p>$f(x+\zeta)\rightarrow e^{i\omega\zeta}F(x)$</p>
-</li>
-<li><p>convolution</p>
-</li>
-</ul>
-<p>The methods to verify properties involving integral and derivative are similar to <a href="#laplacian-transform">Laplacian Transform</a>, the detail of it will be shown there.</p>
-<h4 id="Two-Examples"><a href="#Two-Examples" class="headerlink" title="Two Examples"></a>Two Examples</h4><p>when f is even<br>$f(x)*\cos\omega x&#x3D;F(\omega)\cos\omega x$<br>$f(x)*\sin\omega x&#x3D;F(\omega)\sin\omega x$</p>
-<h3 id="delta-Function"><a href="#delta-Function" class="headerlink" title="$\delta$ Function"></a>$\delta$ Function</h3><p>We view $\delta$ function as a generalized function.</p>
-<p>In the form $\int f(x) dy$, what exactly does $dy$ mean? A mathematical perspective is the <strong>measure</strong> $\sigma$ of a set. Riemann coincidentally defined his integral using the simplest measure namely $x_{i+1}-x_i$ , i.e. the measure of interval $[x_i,x_{i+1})$ in partition. When $\delta (x)$ is entailed, $\int f(x)d\sigma$ shall be viewed as a Lebesgue Integral where only $f(0)$ gained a measure of 1, any other value weighed 0, such that the integral $&#x3D;\Sigma f(x_i) \sigma_i&#x3D;f(0)\times 1&#x3D;f(0)$.</p>
-<p>Also, we may define it ($W$) using <strong>inner product</strong>: $\langle L(W),\phi\rangle&#x3D;\langle W,L^*(\phi)\rangle$, where $L$ represents any linear differential operator, and $L^*$ its adjoint, $\phi$ is a test function of great property.</p>
-<p>Besides, Riesz Representation Theorem guarantees the equality of an inner product and a linear functional, thus <strong>Linear Functional</strong> is also a good choice to describe generalized functions.</p>
-<p>The mathematical interpretation shall stop and physical introduction begins.</p>
-<hr>
-<p>The convolution of $\delta(x)$ and $f(x)$ $$<br>\delta(x-a)*f(x)&#x3D;f(x-a)<br>$$ satisfy the eigen-equation of coordinates:<br>$$ x\delta(x-x_0)&#x3D;x_0\delta(x-x_0) $$ where $x$ is the operator of coordinates.</p>
-<p>It’s obvious that delta function is orthogonal to each other and the completeness is given by:<br>$$f(x)&#x3D;\int_{-\infty}^{\infty}f(\zeta)\delta(\zeta-x)d\zeta$$ where $f(\zeta)$ are the parameters.</p>
-<h4 id="its-FT-Applications"><a href="#its-FT-Applications" class="headerlink" title="its FT &amp; Applications"></a>its FT &amp; Applications</h4><p>$$<br>\mathscr{F}[\delta(x)]&#x3D;1<br>$$ $$<br>\delta(x)&#x3D;\frac{1}{2\pi}\int_{-\infty}^{\infty}e^{i\omega x}d\omega<br>$$  or write it as $$ \delta(p-p’)&#x3D;\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}e^{\frac{i}{\hbar}(p-p’)x}dx$$ which implies the orthogonality of momentum</p>
-<p>the normalized eigen-vector of momentum is:</p>
-<p>$$<br>\psi_p(x)&#x3D;\frac{1}{\sqrt{2\pi\hbar}}e^{\frac{i}{\hbar}px}<br>$$</p>
-<p>as for its completeness, considering the Fourier transform of $f(x)$:</p>
-<p>$$<br>f(x)<br>&#x3D;\frac{1}{2\pi}\int_{-\infty}^{\infty}F(\omega)e^{i\omega x}d\omega<br>$$<br>$$<br>&#x3D;\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}F(\omega)e^{(i&#x2F;\hbar)(\hbar\omega) x}d(\hbar\omega)<br>$$<br>$$<br>&#x3D;\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}F(\omega)e^{(i&#x2F;\hbar)(\hbar\omega) x}d(\hbar\omega)<br>$$<br>$$<br>&#x3D;\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}\tilde{F}(p)e^{(i&#x2F;\hbar)p x}dp<br>$$<br>$$<br>&#x3D;\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty}\tilde{F}(p)\psi_p(x)dp<br>$$</p>
-<p>where<br>$$<br>\tilde{F}(p)&#x3D;F\left(\frac{p}{\hbar}\right)&#x3D;\int_{-\infty}^{\infty}f(x)e^{-i\frac{p}{\hbar}}dx<br>$$</p>
-<h4 id="Delta-function-in-concrete-forms"><a href="#Delta-function-in-concrete-forms" class="headerlink" title="Delta function in concrete forms"></a>Delta function in concrete forms</h4><p>common ones:</p>
-<p>$$<br>V(x)&#x3D;\lim\limits_{\beta\rightarrow\infty}\frac{\sin\beta x}{\pi x}<br>$$</p>
-<p>$$<br>G(x)&#x3D;\lim\limits_{\beta\rightarrow 0}\frac{1}{\sqrt{\pi \beta}}\exp({-\frac{x^2}{\beta}})<br>$$</p>
-<p>$$ L(x)&#x3D;\lim\limits_{\beta\rightarrow 0}\frac{1}{\pi}\frac{\beta}{x^2+\beta^2}<br>$$</p>
-<p>Dirichlet Kernel</p>
-<p>$$<br>D_m(x)&#x3D;\frac{1}{2\pi}\frac{\sin(m+\frac{1}{2}x)}{\sin\frac{1}{2}x}&#x3D;\frac{1}{2\pi}(1+2\sum\limits_{k&#x3D;1}^m\cos kx)<br>$$</p>
-<p>and</p>
-<p>$$<br>\lim\limits_{m\rightarrow\infty}D_m(x)&#x3D;\delta(x)<br>$$</p>
-<ul>
-<li>The fatal loophole in Qiao Gu’s proof of Dirichlet theorem is that he apply the property of selection.<br>Delta function here corresponds to Good-Kernel in math, which requires three essential aspects to satisfy, while Dirichlet Kernel violates one of them. So Dirichlet Kernel cannot be used to approach a function, i.e. cannot apply the property of selection.</li>
-</ul>
-<h4 id="Example-of-delta-function"><a href="#Example-of-delta-function" class="headerlink" title="Example of $\delta$ function"></a>Example of $\delta$ function</h4><p>Though $\sin kx , \cos kx$ aren’t absolutely integrable, but we can discuss their Fourier Transform in physics.</p>
-<p>$$<br>  F_{\sin}(\omega)&#x3D;\int_{-\infty}^{\infty}\sin kx e^{-i\omega x}dx<br>  $$<br>$$<br>  &#x3D;\frac{1}{2i}\int_{-\infty}^{\infty}(e^{ikx}-e^{-ikx})e^{-i\omega x}dx<br> $$<br>$$<br>  &#x3D;i\pi[\delta(\omega+k)-\delta(\omega-k)]<br>  $$<br>$$<br>  F_{\cos}(\omega)&#x3D;\int_{-\infty}^{\infty}\cos kx e^{-i\omega x}dx<br>  $$<br>$$<br>  &#x3D;\frac{1}{2}\int_{-\infty}^{\infty}(e^{ikx}+e^{-ikx})e^{-i\omega x}dx<br>$$<br>$$<br>  &#x3D;\pi[\delta(\omega+k)+\delta(\omega-k)]<br>$$</p>
-<p>important transform pairs</p>
-<p>$$<br>\mathscr{F}[\frac{1}{1+x^2}]\rightleftharpoons e^{-|x|}<br>$$</p>
-<p>Gauss function: $g(x)&#x3D;\exp({-\frac{ax^2}{2}})$</p>
-<p>$$<br> G(\omega)&#x3D;\int_{-\infty}^{\infty}\exp({-\frac{ax^2}{2}}) e^{-i\omega x}dx<br>$$<br>$$<br> &#x3D;\dots(\text{integration by parts})<br>$$<br>$$<br> &#x3D;\frac{ia}{\omega}\mathscr{F}[x\exp(-\frac{ax^2}{2})]<br> &#x3D;\frac{ia}{\omega}i\frac{d}{d\omega}G(\omega)<br>$$</p>
-<p>solve an ode to get $G(\omega)&#x3D;\sqrt{\frac{2\pi}{a}}\exp(-\frac{\omega^2}{2a})$<br>How to calculate the FT of the leap function?</p>
-<p>$$<br>u(x)&#x3D;\begin{cases}<br>  0,&amp;(x&lt;0)\<br>  1,&amp;(x\geq0)<br>\end{cases}<br>$$</p>
-<p>view it as the $\lim\limits_{\beta\rightarrow 0^+}f(x)$<br>where</p>
-<p>$$<br>f(x)&#x3D;\begin{cases}<br>  0,&amp;(x&lt;0)\<br>  e^{-\beta x},&amp;(x\geq0)<br>\end{cases}<br>$$</p>
-<p>hence the FT of $u(t)$ is</p>
-<p>$$<br>U(\omega)&#x3D;\lim\limits_{\beta\rightarrow 0^+}F(\omega)<br>$$<br>$$&#x3D;\lim\limits_{\beta\rightarrow 0^+}\frac{1}{\beta +i \omega}<br>$$<br>$$<br>&#x3D;\pi\delta(\omega)+\frac{1}{i\omega}<br>$$</p>
-<p>The final step see <a href="#delta-function-in-concrete-forms">$L(x)$</a> there.</p>
-<h4 id="Apply-Residue-Theorem"><a href="#Apply-Residue-Theorem" class="headerlink" title="Apply Residue Theorem"></a>Apply Residue Theorem</h4><p>The above examples show some Physical methods to deal with special functions. While for a wide range of integrations we are able to calculate them using <strong><em>Residue Theorem</em></strong>, a much more handy way than Qiao Gu’s Fourier method in his book.</p>
-<p><strong>Usual Steps</strong> (for trigonometric and exponential):<br>1.Adjust the interval to $(-\infty,\infty)$<br>2.Show proper form like $\int_{-\infty}^{\infty} e^{imx}f(x) dx$<br>3.If m&lt;0, $\int_{-\infty}^{\infty} e^{-i|m|x}f(x)dx&#x3D;\int_{-\infty}^{\infty} e^{i|m|y}f(-y)dy$<br>4.Examine whether $f(z)$ converges uniformly to 0 at $\infty$.<br>5.Jordan’s Lemma.</p>
-<p>For instance (P62):</p>
-<p>$$<br>  \quad\int_0^\infty \frac{\cos\omega t}{\beta^2+\omega^2}d\omega<br>  &#x3D;\frac{1}{2}\int_{-\infty}^\infty \frac{\cos\omega t}{\beta^2+\omega^2}d\omega<br>$$<br>$$<br>  &#x3D;\frac{1}{2}\int_{-\infty}^\infty \frac{\cos\omega t+i\sin \omega t }{\beta^2+\omega^2}d\omega<br>$$<br>$$<br>  &#x3D;\frac{1}{2}\int_{-\infty}^\infty \frac{e^{i\omega t}}{\beta^2+\omega^2}d\omega ~~(\text{when}~t&gt;0)<br>$$<br>$$<br>  &#x3D;\pi i{\text{Res}[\frac{e^{i\omega t}}{\beta^2+\omega^2},i\beta]}<br>$$<br>$$<br>  &#x3D;\frac{2\beta}{\pi}e^{-\beta t}<br>$$</p>
-<p>for $t&lt;0$, replace $-\omega$ with $p$:</p>
-<p>$$<br>  &#x3D;\frac{1}{2}\int_{-\infty}^\infty \frac{e^{-ip t}}{\beta^2+p^2}dp<br>$$<br>$$<br>  &#x3D;\frac{2\beta}{\pi}e^{\beta t}<br>$$</p>
-<p>We already apply the <strong>Jordan’s Lemma</strong>. Be careful when you meet trigonometric functions, because they’re not bounded in $\mathbb{C}$, that’s why Jordan’s Lemma is an essential. In the above example the even and odd function helps us to achive the form of Jordan’s Lemma. When the function you met is neither even nor odd, please write like this:$\int f(x)\cos x &#x3D;\text{Re}(\int f(x) e^{ix})&#x3D;\cdots$</p>
-<p>Note again that Jordan’s Lemma could only be utilized when $m$ in $\int e^{imx}dx$ <strong>is larger than 0</strong> (which explained the absolute value in the end), and only the singularities <strong>above the x-axis</strong> are needed to be considered.</p>
-<p>Another example (P38 in Qiao’s book):</p>
-<p>$$<br>  \quad\int_{-\infty}^{\infty}\frac{\sin a\omega}{\omega}e^{i\omega x}d\omega<br>  &#x3D;\int_{-\infty}^{\infty}\frac{e^{i(a+x)\omega}-e^{i(x-a)\omega}}{2i\omega}d\omega<br>$$<br>$$<br>  &#x3D;\frac{1}{2i}\left(\int_{-\infty}^{\infty}\frac{e^{i(a+x)\omega}}{\omega}d\omega-\int_{-\infty}^{\infty}\frac{e^{i(x-a)\omega}}{\omega}d\omega\right)<br>$$<br>$$<br>  &#x3D;\frac{\pi i}{2i}\left(<br>    \begin{cases}<br>  \text{Res}[\frac{e^{i(x+a)\omega}}{\omega},0],&amp;(x&gt;-a)\<br>    \text{Res}[-\frac{e^{-i(x+a)\omega}}{\omega},0],&amp;(x&lt;-a)<br>  \end{cases}<br>-\begin{cases}<br>  \text{Res}[\frac{e^{i(x-a)\omega}}{\omega},0],&amp;(x&gt;a)\<br>  \text{Res}[-\frac{e^{-i(x-a)\omega}}{\omega},0],&amp;(x&lt;a)<br>\end{cases}\right)<br>$$<br>$$<br>&#x3D;\begin{cases}<br>  0,&amp; |x|&gt;a\<br>  \pi,&amp; |x|&lt;a<br>\end{cases}<br>$$</p>
-<p>Note that the singularity is 0, which stuck in the x-axis, so $2\pi i \times \text{Res}$ is not allowed (only works for singularities above the x-axis). Instead, the multipliers should be replaced by $\pi i$.<br>A drawback of Residue Theorem is that we’re not able to calculate the value of such an integral at $x&#x3D;\plusmn a$, which  could be solved by Dirichlet’s Theorem.</p>
-<p>Again, the two cases above entail polar points (a kind of singularities) only. For <strong>Essential singularities</strong>, the Residue Theorem works as well. The only extra obstacle is how to calculate the Residue of an essential singularity, and you’d better calculate its <strong><em>Laurent series</em></strong> stiffly and examine the $C_{-1}$ term.</p>
-<p>When the singularity isn’t isolated, Residue Theorem is no longer legal to use.</p>
-<h3 id="Laplacian-Transform"><a href="#Laplacian-Transform" class="headerlink" title="Laplacian Transform"></a>Laplacian Transform</h3><p>The integral of Laplacian transform converges absolutely and uniformly, such that shifting the order of operators is legal.</p>
-<h4 id="LT’s-Properties"><a href="#LT’s-Properties" class="headerlink" title="LT’s Properties"></a>LT’s Properties</h4><p>Let’s appreciate their symmetry:</p>
-<p>$$<br>\frac{d}{ds}\mathscr{L}[f(t)]&#x3D;\mathscr{L}[-tf(t)]<br>$$<br>$$<br>\mathscr{L}[\frac{d}{dt}f(t)]&#x3D;s\mathscr{L}[f(t)]-f(0^+)<br>$$<br>$$<br>\int_s^\infty\mathscr{L}[f(t)]du&#x3D;\mathscr{L}[\frac{f(t)}{t}]<br>$$<br>$$<br>\mathscr{L}[\int_0^tf(\tau)d\tau]&#x3D;\frac{1}{s}\mathscr{L}[f(t)]<br>$$</p>
-<p>How to verify these properties smoothly?<br>(I mean treat them individually, do not quote others results)</p>
-<ul>
-<li><p>$\frac{d}{ds}\mathscr{L}[f(t)]&#x3D;\mathscr{L}[-tf(t)]$<br>proof<br>$$<br>\frac{d}{ds}\mathscr{L}[f(t)]<br>&#x3D;\frac{d}{ds}\int_0^\infty f(t)e^{-st}dt<br>$$<br>$$<br>&#x3D;\int_0^\infty -tf(t)e^{-st}dt<br>$$<br>$$<br>&#x3D;\mathscr{L}[-tf(t)]<br>$$</p>
-</li>
-<li><p>$\mathscr{L}[\frac{d}{dt}f(t)]&#x3D;s\mathscr{L}[f(t)]-f(0^+)$<br>proof</p>
-</li>
-</ul>
-<p>$$<br>  \mathscr{L}[\frac{d}{dt}f(t)]<br>  &#x3D;\int_0^\infty e^{-st}df(t)<br>$$<br>$$<br>  &#x3D;\left[f(t)e^{-st}\right]_0^\infty-\int_0^\infty -sf(t)e^{-st}dt<br>$$<br>$$<br>  &#x3D;s\mathscr{L}[f(t)]-f(0^+)<br>$$</p>
-<ul>
-<li>$\int_s^\infty\mathscr{L}[f(t)]du&#x3D;\mathscr{L}[\frac{f(t)}{t}]$<br>proof</li>
-</ul>
-<p>$$<br>  \int_s^\infty\mathscr{L}[f(t)]du&#x3D;\int_s^\infty\left(\int_0^\infty f(t)e^{-ut}dt\right)du<br>$$<br>$$<br>  &#x3D;\int_0^\infty\left(\int_s^\infty f(t)e^{-ut}du\right)dt<br>  $$<br>$$<br>  &#x3D;\int_0^\infty \frac{1}{t}f(t)e^{-st}dt<br>  &#x3D;\mathscr{L}[\frac{f(t)}{t}]<br>$$</p>
-<ul>
-<li>$\mathscr{L}[\int_0^tf(\tau)d\tau]&#x3D;\frac{1}{s}\mathscr{L}[f(t)]$<br>proof<br>$$<br>\mathscr{L}[\int_0^tf(\tau)d\tau]&#x3D;\int_0^\infty e^{-st}\left(\int_0^tf(\tau)d\tau \right )dt<br>$$<br>$$<br>&#x3D;-\frac{1}{s}\int_0^\infty (\int_0^tf(\tau)d\tau) d(e^{-st})<br>$$<br>$$<br>&#x3D;\frac{1}{s}\int_0^\infty  e^{-st}d\left(\int_0^tf(\tau)d\tau\right)<br>$$<br>$$<br>&#x3D;\frac{1}{s}\int_0^\infty e^{-st}f(t)dt<br>&#x3D;\frac{1}{s}\mathscr{L}[f(t)]<br>$$</li>
-</ul>
-<p>Conclusion:<br>If the integral and derivative sign is in $\mathscr{L}[\quad]$,the method is Integration by Parts;<br> If the integral and derivative sign is out of $\mathscr{L}[\quad]$,the method is Changing the Order of integral operators.</p>
-<p>Translations:(easy to derive)</p>
-<p>$$<br>e^{-st_0}\mathscr{L}[f(t)]&#x3D;\mathscr{L}[f(t-t_0)]<br>$$<br>$$<br>\mathscr{L}[e^{s_0 t}f(t)]&#x3D;\mathscr{L}[f(t)] (s-s_0)<br>$$</p>
-<p>Warning: Laplacian Transform focus on the <strong>right side of y-axis</strong>, i.e. $f(x)&#x3D;f(x)u(x)$. Functions like $f(t-1)$may cause misunderstandings. A better way to avoid such consequence is to apply Convolution Property instead of Translation in practice.</p>
-<p>Convolution:</p>
-<p>$$<br>\mathscr{L}[f(t)]\times\mathscr{L}[g(t)]&#x3D;\mathscr{L}[f*g(t)]<br>$$</p>
-<p>E.g.<br>$$<br>   \mathscr{L^{-1}}{e^{-st_0}\mathscr{L}[f(t)]}<br>   &#x3D;\mathscr{L^{-1}}[e^{-st_0}]*f(t)<br>$$<br>$$<br>   &#x3D;\delta(t-t_0)*f(t)&#x3D;\int_0^t \delta(t-t_0-\tau)f(\tau)d\tau<br>$$<br>$$<br>   &#x3D;\begin{cases}<br>    f(t-t_0) &amp;(t-t_0&gt;0) \<br>    0 &amp;(t-t_0&lt;0)<br>   \end{cases}<br>$$</p>
-<p>If we simply copied the conclusion of <em>Translation</em>, we happily got $f(t-t_0)$, whose $(0,t_0)$ part is actually wrong.</p>
+</ol>
+<h3 id="D’Almbert-Method"><a href="#D’Almbert-Method" class="headerlink" title="D’Almbert Method"></a>D’Almbert Method</h3><p>To solve the vibrating equation:<br>$$<br>\frac{\partial^2 u}{\partial t^2}-a^2\frac{\partial^2 u}{\partial t^2}&#x3D;0<br>$$<br>written as<br>$$<br>(\frac{\partial }{\partial t}+a\frac{\partial }{\partial x})(\frac{\partial }{\partial t}-a\frac{\partial }{\partial x})u&#x3D;0<br>$$<br>The general solution would be $f_1(x+at)+f_2(x-at)$.<br>$$<br>u(x,t)&#x3D;\frac{1}{2}(\phi(x+at)+\phi(x-at))+\frac{1}{2a}\int_{x-at}^{x+at} \psi(\xi) d\xi<br>$$</p>
+<h3 id="Boundary-Condition"><a href="#Boundary-Condition" class="headerlink" title="Boundary Condition"></a>Boundary Condition</h3><h4 id="Mechanical-Example"><a href="#Mechanical-Example" class="headerlink" title="Mechanical Example"></a>Mechanical Example</h4><img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="blackboard" style="width:400px;height:200px;">
+
+<p>Consider the example of a rod oscillates longitudinal with a spring sticking to its the end.<br>Analysis the small segment in Rod’s part: $u(x)$ represents the small displacement at the point $x$, and note <em>rightward</em> as the positive direction. Calculate the new length of the segment:<br>$$<br>(x+\Delta x+u(x+\Delta x))-(x+u(x))&#x3D;\Delta x+ \frac{\partial u}{\partial x}\Delta x<br>$$ Such that the extension is $\frac{\partial u}{\partial x}\Delta x$. From Hook’s Law, the <strong>relative extension</strong> is proportional to the quotient of the force and sectional area:<br>$$<br>\frac{\frac{\partial u}{\partial x}\Delta x}{\Delta x}&#x3D;\frac{F}{SY} \quad<br>\therefore F&#x3D;SY\frac{\partial u}{\partial x}<br>$$ Analysis the force to get Dynamic Equation:<br>$$<br>SY\left( \frac{\partial u}{\partial x}\left.\right\vert_{x+\Delta x}-\frac{\partial u}{\partial x}\left.\right\vert_{x} \right )&#x3D;\frac{\partial^2 u}{\partial t^2} \rho S \Delta x<br>$$<br>Hence the equation is:<br>$$<br>\frac{Y}{\rho} \frac{\partial^2 u}{\partial x^2}&#x3D;\frac{\partial^2 u}{\partial t^2}<br>$$<br>The Boundary Condition shall be given by analyzing the small segment at the end of the rod, adjust the Dynamic Equation above:<br>$$ F_{x+\Delta x}+SY\left( -\frac{\partial u}{\partial x}\left.\right\vert_{x} \right )&#x3D;\frac{\partial^2 u}{\partial t^2} \rho S \Delta x<br>$$ $$<br>F_{L^+}+SY\left(-\frac{\partial u}{\partial x}\left.\right\vert_{L-\Delta x} \right )&#x3D;\frac{\partial^2 u}{\partial t^2} \rho S \Delta x<br>$$ $$<br>-ku\left.\right\vert_{L}+SY\left( -\frac{\partial u}{\partial x}\left.\right\vert_{L-\Delta x} \right )&#x3D;\frac{\partial^2 u}{\partial t^2} \rho S \Delta x<br>$$<br>Now let $\Delta x\rightarrow 0$, to achieve the final goal:<br>$$<br>-ku\left.\right\vert_{L}+\frac{S}{Y}\left( -\frac{\partial u}{\partial x}\left.\right\vert_{L} \right )&#x3D;0<br>$$<br>When $k$ is large enough, the $\frac{S}{Y}\left( -\frac{\partial u}{\partial L}\left.\right\vert_{L} \right )$ part is $o(k)$ and is legal to be ignored, corresponding the situation with fixed end (the first type, <em>Dirichlet Boundary Condition</em>).<br>When $k$ is small enough, the first section $-ku\left.\right\vert_{L}$ could be ignored and thus verified the Boundary Condition of free end (the second type, <em>Neumann Boundary Condition</em>).<br>In conclusion, the boundary condition exhibits a lower order of small infinitesimal quantity. At the end of the rod, the $\Delta x$ could be regarded as zero, which differs from the interior of the rod.</p>
+<h4 id="Thermodynamical-Example"><a href="#Thermodynamical-Example" class="headerlink" title="Thermodynamical Example"></a>Thermodynamical Example</h4><p>To understand BC, you shall first understand where the equation comes from, for a small fragment of the rod:<br>$$<br>\left(-\kappa S \Delta t \frac{\partial u}{\partial x}\right)\vert_{x}-\left(-\kappa S \Delta t \frac{\partial u}{\partial x}\right)\vert_{x+\Delta x}&#x3D;c(S \Delta x \rho) \Delta u<br>$$<br>which can be simplified to<br>$$<br>\kappa \frac{\partial^2 u}{\partial x^2}&#x3D;c\rho\frac{\Delta u}{\Delta t}<br>$$</p>
+<p>For a rod’s temperature distribution, the Dirichlet BC means the temperature was shown directly. If it states that some hot stream $f(t)$ flows out, that’s the Neumann BC, and the general equation at the right end should be:<br>$$<br>\left(-\kappa S \Delta t \frac{\partial u}{\partial x}\right)|_{L}-\Delta t Sf(t)&#x3D;c(S \Delta x \rho) \Delta u<br>$$</p>
+<p>Eliminate $\Delta t$ and let $\Delta x\to 0$,</p>
+<p>$$<br>-\kappa \frac{\partial u}{\partial x}|_{x&#x3D;L}&#x3D;f(t)<br>$$<br>or more generally<br>$$<br>-\kappa \frac{\partial u}{\partial n}&#x3D;f(t)<br>$$</p>
+<p>where at the left end, $\frac{\partial u}{\partial n}&#x3D;-\frac{\partial u}{\partial x}$, while at the right end $\frac{\partial u}{\partial n}&#x3D;\frac{\partial u}{\partial x}$, the normal $\vec{n}$ is pointing outward of the rod!</p>
+<p>When the end is adiabatic, the BC becomes $\frac{\partial u}{\partial n}&#x3D;0$.</p>
+<p>There’s another possibility that the boundary obeys Newton’s cooling law, which corresponds to the <em>spring</em> in above mechanical example, because the $\text{force} \propto \Delta \text{displacement}$ corresponds to $\text{flow}\propto \Delta\text{temperature}$.</p>
+<p>thus the BC:<br>$$<br>-\kappa\frac{\partial u}{\partial n}\vert_{\text{somewhere}} &#x3D; h(u\vert_{\text{somewhere}}-\theta)<br>$$</p>
+<h3 id="Different-Types-Different-Methods"><a href="#Different-Types-Different-Methods" class="headerlink" title="Different Types, Different Methods"></a>Different Types, Different Methods</h3><h4 id="Homogenous-BC-and-Homogenous-Eq"><a href="#Homogenous-BC-and-Homogenous-Eq" class="headerlink" title="Homogenous BC and Homogenous Eq"></a>Homogenous BC and Homogenous Eq</h4><p>The easiest one, <em>Separate two variables</em> to get an eigen-value problem.</p>
+<h4 id="Homogenous-BC-and-Non-Homogenous-Eq"><a href="#Homogenous-BC-and-Non-Homogenous-Eq" class="headerlink" title="Homogenous BC and Non-Homogenous Eq"></a>Homogenous BC and Non-Homogenous Eq</h4><p>There are two ways to deal with it:</p>
+<h5 id="Fourier-method"><a href="#Fourier-method" class="headerlink" title="Fourier method"></a>Fourier method</h5><p>  Suppose:<br>  $$<br>  u(x,t)&#x3D;\sum_{n&#x3D;1}^{\infty}T_n(t)X_n(x)<br>  $$<br>  where $X_n(x)$ is the eigen-function which we already know, corresponding to BC, like $\sin(\frac{n\pi}{l}x)$. Plug the above formula into the original Eq to derive $T_n(t)$’s differential equation and solve that ode.</p>
+<h5 id="Momentum-Theorem"><a href="#Momentum-Theorem" class="headerlink" title="Momentum Theorem"></a>Momentum Theorem</h5><p>  To implement Momentum Theorem, we have to convert the original Eq to the following form, with <strong>all zero</strong> <em>Initial Condition</em>, if it’s a Vibrating Equation:<br>$$<br>  u_{tt}-a^2 u_{xx}&#x3D;f(x,t)<br>$$<br>$$<br>  u\vert_{x&#x3D;0}&#x3D;0 \quad u\vert_{x&#x3D;l}&#x3D;0<br>$$<br>$$<br>  u\vert_{t&#x3D;0}&#x3D;0 \quad u_t\vert_{t&#x3D;0}&#x3D;0<br>$$<br>  Then we only need to solve:<br>$$<br>  v_{tt}-a^2 v_{xx}&#x3D;0<br>$$<br>$$<br>  v\vert_{x&#x3D;0}&#x3D;0 \quad v\vert_{x&#x3D;l}&#x3D;0<br>$$<br>$$<br>  v\vert_{t&#x3D;\tau}&#x3D;0 \quad v_t\vert_{t&#x3D;\tau}&#x3D;f(x,\tau)<br>$$</p>
+<p>  If it’s the thermodynamical equation<br>  $$<br>  u_{t}-a^2 u_{xx}&#x3D;f(x,t)<br>$$<br>$$<br>  u\vert_{x&#x3D;0}&#x3D;0 \quad u\vert_{x&#x3D;l}&#x3D;0<br>$$<br>$$<br>  u\vert_{t&#x3D;0}&#x3D;0<br>  $$<br>  Then we only need to solve:<br>  $$<br>  v_{t}-a^2 v_{xx}&#x3D;0<br>$$<br>$$<br>  v\vert_{x&#x3D;0}&#x3D;0 \quad v\vert_{x&#x3D;l}&#x3D;0<br>$$<br>$$<br>  v\vert_{t&#x3D;\tau}&#x3D;f(x,\tau)<br>  $$</p>
+<p>  and the final result is:<br>  $$<br>  u(x,t)&#x3D;\int_0^t v(x,t,\tau) d\tau<br>  $$</p>
+<blockquote>
+<p>Understanding:<br>The $f(x,t)$ shall be divided into discrete impulses, exerted on different strings (in an ensemble), and the result is the sum of all strings in this ensemble.</p>
+</blockquote>
+<h4 id="Non-Homogenous-BC-and-Homogenous-Eq"><a href="#Non-Homogenous-BC-and-Homogenous-Eq" class="headerlink" title="Non-Homogenous BC and Homogenous Eq"></a>Non-Homogenous BC and Homogenous Eq</h4><p>The goal is to regain homogenous BC and convert it to the last type of equation.</p>
+<p>Let $u&#x3D;v+w$, where $w$ satisfy homogenous BC. To achieve this, suppose $v&#x3D;A(t)x+B(t)$, and adjust two coefficients to satisfy the non-homogenous BC. As a side-effect ,$w$ has to satisfy the non-homogenous equations but we already know how to solve it.</p>
+<h3 id="Poisson-function"><a href="#Poisson-function" class="headerlink" title="Poisson function"></a>Poisson function</h3><p>The form is:<br>$$<br>\Delta u&#x3D;f(x,y,z)<br>$$</p>
+<p>non-homogenous equations, unfortunately not able to solve by Momentum theorem. Thus we have to develop new method:<br><strong>Guess</strong>! Extract a particular solution out, $u&#x3D;v+w$ transferring the equation into a homogenous one $\Delta v&#x3D;0$. Separate variables……</p>
+<p>Note that if the Poisson function is a two dimensional problem with variables $x$ and $y$, the BC must be fine or else we cannot determine its eigen-function (as you extract a particular solution out and worsen the BC).</p>
+<p>While if the variables are $\rho$ and $\phi$, the solution $w$ you extract must have the sysmetric form in terms of $x$ and $y$, in order to combine it to $x^2+y^2&#x3D;\rho^2$, by the way, you will probably encounter <em>Euler</em> type ode then.</p>
+<p>tips: when encounter Euler type ode, let $\rho&#x3D;e^t \dots$. The general solution would be like:<br>$$<br>v(\rho,\phi)&#x3D;\sum_{m&#x3D;1}^\infty \rho^{m}(A_m \cos m\phi+B_m\sin m\phi)<br>+C_0+D_0\ln \rho+\sum_{m&#x3D;1}^\infty \rho^{-m}(C_m \cos m\phi+D_m\sin m\phi)<br>$$</p>
+<h3 id="Solve-ODE-a-Hard-Way"><a href="#Solve-ODE-a-Hard-Way" class="headerlink" title="Solve ODE a Hard Way"></a>Solve ODE a Hard Way</h3><h4 id="Sturm-Liouville-Problem"><a href="#Sturm-Liouville-Problem" class="headerlink" title="Sturm-Liouville Problem"></a>Sturm-Liouville Problem</h4><p>Consider the operator:<br>$$<br>\mathcal{L}y&#x3D;\frac{d}{dx}\left(p_0(x)\frac{dy}{dx} \right)+p_2(x)y<br>$$<br>It is <em>Hermitian</em> in differential equation sense, because for two functions of $x$ denote as $v$ and $u$:<br>$$<br>\int_a^b v^* (\mathcal{L}u) dx&#x3D;\int_a^b (\mathcal{L}v)^* u dx+\left[ v^* p_0(x) \frac{d u}{dx}- \frac{d v^*}{dx} p_0(x) u\right]_{a}^{b}<br>$$<br>where the $[\dots]$ term would vanish when the boundary condition is appropriate.</p>
+<p>An Hermitian operator enable us to gain orthogonal, complete basis consisting of eigen-functions with real eigenvalues.</p>
+<p>Besides, for an arbitrary ode:<br>$$<br>\mathcal{L}y&#x3D;\frac{d^2 y}{dx^2}+a(x)\frac{dy}{dx}+b(x)y<br>$$<br>multiply by $e^{\int a(\xi)d\xi}$ (denote as $w(x)$).<br>$$<br>w(x)\mathcal{L}y&#x3D;\frac{d}{dx}\left[e^{\int a(\xi)d\xi}\frac{dy}{dx}\right]+\left[b(x)e^{\int a(\xi)d\xi}\right]y<br>$$</p>
+<p>successfully transform into a S-L type. But note that the orthogonality might be different:<br>$$<br>\int_a^b v^* (w(x)\mathcal{L}u) dx&#x3D;\int_a^b (w(x)\mathcal{L}v)^* u dx+\left[ v^* w(x) \frac{d u}{dx}- \frac{d v^*}{dx} w(x) u\right]_{a}^{b}<br>$$</p>
+<h4 id="Legendre-Equation"><a href="#Legendre-Equation" class="headerlink" title="Legendre Equation"></a>Legendre Equation</h4><p>$l$ th order Legendre Eq:</p>
+<p>$$<br>(1-x^2)y’’-2xy’+l(l+1)&#x3D;0<br>$$</p>
+<p><em>Frobenius</em> method by making a series expansion, note that at $x_0&#x3D;0$ the expansion has only positive terms, i.e. <em>Taylor expansion</em>:<br>$$<br>y&#x3D;\sum_{n&#x3D;0}^{\infty}a_nx^n<br>$$</p>
+<p>plug it in and get the recursion relation:<br>$$<br>a_{k+2}&#x3D;\frac{(k-l)(k+l+1)}{(k+2)(k+1)} a_k<br>$$</p>
+<p>The general solution:<br>$$<br>y(x)&#x3D;D_0y_0(x)+D_1y_1(x)<br>$$</p>
+<p>A sad fact is that neither $y_0$ nor $y_1$ is convergent, which can be verified by applying Gaussian Criteria:</p>
+<blockquote>
+<p>Gaussian Criteria<br>the infinite series is $\sum u_k$, denote $$G:&#x3D;\lim_{k\to \infty} k\left(\frac{u_k}{u_{k+1}}-1-\frac{1}{k}\right)$$<br>If $G&lt;1$, the series converges; else if $G&gt;1$, it diverges.<br>Proof: The theorem could be verified by consider $\sum \frac{1}{k\ln k}$</p>
+</blockquote>
+<p>Besides the linear combination of these two diverges too.</p>
+<p>The only solution to fit the real physical situation (avoid infinity) is to convert the infinite series into a <em>polynomial</em> (legendre polynomial).</p>
+<p>when $l&#x3D;2n$, $y_0(x)$ is an $2n$ th order polynomial, while $y_1(x)$ is still infinite, thus we assert $a_1&#x3D;0$ to discard it. The solution shall be $y(x)&#x3D;a_0 y_0(x)$.</p>
+<p>when $l&#x3D;2n+1$, $y_1(x)$ is an $2n+1$ th order polynomial. Then we abandon $y_0(x)$ to get the solution $y(x)&#x3D;a_1 y_1(x)$.</p>
+<h4 id="Bessel-Equation"><a href="#Bessel-Equation" class="headerlink" title="Bessel Equation"></a>Bessel Equation</h4><p>$$<br>x^2y’’+xy’+(x^2-\nu^2)y&#x3D;0<br>$$</p>
+<h5 id="The-simple-case"><a href="#The-simple-case" class="headerlink" title="The simple case"></a>The simple case</h5><p>where $2\nu \notin \mathbb{Z} $</p>
+<p>suppose<br>$$<br>y&#x3D;\sum_{k&#x3D;0}^{\infty} a_k z^{s+k}<br>$$</p>
+<p>In convention we select $a_0\neq 0$</p>
+<p>the $x^s$ term’s coefficient is $(s^2-\nu^2)a_0$, which yields $s&#x3D;\nu$ or $s&#x3D;-\nu$</p>
+<p>thus the recursion relation is:</p>
+<p>$$<br>a_k&#x3D;\frac{-1}{(s+k+\nu)(s+k-\nu)}a_{k-2}<br>$$</p>
+<p>Besides, the $x^{s+1}$ term’s coefficient implies $a_1&#x3D;0$, thus $a_{2k+1}&#x3D;0$</p>
+<p>A great property of Bessel Eq’s solution is that its convergent radii is $\infty$.</p>
+<p>select<br>$$ a_0&#x3D;\frac{1}{2^\nu}\Gamma(\nu+1) $$</p>
+<p>and denote the solution now as $J_\nu (x)$ and $J_{-\nu}(x)$ corresponding to $s&#x3D;\pm \nu$</p>
+<p>$$<br>J_\nu(x)&#x3D;\sum_{m&#x3D;0}^{\infty}\frac{(-1)^m}{m!\Gamma(m+\nu+1)}\left(\frac{x}{2}\right)^{2m+\nu}<br>$$</p>
+<p>$$<br>J_{-\nu}(x)&#x3D;\sum_{m&#x3D;0}^{\infty}\frac{(-1)^m}{m!\Gamma(m-\nu+1)}\left(\frac{x}{2}\right)^{2m-\nu}<br>$$</p>
+<p>They are linear independent, which enables us to form its general solution:<br>$$<br>y(x)&#x3D;C_1 J_\nu(x)+C_2 J_{-\nu}(x)<br>$$</p>
+<h5 id="The-1-2-case"><a href="#The-1-2-case" class="headerlink" title="The 1&#x2F;2 case"></a>The 1&#x2F;2 case</h5><p>when $\nu&#x3D;\frac{1}{2}$, the above formula also satisfies.<br>$$<br>J_{\frac{1}{2}}(x)&#x3D;\sqrt{\frac{2}{\pi x}}\sin x<br>$$<br>$$<br>J_{-\frac{1}{2}}(x)&#x3D;\sqrt{\frac{2}{\pi x}}\cos x<br>$$<br>General solution:<br>$$<br>y(x)&#x3D;C_1 J_\nu(x)+C_2 J_{-\nu}(x)<br>$$</p>
+<h5 id="The-tough-case"><a href="#The-tough-case" class="headerlink" title="The tough case"></a>The tough case</h5><p>$\nu$ is an integer, which implies $J_\nu(x)$ and $J_{-\nu}(x)$ is linear independent.</p>
+<p>The first $J_\nu(x)$ still holds, the purpose is to find another solution which is linear independent with it. <em>Neumann function</em>:<br>$$<br>Y_\nu(x)&#x3D;\lim_{\alpha\to \nu}\frac{J_\alpha(x)\cos\alpha x-J_{-\alpha}(x)}{\sin\alpha x}<br>$$</p>
+<p>thus the solution takes the form of:<br>$$<br>y(x)&#x3D;AJ_\nu(x)+BY_\nu(x)<br>$$</p>
+<h2 id="Appendix"><a href="#Appendix" class="headerlink" title="Appendix"></a>Appendix</h2><p>Derive the Laplacian $\Delta&#x3D;\nabla\cdot\nabla$ in a smarter way:</p>
+<p>first consider the <em>gradient</em>:<br>$$<br>  \nabla u &#x3D;\lim_{\text{Displacement}} \vec{e_r}\frac{\Delta u}{\Delta r}+\vec{e_\theta}\frac{\Delta u}{r\Delta \theta}+\vec{e_\phi}\frac{\Delta u}{r\sin\theta \Delta \phi}<br>$$<br>$$<br>&#x3D;\vec{e_r}\frac{\partial u}{\partial r}+\vec{e_\theta}\frac{1}{r}\frac{\partial u}{\partial \theta}+\vec{e_\phi}\frac{1}{r\sin \theta}\frac{\partial u}{\partial \phi}<br>$$</p>
+<p>Then consider the partial derivative of the three orthonormal vectors $\vec{e_r}$ $\vec{e_\theta}$ $\vec{e_\phi}$ :</p>
+<p>$$<br>\frac{\partial \vec{e_r}}{\partial r}&#x3D;\frac{\partial \vec{e_\theta}}{\partial r}&#x3D;\frac{\partial \vec{e_\phi}}{\partial r}&#x3D;0<br>$$<br>which is obvious because when $\theta$ and $\phi$ are fixed, the three vectors won’t change their directions.</p>
+<p>$$<br>\frac{\partial \vec{e_r}}{\partial \theta}&#x3D;\vec{e_\theta}<br>$$<br>$$<br>\frac{\partial\vec{e_\theta}}{\partial \theta}&#x3D;-\vec{e_r}<br>$$<br>$$<br>\frac{\partial\vec{e_\phi}}{\partial \theta}&#x3D;0<br>$$<br>Which is natural too, because the first two equation is the same as what we learnt earlier in the <em>polar coordinate</em> case. And the last one could be observed directly from the figure, unchanged.</p>
+<p>$$<br>\frac{\partial \vec{e_r}}{\partial \phi}&#x3D;\sin\theta \vec{e_\phi}<br>$$<br>$$<br>\frac{\partial\vec{e_\theta}}{\partial \phi}&#x3D;\cos\theta\vec{e_\phi}<br>$$<br>$$<br>\frac{\partial\vec{e_\phi}}{\partial \phi}&#x3D;-\sin\theta\vec{e_r}-\cos\theta\vec{e_\theta}<br>$$</p>
+<p>The first equation could be verified by drawing the infinitesimal displacement angle. The above $\vec{e_r}$ shift angle $\Delta\alpha$, which satisfy $r\Delta\alpha&#x3D;r\sin\theta\Delta\phi$ , i.e. $\Delta \alpha&#x3D;\sin\theta\Delta\phi$:</p>
+<img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-1.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="fig" style="width:270px;height:270px;">
+for the second equation, much the same:
+<img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-3.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="fig" style="width:270px;height:270px;">
+
+<p>as for $\vec{e_\phi}$, $\Delta\vec{e_\phi}$ points inward to the origin (similar to polar coordinate case), thus the direction is a linear combination of $\vec{e_r}$ and $\vec{e_\phi}$:<br>$$<br>\sin\theta\vec{e_r}+\cos\theta\vec{e_\theta}<br>$$</p>
+<img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-2.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="fig" style="width:200px;height:200px;">
+
+<p>thus the Laplacian:</p>
+<p>$$<br>\nabla\cdot\nabla<br>&#x3D;\nabla\cdot\left(\vec{e_r}\frac{\partial u}{\partial r}+\vec{e_\theta}\frac{1}{r}\frac{\partial u}{\partial \theta}+\vec{e_\phi}\frac{1}{r\sin \theta}\frac{\partial u}{\partial \phi}\right)<br>$$<br>$$<br>&#x3D;\left([\vec{e_r}\frac{\partial }{\partial r}]+[\vec{e_\theta}\frac{1}{r}\frac{\partial }{\partial \theta}]+[\vec{e_\phi}\frac{1}{r\sin \theta}\frac{\partial }{\partial \phi}]\right)<br>$$<br>$$<br>\cdot \left(\vec{e_r}\frac{\partial u}{\partial r}+\vec{e_\theta}\frac{1}{r}\frac{\partial u}{\partial \theta}+\vec{e_\phi}\frac{1}{r\sin \theta}\frac{\partial u}{\partial \phi}\right)<br>$$<br>$$<br>&#x3D;[\frac{\partial^2 u}{\partial r^2}]+[\frac{1}{r}\frac{\partial u}{\partial r}+\frac{1}{r^2}\frac{\partial^2 u}{\partial \theta^2}]<br>$$<br>$$<br>+[\frac{1}{r\sin\theta}(\sin\theta\frac{\partial u}{\partial r}+\cos\theta\frac{1}{r}\frac{\partial u}{\partial\theta}+\frac{1}{r\sin\theta}\frac{\partial^2 u}{\partial \phi^2})]<br>$$</p>
+<p>where three $[\dots]$ linked the corresponding terms to three dot products in divergence.<br>$\square$</p>
 
   </div>
   
@@ -2664,7 +2632,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-01-27T19:18:03+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-01-27T22:28:20+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Jan 27, 2024</p>
@@ -2675,10 +2643,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/tag1/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>tag1</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/tag2/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>tag2</p></a></div>
-  <span hidden itemprop="keywords">tag1 tag2</span>
-
 
         
       
@@ -2690,7 +2654,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/01/27/mathematical_physics_1/&title=数理方法笔记---复变函数与积分变换部分 - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/01/27/mathematical/&title=数理方法笔记---PDE部分 - Hexo&summary="
           
           >
           
@@ -2702,7 +2666,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/01/27/mathematical_physics_1/&title=数理方法笔记---复变函数与积分变换部分 - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/01/27/mathematical/&title=数理方法笔记---PDE部分 - Hexo&summary="
           
           >
           
@@ -2714,7 +2678,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/01/27/mathematical_physics_1/&title=数理方法笔记---复变函数与积分变换部分 - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/01/27/mathematical/&title=数理方法笔记---PDE部分 - Hexo&summary="
           
           >
           
@@ -2747,11 +2711,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/01/27/mathematical/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>数理方法笔记---PDE部分</p>
-          <p class='content'>Mathematical PhysicsPartial Differential EquationThe Classes of PDEWe only discuss PDE with two v...</p>
-        </a>
       
+        <a class='next' href='/2024/01/27/mathematical_physics_1/'>
+          <p class='title'>数理方法笔记---复变函数与积分变换部分<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Mathematical PhysicsBased on Qiao Gu’s and Liang’s.
+Complex FunctionBasic DefinitionsFor a comple...</p>
+        </a>
       
     </div>
   
@@ -2766,7 +2731,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/01/27/mathematical_physics_1/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/01/27/mathematical/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2808,7 +2773,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Complex-Function"><span class="toc-text">Complex Function</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-Definitions"><span class="toc-text">Basic Definitions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tips"><span class="toc-text">Tips</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Harmonic-functions"><span class="toc-text">Harmonic functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Taylor-Series"><span class="toc-text">Taylor Series</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Laurent-Series"><span class="toc-text">Laurent Series</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Integrals"><span class="toc-text">Integrals</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Jordan%E2%80%99s-Lemma"><span class="toc-text">Jordan’s Lemma</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Useful-Variable-Changes"><span class="toc-text">Useful Variable Changes</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fourier-Theory"><span class="toc-text">Fourier Theory</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Fourier-Integral"><span class="toc-text">Fourier Integral</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#An-Example"><span class="toc-text">An Example</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fourier-Transfom"><span class="toc-text">Fourier Transfom</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Property"><span class="toc-text">Property</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Two-Examples"><span class="toc-text">Two Examples</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#delta-Function"><span class="toc-text">$\delta$ Function</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#its-FT-Applications"><span class="toc-text">its FT &amp; Applications</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Delta-function-in-concrete-forms"><span class="toc-text">Delta function in concrete forms</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Example-of-delta-function"><span class="toc-text">Example of $\delta$ function</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Apply-Residue-Theorem"><span class="toc-text">Apply Residue Theorem</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Laplacian-Transform"><span class="toc-text">Laplacian Transform</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#LT%E2%80%99s-Properties"><span class="toc-text">LT’s Properties</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Partial-Differential-Equation"><span class="toc-text">Partial Differential Equation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Classes-of-PDE"><span class="toc-text">The Classes of PDE</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Basic-PDE-Example"><span class="toc-text">Basic PDE Example</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Systematic-Process"><span class="toc-text">Systematic Process</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#D%E2%80%99Almbert-Method"><span class="toc-text">D’Almbert Method</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boundary-Condition"><span class="toc-text">Boundary Condition</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Mechanical-Example"><span class="toc-text">Mechanical Example</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Thermodynamical-Example"><span class="toc-text">Thermodynamical Example</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Different-Types-Different-Methods"><span class="toc-text">Different Types, Different Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Homogenous-BC-and-Homogenous-Eq"><span class="toc-text">Homogenous BC and Homogenous Eq</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Homogenous-BC-and-Non-Homogenous-Eq"><span class="toc-text">Homogenous BC and Non-Homogenous Eq</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Fourier-method"><span class="toc-text">Fourier method</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Momentum-Theorem"><span class="toc-text">Momentum Theorem</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Non-Homogenous-BC-and-Homogenous-Eq"><span class="toc-text">Non-Homogenous BC and Homogenous Eq</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Poisson-function"><span class="toc-text">Poisson function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Solve-ODE-a-Hard-Way"><span class="toc-text">Solve ODE a Hard Way</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Sturm-Liouville-Problem"><span class="toc-text">Sturm-Liouville Problem</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Legendre-Equation"><span class="toc-text">Legendre Equation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Bessel-Equation"><span class="toc-text">Bessel Equation</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#The-simple-case"><span class="toc-text">The simple case</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#The-1-2-case"><span class="toc-text">The 1&#x2F;2 case</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#The-tough-case"><span class="toc-text">The tough case</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Appendix"><span class="toc-text">Appendix</span></a></li></ol>
     </div>
   </section>
 
@@ -3459,7 +3424,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"yesyes"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/branch1/","name":"branch1"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/01/27/mathematical_physics_1/","name":"数理方法笔记---复变函数与积分变换部分"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"yesyes","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"yesyes"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"数理方法笔记---复变函数与积分变换部分","description":"yesyes","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/01/27/mathematical_physics_1/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/01/27/mathematical_physics_1/","wordCount":0,"datePublished":"2024-01-27T02:00:22.000Z","dateModified":"2024-01-27T11:18:03.355Z","articleSection":"branch1","keywords":"tag1,tag2","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"yesyes"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/01/27/mathematical/","name":"数理方法笔记---PDE部分"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"yesyes","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"yesyes"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"数理方法笔记---PDE部分","description":"yesyes","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/01/27/mathematical/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/01/27/mathematical/","wordCount":0,"datePublished":"2024-01-27T14:05:02.000Z","dateModified":"2024-01-27T14:28:20.645Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
