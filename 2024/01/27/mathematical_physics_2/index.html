@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/tags/tag1/"/>
+  
+  <link rel="canonical" href="http://example.com/2024/01/27/mathematical_physics_2/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,18 +33,20 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Tag: tag1 - Hexo</title>
+  <title>数理方法笔记---PDE部分 - Hexo</title>
   <meta name="keywords" content="null">
-  <meta desc name="description" content="yesyes - John Doe - Hexo">
+  <meta desc name="description" content="yesyes - me - Hexo">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/tags/tag1/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数理方法笔记---PDE部分">
+<meta property="og:url" content="http://example.com/2024/01/27/mathematical_physics_2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="yesyes">
+<meta property="og:description" content="Mathematical PhysicsPartial Differential EquationThe Classes of PDEWe only discuss PDE with two variables. Basic PDE ExampleWhat matters is to find the characteristics of a PDE (constant coefficient):">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:author" content="John Doe">
+<meta property="article:published_time" content="2024-01-27T14:05:02.000Z">
+<meta property="article:modified_time" content="2024-01-28T03:38:10.028Z">
+<meta property="article:author" content="me">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -60,17 +62,17 @@
   --color-card: #fff;
   --color-text: #444;
   --color-block: #f6f6f6;
-  --color-inlinecode: #c74f00;
+  --color-inlinecode: #d56d28;
   --color-codeblock: #fff7ea;
-  --color-h1: #3a3a3a;
-  --color-h2: #3a3a3a;
-  --color-h3: #333;
+  --color-h1: #444;
+  --color-h2: #444;
+  --color-h3: #444;
   --color-h4: #444;
-  --color-h5: #555;
-  --color-h6: #666;
+  --color-h5: #444;
+  --color-h6: #444;
   --color-p: #444;
   --color-list: #666;
-  --color-list-hl: #30ad91;
+  --color-list-hl: #008ccc;
   --color-meta: #888;
   --color-read-bkg: #e0d8c8;
   --color-read-post: #f8f1e2;
@@ -92,7 +94,7 @@
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background: #3dd9b6;
+  background: #00b0ff;
   cursor: pointer;
   border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -144,7 +146,7 @@ body.modal-active {
   }
 }
 a {
-  color: #2092ec;
+  color: #00bcd4;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.28s ease;
@@ -926,7 +928,7 @@ button {
   -moz-transition: all 0.28s ease;
   -o-transition: all 0.28s ease;
   -ms-transition: all 0.28s ease;
-  color: #3dd9b6;
+  color: #00b0ff;
 }
 .l_header .switcher >li >a:hover {
   border: none;
@@ -1106,7 +1108,7 @@ ul.m-pc >li>a {
 }
 ul.m-pc >li>a:active,
 ul.m-pc >li>a.active {
-  border-bottom: 2px solid #3dd9b6;
+  border-bottom: 2px solid #00b0ff;
 }
 ul.m-pc li:hover >ul.list-v,
 ul.list-v li:hover >ul.list-v {
@@ -1245,7 +1247,7 @@ ul.list-v >li>a:hover {
 }
 .l_header ul.nav-list-h>li >a:active,
 .l_header ul.nav-list-h>li >a.active {
-  color: #3dd9b6;
+  color: #00b0ff;
 }
 .l_header ul.nav-list-h>li:hover>a {
   color: var(--color-list-hl);
@@ -1626,7 +1628,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1706366759779),
+    lastupdate: new Date(1706415405642),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -1646,6 +1648,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       fancybox: {"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.umd.js"},
       
       
+      
+      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","menus.link","hr","menus.darkMode","plugins.articlePage","music"],"options":{"iconPrefix":"fa-solid","articleShowLink":false,"musicAlwaysShow":false},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-solid fa-search","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-solid fa-image","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"help","name":"常见问题","icon":"fa-solid fa-question","link":"https://volantis.js.org/faqs/","group":"link"},{"id":"examples","name":"示例博客","icon":"fa-solid fa-rss","link":"https://volantis.js.org/examples/","group":"link"},{"id":"contributors","name":"加入社区","icon":"fa-solid fa-fan","link":"https://volantis.js.org/contributors/","group":"link"},"hr",{"id":"source_docs","name":"本站源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/volantis-docs/","group":"link"},{"id":"source_theme","name":"主题源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"darkMode":[{"id":"darkMode","name":"暗黑模式","icon":"fa-solid fa-moon","event":"volantis.dark.toggle()","group":"darkMode"}]}}
       
     }
   }
@@ -2071,7 +2075,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
+            <img no-lazy class='logo' src='https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/emoji%20cat.gif'/>
           
           
           
@@ -2087,13 +2091,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博客"
+                href="/" title="主页"
                   
                   
                   
                     active-action="action-home"
                   >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                  <i class='fa-solid fa-rss fa-fw'></i>主页
                 </a>
                 
               </li>
@@ -2162,40 +2166,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-friends"
                   >
                   <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/test/" title="数学"
-                  
-                  
-                  
-                    active-action="action-test"
-                  >
-                  <i class='fa-solid fa-file fa-fw'></i>数学
                 </a>
                 
               </li>
@@ -2225,13 +2195,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博客"
+                href="/" title="主页"
                   
                   
                   
                     active-action="action-home"
                   >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                  <i class='fa-solid fa-rss fa-fw'></i>主页
                 </a>
                 
               </li>
@@ -2306,40 +2276,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
             
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/test/" title="数学"
-                  
-                  
-                  
-                    active-action="action-test"
-                  >
-                  <i class='fa-solid fa-file fa-fw'></i>数学
-                </a>
-                
-              </li>
-            
-          
-            
           </ul>
         </li>
 			</ul>
@@ -2357,7 +2293,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  search' style="display: none;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/t06abqdd.png"></div>
 
@@ -2384,46 +2320,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class='list-h'>
         
           
-            <a href="/v4/getting-started/"
+            <a href="/"
               
               
-              active-action="action-v4getting-started">
-              <p>文档</p>
+              active-action="action-home">
+              <p>主页</p>
             </a>
           
-            <a href="/faqs/"
+            <a href="/categories/"
               
               
-              active-action="action-faqs">
-              <p>帮助</p>
+              active-action="action-categories">
+              <p>分类</p>
             </a>
           
-            <a href="/examples/"
+            <a href="/tags/"
               
               
-              active-action="action-examples">
-              <p>示例</p>
-            </a>
-          
-            <a href="/contributors/"
-              
-              
-              active-action="action-contributors">
-              <p>社区</p>
+              active-action="action-tags">
+              <p>标签</p>
             </a>
           
             <a href="/archives/"
               
               
               active-action="action-archives">
-              <p>博客</p>
+              <p>归档</p>
             </a>
           
-            <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/"
+            <a href="/friends/"
               
               
-              active-action="action-https:githubcomvolantis-xhexo-theme-volantis">
-              <p>源码</p>
+              active-action="action-friends">
+              <p>友链</p>
             </a>
           
         
@@ -2441,25 +2370,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/27/mathematical_physics_1/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/27/mathematical_physics_2/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2468,67 +2381,307 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="yesyes">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/01/27/mathematical_physics_1/"  itemprop="url">
-        数理方法笔记---复变函数与积分变换部分
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        Mathematical PhysicsBased on Qiao Gu’s and Liang’s.
-Complex FunctionBasic DefinitionsFor a complex function $f(z)&#x3D;f(x+iy)&#x3D;u(x,y)+iv(x,y)$, and an interior point $z&#x3D;x+iy$ in its domai...
-      
+    
+      <h1 class="title" itemprop="name headline">
+        数理方法笔记---PDE部分
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' target="_blank" href="https://maythics.github.io/" rel="nofollow noopener">
+    <img itemprop="image" src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/Maythics.gif" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/Maythics.gif" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Maythics</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E7%89%A9%E7%90%86/">物理</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%89%A9%E7%90%86/" itemprop="url"><span itemprop="name">物理</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-01-27T10:00:22+08:00">2024-01-27</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/branch1/">branch1</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/branch1/" itemprop="url"><span itemprop="name">branch1</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-01-27T22:05:02+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jan 27, 2024</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h1 id="Mathematical-Physics"><a href="#Mathematical-Physics" class="headerlink" title="Mathematical Physics"></a>Mathematical Physics</h1><h2 id="Partial-Differential-Equation"><a href="#Partial-Differential-Equation" class="headerlink" title="Partial Differential Equation"></a>Partial Differential Equation</h2><h3 id="The-Classes-of-PDE"><a href="#The-Classes-of-PDE" class="headerlink" title="The Classes of PDE"></a>The Classes of PDE</h3><p>We only discuss PDE with two variables.</p>
+<h4 id="Basic-PDE-Example"><a href="#Basic-PDE-Example" class="headerlink" title="Basic PDE Example"></a>Basic PDE Example</h4><p>What matters is to find the characteristics of a PDE (<strong>constant</strong> coefficient):<br>$$<br>\mathcal{L}(u)&#x3D;0<br>$$ where $$<br>\mathcal{L}&#x3D;a\frac{\partial^2 }{\partial x^2}+2b\frac{\partial^2 }{\partial x\partial y}+c\frac{\partial^2 }{\partial y^2}<br>$$<br>If we find the characteristic, then the equation become <strong>single variable equation</strong> of the characteristic.<br>To achieve this, we factorize the above equation:</p>
+<p>$$<br>\mathcal{L}&#x3D;\left(\frac{b+\sqrt{\Delta }}{c^{1&#x2F;2}}\dfrac{\partial }{\partial x}+c^{1&#x2F;2}\dfrac{\partial }{\partial y}\right) \left(\frac{b-\sqrt{\Delta }}{c^{1&#x2F;2}}\dfrac{\partial }{\partial x}+c^{1&#x2F;2}\dfrac{\partial }{\partial y}\right)<br>$$</p>
+<p>where $\Delta:&#x3D;b^2-ac$<br>Note that the two factors are commutative, hence if $\Delta\neq 0$, the two factors implies two characteristics separately.<br>If $\Delta &#x3D;0$, there’s only one characteristic line.<br>And the characteristic is given by<br>$$<br>\frac{dy}{dx}&#x3D;\frac{b\pm \sqrt{\Delta}}{a}<br>$$<br>Because any $x, y$ with this relation (i.e. $y(x)$) would imply $\mathcal{L}&#x3D;0$ and the $u(x,y)$ actually becomes $u(x,y(x))$, single valued.</p>
+<p>To achieve the <strong>canonical form</strong> of the second order PDE, we import such variables:$\xi&#x3D;\sqrt{c}x-\frac{b}{\sqrt{c}}y;\eta &#x3D;\frac{1}{\sqrt{c}}y$.<br>$$<br>\mathcal{L}&#x3D;\left(\frac{b+\sqrt{\Delta }}{c^{1&#x2F;2}}\sqrt{c}\frac{\partial }{\partial \xi}+c^{1&#x2F;2}\frac{-b}{\sqrt{c}}\frac{\partial }{\partial \xi}+c^{1&#x2F;2}\frac{1}{\sqrt{c}}\frac{\partial}{\partial \eta}\right)\times<br>$$<br>$$<br>\left(\frac{b-\sqrt{\Delta }}{c^{1&#x2F;2}}\sqrt{c}\frac{\partial }{\partial \xi}+c^{1&#x2F;2}\frac{-b}{\sqrt{c}}\frac{\partial }{\partial \xi}+c^{1&#x2F;2}\frac{1}{\sqrt{c}}\frac{\partial}{\partial \eta}\right)<br>$$<br>$$<br>&#x3D;\left(\sqrt{\Delta}\frac{\partial}{\partial \xi}+\partial \eta \right)\left(-\sqrt{\Delta}\frac{\partial}{\partial \xi}+\partial \eta \right)&#x3D;-\Delta \frac{\partial^2}{\partial \xi^2}+\frac{\partial^2}{\partial \eta^2}<br>$$</p>
+<h4 id="Systematic-Process"><a href="#Systematic-Process" class="headerlink" title="Systematic Process"></a>Systematic Process</h4><p>The equation is:<br>$$<br>\mathcal{L}(u)&#x3D;g<br>$$ where:<br>$$<br>\mathcal{L}&#x3D;a\frac{\partial^2 }{\partial x^2}+2b\frac{\partial^2 }{\partial x\partial y}+c\frac{\partial^2 }{\partial y^2}+d\frac{\partial }{\partial x}+e\frac{\partial }{\partial y}+f<br>$$<br>Attention: $a$ to $g$ are all functions of $x$ and $y$, they’re <strong>not constant</strong> generally.<br>Replacing the variables by:<br>$$<br>\xi &#x3D;\xi (x,y) \quad \eta&#x3D;\eta (x,y)<br>$$<br>Apply <em>Chain Rule</em> and calculate, we got:<br>$$<br>\left(A\frac{\partial^2 }{\partial \xi^2}+2B\frac{\partial^2 }{\partial \xi\partial \eta}+C\frac{\partial^2 }{\partial \eta^2}+D\frac{\partial }{\partial \xi}+E\frac{\partial }{\partial \eta}+F\right)(u)&#x3D;G<br>$$<br>where $A$ and $C$ have the same form:<br>$$<br>a(\frac{\partial W}{\partial x})^2+2b\frac{\partial W}{\partial x}\frac{\partial W}{\partial y}+c(\frac{\partial W }{\partial y})^2<br>$$<br>In $A$’s case $W&#x3D;\xi$, in $C$’s case $W&#x3D;\eta$.</p>
+<p>Suppose the solution is $W(x,y)&#x3D;\text{const}$, then by <strong>Implicit Function</strong> theorem, $y’&#x3D;-\frac{\partial W &#x2F; \partial x}{\partial W &#x2F; \partial y}$, so that the equation above will be:<br>$$<br>a{y’}^2-2by’+c&#x3D;0 \qquad\therefore y’&#x3D;\frac{b\pm \sqrt{\Delta}}{a}<br>$$<br>If you successfully solve the last differential equation we got $\xi(x,y)&#x3D;\text{const}$ and $\eta(x,y)&#x3D;\text{const}$, which are exactly two characteristics.</p>
+<ol>
+<li><p>If there are two solutions and they are real, that’s typical <em>hyperbola</em> type equation, hence we get:<br>$$<br>\frac{\partial^2 u}{\partial \xi\partial \eta}&#x3D;\dots<br>$$<br>or you may as well adjust it to $\frac{\partial^2 u}{\partial \alpha^2}-\frac{\partial^2 u}{\partial \beta^2}&#x3D;\dots$ by letting $\alpha&#x3D;\frac{1}{2}(\xi+\eta)$ and $\beta&#x3D;\frac{1}{2}(\xi-\eta)$.</p>
+</li>
+<li><p>If there’s only one solution (i.e. <em>parabolic</em>), then another characteristic can be chosen by yourself, as long as it’s independent with the previous one. The one you chose randomly namely is $\eta$, then the equation be like:<br>$$<br>\frac{\partial^2 u}{\partial \eta^2}&#x3D;\dots<br>$$</p>
+</li>
+<li><p>If the solutions $\notin \mathbb{R}$, then extract the $ W$ ‘s <strong>real</strong> and <strong>imaginary</strong> part to be $\xi$ and $\eta$ separately. (it can be proved by simply plugging in that such arrangement is indeed the appropriate solution) And we get <em>elliptical</em> equation:<br>$$<br>\frac{\partial^2 u}{\partial \xi^2}+\frac{\partial^2 u}{\partial \eta^2}&#x3D;\dots<br>$$</p>
+</li>
+</ol>
+<h3 id="D’Almbert-Method"><a href="#D’Almbert-Method" class="headerlink" title="D’Almbert Method"></a>D’Almbert Method</h3><p>To solve the vibrating equation:<br>$$<br>\frac{\partial^2 u}{\partial t^2}-a^2\frac{\partial^2 u}{\partial t^2}&#x3D;0<br>$$<br>written as<br>$$<br>(\frac{\partial }{\partial t}+a\frac{\partial }{\partial x})(\frac{\partial }{\partial t}-a\frac{\partial }{\partial x})u&#x3D;0<br>$$<br>The general solution would be $f_1(x+at)+f_2(x-at)$.<br>$$<br>u(x,t)&#x3D;\frac{1}{2}(\phi(x+at)+\phi(x-at))+\frac{1}{2a}\int_{x-at}^{x+at} \psi(\xi) d\xi<br>$$</p>
+<h3 id="Boundary-Condition"><a href="#Boundary-Condition" class="headerlink" title="Boundary Condition"></a>Boundary Condition</h3><h4 id="Mechanical-Example"><a href="#Mechanical-Example" class="headerlink" title="Mechanical Example"></a>Mechanical Example</h4><img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="blackboard" style="width:400px;height:200px;">
+
+<p>Consider the example of a rod oscillates longitudinal with a spring sticking to its the end.<br>Analysis the small segment in Rod’s part: $u(x)$ represents the small displacement at the point $x$, and note <em>rightward</em> as the positive direction. Calculate the new length of the segment:<br>$$<br>(x+\Delta x+u(x+\Delta x))-(x+u(x))&#x3D;\Delta x+ \frac{\partial u}{\partial x}\Delta x<br>$$ Such that the extension is $\frac{\partial u}{\partial x}\Delta x$. From Hook’s Law, the <strong>relative extension</strong> is proportional to the quotient of the force and sectional area:<br>$$<br>\frac{\frac{\partial u}{\partial x}\Delta x}{\Delta x}&#x3D;\frac{F}{SY} \quad<br>\therefore F&#x3D;SY\frac{\partial u}{\partial x}<br>$$ Analysis the force to get Dynamic Equation:<br>$$<br>SY\left( \frac{\partial u}{\partial x}\left.\right\vert_{x+\Delta x}-\frac{\partial u}{\partial x}\left.\right\vert_{x} \right )&#x3D;\frac{\partial^2 u}{\partial t^2} \rho S \Delta x<br>$$<br>Hence the equation is:<br>$$<br>\frac{Y}{\rho} \frac{\partial^2 u}{\partial x^2}&#x3D;\frac{\partial^2 u}{\partial t^2}<br>$$<br>The Boundary Condition shall be given by analyzing the small segment at the end of the rod, adjust the Dynamic Equation above:<br>$$ F_{x+\Delta x}+SY\left( -\frac{\partial u}{\partial x}\left.\right\vert_{x} \right )&#x3D;\frac{\partial^2 u}{\partial t^2} \rho S \Delta x<br>$$ $$<br>F_{L^+}+SY\left(-\frac{\partial u}{\partial x}\left.\right\vert_{L-\Delta x} \right )&#x3D;\frac{\partial^2 u}{\partial t^2} \rho S \Delta x<br>$$ $$<br>-ku\left.\right\vert_{L}+SY\left( -\frac{\partial u}{\partial x}\left.\right\vert_{L-\Delta x} \right )&#x3D;\frac{\partial^2 u}{\partial t^2} \rho S \Delta x<br>$$<br>Now let $\Delta x\rightarrow 0$, to achieve the final goal:<br>$$<br>-ku\left.\right\vert_{L}+\frac{S}{Y}\left( -\frac{\partial u}{\partial x}\left.\right\vert_{L} \right )&#x3D;0<br>$$<br>When $k$ is large enough, the $\frac{S}{Y}\left( -\frac{\partial u}{\partial L}\left.\right\vert_{L} \right )$ part is $o(k)$ and is legal to be ignored, corresponding the situation with fixed end (the first type, <em>Dirichlet Boundary Condition</em>).<br>When $k$ is small enough, the first section $-ku\left.\right\vert_{L}$ could be ignored and thus verified the Boundary Condition of free end (the second type, <em>Neumann Boundary Condition</em>).<br>In conclusion, the boundary condition exhibits a lower order of small infinitesimal quantity. At the end of the rod, the $\Delta x$ could be regarded as zero, which differs from the interior of the rod.</p>
+<h4 id="Thermodynamical-Example"><a href="#Thermodynamical-Example" class="headerlink" title="Thermodynamical Example"></a>Thermodynamical Example</h4><p>To understand BC, you shall first understand where the equation comes from, for a small fragment of the rod:<br>$$<br>\left(-\kappa S \Delta t \frac{\partial u}{\partial x}\right)\vert_{x}-\left(-\kappa S \Delta t \frac{\partial u}{\partial x}\right)\vert_{x+\Delta x}&#x3D;c(S \Delta x \rho) \Delta u<br>$$<br>which can be simplified to<br>$$<br>\kappa \frac{\partial^2 u}{\partial x^2}&#x3D;c\rho\frac{\Delta u}{\Delta t}<br>$$</p>
+<p>For a rod’s temperature distribution, the Dirichlet BC means the temperature was shown directly. If it states that some hot stream $f(t)$ flows out, that’s the Neumann BC, and the general equation at the right end should be:<br>$$<br>\left(-\kappa S \Delta t \frac{\partial u}{\partial x}\right)|_{L}-\Delta t Sf(t)&#x3D;c(S \Delta x \rho) \Delta u<br>$$</p>
+<p>Eliminate $\Delta t$ and let $\Delta x\to 0$,</p>
+<p>$$<br>-\kappa \frac{\partial u}{\partial x}|_{x&#x3D;L}&#x3D;f(t)<br>$$<br>or more generally<br>$$<br>-\kappa \frac{\partial u}{\partial n}&#x3D;f(t)<br>$$</p>
+<p>where at the left end, $\frac{\partial u}{\partial n}&#x3D;-\frac{\partial u}{\partial x}$, while at the right end $\frac{\partial u}{\partial n}&#x3D;\frac{\partial u}{\partial x}$, the normal $\vec{n}$ is pointing outward of the rod!</p>
+<p>When the end is adiabatic, the BC becomes $\frac{\partial u}{\partial n}&#x3D;0$.</p>
+<p>There’s another possibility that the boundary obeys Newton’s cooling law, which corresponds to the <em>spring</em> in above mechanical example, because the $\text{force} \propto \Delta \text{displacement}$ corresponds to $\text{flow}\propto \Delta\text{temperature}$.</p>
+<p>thus the BC:<br>$$<br>-\kappa\frac{\partial u}{\partial n}\vert_{\text{somewhere}} &#x3D; h(u\vert_{\text{somewhere}}-\theta)<br>$$</p>
+<h3 id="Different-Types-Different-Methods"><a href="#Different-Types-Different-Methods" class="headerlink" title="Different Types, Different Methods"></a>Different Types, Different Methods</h3><h4 id="Homogenous-BC-and-Homogenous-Eq"><a href="#Homogenous-BC-and-Homogenous-Eq" class="headerlink" title="Homogenous BC and Homogenous Eq"></a>Homogenous BC and Homogenous Eq</h4><p>The easiest one, <em>Separate two variables</em> to get an eigen-value problem.</p>
+<h4 id="Homogenous-BC-and-Non-Homogenous-Eq"><a href="#Homogenous-BC-and-Non-Homogenous-Eq" class="headerlink" title="Homogenous BC and Non-Homogenous Eq"></a>Homogenous BC and Non-Homogenous Eq</h4><p>There are two ways to deal with it:</p>
+<h5 id="Fourier-method"><a href="#Fourier-method" class="headerlink" title="Fourier method"></a>Fourier method</h5><p>  Suppose:<br>  $$<br>  u(x,t)&#x3D;\sum_{n&#x3D;1}^{\infty}T_n(t)X_n(x)<br>  $$<br>  where $X_n(x)$ is the eigen-function which we already know, corresponding to BC, like $\sin(\frac{n\pi}{l}x)$. Plug the above formula into the original Eq to derive $T_n(t)$’s differential equation and solve that ode.</p>
+<h5 id="Momentum-Theorem"><a href="#Momentum-Theorem" class="headerlink" title="Momentum Theorem"></a>Momentum Theorem</h5><p>  To implement Momentum Theorem, we have to convert the original Eq to the following form, with <strong>all zero</strong> <em>Initial Condition</em>, if it’s a Vibrating Equation:<br>$$<br>  u_{tt}-a^2 u_{xx}&#x3D;f(x,t)<br>$$<br>$$<br>  u\vert_{x&#x3D;0}&#x3D;0 \quad u\vert_{x&#x3D;l}&#x3D;0<br>$$<br>$$<br>  u\vert_{t&#x3D;0}&#x3D;0 \quad u_t\vert_{t&#x3D;0}&#x3D;0<br>$$<br>  Then we only need to solve:<br>$$<br>  v_{tt}-a^2 v_{xx}&#x3D;0<br>$$<br>$$<br>  v\vert_{x&#x3D;0}&#x3D;0 \quad v\vert_{x&#x3D;l}&#x3D;0<br>$$<br>$$<br>  v\vert_{t&#x3D;\tau}&#x3D;0 \quad v_t\vert_{t&#x3D;\tau}&#x3D;f(x,\tau)<br>$$</p>
+<p>  If it’s the thermodynamical equation<br>  $$<br>  u_{t}-a^2 u_{xx}&#x3D;f(x,t)<br>$$<br>$$<br>  u\vert_{x&#x3D;0}&#x3D;0 \quad u\vert_{x&#x3D;l}&#x3D;0<br>$$<br>$$<br>  u\vert_{t&#x3D;0}&#x3D;0<br>  $$<br>  Then we only need to solve:<br>  $$<br>  v_{t}-a^2 v_{xx}&#x3D;0<br>$$<br>$$<br>  v\vert_{x&#x3D;0}&#x3D;0 \quad v\vert_{x&#x3D;l}&#x3D;0<br>$$<br>$$<br>  v\vert_{t&#x3D;\tau}&#x3D;f(x,\tau)<br>  $$</p>
+<p>  and the final result is:<br>  $$<br>  u(x,t)&#x3D;\int_0^t v(x,t,\tau) d\tau<br>  $$</p>
+<blockquote>
+<p>Understanding:<br>The $f(x,t)$ shall be divided into discrete impulses, exerted on different strings (in an ensemble), and the result is the sum of all strings in this ensemble.</p>
+</blockquote>
+<h4 id="Non-Homogenous-BC-and-Homogenous-Eq"><a href="#Non-Homogenous-BC-and-Homogenous-Eq" class="headerlink" title="Non-Homogenous BC and Homogenous Eq"></a>Non-Homogenous BC and Homogenous Eq</h4><p>The goal is to regain homogenous BC and convert it to the last type of equation.</p>
+<p>Let $u&#x3D;v+w$, where $w$ satisfy homogenous BC. To achieve this, suppose $v&#x3D;A(t)x+B(t)$, and adjust two coefficients to satisfy the non-homogenous BC. As a side-effect ,$w$ has to satisfy the non-homogenous equations but we already know how to solve it.</p>
+<h3 id="Poisson-function"><a href="#Poisson-function" class="headerlink" title="Poisson function"></a>Poisson function</h3><p>The form is:<br>$$<br>\Delta u&#x3D;f(x,y,z)<br>$$</p>
+<p>non-homogenous equations, unfortunately not able to solve by Momentum theorem. Thus we have to develop new method:<br><strong>Guess</strong>! Extract a particular solution out, $u&#x3D;v+w$ transferring the equation into a homogenous one $\Delta v&#x3D;0$. Separate variables……</p>
+<p>Note that if the Poisson function is a two dimensional problem with variables $x$ and $y$, the BC must be fine or else we cannot determine its eigen-function (as you extract a particular solution out and worsen the BC).</p>
+<p>While if the variables are $\rho$ and $\phi$, the solution $w$ you extract must have the sysmetric form in terms of $x$ and $y$, in order to combine it to $x^2+y^2&#x3D;\rho^2$, by the way, you will probably encounter <em>Euler</em> type ode then.</p>
+<p>tips: when encounter Euler type ode, let $\rho&#x3D;e^t \dots$. The general solution would be like:<br>$$<br>v(\rho,\phi)&#x3D;\sum_{m&#x3D;1}^\infty \rho^{m}(A_m \cos m\phi+B_m\sin m\phi)<br>+C_0+D_0\ln \rho+\sum_{m&#x3D;1}^\infty \rho^{-m}(C_m \cos m\phi+D_m\sin m\phi)<br>$$</p>
+<h3 id="Solve-ODE-a-Hard-Way"><a href="#Solve-ODE-a-Hard-Way" class="headerlink" title="Solve ODE a Hard Way"></a>Solve ODE a Hard Way</h3><h4 id="Sturm-Liouville-Problem"><a href="#Sturm-Liouville-Problem" class="headerlink" title="Sturm-Liouville Problem"></a>Sturm-Liouville Problem</h4><p>Consider the operator:<br>$$<br>\mathcal{L}y&#x3D;\frac{d}{dx}\left(p_0(x)\frac{dy}{dx} \right)+p_2(x)y<br>$$<br>It is <em>Hermitian</em> in differential equation sense, because for two functions of $x$ denote as $v$ and $u$:<br>$$<br>\int_a^b v^* (\mathcal{L}u) dx&#x3D;\int_a^b (\mathcal{L}v)^* u dx+\left[ v^* p_0(x) \frac{d u}{dx}- \frac{d v^*}{dx} p_0(x) u\right]_{a}^{b}<br>$$<br>where the $[\dots]$ term would vanish when the boundary condition is appropriate.</p>
+<p>An Hermitian operator enable us to gain orthogonal, complete basis consisting of eigen-functions with real eigenvalues.</p>
+<p>Besides, for an arbitrary ode:<br>$$<br>\mathcal{L}y&#x3D;\frac{d^2 y}{dx^2}+a(x)\frac{dy}{dx}+b(x)y<br>$$<br>multiply by $e^{\int a(\xi)d\xi}$ (denote as $w(x)$).<br>$$<br>w(x)\mathcal{L}y&#x3D;\frac{d}{dx}\left[e^{\int a(\xi)d\xi}\frac{dy}{dx}\right]+\left[b(x)e^{\int a(\xi)d\xi}\right]y<br>$$</p>
+<p>successfully transform into a S-L type. But note that the orthogonality might be different:<br>$$<br>\int_a^b v^* (w(x)\mathcal{L}u) dx&#x3D;\int_a^b (w(x)\mathcal{L}v)^* u dx+\left[ v^* w(x) \frac{d u}{dx}- \frac{d v^*}{dx} w(x) u\right]_{a}^{b}<br>$$</p>
+<h4 id="Legendre-Equation"><a href="#Legendre-Equation" class="headerlink" title="Legendre Equation"></a>Legendre Equation</h4><p>$l$ th order Legendre Eq:</p>
+<p>$$<br>(1-x^2)y’’-2xy’+l(l+1)&#x3D;0<br>$$</p>
+<p><em>Frobenius</em> method by making a series expansion, note that at $x_0&#x3D;0$ the expansion has only positive terms, i.e. <em>Taylor expansion</em>:<br>$$<br>y&#x3D;\sum_{n&#x3D;0}^{\infty}a_nx^n<br>$$</p>
+<p>plug it in and get the recursion relation:<br>$$<br>a_{k+2}&#x3D;\frac{(k-l)(k+l+1)}{(k+2)(k+1)} a_k<br>$$</p>
+<p>The general solution:<br>$$<br>y(x)&#x3D;D_0y_0(x)+D_1y_1(x)<br>$$</p>
+<p>A sad fact is that neither $y_0$ nor $y_1$ is convergent, which can be verified by applying Gaussian Criteria:</p>
+<blockquote>
+<p>Gaussian Criteria<br>the infinite series is $\sum u_k$, denote $$G:&#x3D;\lim_{k\to \infty} k\left(\frac{u_k}{u_{k+1}}-1-\frac{1}{k}\right)$$<br>If $G&lt;1$, the series converges; else if $G&gt;1$, it diverges.<br>Proof: The theorem could be verified by consider $\sum \frac{1}{k\ln k}$</p>
+</blockquote>
+<p>Besides the linear combination of these two diverges too.</p>
+<p>The only solution to fit the real physical situation (avoid infinity) is to convert the infinite series into a <em>polynomial</em> (legendre polynomial).</p>
+<p>when $l&#x3D;2n$, $y_0(x)$ is an $2n$ th order polynomial, while $y_1(x)$ is still infinite, thus we assert $a_1&#x3D;0$ to discard it. The solution shall be $y(x)&#x3D;a_0 y_0(x)$.</p>
+<p>when $l&#x3D;2n+1$, $y_1(x)$ is an $2n+1$ th order polynomial. Then we abandon $y_0(x)$ to get the solution $y(x)&#x3D;a_1 y_1(x)$.</p>
+<h4 id="Bessel-Equation"><a href="#Bessel-Equation" class="headerlink" title="Bessel Equation"></a>Bessel Equation</h4><p>$$<br>x^2y’’+xy’+(x^2-\nu^2)y&#x3D;0<br>$$</p>
+<h5 id="The-simple-case"><a href="#The-simple-case" class="headerlink" title="The simple case"></a>The simple case</h5><p>where $2\nu \notin \mathbb{Z} $</p>
+<p>suppose<br>$$<br>y&#x3D;\sum_{k&#x3D;0}^{\infty} a_k z^{s+k}<br>$$</p>
+<p>In convention we select $a_0\neq 0$</p>
+<p>the $x^s$ term’s coefficient is $(s^2-\nu^2)a_0$, which yields $s&#x3D;\nu$ or $s&#x3D;-\nu$</p>
+<p>thus the recursion relation is:</p>
+<p>$$<br>a_k&#x3D;\frac{-1}{(s+k+\nu)(s+k-\nu)}a_{k-2}<br>$$</p>
+<p>Besides, the $x^{s+1}$ term’s coefficient implies $a_1&#x3D;0$, thus $a_{2k+1}&#x3D;0$</p>
+<p>A great property of Bessel Eq’s solution is that its convergent radii is $\infty$.</p>
+<p>select<br>$$ a_0&#x3D;\frac{1}{2^\nu}\Gamma(\nu+1) $$</p>
+<p>and denote the solution now as $J_\nu (x)$ and $J_{-\nu}(x)$ corresponding to $s&#x3D;\pm \nu$</p>
+<p>$$<br>J_\nu(x)&#x3D;\sum_{m&#x3D;0}^{\infty}\frac{(-1)^m}{m!\Gamma(m+\nu+1)}\left(\frac{x}{2}\right)^{2m+\nu}<br>$$</p>
+<p>$$<br>J_{-\nu}(x)&#x3D;\sum_{m&#x3D;0}^{\infty}\frac{(-1)^m}{m!\Gamma(m-\nu+1)}\left(\frac{x}{2}\right)^{2m-\nu}<br>$$</p>
+<p>They are linear independent, which enables us to form its general solution:<br>$$<br>y(x)&#x3D;C_1 J_\nu(x)+C_2 J_{-\nu}(x)<br>$$</p>
+<h5 id="The-1-2-case"><a href="#The-1-2-case" class="headerlink" title="The 1&#x2F;2 case"></a>The 1&#x2F;2 case</h5><p>when $\nu&#x3D;\frac{1}{2}$, the above formula also satisfies.<br>$$<br>J_{\frac{1}{2}}(x)&#x3D;\sqrt{\frac{2}{\pi x}}\sin x<br>$$<br>$$<br>J_{-\frac{1}{2}}(x)&#x3D;\sqrt{\frac{2}{\pi x}}\cos x<br>$$<br>General solution:<br>$$<br>y(x)&#x3D;C_1 J_\nu(x)+C_2 J_{-\nu}(x)<br>$$</p>
+<h5 id="The-tough-case"><a href="#The-tough-case" class="headerlink" title="The tough case"></a>The tough case</h5><p>$\nu$ is an integer, which implies $J_\nu(x)$ and $J_{-\nu}(x)$ is linear independent.</p>
+<p>The first $J_\nu(x)$ still holds, the purpose is to find another solution which is linear independent with it. <em>Neumann function</em>:<br>$$<br>Y_\nu(x)&#x3D;\lim_{\alpha\to \nu}\frac{J_\alpha(x)\cos\alpha x-J_{-\alpha}(x)}{\sin\alpha x}<br>$$</p>
+<p>thus the solution takes the form of:<br>$$<br>y(x)&#x3D;AJ_\nu(x)+BY_\nu(x)<br>$$</p>
+<h2 id="Appendix"><a href="#Appendix" class="headerlink" title="Appendix"></a>Appendix</h2><p>Derive the Laplacian $\Delta&#x3D;\nabla\cdot\nabla$ in a smarter way:</p>
+<p>first consider the <em>gradient</em>:<br>$$<br>  \nabla u &#x3D;\lim_{\text{Displacement}} \vec{e_r}\frac{\Delta u}{\Delta r}+\vec{e_\theta}\frac{\Delta u}{r\Delta \theta}+\vec{e_\phi}\frac{\Delta u}{r\sin\theta \Delta \phi}<br>$$<br>$$<br>&#x3D;\vec{e_r}\frac{\partial u}{\partial r}+\vec{e_\theta}\frac{1}{r}\frac{\partial u}{\partial \theta}+\vec{e_\phi}\frac{1}{r\sin \theta}\frac{\partial u}{\partial \phi}<br>$$</p>
+<p>Then consider the partial derivative of the three orthonormal vectors $\vec{e_r}$ $\vec{e_\theta}$ $\vec{e_\phi}$ :</p>
+<p>$$<br>\frac{\partial \vec{e_r}}{\partial r}&#x3D;\frac{\partial \vec{e_\theta}}{\partial r}&#x3D;\frac{\partial \vec{e_\phi}}{\partial r}&#x3D;0<br>$$<br>which is obvious because when $\theta$ and $\phi$ are fixed, the three vectors won’t change their directions.</p>
+<p>$$<br>\frac{\partial \vec{e_r}}{\partial \theta}&#x3D;\vec{e_\theta}<br>$$<br>$$<br>\frac{\partial\vec{e_\theta}}{\partial \theta}&#x3D;-\vec{e_r}<br>$$<br>$$<br>\frac{\partial\vec{e_\phi}}{\partial \theta}&#x3D;0<br>$$<br>Which is natural too, because the first two equation is the same as what we learnt earlier in the <em>polar coordinate</em> case. And the last one could be observed directly from the figure, unchanged.</p>
+<p>$$<br>\frac{\partial \vec{e_r}}{\partial \phi}&#x3D;\sin\theta \vec{e_\phi}<br>$$<br>$$<br>\frac{\partial\vec{e_\theta}}{\partial \phi}&#x3D;\cos\theta\vec{e_\phi}<br>$$<br>$$<br>\frac{\partial\vec{e_\phi}}{\partial \phi}&#x3D;-\sin\theta\vec{e_r}-\cos\theta\vec{e_\theta}<br>$$</p>
+<p>The first equation could be verified by drawing the infinitesimal displacement angle. The above $\vec{e_r}$ shift angle $\Delta\alpha$, which satisfy $r\Delta\alpha&#x3D;r\sin\theta\Delta\phi$ , i.e. $\Delta \alpha&#x3D;\sin\theta\Delta\phi$:</p>
+<img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-1.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="fig" style="width:270px;height:270px;">
+for the second equation, much the same:
+<img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-3.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="fig" style="width:270px;height:270px;">
+
+<p>as for $\vec{e_\phi}$, $\Delta\vec{e_\phi}$ points inward to the origin (similar to polar coordinate case), thus the direction is a linear combination of $\vec{e_r}$ and $\vec{e_\phi}$:<br>$$<br>\sin\theta\vec{e_r}+\cos\theta\vec{e_\theta}<br>$$</p>
+<img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-2.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="fig" style="width:200px;height:200px;">
+
+<p>thus the Laplacian:</p>
+<p>$$<br>\nabla\cdot\nabla<br>&#x3D;\nabla\cdot\left(\vec{e_r}\frac{\partial u}{\partial r}+\vec{e_\theta}\frac{1}{r}\frac{\partial u}{\partial \theta}+\vec{e_\phi}\frac{1}{r\sin \theta}\frac{\partial u}{\partial \phi}\right)<br>$$<br>$$<br>&#x3D;\left([\vec{e_r}\frac{\partial }{\partial r}]+[\vec{e_\theta}\frac{1}{r}\frac{\partial }{\partial \theta}]+[\vec{e_\phi}\frac{1}{r\sin \theta}\frac{\partial }{\partial \phi}]\right)<br>$$<br>$$<br>\cdot \left(\vec{e_r}\frac{\partial u}{\partial r}+\vec{e_\theta}\frac{1}{r}\frac{\partial u}{\partial \theta}+\vec{e_\phi}\frac{1}{r\sin \theta}\frac{\partial u}{\partial \phi}\right)<br>$$<br>$$<br>&#x3D;[\frac{\partial^2 u}{\partial r^2}]+[\frac{1}{r}\frac{\partial u}{\partial r}+\frac{1}{r^2}\frac{\partial^2 u}{\partial \theta^2}]<br>$$<br>$$<br>+[\frac{1}{r\sin\theta}(\sin\theta\frac{\partial u}{\partial r}+\cos\theta\frac{1}{r}\frac{\partial u}{\partial\theta}+\frac{1}{r\sin\theta}\frac{\partial^2 u}{\partial \phi^2})]<br>$$</p>
+<p>where three $[\dots]$ linked the corresponding terms to three dot products in divergence.<br>$\square$</p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2024/01/27/mathematical_physics_1/' itemprop="url">
-            Read More
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-01-28T11:38:10+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jan 28, 2024</p>
+  </a>
 </div>
 
-          </div>
         
       
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  </section>
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/01/27/mathematical_physics_2/&title=数理方法笔记---PDE部分 - Hexo&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/01/27/mathematical_physics_2/&title=数理方法笔记---PDE部分 - Hexo&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/01/27/mathematical_physics_2/&title=数理方法笔记---PDE部分 - Hexo&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
-    
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2024/01/27/mathematical_physics_1/'>
+          <p class='title'>数理方法笔记---复变函数与积分变换部分<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Mathematical PhysicsBased on Qiao Gu’s and Liang’s.
+Complex FunctionBasic DefinitionsFor a comple...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
   
 
 
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2024/01/27/mathematical_physics_2/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-  
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2537,155 +2690,48 @@ Complex FunctionBasic DefinitionsFor a complex function $f(z)&#x3D;f(x+iy)&#x3D;
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/Maythics.gif'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Hexo</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1900709924@qq.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Maythics/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/branch1/" href="/categories/branch1/"
-            active-action="action-categoriesbranch1"
-            ><div class='name'>branch1</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/branch1/object-Object/" href="/categories/branch1/object-Object/"
-            active-action="action-categoriesbranch1object-Object"
-            ><div class='name'>[object Object]</div><div class='badge'>(0)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/branch1/object-Object/math-jax/" href="/categories/branch1/object-Object/math-jax/"
-            active-action="action-categoriesbranch1object-Objectmath-jax"
-            ><div class='name'>--math jax</div><div class='badge'>(0)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/branch1/plugins-math-jax/" href="/categories/branch1/plugins-math-jax/"
-            active-action="action-categoriesbranch1plugins-math-jax"
-            ><div class='name'>plugins--math jax</div><div class='badge'>(0)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/branch1/plugins%EF%BC%9A-math-jax/" href="/categories/branch1/plugins%EF%BC%9A-math-jax/"
-            active-action="action-categoriesbranch1pluginsEFBC9A-math-jax"
-            ><div class='name'>plugins：--math jax</div><div class='badge'>(0)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/branch1/plugin%EF%BC%9A-math-jax/" href="/categories/branch1/plugin%EF%BC%9A-math-jax/"
-            active-action="action-categoriesbranch1pluginEFBC9A-math-jax"
-            ><div class='name'>plugin：--math jax</div><div class='badge'>(0)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/branch1plugin%EF%BC%9A-math-jax/" href="/categories/branch1plugin%EF%BC%9A-math-jax/"
-            active-action="action-categoriesbranch1pluginEFBC9A-math-jax"
-            ><div class='name'>branch1plugin：--math jax</div><div class='badge'>(0)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/tag1/" style="font-size: 14px; color: #999">tag1</a> <a href="/tags/tag2/" style="font-size: 14px; color: #999">tag2</a>
-    </div>
-  </section>
-
-
-    
-  
-
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Partial-Differential-Equation"><span class="toc-text">Partial Differential Equation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Classes-of-PDE"><span class="toc-text">The Classes of PDE</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Basic-PDE-Example"><span class="toc-text">Basic PDE Example</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Systematic-Process"><span class="toc-text">Systematic Process</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#D%E2%80%99Almbert-Method"><span class="toc-text">D’Almbert Method</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boundary-Condition"><span class="toc-text">Boundary Condition</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Mechanical-Example"><span class="toc-text">Mechanical Example</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Thermodynamical-Example"><span class="toc-text">Thermodynamical Example</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Different-Types-Different-Methods"><span class="toc-text">Different Types, Different Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Homogenous-BC-and-Homogenous-Eq"><span class="toc-text">Homogenous BC and Homogenous Eq</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Homogenous-BC-and-Non-Homogenous-Eq"><span class="toc-text">Homogenous BC and Non-Homogenous Eq</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Fourier-method"><span class="toc-text">Fourier method</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Momentum-Theorem"><span class="toc-text">Momentum Theorem</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Non-Homogenous-BC-and-Homogenous-Eq"><span class="toc-text">Non-Homogenous BC and Homogenous Eq</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Poisson-function"><span class="toc-text">Poisson function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Solve-ODE-a-Hard-Way"><span class="toc-text">Solve ODE a Hard Way</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Sturm-Liouville-Problem"><span class="toc-text">Sturm-Liouville Problem</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Legendre-Equation"><span class="toc-text">Legendre Equation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Bessel-Equation"><span class="toc-text">Bessel Equation</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#The-simple-case"><span class="toc-text">The simple case</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#The-1-2-case"><span class="toc-text">The 1&#x2F;2 case</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#The-tough-case"><span class="toc-text">The tough case</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Appendix"><span class="toc-text">Appendix</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2713,13 +2759,14 @@ Complex FunctionBasic DefinitionsFor a complex function $f(z)&#x3D;f(x+iy)&#x3D;
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2847,6 +2894,358 @@ Complex FunctionBasic DefinitionsFor a complex function $f(z)&#x3D;f(x+iy)&#x3D;
 
 
 
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="rightmenu-wrapper">
+  <ul class="list-v rightmenu" id="rightmenu-content">
+    
+  <li class='navigation menuNavigation-Content'>
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="history.forward()"><i class="fa-solid fa-arrow-right fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="window.location.reload()"><i class="fa-solid fa-redo fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)"><i class="fa-solid fa-arrow-up fa-fw"></i></a>
+
+
+  </li>
+
+
+    <hr class="menuLoad-Content" >
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyPaste" data-event="copyPaste" data-group="inputBox">
+      <i class="fa-solid fa-paste fa-fw"></i>
+      粘贴文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyAll" data-event="copyAll" data-group="inputBox">
+      <i class="fa-solid fa-object-ungroup fa-fw"></i>
+      全选文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyCut" data-event="copyCut" data-group="inputBox">
+      <i class="fa-solid fa-cut fa-fw"></i>
+      剪切文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyText" data-event="copyText" data-group="seletctText">
+      <i class="fa-solid fa-copy fa-fw"></i>
+      复制文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="searchWord" data-event="OpenSearch(__text__)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      站内搜索
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="bingSearch" data-event="window.open(`https://cn.bing.com/search?q=${__text__}`)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      必应搜索
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="openTab" data-event="window.open(__link__)" data-group="elementCheck">
+      <i class="fa-solid fa-external-link-square-alt fa-fw"></i>
+      新标签页打开
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyLink" data-event="copyLink" data-group="elementCheck">
+      <i class="fa-solid fa-link fa-fw"></i>
+      复制链接地址
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyImg" data-event="copyImg" data-group="elementImage">
+      <i class="fa-solid fa-image fa-fw"></i>
+      复制图片
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="googleImg" data-event="window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)" data-group="elementImage">
+      <i class="fa-solid fa-images fa-fw"></i>
+      谷歌识图
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="help" target="_blank" rel="noopener" href="https://volantis.js.org/faqs/" data-group="link">
+      <i class="fa-solid fa-question fa-fw"></i>
+      常见问题
+    </a>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="examples" target="_blank" rel="noopener" href="https://volantis.js.org/examples/" data-group="link">
+      <i class="fa-solid fa-rss fa-fw"></i>
+      示例博客
+    </a>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="contributors" target="_blank" rel="noopener" href="https://volantis.js.org/contributors/" data-group="link">
+      <i class="fa-solid fa-fan fa-fw"></i>
+      加入社区
+    </a>
+  </li>
+
+
+
+    <hr class="menuLoad-Content" >
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="source_docs" target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs/" data-group="link">
+      <i class="fa-solid fa-code-branch fa-fw"></i>
+      本站源码
+    </a>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
+      <i class="fa-solid fa-code-branch fa-fw"></i>
+      主题源码
+    </a>
+  </li>
+
+
+
+    <hr class="menuLoad-Content" >
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="darkMode" data-event="volantis.dark.toggle()" data-group="darkMode">
+      <i class="fa-solid fa-moon fa-fw"></i>
+      暗黑模式
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="printMode" data-event="printMode" data-group="articlePage">
+      <i class="fa-solid fa-print fa-fw"></i>
+      打印页面
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="readMode" data-event="readMode" data-group="articlePage">
+      <i class="fa-solid fa-book-open fa-fw"></i>
+      阅读模式
+    </span>
+  </li>
+
+
+<div id="menuMusic">
+  <li class='music name menuOption-Content'>
+    <p class='nav music-title fix-cursor-default'></p>
+  </li>
+  <li class='music ctrl'>
+    <a class='nav icon-only backward fix-cursor-default' href="/" onclick="return false;" title="backward">
+      <i class='fa-solid fa-step-backward fa-fw'></i>
+    </a>
+    <a class='nav icon-only toggle fix-cursor-default' href="/" onclick="return false;" title="toggle">
+      <i class='fa-solid fa-play fa-fw'></i>
+    </a>
+    <a class='nav icon-only forward fix-cursor-default' href="/" onclick="return false;" title="forward">
+      <i class='fa-solid fa-step-forward fa-fw'></i>
+    </a>
+  </li>
+  <li class='music volume'>
+    <div class='nav volume'>
+      <div class="aplayer-volume-bar-wrap">
+        <div class="aplayer-volume-bar fix-cursor-pointer">
+          <div class="aplayer-volume"></div>
+          <i class='left fa-solid fa-volume-off fa-fw'></i>
+          <i class='right fa-solid fa-volume-up fa-fw'></i>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+
+  </ul>
+</div>
+<script src="/js/plugins/rightMenus.js"></script>
+<script>
+  const RightMenusFunction = {};
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  //RightMenusFunction['copyPaste'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyAll'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyCut'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyText'] = (fun) => {fun()}
+
+
+
+
+
+  RightMenusFunction['searchWord'] = (__text__) => {OpenSearch(__text__)}
+
+
+
+
+
+  RightMenusFunction['bingSearch'] = (__text__) => {window.open(`https://cn.bing.com/search?q=${__text__}`)}
+
+
+
+
+
+  RightMenusFunction['openTab'] = (__link__) => {window.open(__link__)}
+
+
+
+
+
+  //RightMenusFunction['copyLink'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyImg'] = (fun) => {fun()}
+
+
+
+
+
+  RightMenusFunction['googleImg'] = (__link__) => {window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  RightMenusFunction['darkMode'] = () => {volantis.dark.toggle()}
+
+
+
+
+
+  //RightMenusFunction['printMode'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['readMode'] = (fun) => {fun()}
+
+
+
+
+
+</script>
 
 
 
@@ -3116,6 +3515,73 @@ Complex FunctionBasic DefinitionsFor a complex function $f(z)&#x3D;f(x+iy)&#x3D;
 <!-- pjax 标签必须存在于所有页面 否则 pjax error -->
 <pjax>
 
+        <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = "https://unpkg.com/volantis-static@0.0.1654736714924/libs/mathjax/es5/tex-mml-chtml.js";
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typesetPromise();
+  }
+</script>
+
+        <script>
+  // https://www.micdz.cn/article/katex-on-volantis/
+  if (typeof renderMathInElement == "undefined") {
+    volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.css")
+    function pjax_katex() {
+      volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/contrib/auto-render.min.js").then(()=>{
+        renderMathInElement(document.body);
+      })
+    }
+    volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.js").then(pjax_katex)
+    volantis.pjax.push(pjax_katex)
+  }
+</script>
+
+
 </pjax>
 
 <script>
@@ -3247,7 +3713,7 @@ Complex FunctionBasic DefinitionsFor a complex function $f(z)&#x3D;f(x+iy)&#x3D;
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"yesyes"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/tags/tag1/","name":"tag1"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"yesyes","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"yesyes"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"yesyes","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"me","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"yesyes"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/物理/","name":"物理"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/01/27/mathematical_physics_2/","name":"数理方法笔记---PDE部分"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"yesyes","author":{"@type":"Person","name":"me","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"yesyes"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"数理方法笔记---PDE部分","description":"yesyes","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/01/27/mathematical_physics_2/"},"author":{"@type":"Person","name":"me","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/01/27/mathematical_physics_2/","wordCount":0,"datePublished":"2024-01-27T14:05:02.000Z","dateModified":"2024-01-28T03:38:10.028Z","articleSection":"物理","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

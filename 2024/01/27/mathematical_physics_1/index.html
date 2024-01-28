@@ -34,8 +34,8 @@
   <!-- feed -->
   <!-- 页面元数据 -->
   <title>数理方法笔记---复变函数与积分变换部分 - Hexo</title>
-  <meta name="keywords" content="tag1,tag2,null">
-  <meta desc name="description" content="yesyes - John Doe - Hexo">
+  <meta name="keywords" content="null">
+  <meta desc name="description" content="yesyes - me - Hexo">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="数理方法笔记---复变函数与积分变换部分">
@@ -45,10 +45,8 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-01-27T02:00:22.000Z">
-<meta property="article:modified_time" content="2024-01-27T14:44:47.925Z">
-<meta property="article:author" content="John Doe">
-<meta property="article:tag" content="tag1">
-<meta property="article:tag" content="tag2">
+<meta property="article:modified_time" content="2024-01-28T03:38:03.517Z">
+<meta property="article:author" content="me">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -64,17 +62,17 @@
   --color-card: #fff;
   --color-text: #444;
   --color-block: #f6f6f6;
-  --color-inlinecode: #c74f00;
+  --color-inlinecode: #d56d28;
   --color-codeblock: #fff7ea;
-  --color-h1: #3a3a3a;
-  --color-h2: #3a3a3a;
-  --color-h3: #333;
+  --color-h1: #444;
+  --color-h2: #444;
+  --color-h3: #444;
   --color-h4: #444;
-  --color-h5: #555;
-  --color-h6: #666;
+  --color-h5: #444;
+  --color-h6: #444;
   --color-p: #444;
   --color-list: #666;
-  --color-list-hl: #30ad91;
+  --color-list-hl: #008ccc;
   --color-meta: #888;
   --color-read-bkg: #e0d8c8;
   --color-read-post: #f8f1e2;
@@ -96,7 +94,7 @@
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background: #3dd9b6;
+  background: #00b0ff;
   cursor: pointer;
   border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -148,7 +146,7 @@ body.modal-active {
   }
 }
 a {
-  color: #2092ec;
+  color: #00bcd4;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.28s ease;
@@ -930,7 +928,7 @@ button {
   -moz-transition: all 0.28s ease;
   -o-transition: all 0.28s ease;
   -ms-transition: all 0.28s ease;
-  color: #3dd9b6;
+  color: #00b0ff;
 }
 .l_header .switcher >li >a:hover {
   border: none;
@@ -1110,7 +1108,7 @@ ul.m-pc >li>a {
 }
 ul.m-pc >li>a:active,
 ul.m-pc >li>a.active {
-  border-bottom: 2px solid #3dd9b6;
+  border-bottom: 2px solid #00b0ff;
 }
 ul.m-pc li:hover >ul.list-v,
 ul.list-v li:hover >ul.list-v {
@@ -1249,7 +1247,7 @@ ul.list-v >li>a:hover {
 }
 .l_header ul.nav-list-h>li >a:active,
 .l_header ul.nav-list-h>li >a.active {
-  color: #3dd9b6;
+  color: #00b0ff;
 }
 .l_header ul.nav-list-h>li:hover>a {
   color: var(--color-list-hl);
@@ -1630,7 +1628,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1706366759779),
+    lastupdate: new Date(1706415405642),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -1650,6 +1648,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       fancybox: {"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.umd.js"},
       
       
+      
+      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","menus.link","hr","menus.darkMode","plugins.articlePage","music"],"options":{"iconPrefix":"fa-solid","articleShowLink":false,"musicAlwaysShow":false},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-solid fa-search","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-solid fa-image","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"help","name":"常见问题","icon":"fa-solid fa-question","link":"https://volantis.js.org/faqs/","group":"link"},{"id":"examples","name":"示例博客","icon":"fa-solid fa-rss","link":"https://volantis.js.org/examples/","group":"link"},{"id":"contributors","name":"加入社区","icon":"fa-solid fa-fan","link":"https://volantis.js.org/contributors/","group":"link"},"hr",{"id":"source_docs","name":"本站源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/volantis-docs/","group":"link"},{"id":"source_theme","name":"主题源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"darkMode":[{"id":"darkMode","name":"暗黑模式","icon":"fa-solid fa-moon","event":"volantis.dark.toggle()","group":"darkMode"}]}}
       
     }
   }
@@ -2075,7 +2075,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
+            <img no-lazy class='logo' src='https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/emoji%20cat.gif'/>
           
           
           
@@ -2091,13 +2091,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博客"
+                href="/" title="主页"
                   
                   
                   
                     active-action="action-home"
                   >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                  <i class='fa-solid fa-rss fa-fw'></i>主页
                 </a>
                 
               </li>
@@ -2166,40 +2166,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-friends"
                   >
                   <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/test/" title="数学"
-                  
-                  
-                  
-                    active-action="action-test"
-                  >
-                  <i class='fa-solid fa-file fa-fw'></i>数学
                 </a>
                 
               </li>
@@ -2229,13 +2195,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博客"
+                href="/" title="主页"
                   
                   
                   
                     active-action="action-home"
                   >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                  <i class='fa-solid fa-rss fa-fw'></i>主页
                 </a>
                 
               </li>
@@ -2304,40 +2270,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-friends"
                   >
                   <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/test/" title="数学"
-                  
-                  
-                  
-                    active-action="action-test"
-                  >
-                  <i class='fa-solid fa-file fa-fw'></i>数学
                 </a>
                 
               </li>
@@ -2388,46 +2320,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class='list-h'>
         
           
-            <a href="/v4/getting-started/"
+            <a href="/"
               
               
-              active-action="action-v4getting-started">
-              <p>文档</p>
+              active-action="action-home">
+              <p>主页</p>
             </a>
           
-            <a href="/faqs/"
+            <a href="/categories/"
               
               
-              active-action="action-faqs">
-              <p>帮助</p>
+              active-action="action-categories">
+              <p>分类</p>
             </a>
           
-            <a href="/examples/"
+            <a href="/tags/"
               
               
-              active-action="action-examples">
-              <p>示例</p>
-            </a>
-          
-            <a href="/contributors/"
-              
-              
-              active-action="action-contributors">
-              <p>社区</p>
+              active-action="action-tags">
+              <p>标签</p>
             </a>
           
             <a href="/archives/"
               
               
               active-action="action-archives">
-              <p>博客</p>
+              <p>归档</p>
             </a>
           
-            <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/"
+            <a href="/friends/"
               
               
-              active-action="action-https:githubcomvolantis-xhexo-theme-volantis">
-              <p>源码</p>
+              active-action="action-friends">
+              <p>友链</p>
             </a>
           
         
@@ -2475,9 +2400,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
             
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="/" rel="nofollow">
-    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">请设置文章作者</p>
+  <a itemprop="url" class='author' target="_blank" href="https://maythics.github.io/" rel="nofollow noopener">
+    <img itemprop="image" src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/Maythics.gif" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/Maythics.gif" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Maythics</p>
   </a>
 </div>
 
@@ -2487,10 +2412,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/branch1/">branch1</a>
+    <a class="category-link" href="/categories/%E7%89%A9%E7%90%86/">物理</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/branch1/" itemprop="url"><span itemprop="name">branch1</span></a>
+        <a href="/categories/%E7%89%A9%E7%90%86/" itemprop="url"><span itemprop="name">物理</span></a>
       </span>
     
   </div>
@@ -2548,7 +2473,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>If you don’t convert trigonometrical functions (boundless) into exponential functions, the Residue Theorem is not allowed to use! Because the validness is guaranteed by Jordan’s Lemma which require exponential form.</p>
 <h2 id="Fourier-Theory"><a href="#Fourier-Theory" class="headerlink" title="Fourier Theory"></a>Fourier Theory</h2><h3 id="Fourier-Integral"><a href="#Fourier-Integral" class="headerlink" title="Fourier Integral"></a>Fourier Integral</h3><p>$$<br>f(x)&#x3D;\int_0^\infty [A(\omega)\cos\omega x+B(\omega) \sin\omega x]d\omega<br>$$ where<br>$$<br>A(\omega)&#x3D;\frac{1}{\pi}\int_{-\infty}^\infty f(x)\cos\omega x dx<br>$$<br>$$<br>B(\omega)&#x3D;\frac{1}{\pi}\int_{-\infty}^\infty f(x)\sin\omega x dx<br>$$</p>
 <p>Q: why is the interval like this?<br>A: $f(x)&#x3D;\int_0^\infty\cdots$,comes from the Fourier series $\sum\limits_0^\infty$.<br>$A(\omega),B(\omega)&#x3D;\int_{-\infty}^{\infty}$ comes from $\lim\limits_{L\rightarrow\infty}\int_{-L}^L$.</p>
-<h4 id="An-Example"><a href="#An-Example" class="headerlink" title="An Example"></a>An Example</h4><p>Dirichlet integral :<br>considering<br> the function below and its Fourier integral<br>$$<br>f(x)&#x3D;\begin{cases}<br>  0,&amp;(|x|\leq1)\<br>  1,&amp;(|x|&gt;1)<br>\end{cases}<br>$$ we get $$<br>\int_0^\infty\frac{\sin\omega}{\omega}d\omega&#x3D;\frac{\pi}{2}<br>$$</p>
+<h4 id="An-Example"><a href="#An-Example" class="headerlink" title="An Example"></a>An Example</h4><p>Dirichlet integral :<br>considering<br> the function below and its Fourier integral<br>$$<br>f(x)&#x3D;\begin{cases}<br>  0,&amp;(|x|\leq1)\\<br>  1,&amp;(|x|&gt;1)<br>\end{cases}<br>$$ we get $$<br>\int_0^\infty\frac{\sin\omega}{\omega}d\omega&#x3D;\frac{\pi}{2}<br>$$</p>
 <p>This could be derived later by FT more generally.</p>
 <h3 id="Fourier-Transfom"><a href="#Fourier-Transfom" class="headerlink" title="Fourier Transfom"></a>Fourier Transfom</h3><p>$$<br>F(\omega)&#x3D;\int_{-\infty}^\infty f(x) e^{-i\omega x}dx<br>$$<br>$$<br>f(x)&#x3D;\frac{1}{2\pi}\int_{-\infty}^\infty F(\omega) e^{i\omega x}d\omega<br>$$</p>
 <h4 id="Property"><a href="#Property" class="headerlink" title="Property"></a>Property</h4><ul>
@@ -2565,7 +2490,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>convolution</p>
 </li>
 </ul>
-<p>The methods to verify properties involving integral and derivative are similar to <a href="#laplacian-transform">Laplacian Transform</a>, the detail of it will be shown there.</p>
+<p>The methods to verify properties involving integral and derivative are similar to <a href="#">Laplacian Transform</a>, the detail of it will be shown there.</p>
 <h4 id="Two-Examples"><a href="#Two-Examples" class="headerlink" title="Two Examples"></a>Two Examples</h4><p>when f is even<br>$f(x)*\cos\omega x&#x3D;F(\omega)\cos\omega x$<br>$f(x)*\sin\omega x&#x3D;F(\omega)\sin\omega x$</p>
 <h3 id="delta-Function"><a href="#delta-Function" class="headerlink" title="$\delta$ Function"></a>$\delta$ Function</h3><p>We view $\delta$ function as a generalized function.</p>
 <p>In the form $\int f(x) dy$, what exactly does $dy$ mean? A mathematical perspective is the <strong>measure</strong> $\sigma$ of a set. Riemann coincidentally defined his integral using the simplest measure namely $x_{i+1}-x_i$ , i.e. the measure of interval $[x_i,x_{i+1})$ in partition. When $\delta (x)$ is entailed, $\int f(x)d\sigma$ shall be viewed as a Lebesgue Integral where only $f(0)$ gained a measure of 1, any other value weighed 0, such that the integral $&#x3D;\Sigma f(x_i) \sigma_i&#x3D;f(0)\times 1&#x3D;f(0)$.</p>
@@ -2579,10 +2504,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>the normalized eigen-vector of momentum is:</p>
 <p>$$<br>\psi_p(x)&#x3D;\frac{1}{\sqrt{2\pi\hbar}}e^{\frac{i}{\hbar}px}<br>$$</p>
 <p>as for its completeness, considering the Fourier transform of $f(x)$:</p>
-<p>$$<br>f(x)<br>&#x3D;\frac{1}{2\pi}\int_{-\infty}^{\infty}F(\omega)e^{i\omega x}d\omega<br>$$<br>$$<br>&#x3D;\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}F(\omega)e^{(i&#x2F;\hbar)(\hbar\omega) x}d(\hbar\omega)<br>$$<br>$$<br>&#x3D;\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}F(\omega)e^{(i&#x2F;\hbar)(\hbar\omega) x}d(\hbar\omega)<br>$$<br>$$<br>&#x3D;\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}\tilde{F}(p)e^{(i&#x2F;\hbar)p x}dp<br>$$<br>$$<br>&#x3D;\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty}\tilde{F}(p)\psi_p(x)dp<br>$$</p>
+<p>$$<br>f(x)<br>&#x3D;\frac{1}{2\pi}\int_{-\infty}^{\infty}F(\omega)e^{i\omega x}d\omega<br>&#x3D;\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}F(\omega)e^{(i&#x2F;\hbar)(\hbar\omega) x}d(\hbar\omega)<br>$$<br>$$<br>&#x3D;\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}F(\omega)e^{(i&#x2F;\hbar)(\hbar\omega) x}d(\hbar\omega)<br>&#x3D;\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}\tilde{F}(p)e^{(i&#x2F;\hbar)p x}dp<br>$$<br>$$<br>&#x3D;\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty}\tilde{F}(p)\psi_p(x)dp<br>$$</p>
 <p>where<br>$$<br>\tilde{F}(p)&#x3D;F\left(\frac{p}{\hbar}\right)&#x3D;\int_{-\infty}^{\infty}f(x)e^{-i\frac{p}{\hbar}}dx<br>$$</p>
 <h4 id="Delta-function-in-concrete-forms"><a href="#Delta-function-in-concrete-forms" class="headerlink" title="Delta function in concrete forms"></a>Delta function in concrete forms</h4><p>common ones:</p>
-<p>$$<br>V(x)&#x3D;\lim\limits_{\beta\rightarrow\infty}\frac{\sin\beta x}{\pi x}<br>$$</p>
+<div id="delta"></div>
+$$
+V(x)=\lim\limits_{\beta\rightarrow\infty}\frac{\sin\beta x}{\pi x}
+$$
+
 <p>$$<br>G(x)&#x3D;\lim\limits_{\beta\rightarrow 0}\frac{1}{\sqrt{\pi \beta}}\exp({-\frac{x^2}{\beta}})<br>$$</p>
 <p>$$ L(x)&#x3D;\lim\limits_{\beta\rightarrow 0}\frac{1}{\pi}\frac{\beta}{x^2+\beta^2}<br>$$</p>
 <p>Dirichlet Kernel</p>
@@ -2590,23 +2519,29 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>and</p>
 <p>$$<br>\lim\limits_{m\rightarrow\infty}D_m(x)&#x3D;\delta(x)<br>$$</p>
 <ul>
-<li>The fatal loophole in Qiao Gu’s proof of Dirichlet theorem is that he apply the property of selection.<br>Delta function here corresponds to Good-Kernel in math, which requires three essential aspects to satisfy, while Dirichlet Kernel violates one of them. So Dirichlet Kernel cannot be used to approach a function, i.e. cannot apply the property of selection.</li>
+<li>The fatal loophole in Qiao Gu’s proof of Dirichlet theorem is that he apply the property of selection.</li>
 </ul>
+<p>Delta function here corresponds to Good-Kernel in math, which requires three essential aspects to satisfy, while Dirichlet Kernel violates one of them. So Dirichlet Kernel cannot be used to approach a function, i.e. cannot apply the property of selection.</p>
 <h4 id="Example-of-delta-function"><a href="#Example-of-delta-function" class="headerlink" title="Example of $\delta$ function"></a>Example of $\delta$ function</h4><p>Though $\sin kx , \cos kx$ aren’t absolutely integrable, but we can discuss their Fourier Transform in physics.</p>
-<p>$$<br>  F_{\sin}(\omega)&#x3D;\int_{-\infty}^{\infty}\sin kx e^{-i\omega x}dx<br>  $$<br>$$<br>  &#x3D;\frac{1}{2i}\int_{-\infty}^{\infty}(e^{ikx}-e^{-ikx})e^{-i\omega x}dx<br> $$<br>$$<br>  &#x3D;i\pi[\delta(\omega+k)-\delta(\omega-k)]<br>  $$<br>$$<br>  F_{\cos}(\omega)&#x3D;\int_{-\infty}^{\infty}\cos kx e^{-i\omega x}dx<br>  $$<br>$$<br>  &#x3D;\frac{1}{2}\int_{-\infty}^{\infty}(e^{ikx}+e^{-ikx})e^{-i\omega x}dx<br>$$<br>$$<br>  &#x3D;\pi[\delta(\omega+k)+\delta(\omega-k)]<br>$$</p>
+<p>$$<br>  F_{\sin}(\omega)&#x3D;\int_{-\infty}^{\infty}\sin kx e^{-i\omega x}dx<br>  &#x3D;\frac{1}{2i}\int_{-\infty}^{\infty}(e^{ikx}-e^{-ikx})e^{-i\omega x}dx<br>  &#x3D;i\pi[\delta(\omega+k)-\delta(\omega-k)]<br>  $$<br>$$<br>  F_{\cos}(\omega)&#x3D;\int_{-\infty}^{\infty}\cos kx e^{-i\omega x}dx<br>  &#x3D;\frac{1}{2}\int_{-\infty}^{\infty}(e^{ikx}+e^{-ikx})e^{-i\omega x}dx<br>  &#x3D;\pi[\delta(\omega+k)+\delta(\omega-k)]<br>$$</p>
 <p>important transform pairs</p>
 <p>$$<br>\mathscr{F}[\frac{1}{1+x^2}]\rightleftharpoons e^{-|x|}<br>$$</p>
 <p>Gauss function: $g(x)&#x3D;\exp({-\frac{ax^2}{2}})$</p>
-<p>$$<br> G(\omega)&#x3D;\int_{-\infty}^{\infty}\exp({-\frac{ax^2}{2}}) e^{-i\omega x}dx<br>$$<br>$$<br> &#x3D;\dots(\text{integration by parts})<br>$$<br>$$<br> &#x3D;\frac{ia}{\omega}\mathscr{F}[x\exp(-\frac{ax^2}{2})]<br> &#x3D;\frac{ia}{\omega}i\frac{d}{d\omega}G(\omega)<br>$$</p>
+<p>$$<br> G(\omega)&#x3D;\int_{-\infty}^{\infty}\exp({-\frac{ax^2}{2}}) e^{-i\omega x}dx<br> &#x3D;\dots(\text{integration by parts})<br>$$<br>$$<br> &#x3D;\frac{ia}{\omega}\mathscr{F}[x\exp(-\frac{ax^2}{2})]<br> &#x3D;\frac{ia}{\omega}i\frac{d}{d\omega}G(\omega)<br>$$</p>
 <p>solve an ode to get $G(\omega)&#x3D;\sqrt{\frac{2\pi}{a}}\exp(-\frac{\omega^2}{2a})$<br>How to calculate the FT of the leap function?</p>
-<p>$$<br>u(x)&#x3D;\begin{cases}<br>  0,&amp;(x&lt;0)\<br>  1,&amp;(x\geq0)<br>\end{cases}<br>$$</p>
+<p>$$<br>u(x)&#x3D;\begin{cases}<br>  0,&amp;(x&lt;0)\\<br>  1,&amp;(x\geq0)<br>\end{cases}<br>$$</p>
 <p>view it as the $\lim\limits_{\beta\rightarrow 0^+}f(x)$<br>where</p>
-<p>$$<br>f(x)&#x3D;\begin{cases}<br>  0,&amp;(x&lt;0)\<br>  e^{-\beta x},&amp;(x\geq0)<br>\end{cases}<br>$$</p>
+<p>$$<br>f(x)&#x3D;\begin{cases}<br>  0,&amp;(x&lt;0)\\<br>  e^{-\beta x},&amp;(x\geq0)<br>\end{cases}<br>$$</p>
 <p>hence the FT of $u(t)$ is</p>
-<p>$$<br>U(\omega)&#x3D;\lim\limits_{\beta\rightarrow 0^+}F(\omega)<br>$$<br>$$&#x3D;\lim\limits_{\beta\rightarrow 0^+}\frac{1}{\beta +i \omega}<br>$$<br>$$<br>&#x3D;\pi\delta(\omega)+\frac{1}{i\omega}<br>$$</p>
-<p>The final step see <a href="#delta-function-in-concrete-forms">$L(x)$</a> there.</p>
+<p>$$<br>U(\omega)&#x3D;\lim\limits_{\beta\rightarrow 0^+}F(\omega)<br>&#x3D;\lim\limits_{\beta\rightarrow 0^+}\frac{1}{\beta +i \omega}<br>&#x3D;\pi\delta(\omega)+\frac{1}{i\omega}<br>$$</p>
+<p>The final step see <a href="#delta">$L(x)$</a> there.</p>
 <h4 id="Apply-Residue-Theorem"><a href="#Apply-Residue-Theorem" class="headerlink" title="Apply Residue Theorem"></a>Apply Residue Theorem</h4><p>The above examples show some Physical methods to deal with special functions. While for a wide range of integrations we are able to calculate them using <strong><em>Residue Theorem</em></strong>, a much more handy way than Qiao Gu’s Fourier method in his book.</p>
-<p><strong>Usual Steps</strong> (for trigonometric and exponential):<br>1.Adjust the interval to $(-\infty,\infty)$<br>2.Show proper form like $\int_{-\infty}^{\infty} e^{imx}f(x) dx$<br>3.If m&lt;0, $\int_{-\infty}^{\infty} e^{-i|m|x}f(x)dx&#x3D;\int_{-\infty}^{\infty} e^{i|m|y}f(-y)dy$<br>4.Examine whether $f(z)$ converges uniformly to 0 at $\infty$.<br>5.Jordan’s Lemma.</p>
+<p><strong>Usual Steps</strong> (for trigonometric and exponential):</p>
+<p>1.Adjust the interval to $(-\infty,\infty)$</p>
+<p>2.Show proper form like $\int_{-\infty}^{\infty} e^{imx}f(x) dx$</p>
+<p>3.If m&lt;0, $\int_{-\infty}^{\infty} e^{-i|m|x}f(x)dx&#x3D;\int_{-\infty}^{\infty} e^{i|m|y}f(-y)dy$</p>
+<p>4.Examine whether $f(z)$ converges uniformly to 0 at $\infty$.</p>
+<p>5.Jordan’s Lemma.</p>
 <p>For instance (P62):</p>
 <p>$$<br>  \quad\int_0^\infty \frac{\cos\omega t}{\beta^2+\omega^2}d\omega<br>  &#x3D;\frac{1}{2}\int_{-\infty}^\infty \frac{\cos\omega t}{\beta^2+\omega^2}d\omega<br>$$<br>$$<br>  &#x3D;\frac{1}{2}\int_{-\infty}^\infty \frac{\cos\omega t+i\sin \omega t }{\beta^2+\omega^2}d\omega<br>$$<br>$$<br>  &#x3D;\frac{1}{2}\int_{-\infty}^\infty \frac{e^{i\omega t}}{\beta^2+\omega^2}d\omega ~~(\text{when}~t&gt;0)<br>$$<br>$$<br>  &#x3D;\pi i{\text{Res}[\frac{e^{i\omega t}}{\beta^2+\omega^2},i\beta]}<br>$$<br>$$<br>  &#x3D;\frac{2\beta}{\pi}e^{-\beta t}<br>$$</p>
 <p>for $t&lt;0$, replace $-\omega$ with $p$:</p>
@@ -2614,11 +2549,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>We already apply the <strong>Jordan’s Lemma</strong>. Be careful when you meet trigonometric functions, because they’re not bounded in $\mathbb{C}$, that’s why Jordan’s Lemma is an essential. In the above example the even and odd function helps us to achive the form of Jordan’s Lemma. When the function you met is neither even nor odd, please write like this:$\int f(x)\cos x &#x3D;\text{Re}(\int f(x) e^{ix})&#x3D;\cdots$</p>
 <p>Note again that Jordan’s Lemma could only be utilized when $m$ in $\int e^{imx}dx$ <strong>is larger than 0</strong> (which explained the absolute value in the end), and only the singularities <strong>above the x-axis</strong> are needed to be considered.</p>
 <p>Another example (P38 in Qiao’s book):</p>
-<p>$$<br>  \quad\int_{-\infty}^{\infty}\frac{\sin a\omega}{\omega}e^{i\omega x}d\omega<br>  &#x3D;\int_{-\infty}^{\infty}\frac{e^{i(a+x)\omega}-e^{i(x-a)\omega}}{2i\omega}d\omega<br>$$<br>$$<br>  &#x3D;\frac{1}{2i}\left(\int_{-\infty}^{\infty}\frac{e^{i(a+x)\omega}}{\omega}d\omega-\int_{-\infty}^{\infty}\frac{e^{i(x-a)\omega}}{\omega}d\omega\right)<br>$$<br>$$<br>  &#x3D;\frac{\pi i}{2i}\left(<br>    \begin{cases}<br>  \text{Res}[\frac{e^{i(x+a)\omega}}{\omega},0],&amp;(x&gt;-a)\<br>    \text{Res}[-\frac{e^{-i(x+a)\omega}}{\omega},0],&amp;(x&lt;-a)<br>  \end{cases}<br>-\begin{cases}<br>  \text{Res}[\frac{e^{i(x-a)\omega}}{\omega},0],&amp;(x&gt;a)\<br>  \text{Res}[-\frac{e^{-i(x-a)\omega}}{\omega},0],&amp;(x&lt;a)<br>\end{cases}\right)<br>$$<br>$$<br>&#x3D;\begin{cases}<br>  0,&amp; |x|&gt;a\<br>  \pi,&amp; |x|&lt;a<br>\end{cases}<br>$$</p>
+<p>$$<br>  \quad\int_{-\infty}^{\infty}\frac{\sin a\omega}{\omega}e^{i\omega x}d\omega<br>  &#x3D;\int_{-\infty}^{\infty}\frac{e^{i(a+x)\omega}-e^{i(x-a)\omega}}{2i\omega}d\omega<br>$$<br>$$<br>  &#x3D;\frac{1}{2i}\left(\int_{-\infty}^{\infty}\frac{e^{i(a+x)\omega}}{\omega}d\omega-\int_{-\infty}^{\infty}\frac{e^{i(x-a)\omega}}{\omega}d\omega\right)<br>$$<br>$$<br>  &#x3D;\frac{\pi i}{2i}\left(<br>    \begin{cases}<br>  \text{Res}[\frac{e^{i(x+a)\omega}}{\omega},0],&amp;(x&gt;-a)\\<br>    \text{Res}[-\frac{e^{-i(x+a)\omega}}{\omega},0],&amp;(x&lt;-a)<br>  \end{cases}<br>-\begin{cases}<br>  \text{Res}[\frac{e^{i(x-a)\omega}}{\omega},0],&amp;(x&gt;a)\\<br>  \text{Res}[-\frac{e^{-i(x-a)\omega}}{\omega},0],&amp;(x&lt;a)<br>\end{cases}\right)<br>$$<br>$$<br>&#x3D;\begin{cases}<br>  0,&amp; |x|&gt;a\\<br>  \pi,&amp; |x|&lt;a<br>\end{cases}<br>$$</p>
 <p>Note that the singularity is 0, which stuck in the x-axis, so $2\pi i \times \text{Res}$ is not allowed (only works for singularities above the x-axis). Instead, the multipliers should be replaced by $\pi i$.<br>A drawback of Residue Theorem is that we’re not able to calculate the value of such an integral at $x&#x3D;\pm a$, which  could be solved by Dirichlet’s Theorem.</p>
 <p>Again, the two cases above entail polar points (a kind of singularities) only. For <strong>Essential singularities</strong>, the Residue Theorem works as well. The only extra obstacle is how to calculate the Residue of an essential singularity, and you’d better calculate its <strong><em>Laurent series</em></strong> stiffly and examine the $C_{-1}$ term.</p>
 <p>When the singularity isn’t isolated, Residue Theorem is no longer legal to use.</p>
-<h3 id="Laplacian-Transform"><a href="#Laplacian-Transform" class="headerlink" title="Laplacian Transform"></a>Laplacian Transform</h3><p>The integral of Laplacian transform converges absolutely and uniformly, such that shifting the order of operators is legal.</p>
+<h3 id="Laplacian-Transform"><a href="#Laplacian-Transform" class="headerlink" title="Laplacian Transform "></a>Laplacian Transform <div id="LT"></div></h3><p>The integral of Laplacian transform converges absolutely and uniformly, such that shifting the order of operators is legal.</p>
 <h4 id="LT’s-Properties"><a href="#LT’s-Properties" class="headerlink" title="LT’s Properties"></a>LT’s Properties</h4><p>Let’s appreciate their symmetry:</p>
 <p>$$<br>\frac{d}{ds}\mathscr{L}[f(t)]&#x3D;\mathscr{L}[-tf(t)]<br>$$<br>$$<br>\mathscr{L}[\frac{d}{dt}f(t)]&#x3D;s\mathscr{L}[f(t)]-f(0^+)<br>$$<br>$$<br>\int_s^\infty\mathscr{L}[f(t)]du&#x3D;\mathscr{L}[\frac{f(t)}{t}]<br>$$<br>$$<br>\mathscr{L}[\int_0^tf(\tau)d\tau]&#x3D;\frac{1}{s}\mathscr{L}[f(t)]<br>$$</p>
 <p>How to verify these properties smoothly?<br>(I mean treat them individually, do not quote others results)</p>
@@ -2642,7 +2577,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>Warning: Laplacian Transform focus on the <strong>right side of y-axis</strong>, i.e. $f(x)&#x3D;f(x)u(x)$. Functions like $f(t-1)$may cause misunderstandings. A better way to avoid such consequence is to apply Convolution Property instead of Translation in practice.</p>
 <p>Convolution:</p>
 <p>$$<br>\mathscr{L}[f(t)]\times\mathscr{L}[g(t)]&#x3D;\mathscr{L}[f*g(t)]<br>$$</p>
-<p>E.g.<br>$$<br>   \mathscr{L^{-1}}{e^{-st_0}\mathscr{L}[f(t)]}<br>   &#x3D;\mathscr{L^{-1}}[e^{-st_0}]*f(t)<br>$$<br>$$<br>   &#x3D;\delta(t-t_0)*f(t)&#x3D;\int_0^t \delta(t-t_0-\tau)f(\tau)d\tau<br>$$<br>$$<br>   &#x3D;\begin{cases}<br>    f(t-t_0) &amp;(t-t_0&gt;0) \<br>    0 &amp;(t-t_0&lt;0)<br>   \end{cases}<br>$$</p>
+<p>E.g.<br>$$<br>   \mathscr{L^{-1}}{e^{-st_0}\mathscr{L}[f(t)]}<br>   &#x3D;\mathscr{L^{-1}}[e^{-st_0}]*f(t)<br>$$<br>$$<br>   &#x3D;\delta(t-t_0)*f(t)&#x3D;\int_0^t \delta(t-t_0-\tau)f(\tau)d\tau<br>$$<br>$$<br>   &#x3D;\begin{cases}<br>    f(t-t_0) &amp;(t-t_0&gt;0) \\<br>    0 &amp;(t-t_0&lt;0)<br>   \end{cases}<br>$$</p>
 <p>If we simply copied the conclusion of <em>Translation</em>, we happily got $f(t-t_0)$, whose $(0,t_0)$ part is actually wrong.</p>
 
   </div>
@@ -2668,10 +2603,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-01-27T22:44:47+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-01-28T11:38:03+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jan 27, 2024</p>
+    <p>更新于：Jan 28, 2024</p>
   </a>
 </div>
 
@@ -2679,10 +2614,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/tag1/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>tag1</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/tag2/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>tag2</p></a></div>
-  <span hidden itemprop="keywords">tag1 tag2</span>
-
 
         
       
@@ -2751,7 +2682,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/01/27/mathematical/'>
+        <a class='prev' href='/2024/01/27/mathematical_physics_2/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>数理方法笔记---PDE部分</p>
           <p class='content'>Mathematical PhysicsPartial Differential EquationThe Classes of PDEWe only discuss PDE with two v...</p>
         </a>
@@ -2812,7 +2743,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Complex-Function"><span class="toc-text">Complex Function</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-Definitions"><span class="toc-text">Basic Definitions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tips"><span class="toc-text">Tips</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Harmonic-functions"><span class="toc-text">Harmonic functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Taylor-Series"><span class="toc-text">Taylor Series</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Laurent-Series"><span class="toc-text">Laurent Series</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Integrals"><span class="toc-text">Integrals</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Jordan%E2%80%99s-Lemma"><span class="toc-text">Jordan’s Lemma</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Useful-Variable-Changes"><span class="toc-text">Useful Variable Changes</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fourier-Theory"><span class="toc-text">Fourier Theory</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Fourier-Integral"><span class="toc-text">Fourier Integral</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#An-Example"><span class="toc-text">An Example</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fourier-Transfom"><span class="toc-text">Fourier Transfom</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Property"><span class="toc-text">Property</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Two-Examples"><span class="toc-text">Two Examples</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#delta-Function"><span class="toc-text">$\delta$ Function</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#its-FT-Applications"><span class="toc-text">its FT &amp; Applications</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Delta-function-in-concrete-forms"><span class="toc-text">Delta function in concrete forms</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Example-of-delta-function"><span class="toc-text">Example of $\delta$ function</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Apply-Residue-Theorem"><span class="toc-text">Apply Residue Theorem</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Laplacian-Transform"><span class="toc-text">Laplacian Transform</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#LT%E2%80%99s-Properties"><span class="toc-text">LT’s Properties</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Complex-Function"><span class="toc-text">Complex Function</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-Definitions"><span class="toc-text">Basic Definitions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tips"><span class="toc-text">Tips</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Harmonic-functions"><span class="toc-text">Harmonic functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Taylor-Series"><span class="toc-text">Taylor Series</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Laurent-Series"><span class="toc-text">Laurent Series</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Integrals"><span class="toc-text">Integrals</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Jordan%E2%80%99s-Lemma"><span class="toc-text">Jordan’s Lemma</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Useful-Variable-Changes"><span class="toc-text">Useful Variable Changes</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fourier-Theory"><span class="toc-text">Fourier Theory</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Fourier-Integral"><span class="toc-text">Fourier Integral</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#An-Example"><span class="toc-text">An Example</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fourier-Transfom"><span class="toc-text">Fourier Transfom</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Property"><span class="toc-text">Property</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Two-Examples"><span class="toc-text">Two Examples</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#delta-Function"><span class="toc-text">$\delta$ Function</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#its-FT-Applications"><span class="toc-text">its FT &amp; Applications</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Delta-function-in-concrete-forms"><span class="toc-text">Delta function in concrete forms</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Example-of-delta-function"><span class="toc-text">Example of $\delta$ function</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Apply-Residue-Theorem"><span class="toc-text">Apply Residue Theorem</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Laplacian-Transform"><span class="toc-text">Laplacian Transform </span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#LT%E2%80%99s-Properties"><span class="toc-text">LT’s Properties</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -2996,6 +2927,358 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="rightmenu-wrapper">
+  <ul class="list-v rightmenu" id="rightmenu-content">
+    
+  <li class='navigation menuNavigation-Content'>
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="history.forward()"><i class="fa-solid fa-arrow-right fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="window.location.reload()"><i class="fa-solid fa-redo fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)"><i class="fa-solid fa-arrow-up fa-fw"></i></a>
+
+
+  </li>
+
+
+    <hr class="menuLoad-Content" >
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyPaste" data-event="copyPaste" data-group="inputBox">
+      <i class="fa-solid fa-paste fa-fw"></i>
+      粘贴文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyAll" data-event="copyAll" data-group="inputBox">
+      <i class="fa-solid fa-object-ungroup fa-fw"></i>
+      全选文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyCut" data-event="copyCut" data-group="inputBox">
+      <i class="fa-solid fa-cut fa-fw"></i>
+      剪切文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyText" data-event="copyText" data-group="seletctText">
+      <i class="fa-solid fa-copy fa-fw"></i>
+      复制文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="searchWord" data-event="OpenSearch(__text__)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      站内搜索
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="bingSearch" data-event="window.open(`https://cn.bing.com/search?q=${__text__}`)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      必应搜索
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="openTab" data-event="window.open(__link__)" data-group="elementCheck">
+      <i class="fa-solid fa-external-link-square-alt fa-fw"></i>
+      新标签页打开
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyLink" data-event="copyLink" data-group="elementCheck">
+      <i class="fa-solid fa-link fa-fw"></i>
+      复制链接地址
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyImg" data-event="copyImg" data-group="elementImage">
+      <i class="fa-solid fa-image fa-fw"></i>
+      复制图片
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="googleImg" data-event="window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)" data-group="elementImage">
+      <i class="fa-solid fa-images fa-fw"></i>
+      谷歌识图
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="help" target="_blank" rel="noopener" href="https://volantis.js.org/faqs/" data-group="link">
+      <i class="fa-solid fa-question fa-fw"></i>
+      常见问题
+    </a>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="examples" target="_blank" rel="noopener" href="https://volantis.js.org/examples/" data-group="link">
+      <i class="fa-solid fa-rss fa-fw"></i>
+      示例博客
+    </a>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="contributors" target="_blank" rel="noopener" href="https://volantis.js.org/contributors/" data-group="link">
+      <i class="fa-solid fa-fan fa-fw"></i>
+      加入社区
+    </a>
+  </li>
+
+
+
+    <hr class="menuLoad-Content" >
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="source_docs" target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs/" data-group="link">
+      <i class="fa-solid fa-code-branch fa-fw"></i>
+      本站源码
+    </a>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
+      <i class="fa-solid fa-code-branch fa-fw"></i>
+      主题源码
+    </a>
+  </li>
+
+
+
+    <hr class="menuLoad-Content" >
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="darkMode" data-event="volantis.dark.toggle()" data-group="darkMode">
+      <i class="fa-solid fa-moon fa-fw"></i>
+      暗黑模式
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="printMode" data-event="printMode" data-group="articlePage">
+      <i class="fa-solid fa-print fa-fw"></i>
+      打印页面
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="readMode" data-event="readMode" data-group="articlePage">
+      <i class="fa-solid fa-book-open fa-fw"></i>
+      阅读模式
+    </span>
+  </li>
+
+
+<div id="menuMusic">
+  <li class='music name menuOption-Content'>
+    <p class='nav music-title fix-cursor-default'></p>
+  </li>
+  <li class='music ctrl'>
+    <a class='nav icon-only backward fix-cursor-default' href="/" onclick="return false;" title="backward">
+      <i class='fa-solid fa-step-backward fa-fw'></i>
+    </a>
+    <a class='nav icon-only toggle fix-cursor-default' href="/" onclick="return false;" title="toggle">
+      <i class='fa-solid fa-play fa-fw'></i>
+    </a>
+    <a class='nav icon-only forward fix-cursor-default' href="/" onclick="return false;" title="forward">
+      <i class='fa-solid fa-step-forward fa-fw'></i>
+    </a>
+  </li>
+  <li class='music volume'>
+    <div class='nav volume'>
+      <div class="aplayer-volume-bar-wrap">
+        <div class="aplayer-volume-bar fix-cursor-pointer">
+          <div class="aplayer-volume"></div>
+          <i class='left fa-solid fa-volume-off fa-fw'></i>
+          <i class='right fa-solid fa-volume-up fa-fw'></i>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+
+  </ul>
+</div>
+<script src="/js/plugins/rightMenus.js"></script>
+<script>
+  const RightMenusFunction = {};
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  //RightMenusFunction['copyPaste'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyAll'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyCut'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyText'] = (fun) => {fun()}
+
+
+
+
+
+  RightMenusFunction['searchWord'] = (__text__) => {OpenSearch(__text__)}
+
+
+
+
+
+  RightMenusFunction['bingSearch'] = (__text__) => {window.open(`https://cn.bing.com/search?q=${__text__}`)}
+
+
+
+
+
+  RightMenusFunction['openTab'] = (__link__) => {window.open(__link__)}
+
+
+
+
+
+  //RightMenusFunction['copyLink'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyImg'] = (fun) => {fun()}
+
+
+
+
+
+  RightMenusFunction['googleImg'] = (__link__) => {window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  RightMenusFunction['darkMode'] = () => {volantis.dark.toggle()}
+
+
+
+
+
+  //RightMenusFunction['printMode'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['readMode'] = (fun) => {fun()}
+
+
+
+
+
+</script>
 
 
 
@@ -3463,7 +3746,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"yesyes"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/branch1/","name":"branch1"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/01/27/mathematical_physics_1/","name":"数理方法笔记---复变函数与积分变换部分"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"yesyes","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"yesyes"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"数理方法笔记---复变函数与积分变换部分","description":"yesyes","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/01/27/mathematical_physics_1/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/01/27/mathematical_physics_1/","wordCount":0,"datePublished":"2024-01-27T02:00:22.000Z","dateModified":"2024-01-27T14:44:47.925Z","articleSection":"branch1","keywords":"tag1,tag2","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"me","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"yesyes"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/物理/","name":"物理"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/01/27/mathematical_physics_1/","name":"数理方法笔记---复变函数与积分变换部分"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"yesyes","author":{"@type":"Person","name":"me","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"yesyes"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"数理方法笔记---复变函数与积分变换部分","description":"yesyes","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/01/27/mathematical_physics_1/"},"author":{"@type":"Person","name":"me","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/01/27/mathematical_physics_1/","wordCount":0,"datePublished":"2024-01-27T02:00:22.000Z","dateModified":"2024-01-28T03:38:03.517Z","articleSection":"物理","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
