@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-02-01T11:17:26.000Z">
-<meta property="article:modified_time" content="2024-02-01T12:26:17.476Z">
+<meta property="article:modified_time" content="2024-02-02T05:45:28.823Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1793,7 +1793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1706847877444),
+    lastupdate: new Date(1706852805112),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2687,8 +2687,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>$$<br>\frac{d^2 \psi}{dx^2}-k^2\psi&#x3D;-A\delta(x)\psi -\omega^2 \mathscr{F} [\psi] (\omega)- k^2 \mathscr{F}[\psi] (\omega)&#x3D;-A\psi(0)<br>$$</p>
 <p>其中$k&#x3D;\sqrt{-\frac{2mE}{\hbar^2}};A&#x3D;\frac{2m\alpha}{\hbar^2}$（注意是束缚态去掉分类讨论之嫌），这样算出$\mathscr{F}[\psi] (\omega)$后，再反解得到：<br>$$<br>\psi(x)&#x3D;\frac{A\psi(0)}{2k}e^{-k|x|}<br>$$ 这其实限制了$A$与$k$的关系，只有$E&#x3D;-\frac{m\alpha^2}{2\hbar^2}$一个能量的值</p>
 <h3 id="Ex-5-2-4"><a href="#Ex-5-2-4" class="headerlink" title="Ex 5.2.4"></a>Ex 5.2.4</h3><p>$$<br>\langle x|\psi\rangle&#x3D;\psi(x)&#x3D;\begin{cases}<br>  \left( \frac{2}{L}\right)^{1&#x2F;2}\cos\left(\frac{n\pi x}{L}\right) ,&amp;n&#x3D;1,3,5 \dots\\<br>  \left( \frac{2}{L}\right)^{1&#x2F;2}\sin\left(\frac{n\pi x}{L}\right) ,&amp;n&#x3D;2,4,6 \dots\\<br>\end{cases}<br>$$ 能量$E_n&#x3D;\frac{\hbar^2 \pi^2 n^2}{2mL^2}$，当$L$变化时：<br>$$<br>-\frac{\partial E}{\partial L}&#x3D;\frac{\hbar^2 \pi^2 n^2}{mL^3}&#x3D;\frac{2E_n}{L}<br>$$<br>经典考量一个小球，$2L&#x2F;v$的间隔发生碰撞产生动量变化$2mv$，则平均的力大小为$F&#x3D;mv^2&#x2F;L&#x3D;2E&#x2F;L$，对应</p>
-<h3 id="Ex-5-2-6"><a href="#Ex-5-2-6" class="headerlink" title="Ex 5.2.6"></a>Ex 5.2.6</h3><p>考虑定态方程$H\ket{\psi}&#x3D;E\ket{\psi}$<br>$$<br>\psi^2(x)+\frac{2m}{\hbar^2}(E-V)\psi&#x3D;0<br>$$ 注意分析中间区域时，和无限深方势阱一样有$E&gt;0$的要求，原因是如果$E&lt;0$，那在交接地带无法做到$\psi’(x)$连续。此外，在两边必须$E-V&lt;0$指数衰减，因为若不然，就是三角函数振荡，不符合可积要求<br>$$<br>\psi_2(x)&#x3D;A\cos kx<br>\quad<br>\psi_3(x)&#x3D;Be^{-\kappa x}<br>$$<br>其中$k&#x3D;\sqrt{\frac{2mE}{\hbar^2}}$，$\kappa&#x3D;\sqrt{-\frac{2m(E-V)}{\hbar^2}}$，衔接条件：<br>$$<br>A\cos \frac{Lk}{2}&#x3D;B e^{-\kappa L&#x2F;2}<br>\newline<br><br>\newline<br>-Ak\sin\frac{Lk}{2}&#x3D;-\kappa Be^{-\kappa L&#x2F;2}<br>$$ 相除就得到答案中的两个式子，奇的情况同（在数理方法中处理第三类边界条件很像）有意思的是：<br>$$<br>k^2+\kappa^2&#x3D;\frac{2mV_0}{\hbar^2}<br>$$ 采用图解法，换元如书中所述：<br>$$<br>\alpha^2+\beta^2&#x3D;\frac{2ma^2V_0}{\hbar^2}<br>$$<br>上述两个式子就成为：<br>$$<br>\beta&#x3D;\alpha \tan \alpha \quad ; \quad \beta&#x3D;-\alpha \cot \alpha<br>$$</p>
-<p>偶解：<br><img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm2.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="even" height="220" width="230"><br>奇解：<br><img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm1.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="odd" height="200" width="240"><br>可以看出后一个图中，当半径小时有可能没有交点，对应（注意只关注第一象限，因此在别的象限有交点是无所谓的）：<br>$$<br>\text{Radius}&#x3D;a\sqrt{\frac{2mV_0}{\hbar^2}}&#x3D;\frac{\pi}{2}<br>$$<br>此即临界势能</p>
+<h3 id="Ex-5-2-6"><a href="#Ex-5-2-6" class="headerlink" title="Ex 5.2.6"></a>Ex 5.2.6</h3><p>考虑定态方程$H\ket{\psi}&#x3D;E\ket{\psi}$<br>$$<br>\psi^2(x)+\frac{2m}{\hbar^2}(E-V)\psi&#x3D;0<br>$$ 注意分析中间区域时，和无限深方势阱一样有$E&gt;0$的要求，原因是如果$E&lt;0$，那在交接地带无法做到$\psi’(x)$连续。此外，在两边必须$E-V&lt;0$指数衰减，因为若不然，就是三角函数振荡，不符合可积要求<br>$$<br>\psi_2(x)&#x3D;A\cos kx<br>\quad<br>\psi_3(x)&#x3D;Be^{-\kappa x}<br>$$<br>其中$k&#x3D;\sqrt{\frac{2mE}{\hbar^2}}$，$\kappa&#x3D;\sqrt{-\frac{2m(E-V)}{\hbar^2}}$，衔接条件：<br>$$<br>A\cos \frac{Lk}{2}&#x3D;B e^{-\kappa L&#x2F;2}<br>\quad<br>-Ak\sin\frac{Lk}{2}&#x3D;-\kappa Be^{-\kappa L&#x2F;2}<br>$$ 相除就得到答案中的两个式子，奇的情况同（在数理方法中处理第三类边界条件很像）有意思的是：<br>$$<br>k^2+\kappa^2&#x3D;\frac{2mV_0}{\hbar^2}<br>$$ 采用图解法，换元如书中所述：<br>$$<br>\alpha^2+\beta^2&#x3D;\frac{2ma^2V_0}{\hbar^2}<br>$$<br>上述两个式子就成为：<br>$$<br>\beta&#x3D;\alpha \tan \alpha \quad ; \quad \beta&#x3D;-\alpha \cot \alpha<br>$$</p>
+<p>偶解：<br><img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm2.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="even" height="220" width="230"><br>奇解：<br><img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm1.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="odd" height="200" width="240"><br>可以看出后一个图中，当半径小时有可能没有交点，对应（注意只关注第一象限，只用看x轴，在别的象限有交点是无所谓的）：<br>$$<br>\text{Radius}&#x3D;a\sqrt{\frac{2mV_0}{\hbar^2}}&#x3D;\frac{\pi}{2}<br>$$<br>此即临界势能</p>
 <h3 id="Ex-5-3-1"><a href="#Ex-5-3-1" class="headerlink" title="Ex 5.3.1"></a>Ex 5.3.1</h3><p>此处的复势函数即可用来描述粒子消失的情况。验证非自伴：<br>$$<br>\begin{align*}<br>  &amp;\int \psi^\ast \left(-\frac{\hbar^2}{2m}\nabla^2+V_r+iV_i\right)\psi dx<br>\newline<br><br>\newline<br>&#x3D;&amp;\int \psi^\ast \left(-\frac{\hbar^2}{2m}\nabla^2\right)\psi dx+\int \psi^\ast (V_r+iV_i)\psi dx<br>\newline<br><br>\newline<br>&#x3D;&amp;\int \left(\left(-\frac{\hbar^2}{2m}\nabla^2\right)\psi\right)^\ast \psi dx+\int V_r\psi^\ast \psi dx+\int (-iV_i\psi)^\ast \psi dx<br>\end{align*}<br>$$<br>最后一项出现负号不再和原来的算符一样。若势含虚部，在推导中会出现$2iV_i\psi^\ast \psi$整理等式两边时多出：<br>$$<br>\frac{\partial }{\partial t}(\psi^\ast \psi)&#x3D;\frac{2V_i}{\hbar} \psi^\ast \psi<br>$$ 解此附加项即得指数衰减形式</p>
 <h3 id="Ex-5-3-2"><a href="#Ex-5-3-2" class="headerlink" title="Ex 5.3.2"></a>Ex 5.3.2</h3><p>代入$j$表达式显然$\psi^\ast \nabla \psi-\psi\nabla \psi^\ast$一项消失</p>
 <h3 id="Ex-5-3-3"><a href="#Ex-5-3-3" class="headerlink" title="Ex 5.3.3"></a>Ex 5.3.3</h3><p>$$<br>\begin{align*}<br>P&amp;&#x3D;\psi^\ast\psi&#x3D;\frac{1}{(2\pi\hbar)^3}<br>\newline<br><br>\newline<br>\vec{j}&amp;&#x3D;\frac{\hbar}{2mi}(\psi^\ast \nabla \psi-\psi\nabla \psi^\ast)<br>\newline<br><br>\newline<br>&amp;&#x3D;\frac{\hbar}{2mi}\left(\frac{1}{(2\pi\hbar)^3}\frac{2i\vec{p}}{\hbar}\right)&#x3D;\frac{1}{(2\pi\hbar)^3}\frac{\vec{p}}{m}<br>\end{align*}<br>$$</p>
@@ -2721,10 +2721,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-01T20:26:17+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-02T13:45:28+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Feb 1, 2024</p>
+    <p>更新于：Feb 2, 2024</p>
   </a>
 </div>
 
@@ -2805,7 +2805,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2024/02/02/Algebra1/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>近世代数</p>
-          <p class='content'>基本概念代数运算定义：有一个法则使得在集合$M$中任意两个有次序的元素，在$M$中都有唯一的元素$d$对应，则开发者是$M$的一个代数运算
+          <p class='content'>基本概念代数运算定义：有一个法则使得在集合$M$中任意两个有次序的元素，在$M$中都有唯一的元素$d$对应，则该法则是$M$的一个代数运算
 含有代数运算的集合称为代数系统
 注意：由定义可知，“有...</p>
         </a>
@@ -2866,6 +2866,18 @@ Shankar_ch.11.6 n...</p>
 
   <div class='content'>
     <ul class="list entry navigation">
+      
+        <li><a class="flat-box" title="/2024/01/31/QM-prelude/" href="/2024/01/31/QM-prelude/"
+          
+          
+          active-action="action-20240131QM-prelude"
+          >
+          <div class='name'>
+            
+            序言
+          </div>
+          
+        </a></li>
       
         <li><a class="flat-box" title="/2024/01/31/QM1/" href="/2024/01/31/QM1/"
           
@@ -4087,7 +4099,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/Shankar-量子力学/","name":"Shankar 量子力学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/02/01/QM2/","name":"基本假设与一维问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基本假设与一维问题","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/02/01/QM2/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/02/01/QM2/","wordCount":0,"datePublished":"2024-02-01T11:17:26.000Z","dateModified":"2024-02-01T12:26:17.476Z","articleSection":"Shankar 量子力学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/Shankar-量子力学/","name":"Shankar 量子力学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/02/01/QM2/","name":"基本假设与一维问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基本假设与一维问题","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/02/01/QM2/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/02/01/QM2/","wordCount":0,"datePublished":"2024-02-01T11:17:26.000Z","dateModified":"2024-02-02T05:45:28.823Z","articleSection":"Shankar 量子力学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
