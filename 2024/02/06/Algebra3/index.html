@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-02-06T07:01:11.000Z">
-<meta property="article:modified_time" content="2024-02-18T06:21:33.789Z">
+<meta property="article:modified_time" content="2024-02-18T08:48:21.698Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1793,7 +1793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1708237425813),
+    lastupdate: new Date(1708246236695),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2679,6 +2679,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>证明套路就是上面的“判断方法”，以第二条为例：任取$a\in G,n\in \varphi^{-1}(\bar{N})$由已知正规的条件……，因为是同态满射，所以映到另外一个群里就是……，由逆像的定义……，所以$ana^{-1}\in \varphi^{-1}(\bar{N})$，即$a\varphi^{-1}(\bar{N})a^{-1}\subseteq \varphi^{-1}(\bar{N})$，$\square$</p>
 </blockquote>
+<div id="still-sub"></div>
+
 <p><strong>定理</strong>：群$G$的一个正规子群与一个子群的乘积仍然是子群，群$G$的两个正规子群的乘积仍然是正规子群</p>
 <blockquote>
 <p>第一句的证明用到了两个子群$H$与$K$的乘积是子群当且仅当$HK&#x3D;KH$</p>
@@ -2731,15 +2733,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h4 id="单群"><a href="#单群" class="headerlink" title="单群"></a>单群</h4><p><strong>定义</strong>：阶大于一且只有平凡正规子群的群，称为单群</p>
 <p><strong>定理</strong>：有限交换群$G$为单群$\iff |G|$是素数</p>
 <blockquote>
-<p>证明：<br>一方面，如果阶是素数，子群都只有平凡的，更不用说正规子群。<br>另一方面，若是单群，取一个非单位元的元素，若其阶$&lt;|G|$，由它可生成一个正规子群（因为大背景是可交换），矛盾了，说明取的该元素一定阶$&#x3D;|G|$。最后讨论$|G|$：若$|G|$不为素数，由Cauchy定理可以找到更小素数阶的元素，又矛盾，所以$|G|$为素数。</p>
+<p>证明：</p>
+<p>一方面，如果阶是素数，子群都只有平凡的，更不用说正规子群。</p>
+<p>另一方面，若是单群，取一个非单位元的元素，若其阶$&lt;|G|$，由它可生成一个正规子群（因为大背景是可交换），矛盾了，说明取的该元素一定阶$&#x3D;|G|$。最后讨论$|G|$：若$|G|$不为素数，由Cauchy定理可以找到更小素数阶的元素，又矛盾，所以$|G|$为素数。</p>
 </blockquote>
 <h3 id="群同态基本定理"><a href="#群同态基本定理" class="headerlink" title="群同态基本定理"></a>群同态基本定理</h3><p>群与其商群同态：</p>
 <p><strong>定理</strong>：设$N$是群$G$的任意正规子群，则有$G\sim G&#x2F;N$</p>
 <blockquote>
 <p>证明：取同态满射（自然同态）$\tau:\quad a\mapsto aN$即可</p>
 </blockquote>
-<p>若第一个群与第二个群同态，则第二个群在同构意义下是第一个群的商群</p>
-<p><strong>定理</strong>：设$\varphi$是群$G$到群$\bar{G}$的一个同态满射，则$\ker\varphi \unlhd G$，且$G&#x2F;\ker\varphi \cong \bar{G}$</p>
+<p>若第一个群与第二个群同态，则第二个群在同构意义下是第一个群的商群：</p>
+<div id="basic"></div>
+
+<p><strong>群同态基本定理</strong>：设$\varphi$是群$G$到群$\bar{G}$的一个同态满射，则$\ker\varphi \unlhd G$，且$G&#x2F;\ker\varphi \cong \bar{G}$</p>
 <blockquote>
 <p>证明：引用<a href="#normal">正规子群的同态映射逆像正规</a>这一结论，可知单位元的逆像（即$\ker\varphi$）也是正规子群，且定义映射$\sigma : aN\mapsto \varphi (a)$(这就是线代商空间那一节里的映射$\tilde{T}: v+\ker T\mapsto Tv$！)而该$\sigma$是同态且是双射</p>
 </blockquote>
@@ -2747,12 +2753,61 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><strong>推论</strong> 如果$G\sim \bar{G}$，则$|\bar{G}|$整除$|G|$</p>
 <p><strong>定理</strong> 设$\varphi$是群$G$到群$\bar{G}$之间的一个同态满射，则$G$的所有含$\ker\varphi$的子群与$\bar{G}$的所有子群之间可以建立一个<strong>保持包含关系</strong>的双射</p>
 <blockquote>
-<p>先证明一个引理：</p>
+<p>先有引理：</p>
 <p>设$\varphi$是群$G$到群$\bar{G}$的同态映射（没说满），$H\leq G$，且$\ker\varphi\subseteq H$，则$\varphi^{-1}[\varphi(H)]&#x3D;H$</p>
-<p>证明：<br>由集合与映射引入时就学过的结论$H\subseteq\varphi^{-1}[\varphi(H)]$，仅需证另一侧包含，进入证明模版：<br>$\forall x\in\varphi^{-1}[\varphi(H)]\Rightarrow \varphi(x)\in \varphi(H)\Rightarrow \varphi(x)&#x3D;\varphi(h),h\in H$，考虑$G$中元素$h^{-1}x$的像： $\varphi(h^{-1}x)&#x3D;\varphi(h^{-1})\varphi(x)&#x3D;\varphi(h)^{-1}\varphi(x)&#x3D;\bar{e}\Rightarrow h^{-1}x\in\ker\varphi\Rightarrow h^{-1}x\in H\Rightarrow x\in H$，证毕</p>
+<p>证明：</p>
+<p>由集合与映射引入时就学过的结论$H\subseteq\varphi^{-1}[\varphi(H)]$，仅需证另一侧包含，进入证明模版：<br>$\forall x\in\varphi^{-1}[\varphi(H)]\Rightarrow \varphi(x)\in \varphi(H)\Rightarrow \varphi(x)&#x3D;\varphi(h),h\in H$，考虑$G$中元素$h^{-1}x$的像： $\varphi(h^{-1}x)&#x3D;\varphi(h^{-1})\varphi(x)&#x3D;\varphi(h)^{-1}\varphi(x)&#x3D;\bar{e}\Rightarrow h^{-1}x\in\ker\varphi\Rightarrow h^{-1}x\in H\Rightarrow x\in H$，证毕</p>
 </blockquote>
 <blockquote>
-<p>原定理证明：<br>记$G$所有含$\ker\varphi$子群的集合为$M$，记$\bar{G}$所有子群的集合为$\bar{M}$，则$M\to \bar{M}$的映射$f:\quad H\mapsto \varphi(H)\quad \text{for }\forall H\in M$ 即为所求，原因如下<br>满性：任取$\bar{H}\in \bar{M}$，则$\varphi^{-1}(\bar{H})$包含$\ker\varphi$（显然），且由<a href="#homo">该定理</a>保障$\varphi^{-1}(\bar{H})\leq G$，所以的确$\in M$。但$\varphi^{-1}(\bar{H})$究竟是否是$\bar{H}$在$f$之下的逆像呢？使用早在学习集合与映射时就有的结论：“当$\varphi$为满射时，$\varphi[\varphi^{-1}(\bar{H})]&#x3D;\bar{H}$”，这样，$f(H)&#x3D;\bar{H}$，证明$f$是满的<br>单性：取$H _ 1,H _ 2\in M$，若$f(H _ 1)&#x3D;f(H _ 2)$，则$\varphi(H _ 1)&#x3D;\varphi(H _ 2)\Rightarrow \varphi^{-1}[\varphi(H _ 1)]&#x3D;\varphi^{-1}[\varphi(H _ 2)]\Rightarrow H_1&#x3D;H_2$最后一步用了引理。<br>保持包含关系：只用证$\varphi(H _ 1)\subseteq\varphi(H _ 2)\Rightarrow  H_1\subseteq H_2$，而这一步只需两边同时作用$\varphi^{-1}$，并用引理就达成了</p>
+<p>原定理证明：</p>
+<p>记$G$所有含$\ker\varphi$子群的集合为$M$，记$\bar{G}$所有子群的集合为$\bar{M}$，则$M\to \bar{M}$的映射$f:\quad H\mapsto \varphi(H)\quad \text{for }\forall H\in M$ 即为所求，原因如下</p>
+<p>满性：任取$\bar{H}\in \bar{M}$，则$\varphi^{-1}(\bar{H})$包含$\ker\varphi$（显然），且由<a href="#homo">该定理</a>保障$\varphi^{-1}(\bar{H})\leq G$，所以的确$\in M$。但$\varphi^{-1}(\bar{H})$究竟是否是$\bar{H}$在$f$之下的逆像呢？使用早在学习集合与映射时就有的结论：“当$\varphi$为满射时，$\varphi[\varphi^{-1}(\bar{H})]&#x3D;\bar{H}$”，这样，$f(H)&#x3D;\bar{H}$，证明$f$是满的</p>
+<p>单性：取$H _ 1,H _ 2\in M$，若$f(H _ 1)&#x3D;f(H _ 2)$，则$\varphi(H _ 1)&#x3D;\varphi(H _ 2)\Rightarrow \varphi^{-1}[\varphi(H _ 1)]&#x3D;\varphi^{-1}[\varphi(H _ 2)]\Rightarrow H_1&#x3D;H_2$最后一步用了引理。</p>
+<p>保持包含关系：只用证$\varphi(H _ 1)\subseteq\varphi(H _ 2)\Rightarrow  H_1\subseteq H_2$，而这一步只需两边同时作用$\varphi^{-1}$，并用引理就达成了</p>
+</blockquote>
+<h3 id="群同构定理"><a href="#群同构定理" class="headerlink" title="群同构定理"></a>群同构定理</h3><h4 id="第一同构定理"><a href="#第一同构定理" class="headerlink" title="第一同构定理"></a>第一同构定理</h4><p>设$\varphi$是群$G$到群$\bar{G}$的同态满射，又$\ker \varphi\subseteq N\unlhd G,,\bar{N}&#x3D;\varphi(N)$，则<br>$$<br>G&#x2F;N\simeq \bar{G}&#x2F;\bar{N}<br>$$</p>
+<blockquote>
+<p>证明：</p>
+<p>由<a href="#normal">正规与同态的定理</a>知$\bar{N}\unlhd \bar{G}$，令$\tau: xN\mapsto \varphi(x)\varphi(N)$，该$\tau$即为所求的同构映射</p>
+</blockquote>
+<p>以下两个定理都较难：</p>
+<h4 id="第二同构定理"><a href="#第二同构定理" class="headerlink" title="第二同构定理"></a>第二同构定理</h4><p>设群$G$有$H\leq G$，$N\unlhd G$，则$H\cap N\unlhd H$，且：$HN&#x2F;N\simeq H&#x2F;(H\cap N)$</p>
+<blockquote>
+<p>证明：<br>由于<a href="#still-sub">“正规子群与别的子群乘积仍然是子群”</a>，$HN\leq G$，构造$\varphi: x\mapsto xN (\forall x\in H)$，是一个$H\to HN&#x2F;N$的同态满射，核为$H\cap N$，由<a href="#basic">群同态基本定理</a>可知，$HN\unlhd H$且$HN&#x2F;N\simeq H&#x2F;(H\cap N)$</p>
+</blockquote>
+<h4 id="第三同构定理"><a href="#第三同构定理" class="headerlink" title="第三同构定理"></a>第三同构定理</h4><p>设$G$是群，$N\unlhd G$，$\bar{H}\leq G&#x2F;N$，则：</p>
+<ol>
+<li><p>存在唯一$H$满足$N \subseteq H\leq G$，使得$\bar{H}&#x3D;H&#x2F;N$</p>
+</li>
+<li><p>当$\bar{H}\unlhd G&#x2F;N$时，存在唯一的$H\unlhd G$使$\bar{H}&#x3D;H&#x2F;N$，且$G&#x2F;H\simeq (G&#x2F;N)&#x2F;(H&#x2F;N)$</p>
+</li>
+</ol>
+<p>该定理说明商群$G&#x2F;N$的子群仍是商群形如$H&#x2F;N$，且商群$G&#x2F;N$的正规子群有更好的结果：该正规子群是$G&#x2F;N$的正规子群！</p>
+<h3 id="自同构"><a href="#自同构" class="headerlink" title="自同构"></a>自同构</h3><p>某一个含有代数运算（封闭性保证）的集合，其全体自同构关于变换的乘法作成一个群，称为其自同构群</p>
+<blockquote>
+<p>证明：若该代数运算记为$\cdot$，且$\sigma$与$\tau$是两个自同构，则对集合中的任二元素：</p>
+<p>$\sigma\tau(a\cdot b)&#x3D;\sigma[\tau(a\cdot b)]&#x3D;\sigma[\tau(a)\cdot\tau(b)]&#x3D;\sigma\tau(a)\cdot \sigma\tau(b)$</p>
+<p>其中第一个等号用了变换乘法的记号定义，第二个等号用了$\tau$是同态，且由于“自”保证了再作用一个$\sigma$的合理性，第三个等号用了$\sigma$是同态，至此封闭性得证</p>
+<p>结合律不用证，因为变换的乘法满足结合律早证过了；单位元是恒等变换显然</p>
+<p>逆元：由于自同构是双射，因而有逆变换，由曾经集合与映射的知识得$\sigma\sigma^{-1}(x)&#x3D;\sigma^{-1}\sigma(x)&#x3D;x$，来辅助验证$\sigma^{-1}$也是同态：$\sigma^{-1}(a\cdot b)&#x3D;\sigma^{-1}[\sigma\sigma^{-1}(a)\cdot\sigma\sigma^{-1}(b)]$用以下$\sigma$是同态，上式$&#x3D;\sigma^{-1}(a)\cdot\sigma^{-1}(b)$<br>$\square$</p>
+</blockquote>
+<p>群$G$的全体自同构关于变换的乘法作成一个群（易验证），称为<strong>群$G$的自同构群</strong>，记作$\text{Aut} G$</p>
+<p>内自同构是自同构的一种，形式为：$\tau_a: x\mapsto axa^{-1}$</p>
+<p>群$G$的全体内自同构关于变换的乘法作成一个群，称为<strong>群$G$的内自同构群</strong>，记作$\text{Inn} G$</p>
+<p>有意思的是$\text{Inn} G\unlhd\text{Aut} G$</p>
+<blockquote>
+<p>证明：</p>
+<p>$\sigma \tau_a\sigma^{-1}(x)&#x3D;\sigma (a\sigma^{-1}(x)a^{-1}))&#x3D;\sigma(a)x\sigma(a^{-1})&#x3D;\tau_{\sigma(a)}(x)$</p>
+<p>其中第二个等号用了$\sigma$是同态</p>
+</blockquote>
+<p>当把$\text{Inn} G$施加到$G$上时，若子群$N$是不变的，即$\tau_a(N)\subseteq N\text{ for }\forall a\in G$，但这就是$aNa^{-1}\subseteq N$，即：$G$的<strong>正规子群</strong>就是在$\text{Inn}G$任何元素作用下都不变的子群</p>
+<p>同样定义：</p>
+<p>$G$的<strong>特征子群</strong>就是在$\text{Aut}G$任何元素作用下都不变的子群</p>
+<p>$G$的<strong>全特征子群</strong>就是在$G$的任何自同态映射作用下都不变的子群</p>
+<p>包含关系： 全特征子群$\subseteq$特征子群$\subseteq$正规子群</p>
+<p><strong>定理</strong> 令$C(G)$代表群的中心，则$\text{Inn}G\simeq G&#x2F;C(G)$</p>
+<blockquote>
+<p>证明：易验证$\varphi: a \mapsto\tau_a$是$G\to \text{Inn} G$的同态满射，且$\text{Inn} G$中的单位元为恒等自同构，也就是群中心的元素$c\in C(G)$产生的内自同构$\tau_c$，即$\ker\varphi&#x3D;C(G)$，因此由<a href="#basic">群同态基本定理</a>可知结论</p>
 </blockquote>
 
   </div>
@@ -2778,7 +2833,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-18T14:21:33+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-18T16:48:21+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Feb 18, 2024</p>
@@ -2986,7 +3041,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E8%A7%84"><span class="toc-text">正规</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8C%E6%80%81%E5%BA%94%E7%94%A8%E5%88%B0%E7%BE%A4%E6%97%B6%E2%80%A6"><span class="toc-text">同态应用到群时…</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E8%A7%84%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%88%A4%E5%88%AB"><span class="toc-text">正规的定义与判别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E8%A7%84%E7%9A%84%E4%BC%98%E8%B6%8A%E6%80%A7"><span class="toc-text">正规的优越性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cauchy-%E5%AE%9A%E7%90%86"><span class="toc-text">Cauchy 定理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%B1%E5%8C%96%E7%89%88Cauchy%E5%AE%9A%E7%90%86"><span class="toc-text">弱化版Cauchy定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%A3%E8%A7%84%E5%8C%96%E5%AD%90%E4%B8%8E%E7%B1%BB%E6%96%B9%E7%A8%8B"><span class="toc-text">正规化子与类方程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E5%BC%BA%E7%89%88Cauchy%E5%AE%9A%E7%90%86"><span class="toc-text">加强版Cauchy定理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E7%BA%BF%E4%B9%8B%E5%A4%96%E2%80%A6"><span class="toc-text">主线之外…</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Hamilton-%E7%BE%A4"><span class="toc-text">Hamilton 群</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E7%BE%A4"><span class="toc-text">单群</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BE%A4%E5%90%8C%E6%80%81%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="toc-text">群同态基本定理</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E8%A7%84"><span class="toc-text">正规</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8C%E6%80%81%E5%BA%94%E7%94%A8%E5%88%B0%E7%BE%A4%E6%97%B6%E2%80%A6"><span class="toc-text">同态应用到群时…</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E8%A7%84%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%88%A4%E5%88%AB"><span class="toc-text">正规的定义与判别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E8%A7%84%E7%9A%84%E4%BC%98%E8%B6%8A%E6%80%A7"><span class="toc-text">正规的优越性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cauchy-%E5%AE%9A%E7%90%86"><span class="toc-text">Cauchy 定理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%B1%E5%8C%96%E7%89%88Cauchy%E5%AE%9A%E7%90%86"><span class="toc-text">弱化版Cauchy定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%A3%E8%A7%84%E5%8C%96%E5%AD%90%E4%B8%8E%E7%B1%BB%E6%96%B9%E7%A8%8B"><span class="toc-text">正规化子与类方程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E5%BC%BA%E7%89%88Cauchy%E5%AE%9A%E7%90%86"><span class="toc-text">加强版Cauchy定理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E7%BA%BF%E4%B9%8B%E5%A4%96%E2%80%A6"><span class="toc-text">主线之外…</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Hamilton-%E7%BE%A4"><span class="toc-text">Hamilton 群</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E7%BE%A4"><span class="toc-text">单群</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BE%A4%E5%90%8C%E6%80%81%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="toc-text">群同态基本定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BE%A4%E5%90%8C%E6%9E%84%E5%AE%9A%E7%90%86"><span class="toc-text">群同构定理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%90%8C%E6%9E%84%E5%AE%9A%E7%90%86"><span class="toc-text">第一同构定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%90%8C%E6%9E%84%E5%AE%9A%E7%90%86"><span class="toc-text">第二同构定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%90%8C%E6%9E%84%E5%AE%9A%E7%90%86"><span class="toc-text">第三同构定理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%90%8C%E6%9E%84"><span class="toc-text">自同构</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4149,7 +4204,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/近世代数/","name":"近世代数"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/02/06/Algebra3/","name":"正规与商群、同态同构"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"正规与商群、同态同构","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/02/06/Algebra3/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/02/06/Algebra3/","wordCount":0,"datePublished":"2024-02-06T07:01:11.000Z","dateModified":"2024-02-18T06:21:33.789Z","articleSection":"近世代数","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/近世代数/","name":"近世代数"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/02/06/Algebra3/","name":"正规与商群、同态同构"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"正规与商群、同态同构","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/02/06/Algebra3/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/02/06/Algebra3/","wordCount":0,"datePublished":"2024-02-06T07:01:11.000Z","dateModified":"2024-02-18T08:48:21.698Z","articleSection":"近世代数","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
