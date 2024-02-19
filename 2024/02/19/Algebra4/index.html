@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Sylow定理 - (.O w O.)?</title>
+  <title>Sylow定理与直积 - (.O w O.)?</title>
   <meta name="keywords" content="physics">
   <meta desc name="description" content="emmm - Maythics - (.O w O.)?">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sylow定理">
+<meta property="og:title" content="Sylow定理与直积">
 <meta property="og:url" content="http://maythics.github.io/2024/02/19/Algebra4/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
 <meta property="og:description" content="Sylow 定理该内容与上篇Cauchy定理的内容联系紧密，与中间的自同构等没啥关系。本篇相当于Cauchy定理的后续发展 铺垫与引理重陪集 设$H,K$为群$G$的两个子群，令$x\in G$，则称$G$的子集$HxK$为群$G$关于子群$H,K$的一个重陪集 引理1 对群$G$任二重陪集，若$HxK\cap HyK\neq\varnothing$，则必有$HxK&#x3D; HyK$ 该引理的">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-02-19T08:02:44.000Z">
-<meta property="article:modified_time" content="2024-02-19T08:07:36.640Z">
+<meta property="article:modified_time" content="2024-02-19T14:54:16.622Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1793,7 +1793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1708331734351),
+    lastupdate: new Date(1708354591043),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2592,7 +2592,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Sylow定理
+        Sylow定理与直积
       </h1>
       <div class='new-meta-box'>
         
@@ -2695,6 +2695,58 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>这些“非$1$的”$t_j$进行求和，得到：$p\mid ((G:H)-(N(H):H))$，但是$(G:H)&#x3D;(N(H):H)(G:N(H))&#x3D;(N(H):H)k$，因此$p\mid (N(H):H)(k-1)$</p>
 <p>但是，由于$p\nmid m&#x3D;(G:H)&#x3D;(N(H):H)k$，因此$p\nmid (N(H):H)$，所以只能$p\mid (k-1)$</p>
 </blockquote>
+<p>这样，直接得出15阶群，33阶群等群都是循环群的结论！</p>
+<h2 id="直积"><a href="#直积" class="headerlink" title="直积"></a>直积</h2><h3 id="内-外直积"><a href="#内-外直积" class="headerlink" title="内&#x2F;外直积"></a>内&#x2F;外直积</h3><p>直积是控制线代中<strong>直和</strong>概念的一个抽象。物理中，多粒子问题也会引入$\ket{\omega_1}\otimes \ket{\omega_2}\otimes\dots\ket{\omega_n}$这一直积来描述态！</p>
+<p><strong>定义</strong> 设$A_1,A_2\dots A_n$为任意$n$个群，其<strong>笛卡尔积</strong>$G$对于运算：<br>$$<br>(a_1,a_2,\dots a_n)(b_1,b_2,\dots b_n)&#x3D;(a_1b_1,a_2b_2,\dots a_nb_n)<br>$$作成一个群（易验证），称$G$为这$n$个群的直积，每个$A_i$称为直积的直积因子</p>
+<p>记号$G_i:&#x3D;\{(e_1,\dots ,a_i,\dots e_n)|a_i\in A_i\}$，显然$G_i$与$A_i$同构，而且$G_i$是直积$G$的子群</p>
+<p>笛卡尔积表示的直积又称<strong>外直积</strong>，其拥有的特征性质为：</p>
+<ol>
+<li><p>$G_i$都是$G$的正规子群</p>
+</li>
+<li><p>$G&#x3D;G_1 G_2\dots G_n$</p>
+</li>
+<li><p>$G_1G_2\dots G_{i-1}\cap G_i&#x3D;e$</p>
+</li>
+</ol>
+<p>这启发我们再抽象一点：称群$G$是$G_1\dots G_n$的<strong>内直积</strong>，只要它们是满足这三个条件的$G$的子群</p>
+<p>不过，群$G$是$G_1\dots G_n$的内直积有等价条件如下：</p>
+<ol>
+<li><p>$G&#x3D;G_1 G_2\dots G_n$，且$G$中每个元素的表示法是唯一的</p>
+</li>
+<li><p>$G_i$中任意元素同$G_j$中任意元素可交换</p>
+</li>
+</ol>
+<blockquote>
+<p>证明：</p>
+<p>若是内直积，想推出上面两个命题：</p>
+<p>假设有两种表示$a_1 a_2\dots a_n&#x3D;b_1b_2\dots b_n$找到最大的$j$使$a_j\neq b_j$，则$a_1\dots a_{j-1}&#x3D;b_1\dots b_ja_j^{-1}$</p>
+<p>等号左边显示$\in G_1\dots G_{j-1}$，由于都是正规子群，乘积仍然是（正规）子群，因此可找到$(b_1\dots b_{j-1})^{-1}\in G_1\dots G_{j-1}$，同时作用在等式两端，得到：$(b_1\dots b_{j-1})^{-1}(a_1\dots a_{j-1})&#x3D;b_ja_j^{-1}$<br>分析上式，等式左端$\in G_1\dots G_{j-1}$，右端$\in G_j$，根据内直积的条件3，推出$b_j a_j^{-1}&#x3D;e$这与$a_j\neq b_j$矛盾</p>
+<p>若$a_i\in G_i, a_j\in G_j$，则由于两者都正规，$a_ia_ja_i^{-1}a_j^{-1}\in G_i\cap G_j$而这个并是单位元（$\because G_i\cap G_j\subseteq G_1\dots G_{i-1}\cap G_i$），整理后即知可交换</p>
+<p>另一个方向，若满足上面两个命题推出是内直积：</p>
+<p>任取$x_i\in G_i,a\in G$则$a&#x3D;a_1\dots a_n$，$ax_ia^{-1}&#x3D;a_1\dots a_n x (a_1\dots a_n)^{-1}&#x3D;a_i xa_i^{-1}$，因为除了$a_i$以外都越过$x$抵消了，这样上式$\in G_i$，正规得证</p>
+<p>又若$G_1G_2\dots G_{i-1}\cap G_i\neq e$，则有某个元素$a_i\in G_1G_2\dots G_{i-1}$，这样可以用$a_1a_2\dots a_{i-1}$表示$a_i$，不唯一</p>
+<p>$\square$</p>
+</blockquote>
+<p>有限的情况下，显然有性质“直积的阶等于直积因子阶的乘积”</p>
+<h3 id="Sylow子群的直积"><a href="#Sylow子群的直积" class="headerlink" title="Sylow子群的直积"></a>Sylow子群的直积</h3><div class="note info"><p>今后的直积取内直积之含义</p></div>
+
+<p><strong>定理</strong> 设$G$是有限群，且$|G|&#x3D;p_1^{k_1}p_2^{k_2}\dots p_m^{k_m}$为标准质因数分解，则$G$是其Sylow $p_i$子群$P_i$的直积，当且仅当每个$P_i$都是正规子群</p>
+<blockquote>
+<p>证明：只需证从都是正规，推出是直积</p>
+<p>若$P_i\cap P_j\neq \{e\}$，则该交集中的元素$a$必定能生成$P_i$与$P_j$的子群。这样$|P_i|$与$|P_j|$就有大于1的公因数，矛盾，因此这些Sylow $p_i$群彼此交集仅为单位元<br>这样可以使用在Lagrange定理一节的定理“两有限子群乘积$|HK|&#x3D;|H||K|$当且仅当$H\cap K&#x3D;e$”，可推出$|P_1P_2\dots P_m|&#x3D;|G|$</p>
+<p>由于$P_1P_2\dots P_m$是正规子群的乘积，仍是$G$的正规子群，因此由单向包含加上等势推出$G&#x3D;P_1P_2\dots P_m$</p>
+<p>已经由前推出$P_1\dots P_{i-1}\cap P_i&#x3D;e$，因此满足内直积定义的三个条件<br>$\square$</p>
+</blockquote>
+<p><strong>推论</strong> 有限交换群是其Sylow子群的直积</p>
+<p><strong>推论</strong> 有限交换群$G$，若$d\mid|G|$，则由$d$阶子群</p>
+<blockquote>
+<p>证明：<br>直接分解$|G|&#x3D;p_1^{k_1}\dots p_m^{k_m}$，因此$d&#x3D;p_1^{r_1}\dots p_m^{r_m}$，运用第一Sylow定理，可知$G$有$p_i^{r_1}$阶子群$H_i$，这些$H_i$进行相乘，由于交换群所以$H_i$都正规，这样由本节定理得$H_1\dots H_m$就是直积，该直积就是所求</p>
+</blockquote>
+<p>若某个群中的元素全都是有限阶的，且阶都是$p$的幂次形式，则称该群为$p$群（$p$群可以是无限的！）</p>
+<p>一个有限群$G$是$p$群当且仅当$|G|$是$p$的幂次的形式</p>
+<blockquote>
+<p>证明：<br>一边显然，另一边直接分解质因数，如果还有$p$之外别的质因数$q$，则由Cauchy定理必有$q$阶元素，矛盾）</p>
+</blockquote>
 
   </div>
   
@@ -2719,7 +2771,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-19T16:07:36+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-19T22:54:16+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Feb 19, 2024</p>
@@ -2741,7 +2793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/02/19/Algebra4/&title=Sylow定理 - (.O w O.)?&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/02/19/Algebra4/&title=Sylow定理与直积 - (.O w O.)?&summary="
           
           >
           
@@ -2753,7 +2805,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/02/19/Algebra4/&title=Sylow定理 - (.O w O.)?&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/02/19/Algebra4/&title=Sylow定理与直积 - (.O w O.)?&summary="
           
           >
           
@@ -2765,7 +2817,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/02/19/Algebra4/&title=Sylow定理 - (.O w O.)?&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/02/19/Algebra4/&title=Sylow定理与直积 - (.O w O.)?&summary="
           
           >
           
@@ -2901,7 +2953,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-            Sylow定理
+            Sylow定理与直积
           </div>
           
         </a></li>
@@ -2939,7 +2991,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Sylow-%E5%AE%9A%E7%90%86"><span class="toc-text">Sylow 定理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BA%E5%9E%AB%E4%B8%8E%E5%BC%95%E7%90%86"><span class="toc-text">铺垫与引理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80Sylow%E5%AE%9A%E7%90%86%E2%80%94%E5%AD%98%E5%9C%A8%E4%B8%8E%E5%8C%85%E5%90%AB"><span class="toc-text">第一Sylow定理—存在与包含</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8CSylow%E5%AE%9A%E7%90%86%E2%80%94%E5%85%B1%E8%BD%AD%E6%80%A7"><span class="toc-text">第二Sylow定理—共轭性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89Sylow%E5%AE%9A%E7%90%86%E2%80%94%E8%AE%A1%E6%95%B0%E5%AE%9A%E7%90%86"><span class="toc-text">第三Sylow定理—计数定理</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Sylow-%E5%AE%9A%E7%90%86"><span class="toc-text">Sylow 定理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BA%E5%9E%AB%E4%B8%8E%E5%BC%95%E7%90%86"><span class="toc-text">铺垫与引理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80Sylow%E5%AE%9A%E7%90%86%E2%80%94%E5%AD%98%E5%9C%A8%E4%B8%8E%E5%8C%85%E5%90%AB"><span class="toc-text">第一Sylow定理—存在与包含</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8CSylow%E5%AE%9A%E7%90%86%E2%80%94%E5%85%B1%E8%BD%AD%E6%80%A7"><span class="toc-text">第二Sylow定理—共轭性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89Sylow%E5%AE%9A%E7%90%86%E2%80%94%E8%AE%A1%E6%95%B0%E5%AE%9A%E7%90%86"><span class="toc-text">第三Sylow定理—计数定理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B4%E7%A7%AF"><span class="toc-text">直积</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85-%E5%A4%96%E7%9B%B4%E7%A7%AF"><span class="toc-text">内&#x2F;外直积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sylow%E5%AD%90%E7%BE%A4%E7%9A%84%E7%9B%B4%E7%A7%AF"><span class="toc-text">Sylow子群的直积</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4102,7 +4154,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/近世代数/","name":"近世代数"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/02/19/Algebra4/","name":"Sylow定理"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Sylow定理","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/02/19/Algebra4/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/02/19/Algebra4/","wordCount":0,"datePublished":"2024-02-19T08:02:44.000Z","dateModified":"2024-02-19T08:07:36.640Z","articleSection":"近世代数","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/近世代数/","name":"近世代数"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/02/19/Algebra4/","name":"Sylow定理与直积"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Sylow定理与直积","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/02/19/Algebra4/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/02/19/Algebra4/","wordCount":0,"datePublished":"2024-02-19T08:02:44.000Z","dateModified":"2024-02-19T14:54:16.622Z","articleSection":"近世代数","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
