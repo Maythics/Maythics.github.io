@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://maythics.github.io/2024/02/19/algebra4/"/>
+  <link rel="canonical" href="http://maythics.github.io/2024/02/22/qm5/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Sylow定理与直积 - (.O w O.)?</title>
+  <title>多自由度与全同粒子 - (.O w O.)?</title>
   <meta name="keywords" content="physics">
   <meta desc name="description" content="emmm - Maythics - (.O w O.)?">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sylow定理与直积">
-<meta property="og:url" content="http://maythics.github.io/2024/02/19/Algebra4/index.html">
+<meta property="og:title" content="多自由度与全同粒子">
+<meta property="og:url" content="http://maythics.github.io/2024/02/22/QM5/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
-<meta property="og:description" content="Sylow 定理该内容与上篇Cauchy定理的内容联系紧密，与中间的自同构等没啥关系。本篇相当于Cauchy定理的后续发展 铺垫与引理重陪集 设$H,K$为群$G$的两个子群，令$x\in G$，则称$G$的子集$HxK$为群$G$关于子群$H,K$的一个重陪集 引理1 对群$G$任二重陪集，若$HxK\cap HyK\neq\varnothing$，则必有$HxK&#x3D; HyK$ 该引理的">
+<meta property="og:description" content="注：本篇中的“轨道”名词均指代数中的概念，而非物理概念  Shankar_ch.10P249 direct product的定义就是笛卡尔积（笛卡尔积的对象是两个集合）加一个代数运算 至于为何有（10.1.10），得先在新的直积空间中定义元素的加法运算以及标量乘运算（书中没讲，但如何定义是显然的），然后再推出线性…… 把原来Hilbert空间中的算符提升（promote）到一个更“大”的直积Hil">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-02-19T08:02:44.000Z">
-<meta property="article:modified_time" content="2024-02-19T14:54:16.622Z">
+<meta property="article:published_time" content="2024-02-22T08:10:57.000Z">
+<meta property="article:modified_time" content="2024-02-22T08:16:35.014Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -2571,7 +2571,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/02/19/Algebra4/">
+  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/02/22/QM5/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="(.O w O.)?">
   </span>
@@ -2592,7 +2592,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Sylow定理与直积
+        多自由度与全同粒子
       </h1>
       <div class='new-meta-box'>
         
@@ -2611,10 +2611,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/">近世代数</a>
+    <a class="category-link" href="/categories/Shankar-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">Shankar 量子力学</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/" itemprop="url"><span itemprop="name">近世代数</span></a>
+        <a href="/categories/Shankar-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/" itemprop="url"><span itemprop="name">Shankar 量子力学</span></a>
       </span>
     
   </div>
@@ -2623,10 +2623,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-02-19T16:02:44+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-02-22T16:10:57+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Feb 19, 2024</p>
+    <p>发布于：Feb 22, 2024</p>
   </a>
 </div>
 
@@ -2649,104 +2649,71 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="Sylow-定理"><a href="#Sylow-定理" class="headerlink" title="Sylow 定理"></a>Sylow 定理</h2><p>该内容与上篇Cauchy定理的内容联系紧密，与中间的自同构等没啥关系。本篇相当于Cauchy定理的后续发展</p>
-<h3 id="铺垫与引理"><a href="#铺垫与引理" class="headerlink" title="铺垫与引理"></a>铺垫与引理</h3><p><strong>重陪集</strong> 设$H,K$为群$G$的两个子群，令$x\in G$，则称$G$的子集$HxK$为群$G$关于子群$H,K$的一个重陪集</p>
-<p><strong>引理1</strong> 对群$G$任二重陪集，若$HxK\cap HyK\neq\varnothing$，则必有$HxK&#x3D; HyK$</p>
-<p>该引理的作用在于说明群$G$可以用重陪集进行分解。</p>
-<p>从重陪集的定义出发又可知$HxK&#x3D;\bigcup_k Hxk&#x3D;\bigcup_k hxK$，相当于先把整个群按左&#x2F;右陪集分解，之后再把一些陪集重组合并得到。那么，一个重陪集中含有左&#x2F;右陪集的数量是多少呢？</p>
-<p><strong>引理2</strong> $HxK$中，含有关于$H$的右陪集$(K:K\cap x^{-1}Hx)$个，含有关于$K$的左陪集$(H:H\cap xKx^{-1})$个</p>
-<blockquote>
-<p>证明：</p>
-<p>$S:&#x3D;\{Hxk|k\in K\},T:&#x3D;\{(K\cap x^{-1}Hx)k|k\in K\}$，令$\varphi:HxK\mapsto (K\cap x^{-1}Hx)k$，验证well-defined，且是双射（单性需用$x^{-1}Hx$是群，以及子群之并是子群）</p>
-</blockquote>
-<p><strong>引理3</strong> 设$G&#x3D;Hx_1H\cup \cdots Hx_r H$是有限群的重陪集分解，则对任意$Ha\subseteq N(H)$均有某个$x_j$使得$Hx_j&#x3D;Ha$</p>
-<blockquote>
-<p>证明：</p>
-<p>由于$a$必定会落于某$Hx_jH$中，则$a&#x3D;h_1 x_j h_2$，而$a\in Ha\subseteq N(H)$，因此$aH&#x3D;Ha$</p>
-<p>结合两者：$Hx_j&#x3D;H h_1^{-1}ah_2^{-1}&#x3D;Hah_2^{-1}&#x3D;aHh_2^{-1}&#x3D;aH$</p>
-<p>$\square$</p>
-</blockquote>
-<p>这一引理说明包含于$N(H)$的陪集均形如$Hx_j$（$x_j$是重陪集分解后的某一个代表）</p>
-<h3 id="第一Sylow定理—存在与包含"><a href="#第一Sylow定理—存在与包含" class="headerlink" title="第一Sylow定理—存在与包含"></a>第一Sylow定理—存在与包含</h3><p>设$G$是有限群，且$|G|&#x3D;p^s m$，其中$p$为质数，$s$为正整数，$p\nmid m$，则对$G$的每一个$p^i$($i&#x3D;0,1,\dots ,s-1$)阶子群$H$,均存在$G$的$p^{i+1}$阶子群$K$，使得$H\unlhd K$</p>
-<blockquote>
-<p>证明：</p>
-<p>$G$对$H$进行重陪集分解：$G&#x3D;Hx_1 H\cup Hx_2 H\dots\cup Hx_r H$，记$Hx_j H$是由$t_j$个$H$的右陪集组成的，据引理2$t_j&#x3D;(H:H\cap x_j^{-1}Hx_j)$（<strong>这暗示</strong>$t_j\mid p^i$），根据分解$(G:H)&#x3D;t_1+\cdots +t_r$，因此$|G|&#x3D;|H|(G:H)$即$p^s m&#x3D;p^i (t_1+\cdots +t_r)$（<strong>这暗示</strong>$p\mid (t_1+\cdots +t_r)$）</p>
-<p>下面先证$t_j&#x3D;1\iff Hx_j\subseteq N(H)$</p>
-<p>一方面，$t_j&#x3D;1$意味着$H&#x3D;H\cap x_j^{-1}Hx_j$，即$H\subseteq x_j^{-1}Hx_j$，但是两者等势，所以两者相等，即$Hx_j&#x3D;x_j H$，因此$x_j\in N(H)$，故$Hhx_j&#x3D;hx_jH \text{ for }\forall h\in H$，即$Hx_j\subseteq N(H)$<br>另一方面，若$Hx_j\subseteq N(H)$，则$x_j\in Hx_j\Rightarrow x_j\in N(H)$，因此$x_j^{-1}Hx_j&#x3D;H\Rightarrow t_j&#x3D;1$</p>
-<p>由引理3，包含于$N(H)$的陪集均形如$Hx_j$，因此刚刚证的等价关系说明“有几个$t_j&#x3D;1$，就有几个右陪集在$N(H)$中”即$(N(H):H)$</p>
-<p>结合<strong>两个暗示</strong>得到$p\mid (N(H):H)&#x3D;|N(H)&#x2F;H|$（因为不是$1$的那些$t_j$能整除$p^i$可推出一定是$p$的倍数），之所以能写成商群的形式是因为正规化子的性质2（见Cauchy定理一节），这样对该群$N(H)&#x2F;H$应用Cauchy定理，可得到$N(H)&#x2F;H$有一个$p$阶子群</p>
-<p>再使用第三同构定理，商群的子群一定仍然是商群且有形式$K&#x2F;H$，当然必有$H\unlhd K$，故$|K|&#x3D;|K&#x2F;H|\cdot|H|&#x3D;p^{i+1}$，找到了所求的$K$</p>
-</blockquote>
-<h3 id="第二Sylow定理—共轭性"><a href="#第二Sylow定理—共轭性" class="headerlink" title="第二Sylow定理—共轭性"></a>第二Sylow定理—共轭性</h3><p>设$G$是有限群，$p$为质数，则$G$的所有<strong>Sylow p 子群</strong>恰好是群$G$的一个共轭子群类</p>
-<p><strong>Sylow p 子群</strong>：有限群$G$，$|G|&#x3D;p^s m$，其中$p$为质数，$s$为正整数，$p\nmid m$。$G$的$p^s$阶子群称为Sylow p 子群（第一定理已经保证其存在）</p>
-<blockquote>
-<p>证明：</p>
-<p>一方面，与某个Sylow p 子群共轭的群，其阶数也是一样的因而也是Sylow p 子群</p>
-<p>另一方面，任意两个Sylow p 子群都共轭：</p>
-<p>设$H,K$是这样两个群，关于重陪集分解$G&#x3D;Hx_1K\cup \dots\cup Hx_rK$，根据引理2，在$Hx_iK$中含有的关于$H$的右陪集数$t_i&#x3D;(K:K\cap x_i^{-1}Hx_i)$（<strong>暗示</strong>$t_i \mid p^s$），$(G:H)&#x3D;t_1+\dots +t_r$</p>
-<p>考虑$|G|&#x3D;|H|(G:H)$，即$p^sm &#x3D;p^s(t_1+\dots +t_r)\Rightarrow p\nmid m&#x3D;(t_1+\dots +t_r)$，结合暗示可知，必有某$t_j&#x3D;1$</p>
-<p>$t_j&#x3D;1$只有在$K\subseteq x_j^{-1}Hx_j$时会发生，但是两者等势，因此只能相等，该等式就是共轭关系！<br>$\square$</p>
-</blockquote>
-<h3 id="第三Sylow定理—计数定理"><a href="#第三Sylow定理—计数定理" class="headerlink" title="第三Sylow定理—计数定理"></a>第三Sylow定理—计数定理</h3><p>设$G$是有限群，且$|G|&#x3D;p^s m$，其中$p$为质数，$s$为正整数，$p\nmid m$。若$G$的Sylow p子群有$k$个，则$k\mid |G|$且$p\mid (k-1)$</p>
-<blockquote>
-<p>证明：</p>
-<p>假设$H$是一个Sylow p子群，由第二定理知所有的Sylow p子群和它共轭，然后用Cauchy定理一节中的正规化子性质之“与$H$共轭的子集的数量等于$(G:N(H))$”，这样$k&#x3D;(G:N(H))\Rightarrow k\mid |G|$</p>
-<p>重陪集分解$G&#x3D;Hx_1 H\cup Hx_2 H\dots\cup Hx_r H$，……，完全照抄第一Sylow定理的证明，得出“有几个$t_j&#x3D;1$，就有几个右陪集在$N(H)$中”，其余的$t_i$都是非$1$的，即至少$p$起步</p>
-<p>这些“非$1$的”$t_j$进行求和，得到：$p\mid ((G:H)-(N(H):H))$，但是$(G:H)&#x3D;(N(H):H)(G:N(H))&#x3D;(N(H):H)k$，因此$p\mid (N(H):H)(k-1)$</p>
-<p>但是，由于$p\nmid m&#x3D;(G:H)&#x3D;(N(H):H)k$，因此$p\nmid (N(H):H)$，所以只能$p\mid (k-1)$</p>
-</blockquote>
-<p>这样，直接得出15阶群，33阶群等群都是循环群的结论！</p>
-<h2 id="直积"><a href="#直积" class="headerlink" title="直积"></a>直积</h2><h3 id="内-外直积"><a href="#内-外直积" class="headerlink" title="内&#x2F;外直积"></a>内&#x2F;外直积</h3><p>直积是控制线代中<strong>直和</strong>概念的一个抽象。物理中，多粒子问题也会引入$\ket{\omega_1}\otimes \ket{\omega_2}\otimes\dots\ket{\omega_n}$这一直积来描述态！</p>
-<p><strong>定义</strong> 设$A_1,A_2\dots A_n$为任意$n$个群，其<strong>笛卡尔积</strong>$G$对于运算：<br>$$<br>(a_1,a_2,\dots a_n)(b_1,b_2,\dots b_n)&#x3D;(a_1b_1,a_2b_2,\dots a_nb_n)<br>$$作成一个群（易验证），称$G$为这$n$个群的直积，每个$A_i$称为直积的直积因子</p>
-<p>记号$G_i:&#x3D;\{(e_1,\dots ,a_i,\dots e_n)|a_i\in A_i\}$，显然$G_i$与$A_i$同构，而且$G_i$是直积$G$的子群</p>
-<p>笛卡尔积表示的直积又称<strong>外直积</strong>，其拥有的特征性质为：</p>
-<ol>
-<li><p>$G_i$都是$G$的正规子群</p>
-</li>
-<li><p>$G&#x3D;G_1 G_2\dots G_n$</p>
-</li>
-<li><p>$G_1G_2\dots G_{i-1}\cap G_i&#x3D;e$</p>
-</li>
-</ol>
-<p>这启发我们再抽象一点：称群$G$是$G_1\dots G_n$的<strong>内直积</strong>，只要它们是满足这三个条件的$G$的子群</p>
-<p>不过，群$G$是$G_1\dots G_n$的内直积有等价条件如下：</p>
-<ol>
-<li><p>$G&#x3D;G_1 G_2\dots G_n$，且$G$中每个元素的表示法是唯一的</p>
-</li>
-<li><p>$G_i$中任意元素同$G_j$中任意元素可交换</p>
-</li>
-</ol>
-<blockquote>
-<p>证明：</p>
-<p>若是内直积，想推出上面两个命题：</p>
-<p>假设有两种表示$a_1 a_2\dots a_n&#x3D;b_1b_2\dots b_n$找到最大的$j$使$a_j\neq b_j$，则$a_1\dots a_{j-1}&#x3D;b_1\dots b_ja_j^{-1}$</p>
-<p>等号左边显示$\in G_1\dots G_{j-1}$，由于都是正规子群，乘积仍然是（正规）子群，因此可找到$(b_1\dots b_{j-1})^{-1}\in G_1\dots G_{j-1}$，同时作用在等式两端，得到：$(b_1\dots b_{j-1})^{-1}(a_1\dots a_{j-1})&#x3D;b_ja_j^{-1}$<br>分析上式，等式左端$\in G_1\dots G_{j-1}$，右端$\in G_j$，根据内直积的条件3，推出$b_j a_j^{-1}&#x3D;e$这与$a_j\neq b_j$矛盾</p>
-<p>若$a_i\in G_i, a_j\in G_j$，则由于两者都正规，$a_ia_ja_i^{-1}a_j^{-1}\in G_i\cap G_j$而这个并是单位元（$\because G_i\cap G_j\subseteq G_1\dots G_{i-1}\cap G_i$），整理后即知可交换</p>
-<p>另一个方向，若满足上面两个命题推出是内直积：</p>
-<p>任取$x_i\in G_i,a\in G$则$a&#x3D;a_1\dots a_n$，$ax_ia^{-1}&#x3D;a_1\dots a_n x (a_1\dots a_n)^{-1}&#x3D;a_i xa_i^{-1}$，因为除了$a_i$以外都越过$x$抵消了，这样上式$\in G_i$，正规得证</p>
-<p>又若$G_1G_2\dots G_{i-1}\cap G_i\neq e$，则有某个元素$a_i\in G_1G_2\dots G_{i-1}$，这样可以用$a_1a_2\dots a_{i-1}$表示$a_i$，不唯一</p>
-<p>$\square$</p>
-</blockquote>
-<p>有限的情况下，显然有性质“直积的阶等于直积因子阶的乘积”</p>
-<h3 id="Sylow子群的直积"><a href="#Sylow子群的直积" class="headerlink" title="Sylow子群的直积"></a>Sylow子群的直积</h3><div class="note info"><p>今后的直积取内直积之含义</p></div>
+    <div class="note warning"><p>注：本篇中的“轨道”名词均指代数中的概念，而非物理概念</p></div>
 
-<p><strong>定理</strong> 设$G$是有限群，且$|G|&#x3D;p_1^{k_1}p_2^{k_2}\dots p_m^{k_m}$为标准质因数分解，则$G$是其Sylow $p_i$子群$P_i$的直积，当且仅当每个$P_i$都是正规子群</p>
-<blockquote>
-<p>证明：只需证从都是正规，推出是直积</p>
-<p>若$P_i\cap P_j\neq \{e\}$，则该交集中的元素$a$必定能生成$P_i$与$P_j$的子群。这样$|P_i|$与$|P_j|$就有大于1的公因数，矛盾，因此这些Sylow $p_i$群彼此交集仅为单位元<br>这样可以使用在Lagrange定理一节的定理“两有限子群乘积$|HK|&#x3D;|H||K|$当且仅当$H\cap K&#x3D;e$”，可推出$|P_1P_2\dots P_m|&#x3D;|G|$</p>
-<p>由于$P_1P_2\dots P_m$是正规子群的乘积，仍是$G$的正规子群，因此由单向包含加上等势推出$G&#x3D;P_1P_2\dots P_m$</p>
-<p>已经由前推出$P_1\dots P_{i-1}\cap P_i&#x3D;e$，因此满足内直积定义的三个条件<br>$\square$</p>
-</blockquote>
-<p><strong>推论</strong> 有限交换群是其Sylow子群的直积</p>
-<p><strong>推论</strong> 有限交换群$G$，若$d\mid|G|$，则由$d$阶子群</p>
-<blockquote>
-<p>证明：<br>直接分解$|G|&#x3D;p_1^{k_1}\dots p_m^{k_m}$，因此$d&#x3D;p_1^{r_1}\dots p_m^{r_m}$，运用第一Sylow定理，可知$G$有$p_i^{r_1}$阶子群$H_i$，这些$H_i$进行相乘，由于交换群所以$H_i$都正规，这样由本节定理得$H_1\dots H_m$就是直积，该直积就是所求</p>
-</blockquote>
-<p>若某个群中的元素全都是有限阶的，且阶都是$p$的幂次形式，则称该群为$p$群（$p$群可以是无限的！）</p>
-<p>一个有限群$G$是$p$群当且仅当$|G|$是$p$的幂次的形式</p>
-<blockquote>
-<p>证明：<br>一边显然，另一边直接分解质因数，如果还有$p$之外别的质因数$q$，则由Cauchy定理必有$q$阶元素，矛盾）</p>
-</blockquote>
+<h2 id="Shankar-ch-10"><a href="#Shankar-ch-10" class="headerlink" title="Shankar_ch.10"></a>Shankar_ch.10</h2><p>P249 direct product的定义就是笛卡尔积（笛卡尔积的对象是两个集合）加一个代数运算</p>
+<p>至于为何有（10.1.10），得先在新的直积空间中定义元素的加法运算以及标量乘运算（书中没讲，但如何定义是显然的），然后再推出线性……</p>
+<p>把原来Hilbert空间中的算符提升（promote）到一个更“大”的直积Hilbert空间中，则需要平凡的扩充：<br>$$<br>X_1^{(1)\otimes (2)}| x_1\rangle\otimes|x_2 \rangle:&#x3D; | X_1^{(1)}x_1\rangle\otimes|I^{(2)} x_2 \rangle<br>$$<br>对上述的扩充方法加以推广，定义两个“小”空间的算符的直积为“大”空间中的算符，如式10.1.14，这样上式就写为$X_1^{(1)\otimes (2)}&#x3D;X_1^{(1)}\otimes I^{(2)}$</p>
+<h3 id="Ex-10-1-1"><a href="#Ex-10-1-1" class="headerlink" title="Ex 10.1.1"></a>Ex 10.1.1</h3><p>(1) 类似于“无公共数码的轮换可交换”。数学验证只要假设一个态$|x_1\rangle \otimes| x_2\rangle$然后按照算符直积的定义代入即可</p>
+<p>(2)<br>$$<br>\begin{align*}<br>&amp;(\Omega_1^{(1)}\otimes\Gamma_2^{(2)})(\theta_1^{(1)}\otimes\Lambda_2^{(2)})|x_1\rangle \otimes| x_2\rangle<br>\newline<br><br>\newline<br>&#x3D;&amp;(\Omega_1^{(1)}\otimes\Gamma_2^{(2)})(\theta_1^{(1)}|x_1\rangle \otimes\Lambda_2^{(2)}| x_2\rangle)<br>\newline<br><br>\newline<br>&#x3D;&amp;\Omega_1^{(1)}\theta_1^{(1)}|x_1\rangle \otimes\Gamma_2^{(2)}\Lambda_2^{(2)}| x_2\rangle<br>\end{align*}<br>$$</p>
+<p>(3)<br>$$<br>\begin{align*}<br>&amp;[\Omega_1^{(1)\otimes(2)},\Lambda_1^{(1)\otimes(2)}](|x_1\rangle \otimes| x_2\rangle)<br>\newline<br><br>\newline<br>&#x3D;&amp;\Omega_1^{(1)\otimes(2)}\Lambda_1^{(1)\otimes(2)}(|x_1\rangle \otimes| x_2\rangle)-\Lambda_1^{(1)\otimes(2)}\Omega_1^{(1)\otimes(2)}(|x_1\rangle \otimes| x_2\rangle)<br>\newline<br><br>\newline<br>&#x3D;&amp;\Omega_1^{(1)\otimes(2)}(\Lambda_1^{(1)}|x_1\rangle \otimes| x_2\rangle)-\Lambda_1^{(1)\otimes(2)}(\Omega_1^{(1)}|x_1\rangle \otimes| x_2\rangle)<br>\newline<br><br>\newline<br>&#x3D;&amp;\Omega_1^{(1)}\Lambda_1^{(1)}|x_1\rangle \otimes| x_2\rangle-\Lambda_1^{(1)}\Omega_1^{(1)}|x_1\rangle \otimes| x_2\rangle<br>\newline<br><br>\newline<br>&#x3D;&amp;[\Omega_1^{(1)},\Lambda_1^{(1)}]|x_1\rangle \otimes| x_2\rangle<br>\end{align*}<br>$$<br>其中最后一步用了直积的线性性质</p>
+<p>(4) 只需用<br>$$<br>(\Omega_1^{(1)\otimes(2)})^2&#x3D;(\Omega_1^{(1)}\otimes I_2^{(2)})\times(\Omega_1^{(1)}\otimes I_2^{(2)})&#x3D;(\Omega_1^{(1)})^2\otimes I_2^{(2)}<br>$$<br>以及(1)中可交换的结论即可</p>
+<h3 id="Ex-10-1-2"><a href="#Ex-10-1-2" class="headerlink" title="Ex 10.1.2"></a>Ex 10.1.2</h3><p>(1) 第一行为例：<br>第一个位置<br>$$<br>\begin{align*}<br>&amp;(\langle +|\otimes\langle +|)\sigma_1^{(1)\otimes(2)}(|+\rangle\otimes|+\rangle)<br>\newline<br><br>\newline<br>&#x3D;&amp;(\langle +|\otimes\langle +|)(\sigma_1^{(1)}|+\rangle\otimes|+\rangle)<br>\newline<br><br>\newline<br>&#x3D;&amp;\langle +|\sigma_1^{(1)}|+\rangle\langle +|+\rangle&#x3D;a<br>\end{align*}<br>$$<br>第二个位置（第四个位置同理）<br>$$<br>\begin{align*}<br>&amp;(\langle +|\otimes\langle +|)\sigma_1^{(1)\otimes(2)}(|+\rangle\otimes|-\rangle)<br>\newline<br><br>\newline<br>&#x3D;&amp;(\langle +|\otimes\langle +|)(\sigma_1^{(1)}|+\rangle\otimes|-\rangle)<br>\newline<br><br>\newline<br>&#x3D;&amp;\langle +|\sigma_1^{(1)}|+\rangle\langle +|-\rangle&#x3D;0<br>\end{align*}<br>$$<br>第三个位置<br>$$<br>\begin{align*}<br>&amp;(\langle +|\otimes\langle +|)\sigma_1^{(1)\otimes(2)}(|-\rangle\otimes|+\rangle)<br>\newline<br><br>\newline<br>&#x3D;&amp;(\langle +|\otimes\langle +|)(\sigma_1^{(1)}|-\rangle\otimes|+\rangle)<br>\newline<br><br>\newline<br>&#x3D;&amp;\langle +|\sigma_1^{(1)}|-\rangle\langle +|+\rangle&#x3D;b<br>\end{align*}<br>$$</p>
+<p>(2) 同(1)</p>
+<p>(3) (1)乘(2)略，另一种方法：<br>$$<br>\begin{align*}<br>&amp;(\langle +|\otimes\langle +|)\sigma_1^{(1)}\otimes \sigma_2^{(2)}(|+\rangle\otimes|+\rangle)<br>\newline<br><br>\newline<br>&#x3D;&amp;(\langle +|\otimes\langle +|)(\sigma_1^{(1)}|+\rangle\otimes \sigma_2^{(2)}|+\rangle)<br>\newline<br><br>\newline<br>&#x3D;&amp;\langle +|\sigma_1^{(1)}|+\rangle\langle +|\sigma_2^{(2)}|+\rangle&#x3D;ae<br>\end{align*}<br>$$<br>其余略</p>
+<p>其实想验证$\sigma_1^{(1)}\otimes\sigma_2^{(2)}$的矩阵形式就是$\sigma_1^{(1)\otimes(2)}\sigma_2^{(1)\otimes(2)}$（不限于二维）可以用Ex 10.1.1 (1)的结论，直接证明两个算符一样：<br>$$<br>\sigma_1^{(1)\otimes(2)}\sigma_2^{(1)\otimes(2)}&#x3D;(\sigma_1^{(1)}\otimes I_2^{(2)})(I_1^{(1)}\otimes\sigma_2^{(2)})&#x3D;\sigma_1^{(1)}\otimes\sigma_2^{(2)}<br>$$</p>
+<h3 id="Ex-10-1-3"><a href="#Ex-10-1-3" class="headerlink" title="Ex.10.1.3"></a>Ex.10.1.3</h3><p>(1) 在经典的poisson括号情形，令$q_k$取遍$x_1,x_2$，$p_k$取遍$p_1,p_2$，例如（其余情况类似，略）：<br>$$<br>\begin{align*}<br>\{x_I,p_I \}&amp;&#x3D;\frac{1}{2}\sum_k \left( \frac{\partial(x_1+x_2)}{\partial q_k}\frac{\partial (p_1+p_2)}{\partial p_k}-\frac{\partial (x_1+x_2)}{\partial p_k}\frac{\partial (p_1+p_2)}{\partial q_k}\right)<br>\newline<br><br>\newline<br>&amp;&#x3D;\frac{1}{2}((1-0)+(1-0))&#x3D;1<br>\end{align*}<br>$$<br>$$<br>\begin{align*}<br>\{x_I,p_{II} \}&amp;&#x3D;\frac{1}{2}\sum_k \left( \frac{\partial(x_1+x_2)}{\partial q_k}\frac{\partial (p_1-p_2)}{\partial p_k}-\frac{\partial (x_1+x_2)}{\partial p_k}\frac{\partial (p_1-p_2)}{\partial q_k}\right)<br>\newline<br><br>\newline<br>&amp;&#x3D;\frac{1}{2}((1-0)+(-1-0))&#x3D;0<br>\end{align*}<br>$$</p>
+<p>由于此时<br>$$<br>\mathscr{H}&#x3D;\frac{p_I^2}{2m}+\frac{p_{II}^2}{2m}+\frac{1}{2}m\omega^2(x_I^2+3x_{II}^2)<br>$$<br>因此量子化后为：<br>$$<br>H&#x3D;\frac{P_I^2}{2m}+\frac{P_{II}^2}{2m}+\frac{1}{2}m\omega^2(X_I^2+3X_{II}^2)<br>$$<br>抛弃原来的$X_1,X_2$等等，以$X_I,X_{II}$为新的标准，利用对易子定义的postulate II得出$P_I,P_{II}$的表达式……</p>
+<p>这样就回到了P254的class A，分解成$H_1+H_2$，得出两个本征方程形如10.1.28</p>
+<p>(2) 直接量子化为：<br>$$<br>H&#x3D;\frac{P_1^2}{2m}+\frac{P_2^2}{2m}+\frac{1}{2}m\omega^2(X_1^2+X_2^2+(X_1-X_2)^2)<br>$$<br>在坐标空间中<br>$$<br>P_1&#x3D;-i\hbar\frac{\partial}{\partial x_1}&#x3D;-i\hbar\left(\frac{\partial x_I}{\partial x_1}\frac{\partial}{\partial x_I}+\frac{\partial x_{II}}{\partial x_1}\frac{\partial}{\partial x_{II}}\right)&#x3D;\frac{-i\hbar}{\sqrt{2}}\left(\frac{\partial}{\partial x_I}+\frac{\partial}{\partial x_{II}}\right)<br>$$<br>$$<br>P_2&#x3D;-i\hbar\frac{\partial}{\partial x_2}&#x3D;-i\hbar\left(\frac{\partial x_I}{\partial x_2}\frac{\partial}{\partial x_I}+\frac{\partial x_{II}}{\partial x_2}\frac{\partial}{\partial x_{II}}\right)&#x3D;\frac{-i\hbar}{\sqrt{2}}\left(\frac{\partial}{\partial x_I}-\frac{\partial}{\partial x_{II}}\right)<br>$$<br>代入：<br>$$<br>P_1^2+P_2^2&#x3D;-\frac{\hbar^2}{2}\left(2\frac{\partial^2}{\partial x_I^2}+2\frac{\partial^2}{\partial x_{II}^2}+2(\frac{\partial^2}{\partial x_I\partial x_{II}}-\frac{\partial^2}{\partial x_I\partial x_{II}})\right)<br>$$<br>即为$P_I^2+P_{II}^2$，而$x$的部分显然也是一致的</p>
+<h3 id="Ex-10-2-1"><a href="#Ex-10-2-1" class="headerlink" title="Ex 10.2.1"></a>Ex 10.2.1</h3><p>$$<br>H|E\rangle&#x3D;E|E \rangle \Rightarrow -\frac{\hbar^2}{2m}\left( \frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\right)\psi_E (x,y,z)&#x3D;E\psi_E(x,y,z)<br>$$<br>典型的分离变数法，假设$\psi_E(x,y,z)&#x3D;\psi_1(x)\psi_2(y)\psi_3(z)$，代入……果然成功，因此分解成三个一样的一维方程</p>
+<h3 id="Ex-10-2-2"><a href="#Ex-10-2-2" class="headerlink" title="Ex 10.2.2"></a>Ex 10.2.2</h3><p>(1) 同理分成$H&#x3D;H_x+H_y$，分离变量法，假设$\psi(x,y)&#x3D;\psi_1(x)\psi_2(y)$因此：<br>$$<br>\begin{align*}<br>(H_x+H_y)\psi_1(x)\psi_2(y)&amp;&#x3D;E\psi_1(x)\psi_2(y)<br>\newline<br><br>\newline<br>\frac{H_x \psi_1(x)}{\psi_1(x)}+ \frac{H_y \psi_2(y)}{\psi_2(y)}&amp;&#x3D;E&#x3D;E_x+E_y<br>\end{align*}<br>$$<br>拆解成两个一维的方程后，按照原先的讨论即得</p>
+<p>(2) 由于原来的一维(x)的情形就有结论正负交替，在$n_x$为偶时，波函数为偶函数，$n_x$为奇时波函数为奇函数。这样，一旦$n$为偶，$n_x+n_y$要么奇加奇，要么偶加偶，对应的两个波函数乘积一定是偶函数；一旦$n$为奇，$n_x+n_y$一定是奇加偶，两个波函数乘积一定是奇函数</p>
+<p>(3) isotropic指“各向同性”</p>
+<p>此处$n&#x3D;0$代表$n_x&#x3D;0,n_y&#x3D;0$，因此（参考P195）<br>$$<br>\begin{align*}<br>\psi_{n&#x3D;0}(x,y)&amp;&#x3D;\left( \frac{m\omega}{\pi\hbar}\right)^{\frac{1}{2}}\exp \left(-\frac{m\omega(x^2+y^2)} {2\hbar}\right)<br>\newline<br><br>\newline<br>\psi_{n_x&#x3D;1,n_y&#x3D;0}(x,y)&amp;&#x3D;\sqrt{\frac{2}{\pi}} \frac{m\omega x}{\hbar}\exp \left(-\frac{m\omega(x^2+y^2)} {2\hbar}\right)<br>\newline<br><br>\newline<br>\psi_{n_x&#x3D;0,n_y&#x3D;1}(x,y)&amp;&#x3D;\sqrt{\frac{2}{\pi}} \frac{m\omega y}{\hbar}\exp \left(-\frac{m\omega(x^2+y^2)} {2\hbar}\right)<br>\end{align*}<br>$$<br>极坐标就是：<br>$$<br>\begin{align*}<br>\psi_{n&#x3D;0}(\rho,\phi)&amp;&#x3D;\left( \frac{m\omega}{\pi\hbar}\right)^{\frac{1}{2}}\exp \left(-\frac{m\omega\rho^2} {2\hbar}\right)<br>\newline<br><br>\newline<br>\psi_{n_x&#x3D;1,n_y&#x3D;0}(\rho,\phi)&amp;&#x3D;\sqrt{\frac{2}{\pi}} \frac{m\omega \rho\cos\phi}{\hbar}\exp \left(-\frac{m\omega\rho^2} {2\hbar}\right)<br>\newline<br><br>\newline<br>\psi_{n_x&#x3D;0,n_y&#x3D;1}(\rho,\phi)&amp;&#x3D;\sqrt{\frac{2}{\pi}} \frac{m\omega \rho\sin\phi}{\hbar}\exp \left(-\frac{m\omega\rho^2} {2\hbar}\right)<br>\end{align*}<br>$$<br>显然，在$n$时，有$n_x+n_y$的许多种组合，$n_x&#x3D;0\to n$，共$n+1$种方法，取遍所有简并可能</p>
+<h3 id="Ex-10-2-3"><a href="#Ex-10-2-3" class="headerlink" title="Ex 10.2.3"></a>Ex 10.2.3</h3><p>(1) 因为可以分离变量，所以完全同上题</p>
+<p>(2) parity 指“宇称”，当$n$为偶时，要么奇+奇+偶，要么偶+偶+偶，因此相乘后波函数是偶宇称；当$n$为奇时，一定是奇+偶+偶，因此相乘后波函数是奇宇称</p>
+<p>前4个态即$n&#x3D;0,1$，下面角标数组代表$(n_x,n_y,n_z)$，参考P195<br>$$<br>\begin{align*}<br>\psi_{(0,0,0)}(x,y,z)&amp;&#x3D;\left( \frac{m\omega}{\pi\hbar}\right)^{\frac{3}{4}}\exp \left(-\frac{m\omega(x^2+y^2+z^2)} {2\hbar}\right)<br>\newline<br><br>\newline<br>\psi_{(1,0,0)}(x,y,z)&amp;&#x3D;\sqrt{2} \pi^{-\frac{3}{4}}\left(\frac{m\omega}{\hbar}\right)^{\frac{5}{4}}x\exp \left(-\frac{m\omega(x^2+y^2+z^2)} {2\hbar}\right)<br>\newline<br><br>\newline<br>\psi_{(0,1,0)}(x,y,z)&amp;&#x3D;\sqrt{2} \pi^{-\frac{3}{4}}\left(\frac{m\omega}{\hbar}\right)^{\frac{5}{4}}y\exp \left(-\frac{m\omega(x^2+y^2+z^2)} {2\hbar}\right)<br>\newline<br><br>\newline<br>\psi_{(0,0,1)}(x,y,z)&amp;&#x3D;\sqrt{2} \pi^{-\frac{3}{4}}\left(\frac{m\omega}{\hbar}\right)^{\frac{5}{4}}z\exp \left(-\frac{m\omega(x^2+y^2+z^2)} {2\hbar}\right)<br>\end{align*}<br>$$<br>改写为球坐标：<br>$$<br>\begin{align*}<br>\psi_{(0,0,0)}(\rho,\theta,\varphi)&amp;&#x3D;\left( \frac{m\omega}{\pi\hbar}\right)^{\frac{3}{4}}\exp \left(-\frac{m\omega\rho^2} {2\hbar}\right)<br>\newline<br><br>\newline<br>\psi_{(1,0,0)}(\rho,\theta,\varphi)&amp;&#x3D;\sqrt{2} \pi^{-\frac{3}{4}}\left(\frac{m\omega}{\hbar}\right)^{\frac{5}{4}}\rho\sin\theta\cos\varphi \exp \left(-\frac{m\omega\rho^2} {2\hbar}\right)<br>\newline<br><br>\newline<br>\psi_{(0,1,0)}(\rho,\theta,\varphi)&amp;&#x3D;\sqrt{2} \pi^{-\frac{3}{4}}\left(\frac{m\omega}{\hbar}\right)^{\frac{5}{4}}\rho\sin\theta\sin\varphi \exp \left(-\frac{m\omega\rho^2} {2\hbar}\right)<br>\newline<br><br>\newline<br>\psi_{(0,0,1)}(\rho,\theta,\varphi)&amp;&#x3D;\sqrt{2} \pi^{-\frac{3}{4}}\left(\frac{m\omega}{\hbar}\right)^{\frac{5}{4}}\rho\cos\theta \exp \left(-\frac{m\omega\rho^2} {2\hbar}\right)<br>\end{align*}<br>$$<br>采用隔板法，当为$n$时，其实就是$n$个小球，插入两张隔板的问题（允许隔板塞入两端或同一个位置），因此$n+1$个空，若两隔板插到同一个位置，共$n+1$种，若插到不同位置，共$C_{n+1}^{2}$，相加即为答案（当然在二维的公式基础上拓展而来更易想到，即$\sum (i+1)$，但是在更高维时就涉及平方和、立方和…不如隔板法好计算）</p>
+<h3 id="10-3-notes"><a href="#10-3-notes" class="headerlink" title="10.3 notes"></a>10.3 notes</h3><p>P262的逻辑我感觉有些问题（也可能是英文理解造成的）：</p>
+<p>Shankar先假设$\ket{a,b}$与$\ket{b,a}$是两个态，张成了简并的二维空间（两个态不同，线性无关），然后加上“对换后变为常数倍”的约束，推导出只能取$\pm 1$（线性相关，是同一个态）的结论，前后矛盾。实际上，书中先说两者应看成same state vector，但却又用了两者线性组合的形式表达了本征空间中的向量，这一点就很奇怪</p>
+<p>因此我参考了Cohen书的14章，其中ABC三节就基本回答了这个问题：核心是区分“物理态”与“数学态”（前者理解成state，后者理解成ket）。对数学态分析时，人为给粒子标号，可以使用$\ket{a,b}$与$\ket{b,a}$的形式，认为两者“不同”，其线性组合表示所有可能的数学态</p>
+<p>但回到物理问题，真实的物理态只有一个，难道所有这些数学态都能表示这一个物理态吗（交换简并）？答案是不行，“交换简并”会带来灾难</p>
+<p>那该如何从这么多的数学态中找出正确的那一个？答案是引入“对称性假设”作为约束</p>
+<p>对称性假设：体系含全同粒子时，只有态空间中的某些右矢可以描述真实物理状态，这些物理右矢对于粒子的对换而言，要么完全对称，要么完全反对称</p>
+<p>遵循该假设，就消除了“对称简并”（即多个“数学态”对应一个“物理态”）的情况，下面是我认为比较好的体系化的理解：</p>
+<p>对于$n$个全同粒子体系，若有一个数学态$\ket{u}$可在<strong>数学上</strong>（给各个粒子标号后）描述体系的状态，那么由各种变换组成的群（也就是$n$元对称群，阶为$n!$，记为$\bigcup_{\alpha}P_\alpha$）可以施加在$\ket{u}$上，生成各种新的数学态，分别代表各种标号的粒子互换后的结果，引用“群在集合上的作用”的语言，这些新的数学态组成$\ket{u}$的<strong>轨道</strong>！</p>
+<p>记轨道中的元素张成的空间为$\mathscr{E}_u$，对称算符$S:&#x3D;\frac{1}{n!}\sum_\alpha P_\alpha$的本征空间为$\mathscr{E}_S$，反对称算符$A:&#x3D;\frac{1}{n!}\sum_\alpha \varepsilon_\alpha P_\alpha$（其中$\varepsilon_\alpha$在$P_\alpha$是奇置换时取$-1$，偶置换时取$1$）的本征空间为$\mathscr{E}_A$，由于$S$与$A$都是自伴的<strong>投影</strong>算子，因此本征空间也就是值域，且$\mathscr{E}_S,\mathscr{E}_A$都是$\mathscr{E}_u$的<strong>子空间</strong></p>
+<p>对轨道上的任意元素$P_\alpha \ket{u}$作用投影算子，有：<br>$$<br>\begin{align*}<br>SP_\alpha \ket{u}&amp;&#x3D;S\ket{u}<br>\newline<br><br>\newline<br>AP_\alpha \ket{u}&amp;&#x3D;\varepsilon_\alpha A\ket{u}<br>\end{align*}<br>$$<br>上述两式表明不论$P_\alpha$取哪种，$P_\alpha \ket{u}$在作用$S$（或$A$）后都相同了，即“投影到对称空间或反对称空间中后，态只有一个（共线）”，等价于“对称空间或反对称空间都是一维的”，这个结论记为<strong>引理</strong></p>
+<p>对称性假设要求<strong>真实态</strong>要么对称$\in \mathscr{E}_S$，要么反对称$\in \mathscr{E}_A$，为从各个数学态中找到真实态，我们要做的是先建立起$\mathscr{E}_u$，再找出$\mathscr{E}_S$（或$\mathscr{E}_A$）这个子空间。但是，会不会因为子空间是大于一维的，以至于还是不能确定成一个态呢？引理告诉我们不会！这样，就唯一确定了一个态。（至于是取$\mathscr{E}_S$还是$\mathscr{E}_A$，则根据是Boson还是Fermion确定）</p>
+<p>（Cohen 14章的C 3.a小节提供了上述步骤的具体操作套路）</p>
+<p>回到Shankar，注意里面的符号$\ket{x_1x_2,S}$实际上代表Cohen中的$S\ket{x_1x_2}$，已经是对称态了，与$\ket{x_1x_2}$注意区分</p>
+<p>一个曾经困惑我的问题：</p>
+<p>$\mathtt{Q}$：美国实验室里有一个势阱，含有一个处于基态的电子，中国实验室里同样的势阱中也有一个处于同样的基态的电子，它们怎么能同时存在？</p>
+<p>$\mathtt{A}$：这个问题现在看来很搞笑，一方面，可以解释称都已经说了“美国”和“中国”，说明两个电子可区分（虽然实际上不能）；另一方面更好的解释是，题干中的两个电子根本没有处在相同的态，因为它们对$X$算符的测量值就不同！题面中“处于同样的基态”的说法实际上是误导性的。原因在于，这里的基态指的是“考虑局域的势阱建模，对这个模型而言的基态”。但一旦把两个粒子当成全同粒子考量，当然<strong>不能用局域模型</strong>，而是得把中美实验室都放进模型中，采用包含两者的模型，这样两者处的态就不一样了。总之，要用Pauli不相容，至少也要让两个Fermion处在相同的位置呀</p>
+<p>P273 注：此处$\varepsilon_\alpha&#x3D;\pm 1$的取值应当按照奇偶置换理解，如果对标号粒子的一个置换可以表示成奇&#x2F;偶数个<strong>对换</strong>的乘积，则称为奇&#x2F;偶置换。由于对换改变排列逆序数的奇偶性，因此奇&#x2F;偶置换就是使逆序数奇偶性改变&#x2F;不变的置换</p>
+<p>P274上方 在认为两个$H$可分时就把波函数写成因式乘积的形式，这就是解pde时就熟悉的分离变数法</p>
+<h3 id="Ex-10-3-1"><a href="#Ex-10-3-1" class="headerlink" title="Ex 10.3.1"></a>Ex 10.3.1</h3><p>本题就是修改表达式，使得<br>$$<br>\frac{1}{\sqrt{2}}(\ket{\phi}\otimes\ket{\psi}+\ket{\psi}\otimes\ket{\phi})\quad;\quad \ket{\psi}\otimes\ket{\psi}<br>$$<br>两者能放到一个统一的表达式中去，实际上调整一下分母的系数就行（需默认$\ket{\phi},\ket{\psi}$都是标准态），让两者不等时系数仍然是$1&#x2F;\sqrt{2}$，相等时系数为$1&#x2F;2$：<br>$$<br>\frac{1}{\sqrt{2+2|\langle \psi|\phi\rangle|^2}}(\ket{\phi}\otimes\ket{\psi}+\ket{\psi}\otimes\ket{\phi})<br>$$</p>
+<h3 id="Ex-10-3-2"><a href="#Ex-10-3-2" class="headerlink" title="Ex 10.3.2"></a>Ex 10.3.2</h3><p>（按照Cohen中的理解做本题）从表达出各个数学态开始，即，先给粒子标号为$1,2,3$，然后某一个可能的态就是$\ket{u}&#x3D;\ket{1:3,2:3,3:4}$（表示$1,2$在$n&#x3D;3$，$3$在$n&#x3D;4$），下面对这个态$\ket{u}$作用3元对称群$S_3$，得到6个结果（轨道含6个元素），该6者张成数学上的$\mathscr{E}_u$，下面从这个空间中找出唯一的那个真实态：</p>
+<p>据boson知，应当作用对称算子$S$，只取${E}_u$中的$\mathscr{E}_S$部分：<br>$$<br>\begin{align*}<br>&amp;SP_\alpha\ket{u} (\text{for }\forall \alpha)&#x3D;S \ket{u}<br>\newline<br><br>\newline<br>&amp;&#x3D;\frac{1}{3!}(\ket{1:3,2:3,3:4}+\ket{1:3,3:3,2:4}+\ket{2:3,1:3,3:4}<br>\newline<br><br>\newline<br>&amp;+\ket{2:3,3:3,1:4}+\ket{3:3,1:3,2:4}+\ket{3:3,2:3,1:4})<br>\newline<br><br>\newline<br>&amp;&#x3D;\frac{1}{3}(\ket{1:3,2:3,3:4}+\ket{1:3,3:3,2:4}+\ket{2:3,1:3,3:4})<br>\end{align*}<br>$$<br>再把该向量归一化即可，结果为：<br>$$<br>\frac{1}{\sqrt{3}}(\ket{1:3,2:3,3:4}+\ket{1:3,3:3,2:4}+\ket{2:3,1:3,3:4})<br>$$</p>
+<h3 id="Ex-10-3-3"><a href="#Ex-10-3-3" class="headerlink" title="Ex 10.3.3"></a>Ex 10.3.3</h3><p>(1) 三个空，每一个都可填三个态，$3\times 3\times 3&#x3D;27$</p>
+<p>（本题仍按照上题同样的理解）</p>
+<p>为回到一般的全同粒子问题，先把三个态确定下来：$\ket{u_1}&#x3D;\ket{1:a,2:b,3:c}$，$\ket{u_2}&#x3D;\ket{1:a,2:a,3:b}$，$\ket{u_3}&#x3D;\ket{1:a,2:a,3:c}$，$\ket{u_4}&#x3D;\ket{1:b,2:b,3:a}$，$\ket{u_5}&#x3D;\ket{1:b,2:b,3:c}$，$\ket{u_6}&#x3D;\ket{1:c,2:c,3:a}$，$\ket{u_7}&#x3D;\ket{1:c,2:c,3:b}$，$\ket{u_8}&#x3D;\ket{1:a,2:a,3:a}$，$\ket{u_9}&#x3D;\ket{1:b,2:b,3:b}$，$\ket{u_{10}}&#x3D;\ket{1:c,2:c,3:c}$，这就是所有数学态的雏形（<strong>代表系</strong>）。例如对$\ket{u_1}$作用3元对称群，就能得到“一个粒子在a，一个粒子在b，一个粒子在c”这一情形对应的所有数学态；对$\ket{u_2}$作用3元对称群，就能得到“两个粒子在a，一个粒子在b”这一情形对应的所有数学态……</p>
+<p>(2) bosons，答案为代表系中元素的个数：10</p>
+<p>因为如刚才所述，各种情况都被一个$\ket{u _ i}$代表了。$\ket{u _ i}$所在轨道构成的数学空间$\mathscr{E} _ {u _ i}$，会在对称算子的作用后派出<strong>一个</strong>真实态（对称算子作用下没有派不出真实态的情况）因此有几个$\mathscr{E}_{u_i}$，就有几个真实态</p>
+<p>(3) fermions，同上个段落，唯一变的是“反对称算子”替代“对称算子”，这带来一个后果：有些数学空间$\mathscr{E} _ {u _ i}$，在反对称算子的作用后<strong>派不出</strong>一个真实态（因为作用后变零），这导致和bosons相比，fermions得到的真实态少很多，事实上只有$\mathscr{E} _ {u _ 1}$能派出一个真实态，其他都没有，因此答案为1</p>
+<p>当然，本题根本不需这么多讨论，对于fermions，根据不相容原理立马能看出答案是1（只不过，如果(2)(3)问还要写出各个真实态的表达式的话，就要如上述讨论一样了）</p>
+<h3 id="Ex-10-3-4"><a href="#Ex-10-3-4" class="headerlink" title="Ex 10.3.4"></a>Ex 10.3.4</h3><p>根据5.2.17c式，对一个粒子而言$E_n&#x3D;\frac{\hbar^2\pi^2n^2}{2mL^2}$。此处由于可分离变量，因此$E_{sys}&#x3D;\frac{\hbar^2\pi^2(n_1^2+n_2^2)}{2mL^2}$</p>
+<p>情形一只能$n_1&#x3D;n_2&#x3D;1$，测得两个粒子在同一个态，这说明不可能是fermions，只能是$\ket{1,1}$</p>
+<p>情形二，一个2一个1，如果两次观察不是同个情景，那fermions或bosons都有可能，$\frac{1}{\sqrt{2}}(\ket{1,2}+\ket{2,1})$或$\frac{1}{\sqrt{2}}(\ket{1,2}-\ket{2,1})$；若第二次观察是和1同一批粒子，那就只取前者</p>
+<h3 id="Ex-10-3-5"><a href="#Ex-10-3-5" class="headerlink" title="Ex 10.3.5"></a>Ex 10.3.5</h3><p>(1) 是自伴的：<br>$$<br>\langle x_{1’}|\otimes\langle x_{2’}|P_{12}|x_1\rangle\otimes|x_2\rangle&#x3D;\langle x_{1’}|\otimes\langle x_{2’}||x_2\rangle\otimes|x_1\rangle&#x3D;\delta_{1’2}\delta_{2’1}<br>$$<br>（上式第二个等号来自直积中元素内积的定义）以及<br>$$<br>\begin{align*}<br>&amp;\langle x_{1’}|\otimes\langle x_{2’}|P^\dagger_{12}|x_1\rangle\otimes|x_2\rangle&#x3D;(\langle x_1|\otimes\langle x_2|P_{12}|x_{1’}\rangle\otimes|x_{2’}\rangle)^\ast<br>\newline<br><br>\newline<br>&#x3D;&amp;(\langle x_1|\otimes\langle x_2||x_{2’}\rangle\otimes|x_{1’}\rangle)^\ast&#x3D;(\delta_{12’}\delta_{21’})^\ast&#x3D;\delta_{12’}\delta_{21’}<br>\end{align*}<br>$$<br>（上式第一个等号来自伴随的定义），两个式子一模一样，说明$P_{12}$与$P^\dagger_{12}$的矩阵元素一模一样，所以自伴</p>
+<p>由于自伴，特征值为实数，而且满足$P_{12}&#x3D;P^2_{12}$恒成立，易知本征值$\pm 1$</p>
+<p>(2)<br>$$<br>\begin{align*}<br>&amp;P_{12}\ket{\omega_1}\otimes\ket{\omega_2}&#x3D;\iint P_{12}(\ket{x_1}\otimes\ket{x_2}\bra{x_1}\otimes\bra{x_2})\ket{\omega_1}\otimes\ket{\omega_2}dx_1 dx_2<br>\newline<br><br>\newline<br>&#x3D;&amp;\iint \ket{x_2}\otimes\ket{x_1}\braket{x_1|\omega_1}\braket{x_2|\omega_2}dx_1 dx_2<br>\newline<br><br>\newline<br>&#x3D;&amp;\iint \ket{x_2}\otimes\ket{x_1}(\bra{x_2}\otimes\bra{x_1})\ket{\omega_2}\otimes\ket{\omega_1}dx_1\ dx_2<br>&#x3D;\ket{\omega_2}\otimes\ket{\omega_1}<br>\end{align*}<br>$$<br>因此$\mathscr{E} _ S$中的元素在$P _ {12}$作用下乘1，$\mathscr{E} _ A$中的元素在$P _ {12}$作用下乘-1</p>
+<p>(3)<br>$$<br>\begin{align*}<br>&amp;P_{12}X_1P_{12}\ket{x_i}\otimes\ket{x_j}&#x3D;P_{12}X_1\ket{x_j}\otimes\ket{x_i}&#x3D;x_jP_{12}\ket{x_j}\otimes\ket{x_i}\newline<br><br>\newline<br>&#x3D;&amp;x_j\ket{x_i}\otimes\ket{x_j}&#x3D;X_2\ket{x_i}\otimes\ket{x_j}<br>\end{align*}<br>$$</p>
+<p>而任何态都可以用坐标空间的基展开，然后$\sum_{ij}c_{ij}\ket{x_i}\otimes\ket{x_j}$也满足，因此$P_{12}X_1P_{12}&#x3D;X_2$得证</p>
+<p>再类似验证一下$X$的幂次和$XP$等也满足该等式，这样推广到任何可用幂级数表示的函数（收敛域内部）就没问题了</p>
+<p>(4) （实际上$H&#x3D;P_{12}HP_{12}$就是$[H,P_{12}]&#x3D;0$，两者可交换的意思，有点像正规化子、共轭的概念）由于(3)中已经得出结论$P_{12}\Omega(X_1,X_2,P_1,P_2)P_{12}&#x3D;\Omega(X_1,X_2,P_1,P_2)$，用对称的$H$替换上式的$\Omega$，自然得出结论。此外，由于$U&#x3D;e^{-iHt}$，$H$与$P_{12}$可交换，那么$H$的多项式乃至级数也和$P_{12}$可交换，证毕</p>
+<p>这样在$U(t)$作用后，再考察其关于$P_{12}$的本征值，和先作用$P_{12}$，再作用$U(t)$一样,假设一开始就处于反对称态：<br>$$<br>P_{12}(U(t)\ket{\psi})&#x3D;U(t)P_{12}\ket{\psi}&#x3D;-U(t)\ket{\psi}<br>$$<br>说明$U(t)\ket{\psi}$仍处于$P_{12}$的本征值为-1的本征空间（反对称），不变</p>
+<h3 id="Ex-10-3-6"><a href="#Ex-10-3-6" class="headerlink" title="Ex 10.3.6"></a>Ex 10.3.6</h3><p>复合物都是由基本粒子构成，基本粒子都已经划分为boson或fermion后，复合物也一定是二者之一：由偶数个fermions构成的总体，在任一对换后，排序的奇偶性变化偶数次，即排序的奇偶性不变，因此乘$+1$，总体是boson；由奇数个fermions构成的总体，在任一对换后，排序的奇偶性变化奇数次，即排序的奇偶性改变，乘$-1$，总体是fermion</p>
 
   </div>
   
@@ -2771,10 +2738,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-19T22:54:16+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-22T16:16:35+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Feb 19, 2024</p>
+    <p>更新于：Feb 22, 2024</p>
   </a>
 </div>
 
@@ -2793,7 +2760,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/02/19/Algebra4/&title=Sylow定理与直积 - (.O w O.)?&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/02/22/QM5/&title=多自由度与全同粒子 - (.O w O.)?&summary="
           
           >
           
@@ -2805,7 +2772,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/02/19/Algebra4/&title=Sylow定理与直积 - (.O w O.)?&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/02/22/QM5/&title=多自由度与全同粒子 - (.O w O.)?&summary="
           
           >
           
@@ -2817,7 +2784,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/02/19/Algebra4/&title=Sylow定理与直积 - (.O w O.)?&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/02/22/QM5/&title=多自由度与全同粒子 - (.O w O.)?&summary="
           
           >
           
@@ -2853,16 +2820,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/02/21/Algebra5/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>有限交换群</p>
+      
+        <a class='next' href='/2024/02/21/Algebra5/'>
+          <p class='title'>有限交换群<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>有限交换群在Sylow定理的帮助下，有限交换群已经可以被分解成Sylow子群的直积了，但实际上会有更好的结论：“有限交换群基本定理”与“不变因子定理”。在本篇的帮助下，我们将完全描述有限交换群（...</p>
-        </a>
-      
-      
-        <a class='next' href='/2024/02/06/Algebra3/'>
-          <p class='title'>正规与商群、同态同构<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>正规同态应用到群时…借助同态，可以判定一个代数结构是否是群：
-定理：设$G$是一个群，$\bar{G}$是一个有代数运算的集合，如果$G\sim \bar{G}$，则$\bar{G}$也是群，而...</p>
         </a>
       
     </div>
@@ -2878,7 +2839,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/02/19/Algebra4/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/02/22/QM5/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2907,7 +2868,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <i class="fa-solid fa-superscript fa-fw" aria-hidden="true"></i><span class='name'>Abstract Algebra</span>
+      <i class="fa-solid fa-atom fa-fw" aria-hidden="true"></i><span class='name'>Quantum Mechanics</span>
     
   </header>
 
@@ -2915,62 +2876,74 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='content'>
     <ul class="list entry navigation">
       
-        <li><a class="flat-box" title="/2024/02/02/Algebra1/" href="/2024/02/02/Algebra1/"
+        <li><a class="flat-box" title="/2024/01/31/QM-prelude/" href="/2024/01/31/QM-prelude/"
           
           
-          active-action="action-20240202Algebra1"
+          active-action="action-20240131QM-prelude"
           >
           <div class='name'>
             
-            基本概念与群初识
+            序言
           </div>
           
         </a></li>
       
-        <li><a class="flat-box" title="/2024/02/02/Algebra2/" href="/2024/02/02/Algebra2/"
+        <li><a class="flat-box" title="/2024/01/31/QM1/" href="/2024/01/31/QM1/"
           
           
-          active-action="action-20240202Algebra2"
+          active-action="action-20240131QM1"
           >
           <div class='name'>
             
-            陪集、群在集合上的作用
+            前置基础与数学
           </div>
           
         </a></li>
       
-        <li><a class="flat-box" title="/2024/02/06/Algebra3/" href="/2024/02/06/Algebra3/"
+        <li><a class="flat-box" title="/2024/02/01/QM2/" href="/2024/02/01/QM2/"
           
           
-          active-action="action-20240206Algebra3"
+          active-action="action-20240201QM2"
           >
           <div class='name'>
             
-            正规与商群、同态同构
+            基本假设与一维问题
           </div>
           
         </a></li>
       
-        <li><a class="flat-box" title="/2024/02/19/Algebra4/" href="/2024/02/19/Algebra4/"
+        <li><a class="flat-box" title="/2024/02/04/QM3/" href="/2024/02/04/QM3/"
           
           
-          active-action="action-20240219Algebra4"
+          active-action="action-20240204QM3"
           >
           <div class='name'>
             
-            Sylow定理与直积
+            谐振子
           </div>
           
         </a></li>
       
-        <li><a class="flat-box" title="/2024/02/21/Algebra5/" href="/2024/02/21/Algebra5/"
+        <li><a class="flat-box" title="/2024/02/05/QM4/" href="/2024/02/05/QM4/"
           
           
-          active-action="action-20240221Algebra5"
+          active-action="action-20240205QM4"
           >
           <div class='name'>
             
-            有限交换群
+            费曼&海森堡登场
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2024/02/22/QM5/" href="/2024/02/22/QM5/"
+          
+          
+          active-action="action-20240222QM5"
+          >
+          <div class='name'>
+            
+            多自由度与全同粒子
           </div>
           
         </a></li>
@@ -3008,7 +2981,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Sylow-%E5%AE%9A%E7%90%86"><span class="toc-text">Sylow 定理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BA%E5%9E%AB%E4%B8%8E%E5%BC%95%E7%90%86"><span class="toc-text">铺垫与引理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80Sylow%E5%AE%9A%E7%90%86%E2%80%94%E5%AD%98%E5%9C%A8%E4%B8%8E%E5%8C%85%E5%90%AB"><span class="toc-text">第一Sylow定理—存在与包含</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8CSylow%E5%AE%9A%E7%90%86%E2%80%94%E5%85%B1%E8%BD%AD%E6%80%A7"><span class="toc-text">第二Sylow定理—共轭性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89Sylow%E5%AE%9A%E7%90%86%E2%80%94%E8%AE%A1%E6%95%B0%E5%AE%9A%E7%90%86"><span class="toc-text">第三Sylow定理—计数定理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B4%E7%A7%AF"><span class="toc-text">直积</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85-%E5%A4%96%E7%9B%B4%E7%A7%AF"><span class="toc-text">内&#x2F;外直积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sylow%E5%AD%90%E7%BE%A4%E7%9A%84%E7%9B%B4%E7%A7%AF"><span class="toc-text">Sylow子群的直积</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Shankar-ch-10"><span class="toc-text">Shankar_ch.10</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-10-1-1"><span class="toc-text">Ex 10.1.1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-10-1-2"><span class="toc-text">Ex 10.1.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-10-1-3"><span class="toc-text">Ex.10.1.3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-10-2-1"><span class="toc-text">Ex 10.2.1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-10-2-2"><span class="toc-text">Ex 10.2.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-10-2-3"><span class="toc-text">Ex 10.2.3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-3-notes"><span class="toc-text">10.3 notes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-10-3-1"><span class="toc-text">Ex 10.3.1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-10-3-2"><span class="toc-text">Ex 10.3.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-10-3-3"><span class="toc-text">Ex 10.3.3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-10-3-4"><span class="toc-text">Ex 10.3.4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-10-3-5"><span class="toc-text">Ex 10.3.5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-10-3-6"><span class="toc-text">Ex 10.3.6</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4171,7 +4144,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/近世代数/","name":"近世代数"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/02/19/Algebra4/","name":"Sylow定理与直积"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Sylow定理与直积","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/02/19/Algebra4/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/02/19/Algebra4/","wordCount":0,"datePublished":"2024-02-19T08:02:44.000Z","dateModified":"2024-02-19T14:54:16.622Z","articleSection":"近世代数","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/Shankar-量子力学/","name":"Shankar 量子力学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/02/22/QM5/","name":"多自由度与全同粒子"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"多自由度与全同粒子","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/02/22/QM5/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/02/22/QM5/","wordCount":0,"datePublished":"2024-02-22T08:10:57.000Z","dateModified":"2024-02-22T08:16:35.014Z","articleSection":"Shankar 量子力学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
