@@ -5,7 +5,7 @@
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
   --color-site-inner: #fff;
-  --color-site-footer: #666;
+  --color-site-footer: #f4f4f4;
   --color-card: #fff;
   --color-text: #444;
   --color-block: #f6f6f6;
@@ -660,7 +660,7 @@ button {
     --color-copyright-bkg: #21252b;
   }
   :root:not([color-scheme]) img {
-    filter: brightness(70%) !important;
+    filter: brightness(80%) !important;
   }
   :root:not([color-scheme]) .blur {
     background: rgba(34,34,34,0.9) !important;
@@ -732,7 +732,7 @@ button {
   --color-copyright-bkg: #21252b;
 }
 [color-scheme='dark'] img {
-  filter: brightness(70%) !important;
+  filter: brightness(80%) !important;
 }
 [color-scheme='dark'] .blur {
   background: rgba(34,34,34,0.9) !important;
