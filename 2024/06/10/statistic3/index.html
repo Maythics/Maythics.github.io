@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://maythics.github.io/categories/近世代数/"/>
+  
+  <link rel="canonical" href="http://maythics.github.io/2024/06/10/statistic3/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,17 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Category: 近世代数 - (.O w O.)?</title>
+  <title>MCMC - (.O w O.)?</title>
   <meta name="keywords" content="physics">
   <meta desc name="description" content="emmm - Maythics - (.O w O.)?">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="(.O w O.)?">
-<meta property="og:url" content="http://maythics.github.io/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MCMC">
+<meta property="og:url" content="http://maythics.github.io/2024/06/10/statistic3/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
-<meta property="og:description" content="emmm">
+<meta property="og:description" content="统计学习方法MCMCMonte Carlo就是“用随机抽样进行模拟数值计算”，均匀撒点求面积、用样本均值计算总体均值，都算Monte Carlo方法，毕竟，Monte Carlo是赌城的名字而非科学家的名字 注意：此处需要概率分布是已知的！你的目标就是求某一概率密度分布$p(x)$下的某个统计量，当然需要事先知道该概率分布$p(x)$ 一个潜在的问题是，你想用“样本”去近似算统计值（依靠大数定律）">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2024-06-10T07:56:52.000Z">
+<meta property="article:modified_time" content="2024-06-10T08:01:31.994Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -2530,7 +2532,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  search' style="display: none;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2607,35 +2609,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/03/05/Algebra6/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/06/10/statistic3/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="(.O w O.)?">
   </span>
@@ -2644,395 +2620,304 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="emmm">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/05/Algebra6/"  itemprop="url">
-        物理篇---群表示
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        本篇开始为物理学服务。以下，“幺正变换”&#x3D;“等距同构”，“厄密”&#x3D;“自伴”
-有限群（线性）表示基本定义群$G$的矩阵表示，指从$G$到一般线性群$GL_n$的同态。即：把群中每个元素都同态地对应到一个方阵：$g\mapsto D(g)$，这些方阵的集合对矩阵乘法作成一个群$D(G)$，称为$G$的群表示。这些方阵代表一个$n$维线性空间到自己的映射，该$n$维线性空间称为...
-      
+    
+      <h1 class="title" itemprop="name headline">
+        MCMC
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="https://maythics.github.io/" rel="nofollow">
+    <img itemprop="image" src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/Maythics.gif" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/Maythics.gif" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Maythics</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/">统计学习</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">统计学习</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-05T15:07:23+08:00">2024-03-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/">近世代数</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/" itemprop="url"><span itemprop="name">近世代数</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-06-10T15:56:52+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jun 10, 2024</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h1 id="统计学习方法"><a href="#统计学习方法" class="headerlink" title="统计学习方法"></a>统计学习方法</h1><h2 id="MCMC"><a href="#MCMC" class="headerlink" title="MCMC"></a>MCMC</h2><h3 id="Monte-Carlo"><a href="#Monte-Carlo" class="headerlink" title="Monte Carlo"></a>Monte Carlo</h3><p>就是“用随机抽样进行模拟数值计算”，均匀撒点求面积、用样本均值计算总体均值，都算Monte Carlo方法，毕竟，Monte Carlo是赌城的名字而非科学家的名字</p>
+<p>注意：此处需要概率分布是已知的！你的目标就是求某一概率密度分布$p(x)$下的某个统计量，当然需要事先知道该概率分布$p(x)$ 一个潜在的问题是，你想用“样本”去近似算统计值（依靠大数定律），这要求手中有按照$p(x)$分布的<strong>样本</strong>，但你很可能没有</p>
+<p>因此，Monte Carlo的核心是<strong>随机抽样</strong></p>
+<p>有多种方法进行随机抽样，比如：</p>
+<ol>
+<li><p>直接抽样法：最直观的，依赖于均匀抽样与CDF的反函数（搜索一下就知道了）</p>
+</li>
+<li><p>接受-拒绝法： 在有某个已知分布$q(x)$的抽样的基础上，让这些抽样变成符合$p(x)$的抽样。如何变？比如我按照$q(x)$抽取到了点$x^\ast$，概率密度为$q(x^\ast)$，但目标是：生成的$x^\ast$得按照概率密度$p(x^\ast)$分布，因此，我以$\frac{p(x^\ast)}{cq(x^\ast)}$的概率采纳这个样本，将它加入最终的样本序列中</p>
+</li>
+</ol>
+<img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/acceptrefuse.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/acceptrefuse.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="accept/refuse" width="220" height="120">
+
+<ol start="3">
+<li>Markov Chain：随机游走也是一种抽样！比如在三个点A,B,C之间按照某种概率游走，每一时刻的位置连起来就是一个序列，比如A,C,B,A,C,C……这就是对于A,B,C的一种抽样。下面就是讲这种方法</li>
+</ol>
+<h3 id="Markov-Chain"><a href="#Markov-Chain" class="headerlink" title="Markov Chain"></a>Markov Chain</h3><h4 id="Markov性"><a href="#Markov性" class="headerlink" title="Markov性"></a>Markov性</h4><p>某一个物理量具有Markov性，即该物理量的未来只依赖于该物理量的现在，不依赖于其过去，称它某一个时刻的值为<strong>状态</strong></p>
+<p>例子：考察质量为$m$的质点在已知势场中的运动，$(\vec{x}(t),\vec{v}(t))$就具有Markov性，因为已知$t_0$时的$\vec{x}(t_0)$和$\vec{v}(t_0)$，今后的$\vec{x}(t)$和$\vec{v}(t)$全都可以求出来了</p>
+<p>但是$\vec{x}(t)$是不具有Markov性的：已知$\vec{x}(t_0)$，还无法得知$\vec{x}(t_0+\Delta t)$。因为还需要知道$t_0$时的速度信息，而$t_0$时刻的速度信息是已知$\vec{x}(t_0)$和$\vec{x}(t_0-\Delta t)$才能算出来的，因此，这需要用到$\vec{x}(t_0-\Delta t)$这一<strong>过去</strong>的信息，未来还和过去相关了</p>
+<p>总结来说，如果演化方程中，含有导数项，就与历史有关，就不具有Markov性，如下</p>
+<p>满足Markov性的状态演化方程：</p>
+<p>$$<br>\begin{align*}<br>\vec{x}(t_0+\Delta t)&amp;&#x3D;\vec{x}(t_0)+\vec{v}(t_0)\Delta t<br>\newline\newline<br>\vec{v}(t_0+\Delta t)&amp;&#x3D;\vec{v}(t_0)+\frac{-\nabla V(\vec{x}(t_0))}{m}\Delta t<br>\end{align*}<br>$$</p>
+<p>不满足的：</p>
+<p>$$<br>\vec{x}(t_0+\Delta t)&#x3D;\vec{x}(t_0)+\dot{\vec{x}}(t_0)\Delta t<br>$$</p>
+<p>因此，初中物理就有一句话：“物体的<strong>运动状态</strong>就是指位置和速度”。控制理论中的<strong>状态</strong>概念之所以有用，就是因为Markov性</p>
+<h4 id="许多定义与定理"><a href="#许多定义与定理" class="headerlink" title="许多定义与定理"></a>许多定义与定理</h4><p>约定用$i,j$字母代表状态，$X_t$代表第$t$步时所处状态的随机变量，其取值就是$i,j,\dots$这样的状态</p>
+<p><strong>定义</strong> 一个随机变量序列$\set{X_0,X_1,\dots, X_t,\dots}$，若：</p>
+<p>$$<br>P(X_t|X_0,\dots ,X_{t-1})&#x3D;P(X_t|X_{t-1})<br>$$<br>就是具有Markov性的随机序列，称为Markov链</p>
+<p><strong>定义</strong> 状态分布：指Markov链在某一时刻的概率分布：</p>
+<p>$$<br>\pi(t)&#x3D;\begin{pmatrix}<br>  \pi_1(t)\<br>  \pi_2(t)\<br>  \vdots \<br>\end{pmatrix}<br>$$<br>其中，$\pi_i(t)$代表$t$时刻恰在状态$i$的概率，即$\pi_i(t)&#x3D;P(X_t&#x3D;i)$</p>
+<p>下文中，请注意区分“状态”与“状态分布”</p>
+<p><strong>定义</strong> 状态转移概率矩阵，其分量$p_{ij}&#x3D;P(X_t&#x3D;i|X_{t-1}&#x3D;j)$，即从$j$移动到$i$的概率，因此，$\pi(t)&#x3D;P\pi(t-1)$</p>
+<p><strong>定义</strong> 设给定的Markov链，其状态转移概率矩阵为$P$，如果存在状态空间中的一个分布$\pi&#x3D;(\pi_1,\pi_2,\dots)^T$满足$\pi&#x3D;P\pi$，则$\pi$称为平稳分布</p>
+<p><strong>定义</strong> 给定Markov链，若对于任意的两个状态$i$与$j$，均存在一个$t$满足</p>
+<p>$$<br>P(X_t&#x3D;i|X_0&#x3D;j)&gt;0<br>$$<br>则称该Markov链<strong>不可约</strong></p>
+<p>其实，如果存在$t$使得$P(X_t&#x3D;i|X_0&#x3D;j)&gt;0$，则记$j\to i$，若还有$i\to j$，则称$i$与$j$<strong>互通</strong>，记为$i\leftrightarrow j$。这个互通其实是一个<strong>等价关系</strong>，因此可以依此划分状态，把互通的状态记为一类。不可约说的就是：该Markov链仅仅只有一类</p>
+<p><strong>定义</strong> 某一个状态$i$，从它自己出发回到自己概率非零，那么集合$\set{t:P(X_t&#x3D;i|X_0&#x3D;i)&gt;0}$就非空，这个集合中所有数的最大公约数就是$i$状态的周期，若最大公约数为1，则该状态是非周期的，所有状态都是非周期的Markov链，称为非周期的Markov链</p>
+<p><strong>定义</strong> 首达概率：$p^t_{ij}$指$0$时刻从$j$出发，$t$时刻<strong>首次</strong>到达$i$的概率。又记$f_{ij}&#x3D;\sum\limits_{t&#x3D;1}^\infty p^t_{ij}$，这里的$f_{ij}$指的是<strong>能经过有限步</strong>，从$j$到$i$的概率</p>
+<p><strong>定义</strong> 常返状态：如果$f_{ii}&#x3D;1$，那么状态$i$就是常返（recurrent）状态</p>
+<p><strong>定义</strong> 正常返状态：记$\mu_i&#x3D;\sum\limits_{t&#x3D;1}^\infty t p^t_{ii}$，这代表的就是$i$出发回到$i$的步数的期望值，如果$\mu_i&lt;\infty$，则称$i$为<strong>正常返状态</strong>，若$\mu_i&#x3D;+\infty$，称为<strong>零常返状态</strong></p>
+<p><strong>定义</strong> 可逆：如果有状态分布$\pi&#x3D;(\pi_1,\pi_2,\dots)^T$，使得对于任何状态$i,j$，对任意的$t$满足<strong>细致平衡方程</strong>：$p_{ji}\pi_j&#x3D;p_{ij}\pi_i$，则称Markov链可逆</p>
+<p><strong>定理</strong> 满足细致平衡方程的状态分布$\pi$就是平稳分布，$P\pi&#x3D;\pi$</p>
+<blockquote>
+<p>证明：$(P\pi) _ i&#x3D;\sum _ j P _ {ij}\pi _ j&#x3D;\sum _ j P _ {ji}\pi _ i&#x3D;\pi _ i\sum _ j P _ {ji}&#x3D;\pi _ i$</p>
+</blockquote>
+<h3 id="Metropolis-Hastings算法"><a href="#Metropolis-Hastings算法" class="headerlink" title="Metropolis Hastings算法"></a>Metropolis Hastings算法</h3><p>（下面说的转移核$p(x,y)$，其实指的是$x$转变到$y$的概率密度函数，譬如，显然有：$\int p(x,y)dy&#x3D;1$，因为$x$转变到各个新状态的概率为一）</p>
+<p>该算法就靠的是一个转移核为$p(x,x’)$的Markov链，按照这个转移核进行随机游走，能够得到一个平稳分布$p(x)$，这就是要抽样的目标分布！样本就随着游走的进行，源源不断生成了</p>
+<p>如何得到$p(x,x’)$的核心公式：</p>
+<p>$$<br>p(x,x’)&#x3D;q(x,x’)\alpha(x,x’)<br>$$</p>
+<p>其中：</p>
+<ol>
+<li><p>$q(x,x’)$叫建议分布，它是另一个<strong>不可约</strong>的Markov链的转移核，回顾一下不可约的定义，就知道$q(x,x’)&gt;0$恒成立，这保证了分母不为零</p>
+</li>
+<li><p>$\alpha(x,x’)$叫接受分布，定义为$\alpha(x,x’)&#x3D;\min\set{1,\frac{p(x’)q(x’,x)}{p(x)q(x,x’)}}$</p>
+</li>
+</ol>
+<p>按照$p(x,x’)$游走的含义是什么呢？当我决定下一步去哪的时候，先去“建议分布”那里寻求建议，它会按照$q(x,x’)$给你候选状态$x’$，然后，“接受分布”告诉你要不要接受它：以$\alpha(x,x’)$的概率接受候选，转移到那里去；以$1-\alpha(x,x’)$的概率不接受，仍然停留在原地，即：下一个状态还是$x$，至此，完成一次游走。继续重复执行这一方法，夜以继日地游走，就能够得到源源不断的抽样，这就是Metropolis Hastings算法</p>
+<p>回答一下为什么这个算法得到的抽样是平稳的问题：</p>
+<p><strong>定理</strong> 由该转移核得到的Markov链是可逆的，即：$p(x)p(x,x’)&#x3D;p(x’)p(x’,x)$，且$p(x)$就是平稳分布</p>
+<blockquote>
+<p>证明：<br>$$<br>\begin{align*}<br>  p(x)p(x,x’)&amp;&#x3D;p(x)\min\set{q(x,x’),\frac{p(x’)q(x’,x)}{p(x)}}<br>  \newline<br>  &amp;&#x3D;\min\set{p(x)q(x,x’),p(x’)q(x’,x)}<br>  \newline<br>  &amp;&#x3D;p(x’)q(x’,x)\min\set{\frac{p(x)q(x,x’)}{p(x’)q(x’,x)},1}<br>  \newline<br>  &amp;&#x3D;p(x’)p(x’,x)<br>\end{align*}<br>$$<br>当然，满足细致平衡方程自然是平稳分布（鉴于这里是连续的，之前的求和得换成积分，再写一下）：<br>$$<br>\int p(x)p(x,x’)dx&#x3D;p(x’)\int p(x’,x)dx&#x3D;p(x’) \quad \square<br>$$</p>
+</blockquote>
+<h3 id="思路梳理"><a href="#思路梳理" class="headerlink" title="思路梳理"></a>思路梳理</h3><p>再理一下思路：</p>
+<ol>
+<li><p>目标是要得到依$p(x)$分布的随机样本，方法是构造一个Markov链</p>
+</li>
+<li><p>构造Markov链的用处在于，在上面游走很久后，平稳分布就是$p(x)$！</p>
+</li>
+<li><p>想构造Markov链，要先知道怎么游走，那请问该Markov链的转移规则$p(x,x’)$又是怎么来的？答：给出建议分布和接受分布后得到</p>
+</li>
+<li><p>不过，接受分布又是关于$q(x,x’)$和$p(x)$的函数，所以，只要给出建议分布$q(x,x’)$，就足以得到$p(x,x’)$了</p>
+</li>
+</ol>
+<p>所以，下面就来看看$q(x,x’)$该选什么</p>
+<p>第一种选法是对称选取$q(x,x’)&#x3D;q(x’,x)$，这样$\alpha(x,x’)$很简单，就是$\min\set{1,\frac{p(x’)}{p(x)}}$，具体的，可以选$q(x,x’)\propto \exp(-\frac{(x-x’)^2}{2})$等等</p>
+<p>第二种选法叫独立抽样，更加简单，它认为下一刻到哪，和此刻所在位置都没关系!就是$q(x,x’)&#x3D;q(x’)$，这样，$\alpha(x,x’)$也很简单，就是$\min\set{1,\frac{p(x’)&#x2F;q(x’)}{p(x)&#x2F;q(x)}}$</p>
+<p>总结：</p>
+<ol>
+<li><p>明确目标$p(x)$</p>
+</li>
+<li><p>选择建议分布$q(x,x’)$（自己选）</p>
+</li>
+<li><p>构建$p(x,x’)$，这就是想要的Markov链</p>
+</li>
+<li><p>开始按照$p(x,x’)$的转移规则游走</p>
+</li>
+<li><p>游走足够长时间后，认为进入平稳分布阶段了，把<strong>这之后</strong>游走的结果取出来，作为$p(x)$的采样</p>
+</li>
+</ol>
+<p>达到平稳分布前的所有时间称为<strong>燃烧期</strong>，这些样本是舍弃掉没用的，因为还没到平稳的$p(x)$分布呢</p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2024/03/05/Algebra6/' itemprop="url">
-            Read More
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-06-10T16:01:31+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jun 10, 2024</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/02/21/Algebra5/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="(.O w O.)?">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="(.O w O.)?">
-    <meta itemprop="description" content="emmm">
-  </span>
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/06/10/statistic3/&title=MCMC - (.O w O.)?&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/06/10/statistic3/&title=MCMC - (.O w O.)?&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/06/10/statistic3/&title=MCMC - (.O w O.)?&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+    
+    
   
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2024/06/03/analysis/complex-analysis1/'>
+          <p class='title'>认识全纯<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Complex Analysis基本概念Holomorphic如果$f(z)$在开集$U$中固定每一个点都可微，则称$f$在$U$上是全纯的（holomorphic）
+保角性质（conforma...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2024/06/10/statistic3/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/21/Algebra5/"  itemprop="url">
-        有限交换群
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        有限交换群在Sylow定理的帮助下，有限交换群已经可以被分解成Sylow子群的直积了，但实际上会有更好的结论：“有限交换群基本定理”与“不变因子定理”。在本篇的帮助下，我们将完全描述有限交换群（和先前的循环群一样，在同构意义下完全知道其结构）
-有限交换群基本定理有限交换群$G$（$|G|&gt;1$）都可以被唯一分解成“素数幂次”阶循环群的直积：$$G&#x3D;\braket{a_1}\o...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-02-21T14:57:56+08:00">2024-02-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/">近世代数</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/" itemprop="url"><span itemprop="name">近世代数</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/02/21/Algebra5/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/02/19/Algebra4/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="(.O w O.)?">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="(.O w O.)?">
-    <meta itemprop="description" content="emmm">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/19/Algebra4/"  itemprop="url">
-        Sylow定理与直积
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Sylow 定理该内容与上篇Cauchy定理的内容联系紧密，与中间的自同构等没啥关系。本篇相当于Cauchy定理的后续发展
-铺垫与引理重陪集 设$H,K$为群$G$的两个子群，令$x\in G$，则称$G$的子集$HxK$为群$G$关于子群$H,K$的一个重陪集
-引理1 对群$G$任二重陪集，若$HxK\cap HyK\neq\varnothing$，则必有$HxK&#x3D; HyK$
-该...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-02-19T16:02:44+08:00">2024-02-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/">近世代数</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/" itemprop="url"><span itemprop="name">近世代数</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/02/19/Algebra4/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/02/06/Algebra3/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="(.O w O.)?">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="(.O w O.)?">
-    <meta itemprop="description" content="emmm">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/06/Algebra3/"  itemprop="url">
-        正规与商群、同态同构
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        正规同态应用到群时…借助同态，可以判定一个代数结构是否是群：
-定理：设$G$是一个群，$\bar{G}$是一个有代数运算的集合，如果$G\sim \bar{G}$，则$\bar{G}$也是群，而且$G$的单位元的像就是$\bar{G}$的单位元，$G$中元素的逆元的像就是该元素像的逆元。
-就像一个线性映射从$V\to W$，则$\text{range}T$是$W$的子空间，$\text{nu...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-02-06T15:01:11+08:00">2024-02-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/">近世代数</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/" itemprop="url"><span itemprop="name">近世代数</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/02/06/Algebra3/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/02/02/Algebra2/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="(.O w O.)?">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="(.O w O.)?">
-    <meta itemprop="description" content="emmm">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/02/Algebra2/"  itemprop="url">
-        陪集、群在集合上的作用
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        陪集、指数陪集的定义与性质左陪集的定义：设$H\leq G$，取$a\in G$则称$aH:&#x3D;\{ax|x\in H\}$为群$G$关于子群$H$的一个左陪集则称$Ha:&#x3D;\{xa|x\in H\}$为群$G$关于子群$H$的一个右陪集
-陪集就像是线代中仿射子集的抽象，如仿射子集不是子空间（除了过原点的那个），这里的陪集也不是子群（除了$H$本身）
-如同在Done Rig...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-02-02T20:08:24+08:00">2024-02-02</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/">近世代数</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/" itemprop="url"><span itemprop="name">近世代数</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/02/02/Algebra2/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/02/02/Algebra1/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="(.O w O.)?">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="(.O w O.)?">
-    <meta itemprop="description" content="emmm">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/02/Algebra1/"  itemprop="url">
-        基本概念与群初识
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        基本概念代数运算定义：有一个法则使得在集合$M$中任意两个有次序的元素，在$M$中都有唯一的元素对应，则该法则是$M$的一个代数运算
-含有代数运算的集合称为代数系统
-注意：由定义可知，“有代数运算”已经包含了运算的封闭
-运算律值得注意厘清“结合律”与“记号的定义”之间关系：
-eg. 证明变换的乘法满足结合律：
-$$\begin{align*}  [(\sigma\tau)\varphi] (...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-02-02T12:14:38+08:00">2024-02-02</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/">近世代数</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/" itemprop="url"><span itemprop="name">近世代数</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/02/02/Algebra1/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-    
-  
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3041,104 +2926,61 @@ $$\begin{align*}  [(\sigma\tau)\varphi] (...
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/Maythics.gif'/>
-        </a>
-      
-    
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/about/"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1900709924@qq.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Maythics/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-    
-  
 
   
-    
-    
-      
+<section class="widget list group desktop mobile pjax">
   
-  <section class="widget category desktop pjax">
-    
   <header>
     
-      <a href='/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>幂集的一个子集</span></a>
+      <i class="fa-solid fa-chart-line fa-fw" aria-hidden="true"></i><span class='name'>Statistical Learning</span>
     
   </header>
 
 
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Shankar-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/" href="/categories/Shankar-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/"
-            active-action="action-categoriesShankar-E9878FE5AD90E58A9BE5ADA6"
-            ><div class='name'>Shankar 量子力学</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%88%86%E6%9E%90/" href="/categories/%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE58886E69E90"
-            ><div class='name'>分析</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%B7%A5%E7%A7%91%E9%AD%94%E6%B3%95/" href="/categories/%E5%B7%A5%E7%A7%91%E9%AD%94%E6%B3%95/"
-            active-action="action-categoriesE5B7A5E7A791E9AD94E6B395"
-            ><div class='name'>工科魔法</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95/" href="/categories/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95/"
-            active-action="action-categoriesE695B0E79086E696B9E6B395"
-            ><div class='name'>数理方法</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/" href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesE7BB9FE8AEA1E5ADA6E4B9A0"
-            ><div class='name'>统计学习</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/" href="/categories/%E8%BF%91%E4%B8%96%E4%BB%A3%E6%95%B0/"
-            active-action="action-categoriesE8BF91E4B896E4BBA3E695B0"
-            ><div class='name'>近世代数</div><div class='badge'>(6)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
+  <div class='content'>
+    <ul class="list entry navigation">
+      
+        <li><a class="flat-box" title="/2024/04/04/statistics1/" href="/2024/04/04/statistics1/"
+          
+          
+          active-action="action-20240404statistics1"
+          >
+          <div class='name'>
+            
+            信息熵
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2024/06/10/statistic3/" href="/2024/06/10/statistic3/"
+          
+          
+          active-action="action-20240610statistic3"
+          >
+          <div class='name'>
+            
+            MCMC
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2024/06/01/statistics2/" href="/2024/06/01/statistics2/"
+          
+          
+          active-action="action-20240601statistics2"
+          >
+          <div class='name'>
+            
+            PCA
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
 
 
     
@@ -3148,19 +2990,44 @@ $$\begin{align*}  [(\sigma\tau)\varphi] (...
     
     
       
-
     
-  
-
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MCMC"><span class="toc-text">MCMC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Monte-Carlo"><span class="toc-text">Monte Carlo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Markov-Chain"><span class="toc-text">Markov Chain</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Markov%E6%80%A7"><span class="toc-text">Markov性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%B8%E5%A4%9A%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9A%E7%90%86"><span class="toc-text">许多定义与定理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Metropolis-Hastings%E7%AE%97%E6%B3%95"><span class="toc-text">Metropolis Hastings算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF%E6%A2%B3%E7%90%86"><span class="toc-text">思路梳理</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3208,13 +3075,14 @@ $$\begin{align*}  [(\sigma\tau)\varphi] (...
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4213,6 +4081,60 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 <!-- pjax 标签必须存在于所有页面 否则 pjax error -->
 <pjax>
 
+        <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = "https://unpkg.com/volantis-static@0.0.1654736714924/libs/mathjax/es5/tex-mml-chtml.js";
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typesetPromise();
+  }
+</script>
+
+
+
 </pjax>
 
 <script>
@@ -4344,7 +4266,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/近世代数/","name":"近世代数"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/统计学习/","name":"统计学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/06/10/statistic3/","name":"MCMC"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"MCMC","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/06/10/statistic3/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/06/10/statistic3/","wordCount":0,"datePublished":"2024-06-10T07:56:52.000Z","dateModified":"2024-06-10T08:01:31.994Z","articleSection":"统计学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
