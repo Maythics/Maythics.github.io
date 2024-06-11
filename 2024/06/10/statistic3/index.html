@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-06-10T07:56:52.000Z">
-<meta property="article:modified_time" content="2024-06-10T08:41:48.501Z">
+<meta property="article:modified_time" content="2024-06-11T12:10:24.939Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1718008945656),
+    lastupdate: new Date(1718107876133),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2694,15 +2694,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>因此，Monte Carlo的核心是<strong>随机抽样</strong></p>
 <p>有多种方法进行随机抽样，比如：</p>
 <ol>
-<li><p>直接抽样法：最直观的，依赖于均匀抽样与CDF的反函数（搜索一下就知道了）</p>
+<li><p>直接抽样法：最直观的，依赖于均匀抽样与CDF的反函数（搜索一下就知道了），但该方法不一定可操作，比如，求CDF的积分$p(x)$，这个积分很可能不好算，因此有了下面的方法</p>
 </li>
-<li><p>接受-拒绝法： 在有某个已知分布$q(x)$的抽样的基础上，让这些抽样变成符合$p(x)$的抽样。如何变？比如我按照$q(x)$抽取到了点$x^\ast$，概率密度为$q(x^\ast)$，但目标是：生成的$x^\ast$得按照概率密度$p(x^\ast)$分布，因此，我以$\frac{p(x^\ast)}{cq(x^\ast)}$的概率采纳这个样本，将它加入最终的样本序列中</p>
+<li><p>接受-拒绝法： 在有某个已知分布$q(x)$的抽样的基础上，让这些抽样变成符合$p(x)$的抽样。如何变？比如我按照$q(x)$抽取到了点$x^\ast$，概率密度为$q(x^\ast)$，但目标是：生成的$x^\ast$得按照概率密度$p(x^\ast)$分布，因此，我以$\frac{p(x^\ast)}{cq(x^\ast)}$的概率采纳这个样本，将它加入最终的样本序列中，剩余的概率抛弃它，这就得到了按$p(x)$分布的抽样。但是，很可能$\frac{p(x^\ast)}{cq(x^\ast)}$很小很小，导致大部分时间都在抛弃，效率低下，因此才有了下面的方法</p>
 </li>
 </ol>
 <img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/acceptrefuse.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/acceptrefuse.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="accept/refuse" width="220" height="120">
 
 <ol start="3">
-<li>Markov Chain：随机游走也是一种抽样！比如在三个点A,B,C之间按照某种概率游走，每一时刻的位置连起来就是一个序列，比如A,C,B,A,C,C……这就是对于A,B,C的一种抽样。下面就是讲这种方法</li>
+<li>Markov Chain：随机游走也是一种抽样！比如在三个点A,B,C之间按照某种概率游走，每一时刻的位置，构成一个序列，比如A,C,B,A,C,C……这就是对于A,B,C的一种抽样。下面就是讲这种方法</li>
 </ol>
 <h3 id="Markov-Chain"><a href="#Markov-Chain" class="headerlink" title="Markov Chain"></a>Markov Chain</h3><h4 id="Markov性"><a href="#Markov性" class="headerlink" title="Markov性"></a>Markov性</h4><p>某一个物理量具有Markov性，即该物理量的未来只依赖于该物理量的现在，不依赖于其过去，称它某一个时刻的值为<strong>状态</strong></p>
 <p>例子：考察质量为$m$的质点在已知势场中的运动，$(\vec{x}(t),\vec{v}(t))$就具有Markov性，因为已知$t_0$时的$\vec{x}(t_0)$和$\vec{v}(t_0)$，今后的$\vec{x}(t)$和$\vec{v}(t)$全都可以求出来了</p>
@@ -2712,7 +2712,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>$$<br>\begin{align*}<br>\vec{x}(t_0+\Delta t)&amp;&#x3D;\vec{x}(t_0)+\vec{v}(t_0)\Delta t<br>\newline\newline<br>\vec{v}(t_0+\Delta t)&amp;&#x3D;\vec{v}(t_0)+\frac{-\nabla V(\vec{x}(t_0))}{m}\Delta t<br>\end{align*}<br>$$</p>
 <p>不满足的：</p>
 <p>$$<br>\vec{x}(t_0+\Delta t)&#x3D;\vec{x}(t_0)+\dot{\vec{x}}(t_0)\Delta t<br>$$</p>
-<p>因此，初中物理就有一句话：“物体的<strong>运动状态</strong>就是指位置和速度”。控制理论中的<strong>状态</strong>概念之所以有用，就是因为Markov性</p>
+<p>因此，初中物理就有一句话：“物体的<strong>运动状态</strong>就是指位置和速度”。现代控制理论中的<strong>状态</strong>概念之所以有用，就是因为Markov性</p>
 <h4 id="许多定义与定理"><a href="#许多定义与定理" class="headerlink" title="许多定义与定理"></a>许多定义与定理</h4><p>约定用$i,j$字母代表状态，$X_t$代表第$t$步时所处状态的随机变量，其取值就是$i,j,\dots$这样的状态</p>
 <p><strong>定义</strong> 一个随机变量序列$\set{X_0,X_1,\dots, X_t,\dots}$，若：</p>
 <p>$$<br>P(X_t|X_0,\dots ,X_{t-1})&#x3D;P(X_t|X_{t-1})<br>$$<br>就是具有Markov性的随机序列，称为Markov链</p>
@@ -2720,7 +2720,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>$$<br>\pi(t)&#x3D;\begin{pmatrix}<br>  \pi_1(t)\\<br>  \pi_2(t)\\<br>  \vdots \\<br>\end{pmatrix}<br>$$<br>其中，$\pi_i(t)$代表$t$时刻恰在状态$i$的概率，即$\pi_i(t)&#x3D;P(X_t&#x3D;i)$</p>
 <p>下文中，请注意区分“状态”与“状态分布”</p>
 <p><strong>定义</strong> 状态转移概率矩阵，其分量$p_{ij}&#x3D;P(X_t&#x3D;i|X_{t-1}&#x3D;j)$，即从$j$移动到$i$的概率，因此，$\pi(t)&#x3D;P\pi(t-1)$</p>
-<p><strong>定义</strong> 设给定的Markov链，其状态转移概率矩阵为$P$，如果存在状态空间中的一个分布$\pi&#x3D;(\pi_1,\pi_2,\dots)^T$满足$\pi&#x3D;P\pi$，则$\pi$称为平稳分布</p>
+<p><strong>定义</strong> 设给定的Markov链，其状态转移概率矩阵为$P$，如果存在状态空间中的一个分布$\pi&#x3D;(\pi_1,\pi_2,\dots)^\top$满足$\pi&#x3D;P\pi$，则$\pi$称为平稳分布</p>
 <p><strong>定义</strong> 给定Markov链，若对于任意的两个状态$i$与$j$，均存在一个$t$满足</p>
 <p>$$<br>P(X_t&#x3D;i|X_0&#x3D;j)&gt;0<br>$$<br>则称该Markov链<strong>不可约</strong></p>
 <p>其实，如果存在$t$使得$P(X_t&#x3D;i|X_0&#x3D;j)&gt;0$，则记$j\to i$，若还有$i\to j$，则称$i$与$j$<strong>互通</strong>，记为$i\leftrightarrow j$。这个互通其实是一个<strong>等价关系</strong>，因此可以依此划分状态，把互通的状态记为一类。不可约说的就是：该Markov链仅仅只有一类</p>
@@ -2728,7 +2728,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><strong>定义</strong> 首达概率：$p^t_{ij}$指$0$时刻从$j$出发，$t$时刻<strong>首次</strong>到达$i$的概率。又记$f_{ij}&#x3D;\sum\limits_{t&#x3D;1}^\infty p^t_{ij}$，这里的$f_{ij}$指的是<strong>能经过有限步</strong>，从$j$到$i$的概率</p>
 <p><strong>定义</strong> 常返状态：如果$f_{ii}&#x3D;1$，那么状态$i$就是常返（recurrent）状态</p>
 <p><strong>定义</strong> 正常返状态：记$\mu_i&#x3D;\sum\limits_{t&#x3D;1}^\infty t p^t_{ii}$，这代表的就是$i$出发回到$i$的步数的期望值，如果$\mu_i&lt;\infty$，则称$i$为<strong>正常返状态</strong>，若$\mu_i&#x3D;+\infty$，称为<strong>零常返状态</strong></p>
-<p><strong>定义</strong> 可逆：如果有状态分布$\pi&#x3D;(\pi_1,\pi_2,\dots)^T$，使得对于任何状态$i,j$，对任意的$t$满足<strong>细致平衡方程</strong>：$p_{ji}\pi_j&#x3D;p_{ij}\pi_i$，则称Markov链可逆</p>
+<p><strong>定义</strong> 可逆：如果有状态分布$\pi&#x3D;(\pi_1,\pi_2,\dots)^\top$，使得对于任何状态$i,j$，对任意的$t$满足<strong>细致平衡方程</strong>：$p_{ij}\pi_j&#x3D;p_{ji}\pi_i$，则称Markov链可逆</p>
 <p><strong>定理</strong> 满足细致平衡方程的状态分布$\pi$就是平稳分布，$P\pi&#x3D;\pi$</p>
 <blockquote>
 <p>证明：$(P\pi) _ i&#x3D;\sum _ j P _ {ij}\pi _ j&#x3D;\sum _ j P _ {ji}\pi _ i&#x3D;\pi _ i\sum _ j P _ {ji}&#x3D;\pi _ i$</p>
@@ -2738,10 +2738,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>证明 参见<a target="_blank" rel="noopener" href="https://www.math.pku.edu.cn/teachers/lidf/course/stochproc/stochprocnotes/html/_book/StocProc.pdf">https://www.math.pku.edu.cn/teachers/lidf/course/stochproc/stochprocnotes/html/_book/StocProc.pdf</a> 定理5.8 定义5.13 定理5.12 待填</p>
 </blockquote>
-<p>这个定理之所以好，是因为我们在Markov链上游走，最后会落到某个极限的分布（若存在的话）中去，这个极限分布如果恰好等于平稳分布，且就是我们想要的那个分布，那么“游走”就可以当成“采样”了！否则，即使苦心经营了一个平稳分布，但是怎么游走也走不到那里去，计划仍然会泡汤</p>
-<h3 id="Metropolis-Hastings算法"><a href="#Metropolis-Hastings算法" class="headerlink" title="Metropolis Hastings算法"></a>Metropolis Hastings算法</h3><p>（下面说的转移核$p(x,y)$，其实指的是$x$转变到$y$的概率密度函数，譬如，显然有：$\int p(x,y)dy&#x3D;1$，因为$x$转变到各个新状态的概率为一）</p>
-<p>该算法就靠的是一个转移核为$p(x,x’)$的Markov链，按照这个转移核进行随机游走，时间够长后，能够得到一个平稳分布$p(x)$，这就是要抽样的目标分布！样本就随着游走的进行，源源不断生成了</p>
-<p>如何得到$p(x,x’)$的核心公式：</p>
+<p>这个定理之所以好，是因为我们在Markov链上游走，最后会落到某个极限的分布中去，这个极限分布如果恰好等于平稳分布，而且还是我们想要的那个样本分布，那么“游走”就可以当成“采样”了！否则，即使苦心经营了一个平稳分布，但是怎么游走也走不到那里去，我们的计划仍然会泡汤</p>
+<h3 id="Metropolis-Hastings算法"><a href="#Metropolis-Hastings算法" class="headerlink" title="Metropolis Hastings算法"></a>Metropolis Hastings算法</h3><p>注：下面说的转移核$p(x,y)$，其实指的是$x$转变到$y$的概率密度函数，对应着离散的情形中的矩阵元素$p_{ij}$（从$j$到$i$的转移概率）。譬如，显然有：$\int p(x,y)dy&#x3D;1$，因为$x$转变到各个新状态的概率和为一</p>
+<p>思想：该算法就靠的是一个转移核为$p(x,x’)$的Markov链。按这个转移核进行随机游走，时间够长后，能够得到一个平稳分布$p(x)$，就是目标的样本分布！这样，样本就随着游走的进行，源源不断生成了</p>
+<p>在该算法中，如何得到$p(x,x’)$的核心公式：</p>
 <p>$$<br>p(x,x’)&#x3D;q(x,x’)\alpha(x,x’)<br>$$</p>
 <p>其中：</p>
 <ol>
@@ -2750,24 +2750,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>$\alpha(x,x’)$叫接受分布，定义为$\alpha(x,x’)&#x3D;\min\set{1,\frac{p(x’)q(x’,x)}{p(x)q(x,x’)}}$</p>
 </li>
 </ol>
-<p>按照$p(x,x’)$游走的含义是什么呢？当我决定下一步去哪的时候，先去“建议分布”那里寻求建议，它会按照$q(x,x’)$给你候选状态$x’$，然后，“接受分布”告诉你要不要接受它：以$\alpha(x,x’)$的概率接受候选，转移到那里去；以$1-\alpha(x,x’)$的概率不接受，仍然停留在原地，即：下一个状态还是$x$，至此，完成一次游走。继续重复执行这一方法，夜以继日地游走，就能够得到源源不断的抽样，这就是Metropolis Hastings算法</p>
-<p>回答一下为什么这个算法得到的抽样是平稳的问题：</p>
+<p>按照$p(x,x’)$游走的含义是什么呢？当我决定下一步去哪的时候，先去“建议分布”那里寻求建议，它会按照$q(x,x’)$给你候选状态$x’$，然后，“接受分布”告诉你要不要接受它：以$\alpha(x,x’)$的概率接受候选，转移到那里去；以$1-\alpha(x,x’)$的概率不接受，“采样失败”，干等着，下一轮再来。继续重复执行这一方法，夜以继日地游走，就能够得到源源不断的抽样，这就是Metropolis Hastings算法</p>
+<p>回答一下为什么这个算法得到的抽样是平稳的：</p>
 <p><strong>定理</strong> 由该转移核得到的Markov链是可逆的，即：$p(x)p(x,x’)&#x3D;p(x’)p(x’,x)$，且$p(x)$就是平稳分布</p>
 <blockquote>
 <p>证明：<br>$$<br>\begin{align*}<br>  p(x)p(x,x’)&amp;&#x3D;p(x)\min\set{q(x,x’),\frac{p(x’)q(x’,x)}{p(x)}}<br>  \newline<br>  &amp;&#x3D;\min\set{p(x)q(x,x’),p(x’)q(x’,x)}<br>  \newline<br>  &amp;&#x3D;p(x’)q(x’,x)\min\set{\frac{p(x)q(x,x’)}{p(x’)q(x’,x)},1}<br>  \newline<br>  &amp;&#x3D;p(x’)p(x’,x)<br>\end{align*}<br>$$<br>当然，满足细致平衡方程自然是平稳分布（鉴于这里是连续的，之前的求和得换成积分，再写一下）：<br>$$<br>\int p(x)p(x,x’)dx&#x3D;p(x’)\int p(x’,x)dx&#x3D;p(x’) \quad \square<br>$$</p>
 </blockquote>
-<h3 id="思路梳理"><a href="#思路梳理" class="headerlink" title="思路梳理"></a>思路梳理</h3><p>再理一下思路：</p>
+<h3 id="Metropolis思路梳理"><a href="#Metropolis思路梳理" class="headerlink" title="Metropolis思路梳理"></a>Metropolis思路梳理</h3><p>再理一下思路：</p>
 <ol>
 <li><p>目标是要得到依$p(x)$分布的随机样本，方法是构造一个Markov链</p>
 </li>
 <li><p>构造Markov链的用处在于，在上面游走很久后，平稳分布就是$p(x)$！</p>
 </li>
-<li><p>想构造Markov链，要先知道怎么游走，那请问该Markov链的转移规则$p(x,x’)$又是怎么来的？答：给出建议分布和接受分布后得到</p>
+<li><p>想构造Markov链，要先知道怎么游走，“怎么游走”在数学上就是转移核。那请问转移核$p(x,x’)$又是怎么来的？答：给出建议分布和接受分布后得到</p>
 </li>
-<li><p>不过，接受分布又是关于$q(x,x’)$和$p(x)$的函数，所以，只要给出建议分布$q(x,x’)$，就足以得到$p(x,x’)$了</p>
+<li><p>不过，接受分布是关于$q(x,x’)$和$p(x)$的函数，所以，只要给出建议分布$q(x,x’)$，就足以得到$p(x,x’)$了</p>
 </li>
 </ol>
-<p>所以，下面就来看看$q(x,x’)$该选什么</p>
+<p>“形上谓道”的内容说完了，下面来看“形下谓器”的东西：$q(x,x’)$该选什么</p>
 <p>第一种选法是对称选取$q(x,x’)&#x3D;q(x’,x)$，这样$\alpha(x,x’)$很简单，就是$\min\set{1,\frac{p(x’)}{p(x)}}$，具体的，可以选$q(x,x’)\propto \exp(-\frac{(x-x’)^2}{2})$等等</p>
 <p>第二种选法叫独立抽样，更加简单，它认为下一刻到哪，和此刻所在位置都没关系!就是$q(x,x’)&#x3D;q(x’)$，这样，$\alpha(x,x’)$也很简单，就是$\min\set{1,\frac{p(x’)&#x2F;q(x’)}{p(x)&#x2F;q(x)}}$</p>
 <p>总结：</p>
@@ -2783,7 +2783,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>游走足够长时间后，认为进入平稳分布阶段了，把<strong>这之后</strong>游走的结果取出来，作为$p(x)$的采样</p>
 </li>
 </ol>
-<p>达到平稳分布前的所有时间称为<strong>燃烧期</strong>，这些样本是舍弃掉没用的，因为还没到平稳的$p(x)$分布呢</p>
+<p>达到平稳分布前的时期称为<strong>燃烧期</strong>，该期间的样本是舍弃掉的，因为还没到平稳的$p(x)$分布呢</p>
+<h3 id="Gibbs采样"><a href="#Gibbs采样" class="headerlink" title="Gibbs采样"></a>Gibbs采样</h3><p>为什么要Gibbs？答：Metropolis算法仍然有“拒绝”样本的可能，“拒绝”就是白费了一次的意思，存在效率低下的隐患，而Gibbs采样方法就没有这个问题，不会停留在某个状态</p>
+<p>首先声明，Gibbs抽样适用于<strong>多元随机变量联合分布</strong></p>
+<p>先看二元的例子，比如我的目标是密度函数$p$，那抽到点$x&#x3D;(x_1,x_2)$的概率密度是<br>$$<br>p(x)&#x3D;p((x_1,x_2))&#x3D;p(x_1)p(x_2|x_1)<br>$$<br>（小心别和前面转移核的记号混起来，所以我多加了一层括号）同理，抽到点$x’&#x3D;(x_1,x_2’)$的概率就是：<br>$$<br>p(x’)&#x3D;p((x_1,x_2’))&#x3D;p(x_1)p(x_2’|x_1)<br>$$<br>因此就有：<br>$$<br>p(x)p(x_2’|x_1)&#x3D;p(x’)p(x_2|x_1)<br>$$<br>这个形式，对比一下细致平衡方程，发现有惊喜：令转移核为$p(x,x’)&#x3D;p(x_2’|x_1)$以及$p(x’,x)&#x3D;p(x_2|x_1)$，那上式不就是细致平衡方程嘛！那最后平稳分布啥的好性质不就都有了嘛！所以，我的游走规则（转移核）就这么愉快决定了</p>
+<p>这，就是Gibbs采样。不用找建议分布，更没有什么拒绝的环节，简单明了</p>
+<p>当然，因为必须要有别的分量（上例中的$x_1$）都相同，才能列出这个式子，所以每次只能变动一个分量。因此，想要Gibbs抽样一次，其实需要依次对每个分量都进行一次“固定别的分量”后的随机游走，等分量全部更新完，才得到新的样本点</p>
+<p>在理解了二元情形后，把它写成多元通用的形式：</p>
+<p>Gibbs抽样从一个初始点$x^{(0)}&#x3D;(x^{(0)}_1,x^{(0)}_2,\dots,x^{(0)}_k)$出发，约定第$i$次得到的样本点记为：$x^{(i)}&#x3D;(x^{(i)}_1,x^{(i)}_2,\dots,x^{(i)}_k)$</p>
+<p>在第$i+1$步时:</p>
+<ol>
+<li><p>先对第一个变量按照$p(x_1|x^{(i)}_2,\dots,x^{(i)}_k)$进行随机抽样，得到$x^{(i+1)}_1$</p>
+</li>
+<li><p>然后对第二个分量按照$p(x_2|x^{(i+1)}_1,x^{(i)}_3,\dots,x^{(i)}_k)$进行随机抽样，得到$x^{(i+1)}_2$</p>
+</li>
+<li><p>一直类推，对第$j$个分量按照$p(x _ j|x^{(i+1)} _ 1,x^{(i+1)} _ {j-1},x^{(i)} _ {j+1},\dots,x^{(i)} _ k)$进行随机抽样，得到$x^{(i+1)} _ j$，直到更新完所有分量</p>
+</li>
+<li><p>恭喜，已经得到了一枚新样本</p>
+</li>
+</ol>
+<img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/GibbsSample.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/GibbsSample.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="gibbs" width=360 height=200>
+
+<h3 id="Gibbs采样与Metropolis的联系"><a href="#Gibbs采样与Metropolis的联系" class="headerlink" title="Gibbs采样与Metropolis的联系"></a>Gibbs采样与Metropolis的联系</h3><p>其实，Gibbs是Metropolis的特例，下面就来证明之</p>
+<p>Metropolis中取建议分布</p>
+<p>$$<br>q(x,x’)&#x3D;p(x_j|x_{-j})<br>$$</p>
+<p>这里的$x_{-j}$代表此时除了$x_j$以外的其他的分量</p>
+<p>相应的Metropolis接受分布就是：</p>
+<p>$$<br>\alpha(x,x’)&#x3D;\min\set{1,\frac{p(x’)p(x_j|x_{-j}’)}{p(x)p(x_j’|x_{-j})}}<br>$$</p>
+<p>根据条件概率定义$p(x’)&#x3D;p(x_{-j}’)p(x_j’|x_{-j}’)$以及$p(x)&#x3D;p(x_{-j})p(x_j|x_{-j})$，上式就变为：</p>
+<p>$$<br>\alpha(x,x’)&#x3D;\min\set{1,\frac{p(x_{-j}’)p(x_j’|x_{-j}’)p(x_j|x_{-j}’)}{p(x_{-j})p(x_j|x_{-j})p(x_j’|x_{-j})}}<br>$$</p>
+<p>由于$-j$那一部分的变量根本没变，$x_{-j}’&#x3D;x_{-j}$，所以：</p>
+<p>$$<br>\alpha(x,x’)&#x3D;\min\set{1,1}&#x3D;1<br>$$</p>
+<p>果然，没有拒绝环节</p>
 
   </div>
   
@@ -2808,10 +2839,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-06-10T16:41:48+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-06-11T20:10:24+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jun 10, 2024</p>
+    <p>更新于：Jun 11, 2024</p>
   </a>
 </div>
 
@@ -3016,7 +3047,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MCMC"><span class="toc-text">MCMC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Monte-Carlo"><span class="toc-text">Monte Carlo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Markov-Chain"><span class="toc-text">Markov Chain</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Markov%E6%80%A7"><span class="toc-text">Markov性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%B8%E5%A4%9A%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9A%E7%90%86"><span class="toc-text">许多定义与定理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Metropolis-Hastings%E7%AE%97%E6%B3%95"><span class="toc-text">Metropolis Hastings算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF%E6%A2%B3%E7%90%86"><span class="toc-text">思路梳理</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MCMC"><span class="toc-text">MCMC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Monte-Carlo"><span class="toc-text">Monte Carlo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Markov-Chain"><span class="toc-text">Markov Chain</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Markov%E6%80%A7"><span class="toc-text">Markov性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%B8%E5%A4%9A%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9A%E7%90%86"><span class="toc-text">许多定义与定理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Metropolis-Hastings%E7%AE%97%E6%B3%95"><span class="toc-text">Metropolis Hastings算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Metropolis%E6%80%9D%E8%B7%AF%E6%A2%B3%E7%90%86"><span class="toc-text">Metropolis思路梳理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gibbs%E9%87%87%E6%A0%B7"><span class="toc-text">Gibbs采样</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gibbs%E9%87%87%E6%A0%B7%E4%B8%8EMetropolis%E7%9A%84%E8%81%94%E7%B3%BB"><span class="toc-text">Gibbs采样与Metropolis的联系</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4272,7 +4303,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/统计学习/","name":"统计学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/06/10/statistic3/","name":"MCMC"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"MCMC","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/06/10/statistic3/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/06/10/statistic3/","wordCount":0,"datePublished":"2024-06-10T07:56:52.000Z","dateModified":"2024-06-10T08:41:48.501Z","articleSection":"统计学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/统计学习/","name":"统计学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/06/10/statistic3/","name":"MCMC"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"MCMC","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/06/10/statistic3/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/06/10/statistic3/","wordCount":0,"datePublished":"2024-06-10T07:56:52.000Z","dateModified":"2024-06-11T12:10:24.939Z","articleSection":"统计学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
