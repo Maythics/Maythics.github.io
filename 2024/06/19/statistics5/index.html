@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://maythics.github.io/2024/02/01/qm2/"/>
+  <link rel="canonical" href="http://maythics.github.io/2024/06/19/statistics5/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>基本假设与一维问题 - (.O w O.)?</title>
+  <title>Adaboost - (.O w O.)?</title>
   <meta name="keywords" content="physics">
   <meta desc name="description" content="emmm - Maythics - (.O w O.)?">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="基本假设与一维问题">
-<meta property="og:url" content="http://maythics.github.io/2024/02/01/QM2/index.html">
+<meta property="og:title" content="Adaboost">
+<meta property="og:url" content="http://maythics.github.io/2024/06/19/statistics5/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
-<meta property="og:description" content="Shankar_ch.4值得注意的是，在Postulate II 中，动量算子在坐标空间的“矩阵”其中元素为：$\bra{x}P\ket{x’}&#x3D;-i\hbar \delta’(x-x’)&#x3D;-i\hbar\frac{d}{dx}\delta(x-x’)&#x3D;i\hbar\frac{d}{dx’}\delta(x-x’)$，要小心求导是对$x$还是$x’$ Ex 4.2.1">
+<meta property="og:description" content="统计学习方法Adaboost这不是一个具体的算法，而是一个进化方法。基于某一个已经有的算法，Adaboost能让它变强 弱分类器：就是一个分类算法，只不过它比较菜，菜到什么程度呢？菜到就比依概率随机分类要强那么一点，比如一个正确率55%的二分类算法 Adaboost的思想是什么呢？和听写一个道理，初始，字都不会写，第一次错了很多，订正的时候把写错的字罚抄10遍，第二次听写时，你着重关注了上次写错的">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-02-01T11:17:26.000Z">
-<meta property="article:modified_time" content="2024-04-01T09:59:52.739Z">
+<meta property="article:published_time" content="2024-06-19T07:49:24.000Z">
+<meta property="article:modified_time" content="2024-06-19T07:55:57.317Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -2611,7 +2611,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/02/01/QM2/">
+  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/06/19/statistics5/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="(.O w O.)?">
   </span>
@@ -2632,7 +2632,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        基本假设与一维问题
+        Adaboost
       </h1>
       <div class='new-meta-box'>
         
@@ -2651,10 +2651,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/Shankar-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">Shankar 量子力学</a>
+    <a class="category-link" href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/">统计学习</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/Shankar-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/" itemprop="url"><span itemprop="name">Shankar 量子力学</span></a>
+        <a href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">统计学习</span></a>
       </span>
     
   </div>
@@ -2663,10 +2663,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-02-01T19:17:26+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-06-19T15:49:24+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Feb 1, 2024</p>
+    <p>发布于：Jun 19, 2024</p>
   </a>
 </div>
 
@@ -2689,54 +2689,76 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="Shankar-ch-4"><a href="#Shankar-ch-4" class="headerlink" title="Shankar_ch.4"></a>Shankar_ch.4</h2><p>值得注意的是，在Postulate II 中，动量算子在坐标空间的“矩阵”其中元素为：$\bra{x}P\ket{x’}&#x3D;-i\hbar \delta’(x-x’)&#x3D;-i\hbar\frac{d}{dx}\delta(x-x’)&#x3D;i\hbar\frac{d}{dx’}\delta(x-x’)$，要小心求导是对$x$还是$x’$</p>
-<h3 id="Ex-4-2-1"><a href="#Ex-4-2-1" class="headerlink" title="Ex 4.2.1"></a>Ex 4.2.1</h3><p>(1) 三个本征值1,0,-1</p>
-<p>(2)该态为$\begin{pmatrix}<br>1 \\<br>0 \\<br>0 \\<br>\end{pmatrix}$ 所以计算期望值：<br>$$<br>  \langle L_x\rangle&#x3D;<br>  \begin{pmatrix}<br>    1 &amp; 0 &amp; 0 \\<br>  \end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix}<br>    0 &amp; 1 &amp; 0 \\<br>    1 &amp; 0 &amp; 1 \\<br>    0 &amp; 1 &amp; 0 \\<br>  \end{pmatrix}<br>  \begin{pmatrix}<br>  1 \\<br>  0 \\<br>  0 \\<br>  \end{pmatrix}&#x3D;0<br>$$<br>同理$L_x^2&#x3D;\frac{1}{2}\begin{pmatrix}<br>  1 &amp; 0 &amp; 1 \\<br>  0 &amp; 2 &amp; 0 \\<br>  1 &amp; 0 &amp; 1 \\<br>\end{pmatrix}$所以期望值为：<br>$$<br>  \langle L_x^2 \rangle&#x3D;<br>  \begin{pmatrix}<br>    1 &amp; 0 &amp; 0 \\<br>  \end{pmatrix}\frac{1}{2}\begin{pmatrix}<br>    1 &amp; 0 &amp; 1 \\<br>    0 &amp; 2 &amp; 0 \\<br>    1 &amp; 0 &amp; 1 \\<br>  \end{pmatrix}<br>  \begin{pmatrix}<br>  1 \\<br>  0 \\<br>  0 \\<br>  \end{pmatrix}&#x3D;\frac{1}{2}<br>$$<br>计算不确定度的平方：<br>$$<br>\Delta L_x^2&#x3D;\langle L_x^2\rangle-\langle L_x\rangle^2&#x3D;\frac{1}{2}<br>$$<br>或者按照书中的定义：<br>$$<br>\Delta L_x&#x3D;<br>\left(\begin{pmatrix}<br>  1 &amp; 0 &amp; 0 \<br>\end{pmatrix}<br>(L_x-0)^2<br>\begin{pmatrix}<br>  1 \\<br>  0 \\<br>  0 \\<br>\end{pmatrix}\right)^{1&#x2F;2}&#x3D;\frac{1}{\sqrt{2}}<br>$$<br>(3) 先计算$L_x$的本征问题：<br>$$<br>\begin{vmatrix}<br>  -\lambda &amp; 1 &amp; 0 \\<br>  1 &amp; -\lambda &amp; 1 \\<br>  0 &amp; 1 &amp; -\lambda \\<br>\end{vmatrix} &#x3D;0<br>$$<br>求得值为$0,\pm \sqrt{2}$本征向量在$\mathbb{R^3}$中的坐标表示为：<br>$$<br>\frac{1}{\sqrt{2}}<br>\begin{pmatrix}<br>  1\\<br>  0\\<br>  -1\\<br>\end{pmatrix}<br>\hspace{3em}<br>\frac{1}{2}<br>\begin{pmatrix}<br>  1\\<br>  \sqrt{2}\\<br>  1\\<br>\end{pmatrix}<br>\hspace{3em}<br>\frac{1}{2}<br>\begin{pmatrix}<br>  1\\<br>  -\sqrt{2}\\<br>  1\\<br>\end{pmatrix}<br>$$<br>发现$L_z$的基也即欧式空间的标准基，所以答案就是如上向量，记为$\ket{\psi_1},\ket{\psi_2},\ket{\psi_3}$</p>
-<p>(4) 对于$\begin{pmatrix}<br>  0\\<br>  0\\<br>  1\\<br>\end{pmatrix}$而言，通过$L_x$的基展开，有：<br>$$<br>\begin{pmatrix}<br>  0\\<br>  0\\<br>  1\\<br>\end{pmatrix}&#x3D;-\frac{1}{\sqrt{2}}\ket{\psi_1}+\frac{1}{2}\Ket{\psi_2}+\frac{1}{2}\Ket{\psi_3}<br>$$<br>注意这里的求解线性组合系数会自动归一化，因为这两个正交归一基之间的映射为等距同构。答案：得到三本征态之一，概率分别为$\frac{1}{2},\frac{1}{4},\frac{1}{4}$</p>
-<p>(5) 易知$L_z^2&#x3D;\begin{pmatrix}<br>  1 &amp; 0 &amp; 0\\<br>  0 &amp; 0 &amp; 0\\<br>  0 &amp; 0 &amp; 1\\<br>\end{pmatrix}$，其本征值为1对应的本征空间为$E(1,L_z^2)&#x3D;\text{span}\left( e_1, e_3\right)$因此测量后状态为$e_1$与$e_3$张成空间中的某个向量，计算落入该子空间而非$0$对应的子空间的概率可考虑：<br>$$<br>\ket{\psi}&#x3D;\frac{1}{2}e_2+\frac{\sqrt{3}}{2}v<br>$$<br>其中$v$指代$E(1,L_z^2)$中的某个单位模长的向量，注意上述表达式是唯一的，因为不同本征空间是直和关系。故测得本征值为$1$对应的就是坍缩到$v$态，概率$\frac{3}{4}$。</p>
-<p>若之后立刻进行$L_z$的测量，将该态$v$用$L_x$的本征向量$(e_1,e_2,e_3)$展开：<br>$$<br>v&#x3D;\frac{1}{2}e_1+\frac{1}{\sqrt{2}}e_3<br>$$<br>故$\frac{1}{3}$可能得到测量值$1$，对应$e_1$态，$\frac{2}{3}$可能得到测量值$-1$，对应$e_3$态。</p>
-<p>本题利用了一个巧妙的$L_z$将广义本征空间与本征空间联系在一起，（$L_z^2$的核空间即$L_z$的广义本征空间）</p>
-<p>(6) $\delta$之间的相对相位能够体现出不同结果，是有意义的，代表不同状态</p>
-<h3 id="4-2-notes"><a href="#4-2-notes" class="headerlink" title="4.2 notes"></a>4.2 notes</h3><p>P131 证明在非简并情况下，两个算子互易等价于有共有的一组本征向量能够组成基（注意，本证明只处理有限维向量空间，毕竟在无限维的空间中我连谱定理都不会）：</p>
+    <h1 id="统计学习方法"><a href="#统计学习方法" class="headerlink" title="统计学习方法"></a>统计学习方法</h1><h2 id="Adaboost"><a href="#Adaboost" class="headerlink" title="Adaboost"></a>Adaboost</h2><p>这不是一个具体的算法，而是一个进化方法。基于某一个已经有的算法，Adaboost能让它变强</p>
+<p>弱分类器：就是一个分类算法，只不过它比较菜，菜到什么程度呢？菜到就比依概率随机分类要强那么一点，比如一个正确率55%的二分类算法</p>
+<p>Adaboost的思想是什么呢？和听写一个道理，初始，字都不会写，第一次错了很多，订正的时候把写错的字罚抄10遍，第二次听写时，你着重关注了上次写错的字，把它们写对了，但是第一次写对的字由于轻视而遗忘了，又写错了，然后再把它们罚抄10遍……一遍一遍罚抄下来，你就能全对了</p>
+<p>思路：</p>
 <ol>
-<li><p>$\Lambda$和$\Omega$共有的本征向量能够组成基$\Rightarrow$互易：<br>  设这组基为$v_1,v_2,v_3\dots v_n$，其中$n&#x3D;\text{dim}\mathbb{V}$。则$\forall v\in \mathbb{V}$有：<br>  $$<br>  \begin{align*}<br> \Lambda\Omega v&amp;&#x3D;\Lambda\Omega (\sum_{i&#x3D;1}^n c_i v_i)&#x3D;\Lambda \sum_{i&#x3D;1}^n c_i \Omega v_i<br> \newline<br> &amp;&#x3D;\Lambda \sum_{i&#x3D;1}^n c_i \omega_i v_i&#x3D;\sum_{i&#x3D;1}^n c_i\omega_i \Lambda v_i&#x3D;\sum_{i&#x3D;1}^n c_i \omega_i \lambda_i v_i<br>  \end{align*}<br>  $$  对于$\Omega \Lambda v$得到完全相同结果。</p>
+<li><p>给定训练集，假设已经找到了一个弱分类器，先拿它分分看，发现有一些点分错了，那么就加大这些错分数据点的权重，以示额外关注</p>
 </li>
-<li><p>$\Lambda$和$\Omega$互易$\Rightarrow$共有的本征向量能够组成基：<br>只需要证明任一$\Lambda$的本征向量组成的基$\Ket{\lambda_1},\Ket{\lambda_2}\dots \Ket{\lambda_n}$也是$\Omega$的本征向量即可。找出使得$\Omega \ket{\lambda_i}\neq 0$的那个$\ket{\lambda_i}$：<br>$$<br>\Omega \Lambda \Ket{\lambda_i}&#x3D;\Lambda \Omega \Ket{\lambda_i}\iff \lambda_i \Omega \Ket{\lambda_i}&#x3D;\Lambda \Omega\Ket{\lambda_i}<br>$$   这说明非零向量$\Omega\ket{\lambda_i}$落在$E(\lambda_i,\Lambda)$中，在非简并的情况下，因为是一维不变子空间所以$\Omega\ket{\lambda_i}&#x3D;\omega\ket{\lambda_i}$<br>对于$\Omega \ket{\lambda_j}&#x3D;0$ 的那些向量$\ket{\lambda_j}$而言，自然也是$\Omega$的本征向量，因为在$\text{null} \Omega&#x3D;E(0,\Omega)$中</p>
+<li><p>调整分类器参数，使得赋权分类误差率最小，得到新的分类器</p>
+</li>
+<li><p>再拿新的分类器分分看，回到第一步</p>
 </li>
 </ol>
-<p>P134 验证密度矩阵性质：<br>(1) 使用<a href="/2024/01/31/QM1/#1-6-notes">第一章</a>结论，以及$p_k\in\mathbb{R}$的事实（以下省略$\mathcal{M}$记号，不区分算子和其对应的矩阵）：<br>$$<br>\begin{align*}<br>  \bra{i}\rho^\dagger\ket{j}&amp;&#x3D;\bra{j}\rho\ket{i}^*&#x3D;\bra{j}(\sum_k p_k \ket{k}\bra{k})\ket{i}^*<br>  \newline<br>  &amp;&#x3D;\sum_k p_k(\langle j|k\rangle\langle k|i\rangle)^*&#x3D;\sum_k p_k\langle i|k\rangle\langle k|j\rangle<br>  \newline<br>  &amp;&#x3D;\bra{i}(\sum_k p_k \ket{k}\bra{k})\ket{j}&#x3D;\bra{i}\rho\ket{j}<br>\end{align*}<br>$$<br>(2)<br>$$<br>\begin{align*}<br>  \text{Tr}\rho&amp;&#x3D;\sum_i \rho_{ii}&#x3D;\sum_i \bra{i}\rho\ket{i}<br>  \newline<br>  &amp;&#x3D;\sum_i\bra{i}(\sum_k p_k \ket{k}\bra{k})\ket{i}<br>  \newline<br>  &amp;&#x3D;\sum_i \bra{i}p_i\ket{i}&#x3D;\sum_i p_i&#x3D;1<br>\end{align*}<br>$$<br>(5)<br>$$<br>\begin{align*}<br>  \text{Tr}\rho^2&amp;&#x3D;\text{Tr}\left(\sum_i\sum_k p_i\ket{i}\bra{i}p_k\ket{k}\bra{k}\right)<br>  \newline<br>  &amp;&#x3D;\text{Tr}\left( \sum_i p_i^2\ket{i}\bra{i}\right)<br>  \newline<br>  &amp;&#x3D;\sum_j \bra{j} \sum_i p_i^2\ket{i}\bra{i} \ket{j}<br>  \newline<br>  &amp;&#x3D;\sum_j p_j^2 \leq \left(\sum_j p_j\right)^2&#x3D;1<br>\end{align*}<br>$$</p>
-<p>P137 关于$\psi_p(x)$的归一化复习：<br>$$<br>\mathscr{F}[\delta(x-x’)]&#x3D;\int_{-\infty}^\infty \delta(x-x’)e^{-ikx}dx&#x3D;e^{-ikx’}<br>\newline<br>\delta(x-x’)&#x3D;\frac{1}{2\pi}\int_{-\infty}^\infty e^{ik(x-x’)} dk<br>$$<br>因此，若$\psi_p(x)&#x3D;\frac{1}{\sqrt{2\pi \hbar}}e^{ipx&#x2F;\hbar}$ 就有正交关系：<br>$$<br>\int_{-\infty}^\infty \psi_p^*(x)\psi_{p’}(x) dx&#x3D;\frac{1}{2\pi\hbar}\int_{-\infty}^\infty e^{ix(p’-p)&#x2F;\hbar}dx<br>\newline<br><br>\newline<br>&#x3D;\frac{1}{2\pi}\int_{-\infty}^\infty e^{ix(p’-p)&#x2F;\hbar}d\left(\frac{x}{\hbar}\right)&#x3D;\delta(p’-p)&#x3D;\delta(p-p’)<br>$$<br>这样就得到了坐标空间中动量算符的本征函数的表达式，书中的后续步骤是以坐标空间中的形式为桥梁，得到波函数在动量本征函数上的投影</p>
-<p>在计算$\langle p|\psi\rangle$的最后一步算了一个高斯型积分，但是之前学的都是实的情况，不涉及复的，出于数学的考量简要分析想法：<br>$$<br>\lim_{R\to \infty}\int_{-(1+ik)R}^{(1+ik)R} e^{x^2}dx&#x3D;\lim_{R\to \infty}\int_{-R}^R (1+ik) e^{(1+ik)^2 x^2} dx<br>$$ 变量代换是可行的，化为对实变量的积分，相当于把积分路线旋转到实轴上。该积分按照复变函数的积分定义拆分为实部虚部等等，就可以验证和实高斯型积分能一样操作</p>
-<p>下一段说$\braket{P}&#x3D;0$，原因是：<br>$$<br>\braket{P}&#x3D;\bra{\psi}P\ket{\psi}&#x3D;\int\langle \psi|P| p\rangle<br>\langle p|\psi\rangle dp&#x3D;\int p \langle \psi|p\rangle\langle p|\psi\rangle dp&#x3D;0<br>$$<br>最后一步是因为书中已经给出$\langle p|\psi\rangle$形式，因此积分一个奇函数为$0$</p>
-<h3 id="Ex-4-2-2"><a href="#Ex-4-2-2" class="headerlink" title="Ex 4.2.2"></a>Ex 4.2.2</h3><p>在坐标空间中看：<br>$$<br>\begin{align*}<br>  \braket{P}&amp;&#x3D;\bra{\psi}P\ket{\psi}&#x3D;\int\langle \psi|x’\rangle \langle x’|P|\psi\rangle dx’<br>  \newline<br>  &amp;&#x3D;\int \langle \psi|x’\rangle \int \langle x’|P|\xi \rangle \langle \xi|\psi\rangle d\xi dx’<br>  \newline<br>  &amp;&#x3D;|c|^2\int \psi_r^\ast (x’) \int -i\hbar \frac{d}{dx’}\delta(x’-\xi) \psi_r(\xi) d\xi dx’<br>  \newline<br>  &amp;&#x3D;|c|^2\int \psi_r^\ast(x’) \int -i\hbar \delta(x’-\xi) \frac{d}{d\xi}\psi_r(\xi) d\xi dx’<br>  \newline<br>  &amp;&#x3D;-i\hbar|c|^2\int \psi_r^\ast (x’)  \frac{d}{dx’}\psi_r(x’)dx’<br>  \newline<br>  &amp;&#x3D;-i\hbar|c|^2\int \psi_r^\ast(x’)d\psi_r(x’)<br>  \newline<br>  &amp;&#x3D;-i\hbar|c|^2\int \psi_r(x’)d\psi_r(x’)&#x3D;0<br>\end{align*}<br>$$ 最后一步用了左右边界处的值都趋于$0$的条件</p>
-<h3 id="Ex-4-2-3"><a href="#Ex-4-2-3" class="headerlink" title="Ex 4.2.3"></a>Ex 4.2.3</h3><p>$$<br>\begin{align*}<br>  \braket{P}’&amp;&#x3D;\bra{\psi’}P\ket{\psi’}&#x3D;\int\langle \psi’|x’\rangle \langle x’|P|\psi’\rangle dx’<br>  \newline<br>  &amp;&#x3D;\int e^{-ip_0 x’ &#x2F;\hbar}\psi^\ast(x’) (-i\hbar\frac{d}{dx’})e^{ip_0 x’ &#x2F;\hbar}\psi(x’)dx’<br>  \newline<br>  &amp;&#x3D;\int e^{-ip_0 x’ &#x2F;\hbar}\psi^\ast(x’)p_0 e^{ip_0 x’ &#x2F;\hbar}\psi(x’)dx’<br>  \newline<br>  &amp; +\int e^{-ip_0 x’ &#x2F;\hbar}\psi^\ast(x’) e^{ip_0 x’ &#x2F;\hbar}(-i\hbar\frac{d}{dx’})\psi(x’)dx’<br>  \newline<br>  &amp;&#x3D;\int \psi^\ast(x’)p_0 \psi(x’)dx’+\int \psi^\ast(x’)(-i\hbar\frac{d}{dx’})\psi(x’)dx’<br>  \newline<br>  &amp;&#x3D;p_0+\braket{P}<br>\end{align*}<br>$$</p>
-<h3 id="4-3-notes"><a href="#4-3-notes" class="headerlink" title="4.3 notes"></a>4.3 notes</h3><p>P146 对于$U(t)$的另一种写法的验证：<br>$$<br>\begin{align*}<br>  U(t)|\psi(0)\rangle&amp;&#x3D;\sum_j \frac{(-i\hbar t H)^j}{j!}|\psi(0)\rangle<br>  \newline<br>  &amp;&#x3D;\sum_j\sum_E \frac{(-i\hbar t H)^j}{j!}|E\rangle \langle E|\psi(0)\rangle<br>  \newline<br>  &amp;&#x3D;\sum_j\sum_E \frac{(-i\hbar t E)^j}{j!}|E\rangle \langle E|\psi(0)\rangle<br>  \newline<br>  &amp;&#x3D;\sum_E e^{-iEt&#x2F;\hbar}|E\rangle \langle E|\psi(0)\rangle<br>\end{align*}<br>$$<br>（已经使用了收敛半径为$\infty$以及Fubini定理）可见两种写法的统一。至于证明$U(t)$是等距同构：引用<a href="/2024/01/31/QM1/#Ex-1-9-2">习题1.9.2</a>即可。</p>
-<p>4.3.15又用了等距同构的性质$U^\dagger U&#x3D;I$，证明：<br>$$<br>\langle v|v\rangle&#x3D;\langle Uv|Uv\rangle&#x3D;\langle U^\dagger Uv|v\rangle<br>\newline<br><br>\newline<br>\therefore \langle (U^\dagger U-I)v|v\rangle&#x3D;0 \quad\text{for}\forall v\in \mathbb{V} \text{on} \mathbb{C}<br>\newline<br><br>\newline<br>\therefore U^\dagger U&#x3D;I<br>$$ 最后一步用的是复向量空间上作用在任意向量上使得该向量正交于原向量的都是零算子的结论。这暗示着归一性随时间变化一直成立。</p>
-<p>此外，等距同构是可以完全用两组规范正交基之间的线性映射$U v_i&#x3D;w_i$描述的，实质就是坐标架在空间的旋转</p>
-<p>4.3.16的最后一步：<br>$$<br>U^{-1}(t_2,t_1)&#x3D;(\prod_n H_n)^{-1}&#x3D;\prod_n H_n^{-1}&#x3D;U(t_1,t_2)<br>$$</p>
-<h2 id="Shankar-ch-5"><a href="#Shankar-ch-5" class="headerlink" title="Shankar_ch.5"></a>Shankar_ch.5</h2><p>P152 的propagator可以从$U(t)&#x3D;e^{iHt&#x2F;\hbar}$出发，注意要展开为$Ae^{iEt&#x2F;\hbar}$的形式需要$H$作用等于乘个$E$，因此展开基一定得是$H$的本征向量组成的，此处用$\ket{p}$更好，一是因为$\ket{p}$本身也是$H$的本征向量，二是因为$\text{dim}E(E_i,H)&#x3D;2$，因此用$E_i$展开有符号不便</p>
-<h3 id="Ex-5-1-1"><a href="#Ex-5-1-1" class="headerlink" title="Ex 5.1.1"></a>Ex 5.1.1</h3><p>$$<br>\begin{align*}<br>  U(t)&amp;&#x3D;\int_{-\infty}^{\infty}\ket{p}\bra{p}e^{-iEt&#x2F;\hbar}dp<br>  \newline<br>  &amp;&#x3D;\left(\int_{-\infty}^{0}+\int_0^\infty \right) \ket{p}\bra{p}e^{-iEt&#x2F;\hbar}dp<br>  \newline<br>  &amp;&#x3D;\sum_{\alpha&#x3D;\pm}\int_0^\infty \ket{E,\alpha}\bra{E,\alpha}e^{-iEt&#x2F;\hbar}dp<br>  \newline<br>  &amp;&#x3D;\sum_{\alpha&#x3D;\pm}\int_0^\infty \ket{E,\alpha}\bra{E,\alpha}e^{-iEt&#x2F;\hbar} \frac{m}{(2mE)^{\frac{1}{2}}}dE<br>\end{align*}<br>$$</p>
-<h3 id="Ex-5-1-2"><a href="#Ex-5-1-2" class="headerlink" title="Ex 5.1.2"></a>Ex 5.1.2</h3><p>解ode而已；当$E&lt;0$时由于指数，两项都会发散，不能描述真实物理情况</p>
-<hr>
-<p>P153 5.1.11式的由来：<br>$$<br>\psi(x,t)&#x3D;\langle x\ket{\psi(t)}&#x3D;\langle x |U(t) |\psi(0)\rangle<br>\newline<br><br>\newline<br>&#x3D;\int \langle x |U(t)|x’\rangle\langle x’ |\psi(0)\rangle dx’<br>\newline<br><br>\newline<br>&#x3D;\int U(x,t;x’) \langle x’ |\psi(0)\rangle dx’&#x3D;\dots<br>$$</p>
-<h3 id="Ex-5-1-3"><a href="#Ex-5-1-3" class="headerlink" title="Ex 5.1.3"></a>Ex 5.1.3</h3><p>$$<br>\sum_{n&#x3D;0}^\infty \frac{1}{n!}\left(\frac{i\hbar t}{2M}\right)^n \frac{d^{2n}}{dx^{2n}} \pi^{-1&#x2F;4}\sum_{m&#x3D;0}^\infty \frac{(-1)^m x^{2m}}{m!2^m}<br>$$<br>考虑单一项作用得到的级数：<br>$$<br>\frac{d^{2n}}{dx^{2n}}\sum_{m&#x3D;0}^\infty \frac{(-1)^m x^{2m}}{m!2^m}&#x3D;\sum_{m&#x3D;n}^\infty \frac{(2m)!}{(2m-2n)!}\frac{(-1)^m x^{2m-2n}}{m!2^m}<br>$$<br>代入：<br>$$<br>\begin{align*}<br>  &amp;&#x3D;\pi^{-\frac{1}{4}} \sum_{n&#x3D;0}^\infty \frac{1}{n!} \left(\frac{-i\hbar t}{2M}\right)^n \sum_{l&#x3D;0}^\infty \frac{(2n+2l)!}{(2l)!}\frac{(-1)^{l} x^{2l}}{(l+n)!2^{l+n}}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\pi^{-\frac{1}{4}} \sum_{l&#x3D;0}^\infty\sum_{n&#x3D;0}^\infty \frac{1}{n!} \left(\frac{-i\hbar t}{2M}\right)^n  \frac{(2n+2l)!}{(2l)!}\frac{(-1)^{l} x^{2l}}{(l+n)!2^{l+n}}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\pi^{-\frac{1}{4}} \sum_{l&#x3D;0}^\infty\sum_{n&#x3D;0}^\infty \frac{1}{n!} \left(\frac{-i\hbar t}{4M}\right)^n  \frac{(2n+2l)!}{(l+n)!}\frac{(-1)^{l} x^{2l}}{(2l)!2^{l}}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\pi^{-\frac{1}{4}} \sum_{l&#x3D;0}^\infty\sum_{n&#x3D;0}^\infty \frac{1}{n!} \left(\frac{-i\hbar t}{4M}\right)^n  \left[2^{2(n+l)}(n+l-\frac{1}{2})(n+l-\frac{3}{2})\dots\right]\frac{(-1)^{l} x^{2l}}{(2l)!2^{l}}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\pi^{-\frac{1}{4}} \sum_{l&#x3D;0}^\infty\sum_{n&#x3D;0}^\infty \frac{1}{n!} \left(\frac{-i\hbar t}{M}\right)^n  \left[(n+l-\frac{1}{2})(n+l-\frac{3}{2})\dots\right]\frac{(-2)^{l} x^{2l}}{(2l)!}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\sum_{l&#x3D;0}^\infty\frac{\pi^{-\frac{1}{4}}(-2)^{l} x^{2l}}{(2l)!}\sum_{n&#x3D;0}^\infty \frac{1}{n!} \left(\frac{-i\hbar t}{M}\right)^n  \left[(n+l-\frac{1}{2})(n+l-\frac{3}{2})\dots\right]<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\sum_{l&#x3D;0}^\infty\frac{\pi^{-\frac{1}{4}}(-2)^{l} x^{2l}}{(2l)!}\sum_{n&#x3D;0}^\infty \frac{1}{n!} \left(\frac{-i\hbar t}{M}\right)^n  \left[(n+l-\frac{1}{2})(n+l-\frac{3}{2})\dots(l+\frac{1}{2})\right]<br>  \newline<br>  &amp;\times\left[(l-\frac{1}{2})(l-\frac{3}{2})\dots \frac{1}{2}\right]<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\sum_{l&#x3D;0}^\infty\frac{\pi^{-\frac{1}{4}}(-2)^{l} x^{2l}}{(2l)!}(1+\frac{i\hbar t}{M})^{-l-1&#x2F;2}[\frac{(2l-1)!!}{2^l}]<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\sum_{l&#x3D;0}^\infty\frac{\pi^{-\frac{1}{4}}(-1)^{l} x^{2l}}{(2l)!!}(1+\frac{i\hbar t}{M})^{-l-1&#x2F;2}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\sum_{l&#x3D;0}^\infty\frac{\pi^{-\frac{1}{4}}(-\frac{1}{2}x^2)^{l}}{l!}(1+\frac{i\hbar t}{M})^{-l-1&#x2F;2}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\pi^{-\frac{1}{4}} (1+\frac{i\hbar t}{M})^{-1&#x2F;2} \sum_{l&#x3D;0}^\infty\frac{(-\frac{1}{2}x^2)^{l}}{l!}(1+\frac{i\hbar t}{M})^{-l}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\pi^{-\frac{1}{4}} (1+\frac{i\hbar t}{M})^{-1&#x2F;2} \exp{\left(\frac{-\frac{1}{2}x^2}{1+\frac{i\hbar t}{M}}\right)}<br>\end{align*}<br>$$</p>
-<h3 id="Ex-5-2-1"><a href="#Ex-5-2-1" class="headerlink" title="Ex 5.2.1"></a>Ex 5.2.1</h3><p>需要注意undisturbed 不考虑之后的演化，相当于立即测量，求该函数在新基态上的分量大小，算$\langle n’| \psi\rangle$即可</p>
-<h3 id="Ex-5-2-2"><a href="#Ex-5-2-2" class="headerlink" title="Ex 5.2.2"></a>Ex 5.2.2</h3><p>(a)<br>$$<br>\bra{\psi}H\ket{\psi}&#x3D;\int\bra{\psi}H\ket{E}\langle E|\psi\rangle dE&#x3D;\int E \langle\psi|E\rangle \langle E|\psi\rangle dE<br>\newline<br><br>\newline<br>\geq \int E_0 \langle\psi|E\rangle \langle E|\psi\rangle dE&#x3D;E_0<br>$$</p>
-<p>(b) 在hint中之所以可以用$\bra{\psi_\alpha}H\ket{\psi_\alpha}$的方法去算能量$E(\alpha)$是因为$\psi_\alpha$已经是规范正交基了，具体计算略……最后得到一个$\alpha$的函数，可以取到$E(\alpha)&lt;0$</p>
-<h3 id="Ex-5-2-3"><a href="#Ex-5-2-3" class="headerlink" title="Ex 5.2.3"></a>Ex 5.2.3</h3><p>没有别的bound state了，此题参见顾樵数学物理方法 P76 例7，两边同时Fourier Transform</p>
-<p>$$<br>\frac{d^2 \psi}{dx^2}-k^2\psi&#x3D;-A\delta(x)\psi -\omega^2 \mathscr{F} [\psi] (\omega)- k^2 \mathscr{F}[\psi] (\omega)&#x3D;-A\psi(0)<br>$$</p>
-<p>其中$k&#x3D;\sqrt{-\frac{2mE}{\hbar^2}};A&#x3D;\frac{2m\alpha}{\hbar^2}$（注意是束缚态去掉分类讨论之嫌），这样算出$\mathscr{F}[\psi] (\omega)$后，再反解得到：<br>$$<br>\psi(x)&#x3D;\frac{A\psi(0)}{2k}e^{-k|x|}<br>$$ 这其实限制了$A$与$k$的关系，只有$E&#x3D;-\frac{m\alpha^2}{2\hbar^2}$一个能量的值</p>
-<h3 id="Ex-5-2-4"><a href="#Ex-5-2-4" class="headerlink" title="Ex 5.2.4"></a>Ex 5.2.4</h3><p>$$<br>\langle x|\psi\rangle&#x3D;\psi(x)&#x3D;\begin{cases}<br>  \left( \frac{2}{L}\right)^{1&#x2F;2}\cos\left(\frac{n\pi x}{L}\right) ,&amp;n&#x3D;1,3,5 \dots\\<br>  \left( \frac{2}{L}\right)^{1&#x2F;2}\sin\left(\frac{n\pi x}{L}\right) ,&amp;n&#x3D;2,4,6 \dots\\<br>\end{cases}<br>$$ 能量$E_n&#x3D;\frac{\hbar^2 \pi^2 n^2}{2mL^2}$，当$L$变化时：<br>$$<br>-\frac{\partial E}{\partial L}&#x3D;\frac{\hbar^2 \pi^2 n^2}{mL^3}&#x3D;\frac{2E_n}{L}<br>$$<br>经典考量一个小球，$2L&#x2F;v$的间隔发生碰撞产生动量变化$2mv$，则平均的力大小为$F&#x3D;mv^2&#x2F;L&#x3D;2E&#x2F;L$，对应</p>
-<h3 id="Ex-5-2-6"><a href="#Ex-5-2-6" class="headerlink" title="Ex 5.2.6"></a>Ex 5.2.6</h3><p>考虑定态方程$H\ket{\psi}&#x3D;E\ket{\psi}$<br>$$<br>\psi^2(x)+\frac{2m}{\hbar^2}(E-V)\psi&#x3D;0<br>$$ 注意分析中间区域时，和无限深方势阱一样有$E&gt;0$的要求，原因是如果$E&lt;0$，那在交接地带无法做到$\psi’(x)$连续。此外，在两边必须$E-V&lt;0$指数衰减，因为若不然，就是三角函数振荡，不符合可积要求<br>$$<br>\psi_2(x)&#x3D;A\cos kx<br>\quad<br>\psi_3(x)&#x3D;Be^{-\kappa x}<br>$$<br>其中$k&#x3D;\sqrt{\frac{2mE}{\hbar^2}}$，$\kappa&#x3D;\sqrt{-\frac{2m(E-V)}{\hbar^2}}$，衔接条件：<br>$$<br>A\cos \frac{Lk}{2}&#x3D;B e^{-\kappa L&#x2F;2}<br>\quad<br>-Ak\sin\frac{Lk}{2}&#x3D;-\kappa Be^{-\kappa L&#x2F;2}<br>$$ 相除就得到答案中的两个式子，奇的情况同（在数理方法中处理第三类边界条件很像）有意思的是：<br>$$<br>k^2+\kappa^2&#x3D;\frac{2mV_0}{\hbar^2}<br>$$ 采用图解法，换元如书中所述：<br>$$<br>\alpha^2+\beta^2&#x3D;\frac{2ma^2V_0}{\hbar^2}<br>$$<br>上述两个式子就成为：<br>$$<br>\beta&#x3D;\alpha \tan \alpha \quad ; \quad \beta&#x3D;-\alpha \cot \alpha<br>$$</p>
-<p>偶解：<br><img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm2.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="even" height="220" width="230"><br>奇解：<br><img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm1.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="odd" height="200" width="240"><br>可以看出后一个图中，当半径小时有可能没有交点，对应（注意只关注第一象限，只用看x轴，在别的象限有交点是无所谓的）：<br>$$<br>\text{Radius}&#x3D;a\sqrt{\frac{2mV_0}{\hbar^2}}&#x3D;\frac{\pi}{2}<br>$$<br>此即临界势能</p>
-<h3 id="Ex-5-3-1"><a href="#Ex-5-3-1" class="headerlink" title="Ex 5.3.1"></a>Ex 5.3.1</h3><p>此处的复势函数即可用来描述粒子消失的情况。验证非自伴：<br>$$<br>\begin{align*}<br>  &amp;\int \psi^\ast \left(-\frac{\hbar^2}{2m}\nabla^2+V_r+iV_i\right)\psi dx<br>\newline<br><br>\newline<br>&#x3D;&amp;\int \psi^\ast \left(-\frac{\hbar^2}{2m}\nabla^2\right)\psi dx+\int \psi^\ast (V_r+iV_i)\psi dx<br>\newline<br><br>\newline<br>&#x3D;&amp;\int \left(\left(-\frac{\hbar^2}{2m}\nabla^2\right)\psi\right)^\ast \psi dx+\int V_r\psi^\ast \psi dx+\int (-iV_i\psi)^\ast \psi dx<br>\end{align*}<br>$$<br>最后一项出现负号不再和原来的算符一样。若势含虚部，在推导中会出现$2iV_i\psi^\ast \psi$整理等式两边时多出：<br>$$<br>\frac{\partial }{\partial t}(\psi^\ast \psi)&#x3D;\frac{2V_i}{\hbar} \psi^\ast \psi<br>$$ 解此附加项即得指数衰减形式</p>
-<h3 id="Ex-5-3-2"><a href="#Ex-5-3-2" class="headerlink" title="Ex 5.3.2"></a>Ex 5.3.2</h3><p>代入$j$表达式显然$\psi^\ast \nabla \psi-\psi\nabla \psi^\ast$一项消失</p>
-<h3 id="Ex-5-3-3"><a href="#Ex-5-3-3" class="headerlink" title="Ex 5.3.3"></a>Ex 5.3.3</h3><p>$$<br>\begin{align*}<br>P&amp;&#x3D;\psi^\ast\psi&#x3D;\frac{1}{(2\pi\hbar)^3}<br>\newline<br><br>\newline<br>\vec{j}&amp;&#x3D;\frac{\hbar}{2mi}(\psi^\ast \nabla \psi-\psi\nabla \psi^\ast)<br>\newline<br><br>\newline<br>&amp;&#x3D;\frac{\hbar}{2mi}\left(\frac{1}{(2\pi\hbar)^3}\frac{2i\vec{p}}{\hbar}\right)&#x3D;\frac{1}{(2\pi\hbar)^3}\frac{\vec{p}}{m}<br>\end{align*}<br>$$</p>
-<p>跳过散射一节</p>
-<p>Theorem 15 说的是一维束缚态无简并情况，这个简并指的是$H$的本征态</p>
-<p>Theorem 16 说的是采用实本征函数是可行的且不会因此丧失一般性</p>
-<h2 id="Shankar-ch-6"><a href="#Shankar-ch-6" class="headerlink" title="Shankar_ch.6"></a>Shankar_ch.6</h2><p>算子$\frac{-i}{\hbar}H$的共轭是$\frac{i}{\hbar}H$，因为$(AB)^\dagger&#x3D;B^\dagger A^\dagger$，且两者显然交换，且哈密顿算子自伴</p>
-<p>书中给出了一个广义的Ehrenfest Theorem：<br>$$<br>\frac{d}{dt}\braket{\Omega}&#x3D;\frac{-i}{\hbar}\braket{[\Omega, H]}<br>$$</p>
+<p>注意：下面的Adaboost均指二分问题，标签$y\in \set{1,-1}$（多分类问题的Adaboost也是有的，大作业AdaKNN中，就用了多分类的Adaboost）</p>
+<h3 id="从前向分步算法说起"><a href="#从前向分步算法说起" class="headerlink" title="从前向分步算法说起"></a>从前向分步算法说起</h3><h4 id="前向分步算法"><a href="#前向分步算法" class="headerlink" title="前向分步算法"></a>前向分步算法</h4><p>先明确最终要得到的模型长这样，称为<strong>加法模型</strong>：<br>$$<br>f(x)&#x3D;\sum_{m&#x3D;1}^M \beta_m b(x,\gamma_m)<br>$$</p>
+<p>其中$b(x,\gamma_m)$为“基函数”，$\gamma_m$是它的参数，$\beta_m$是它的话语权。“基函数”其实指的就是一个分类器，所以上式的意思是：最终的分类器是很多小分类器群策群力的结果，每个小分类器都能投出$\beta_m$票，其和决定了最终分类结果</p>
+<p>如何学习出这么一个分类器呢？前向分步算法这样说：</p>
+<p>对一个训练集$\set{(x_1,y_1),\dots,(x_N,y_N)}$先规定一个损失函数$\sum\limits_{i&#x3D;1}^N L(y_i,f(x))$，然后走一步看一步，每一步都最小化损失函数，求$\min\limits_{\beta,\gamma} \sum\limits_{i&#x3D;1}^N L(y_i,f_{m-1}(x)+\beta b(x,\gamma))$，意思是前面$m-1$步的模型成果予以保留，在其基础上看看如何加上新的$\beta b(x,\gamma)$使损失最小</p>
+<ol>
+<li><p>初始，已知一个$b(x,\gamma_0)$（比如它是个以$w_0,b_0$为参数的支持向量机）</p>
+</li>
+<li><p>第$m$步，求解$\beta_m,\gamma_m &#x3D; \arg\min\limits_{\beta,\gamma} \sum\limits_{i&#x3D;1}^N L(y_i,f_{m-1}(x_i)+\beta b(x_i,\gamma))$</p>
+</li>
+<li><p>更新模型$f_m(x)&#x3D;f_{m-1}(x_i)+\beta_m b(x_i,\gamma_m)$</p>
+</li>
+</ol>
+<p>你可能觉得，这和Adaboost好像有点不像，之前说的什么“增大错分数据的权重”在哪里体现呢？别急，根据前向分步算法的要求慢慢推导，就能得出Adaboost，这个权重会自动浮现！</p>
+<h4 id="推导出Adaboost"><a href="#推导出Adaboost" class="headerlink" title="推导出Adaboost"></a>推导出Adaboost</h4><p>使用前向分步算法训练加法模型，并把损失函数规定为：$L(y,f(x))&#x3D;\exp(-y f(x))$，用的基函数记作$G(x)$，权重为$\alpha$</p>
+<p>按前向分步算法要求，在第$m$步应该求：<br>$$<br>\begin{align*}<br>  \alpha_m,G_m(x) &amp;&#x3D;\arg\min\limits_{\alpha,G} \sum\limits_{i&#x3D;1}^N L(y_i,f_{m-1}(x)+\alpha G_m(x))<br>  \newline<br>  &amp;&#x3D;\arg\min\limits_{\alpha,G} \sum\limits_{i&#x3D;1}^N \exp[-y_i(f_{m-1}(x)+\alpha G_m(x))]<br>  \newline<br>\end{align*}<br>$$</p>
+<p>由于此时，前面$m-1$步的模型成果予以保留，因此$\exp( -y_i f_{m-1}(x))$这一项只是常数，记它为$w_{mi}$</p>
+<p>上式右边的求和部分写为“分类正确”和“分类错误”两部分加和，并且观察到，当分类正确时$G(x_i)&#x3D;y_i$，因此同为$1$或$-1$，所以正确点$G(x_i)y_i&#x3D;1$，就有：</p>
+<p>$$<br>\sum_{y_i &#x3D; G(x_i)} w_{mi} e^{-\alpha}+\sum_{y_i \neq G(x_i)} w_{mi} e^{\alpha}<br>$$</p>
+<p>进行配凑并且化简：<br>$$<br>\begin{align*}<br>  &amp;\sum_{y_i &#x3D; G(x_i)} w_{mi} e^{-\alpha}+\sum_{y_i \neq G(x_i)} w_{mi} e^{\alpha}-\sum_{y_i \neq G(x_i)} w_{mi} e^{-\alpha}+\sum_{y_i \neq G(x_i)} w_{mi} e^{-\alpha}<br>  \newline<br>  &#x3D;&amp;(e^{\alpha}-e^{-\alpha} )\sum_{i&#x3D;1}^N w_{mi} I(y_i\notin G(x_i)) +e^{-\alpha}\sum_{i&#x3D;1}^N w_{mi}<br>\end{align*}<br>$$</p>
+<p>先一维搜索$G$，尾项与之无关，只关心：</p>
+<p>$$<br>\begin{equation}<br>  G_m(x) &#x3D;\arg\min_G \sum_{i&#x3D;1}^N w_{mi} I(y_i\notin G(x_i))<br>\end{equation}<br>$$</p>
+<p>含义很明显了，就是在分类器$G_m$之下，在赋权$w_{mi}$意义下错分最少。这里，$w_{mi}$可被诠释为<strong>权重</strong>，因为$w_{mi}$全部等于一的话，上式就指的是错误率，若某一个$x_j$的权重$w_{mj}$特别大的话，要优先把它分对，才能让上式的右侧整体取到minimum，这就是赋权错分率</p>
+<p>定下$G&#x3D;G_m$后再搜寻$\alpha$：</p>
+<p>$$<br>\arg\min_\alpha (e^{\alpha}-e^{-\alpha} )\sum_{i&#x3D;1}^N w_{mi} I(y_i\notin G_m(x_i)) +e^{-\alpha}\sum_{i&#x3D;1}^N w_{mi}<br>$$</p>
+<p>右侧对$\alpha$求偏导并使之为零即可，解得：</p>
+<p>$$<br>\begin{align}<br>  &amp;\alpha_m &#x3D;\frac{1}{2} \log \frac{1-e_m}{e_m}<br>  \newline<br>  &amp;\text{where } e_m&#x3D;\frac{\sum_{i&#x3D;1}^N w_{mi} I(y_i\notin G_m(x_i)) }{\sum_{i&#x3D;1}^N w_{mi}}<br>\end{align}<br>$$</p>
+<p>因此，$\alpha_m$与$G_m(x)$按照(1)和(2)的取法，是最优的，记住它们</p>
+<p>再来关注一下$w_{mi}$的定义，是$\exp( -y_i f_{m-1}(x))$，会随着每一轮新分类器的加入而变化，递推关系为：<br>$$<br>\begin{align}<br>w_{m+1, i}&amp;&#x3D;\exp(-y_i f_{m}(x))&#x3D;\exp[-y_i (f_{m-1}(x)+\alpha_m G_m(x))]<br>\newline<br>&amp;&#x3D;w_{mi}\exp(-y_i \alpha_m G_m(x))<br>\end{align}<br>$$</p>
+<p>这就表示<strong>权重</strong>会更新。一开始我们只是把过往的信息绑定成一个常数，没想到后面这个常数竟然能诠释成分类点的权重，非常神奇啊</p>
+<h3 id="励志的Adaboost"><a href="#励志的Adaboost" class="headerlink" title="励志的Adaboost"></a>励志的Adaboost</h3><p>为什么说Adaboost很励志呢？</p>
+<ol>
+<li><p>一方面，前向分步训练模型的方法就像人的轨迹一样，没有回头路。曾经某步产生的子分类器将永远含在最终分类器里，无法抹去。不能因为现在觉得某个子分类器表现不佳就把它删除，要知道在当时的语境下，这个子分类器可是靠着最小化全局损失函数产生出来的，已经尽最大的努力了，所以不能责怪曾经的自己</p>
+</li>
+<li><p>另一方面，怎样能在当下做出最好的决策，让损失函数最小呢？靠的是吸收教训，每一次都要把之前犯下错误的地方放大来看，加深印象</p>
+</li>
+</ol>
+<p>综合上面的(1)-(5)式理一下Adaboost算法（和原始的(1)-(5)式相比，做了scaling）：</p>
+<p>训练数据点为$\set{(x_1,y_1),\dots,(x_N,y_N)},y_i\in\set{1,-1}$</p>
+<ol>
+<li><p>初始化训练数据权重$w_{1i}&#x3D;\frac{1}{N}$</p>
+</li>
+<li><p>在第$m$步后，在权值分布为$w_{mi}$的情况下找到$G_m$使得赋权错分率$\sum_{i&#x3D;1}^N w_{mi} I(y_i\notin G(x_i))$最小</p>
+</li>
+<li><p>此时这个最小的误差率$\sum_{i&#x3D;1}^N w_{mi} I(y_i\notin G_m(x_i))$记为$e_m$，按照公式$\alpha_m&#x3D;\frac{1}{2}\log \frac{1-e_m}{e_m}$算出$\alpha_m$</p>
+</li>
+<li><p>更新权重分布：$w_{m+1, i}&#x3D;\frac{w_{mi}}{Z_m}\exp(-y_i \alpha_m G_m(x))$，（这里的$Z_m$是归一化因子）返回第二步</p>
+</li>
+</ol>
+<p>结束后，把沿途产生的所有子分类器都按照各自的话语权线性加和，前向分步的结果就是：$f(x)&#x3D;\sum\limits_{m&#x3D;1}^M \alpha_m G_m(x)$，这里的$\alpha_m$并不是归一化的，因为没必要归一化，重要的是相对而非绝对大小，最终的分类器就是：<br>$$<br>G(x)&#x3D;\text{sign}(\sum\limits_{m&#x3D;1}^M \alpha_m G_m(x))<br>$$</p>
+<h3 id="训练误差界—蜗牛的成功"><a href="#训练误差界—蜗牛的成功" class="headerlink" title="训练误差界—蜗牛的成功"></a>训练误差界—蜗牛的成功</h3><p>非常完美的一点是，理论可算Adaboost的误差上界：</p>
+<p>$$<br>\frac{1}{N}\sum_{i&#x3D;1}^N I(G(x_i)\neq y_i)\leq \prod_m Z_m \leq \exp\left( -2\sum_{m&#x3D;1}^M \gamma_m^2 \right)<br>$$</p>
+<p>这里的$Z_m$是当时的归一化系数，$\gamma_m$是第$\frac{1}{2}-e_m$，即第$m$个子分类器的表现比50%好多少</p>
+<blockquote>
+<p>证明： 代填</p>
+</blockquote>
+<p>这个定理之所以非常好，是因为它证明了，只要存在$\epsilon &gt;0$能保证每一次都能有$\gamma_m\geq \epsilon$，那么$\frac{1}{N}\sum\limits_{i&#x3D;1}^N I(G(x_i)\neq y_i)\leq  \exp\left( -2M\epsilon^2 \right)$</p>
+<p>这随着训练次数$M \to \infty$，竟然是趋于0的！即：只要保证每次都能比50%好$\epsilon$，那随着训练次数增多，也能臻于完美，这真是励志的蜗牛啊</p>
 
   </div>
   
@@ -2761,10 +2783,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-01T17:59:52+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-06-19T15:55:57+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 1, 2024</p>
+    <p>更新于：Jun 19, 2024</p>
   </a>
 </div>
 
@@ -2783,7 +2805,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/02/01/QM2/&title=基本假设与一维问题 - (.O w O.)?&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/06/19/statistics5/&title=Adaboost - (.O w O.)?&summary="
           
           >
           
@@ -2795,7 +2817,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/02/01/QM2/&title=基本假设与一维问题 - (.O w O.)?&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/06/19/statistics5/&title=Adaboost - (.O w O.)?&summary="
           
           >
           
@@ -2807,7 +2829,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/02/01/QM2/&title=基本假设与一维问题 - (.O w O.)?&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/06/19/statistics5/&title=Adaboost - (.O w O.)?&summary="
           
           >
           
@@ -2843,19 +2865,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/02/02/Algebra1/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>基本概念与群初识</p>
-          <p class='content'>基本概念代数运算定义：有一个法则使得在集合$M$中任意两个有次序的元素，在$M$中都有唯一的元素对应，则该法则是$M$的一个代数运算
-含有代数运算的集合称为代数系统
-注意：由定义可知，“有代数运...</p>
-        </a>
       
-      
-        <a class='next' href='/2024/01/31/QM1/'>
-          <p class='title'>前置基础与数学<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>Quantum Mechanics
-            Done Right中曾说物理学家喜欢在内积的定义中采用第二个位置的加性和齐性，原来是因为物理学中习惯用右矢
-            ...</p>
+        <a class='next' href='/2024/06/19/statistics6/'>
+          <p class='title'>Decision Tree<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>统计学习方法决策树简介决策树由结点和有向边组成，最末端的叶结点表示一个类
+非末端的结点就是一个决策点，类似于switch case语句，经过该决策点后数据就做了一次划分。整棵树，就是一些case...</p>
         </a>
       
     </div>
@@ -2871,7 +2885,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/02/01/QM2/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/06/19/statistics5/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2900,7 +2914,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <i class="fa-solid fa-atom fa-fw" aria-hidden="true"></i><span class='name'>Quantum Mechanics</span>
+      <i class="fa-solid fa-chart-line fa-fw" aria-hidden="true"></i><span class='name'>Statistical Learning</span>
     
   </header>
 
@@ -2908,74 +2922,74 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='content'>
     <ul class="list entry navigation">
       
-        <li><a class="flat-box" title="/2024/01/31/QM-prelude/" href="/2024/01/31/QM-prelude/"
+        <li><a class="flat-box" title="/2024/04/04/statistics1/" href="/2024/04/04/statistics1/"
           
           
-          active-action="action-20240131QM-prelude"
+          active-action="action-20240404statistics1"
           >
           <div class='name'>
             
-            序言
+            Entropy
           </div>
           
         </a></li>
       
-        <li><a class="flat-box" title="/2024/01/31/QM1/" href="/2024/01/31/QM1/"
+        <li><a class="flat-box" title="/2024/06/19/statistics6/" href="/2024/06/19/statistics6/"
           
           
-          active-action="action-20240131QM1"
+          active-action="action-20240619statistics6"
           >
           <div class='name'>
             
-            前置基础与数学
+            Decision Tree
           </div>
           
         </a></li>
       
-        <li><a class="flat-box" title="/2024/02/01/QM2/" href="/2024/02/01/QM2/"
+        <li><a class="flat-box" title="/2024/06/01/statistics2/" href="/2024/06/01/statistics2/"
           
           
-          active-action="action-20240201QM2"
+          active-action="action-20240601statistics2"
           >
           <div class='name'>
             
-            基本假设与一维问题
+            PCA
           </div>
           
         </a></li>
       
-        <li><a class="flat-box" title="/2024/02/04/QM3/" href="/2024/02/04/QM3/"
+        <li><a class="flat-box" title="/2024/06/19/statistics4/" href="/2024/06/19/statistics4/"
           
           
-          active-action="action-20240204QM3"
+          active-action="action-20240619statistics4"
           >
           <div class='name'>
             
-            谐振子
+            SVM
           </div>
           
         </a></li>
       
-        <li><a class="flat-box" title="/2024/02/05/QM4/" href="/2024/02/05/QM4/"
+        <li><a class="flat-box" title="/2024/06/19/statistics5/" href="/2024/06/19/statistics5/"
           
           
-          active-action="action-20240205QM4"
+          active-action="action-20240619statistics5"
           >
           <div class='name'>
             
-            费曼&海森堡登场
+            Adaboost
           </div>
           
         </a></li>
       
-        <li><a class="flat-box" title="/2024/02/22/QM5/" href="/2024/02/22/QM5/"
+        <li><a class="flat-box" title="/2024/06/10/statistic3/" href="/2024/06/10/statistic3/"
           
           
-          active-action="action-20240222QM5"
+          active-action="action-20240610statistic3"
           >
           <div class='name'>
             
-            多自由度与全同粒子
+            MCMC
           </div>
           
         </a></li>
@@ -3013,7 +3027,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Shankar-ch-4"><span class="toc-text">Shankar_ch.4</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-4-2-1"><span class="toc-text">Ex 4.2.1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-notes"><span class="toc-text">4.2 notes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-4-2-2"><span class="toc-text">Ex 4.2.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-4-2-3"><span class="toc-text">Ex 4.2.3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-notes"><span class="toc-text">4.3 notes</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shankar-ch-5"><span class="toc-text">Shankar_ch.5</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-1-1"><span class="toc-text">Ex 5.1.1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-1-2"><span class="toc-text">Ex 5.1.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-1-3"><span class="toc-text">Ex 5.1.3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-2-1"><span class="toc-text">Ex 5.2.1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-2-2"><span class="toc-text">Ex 5.2.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-2-3"><span class="toc-text">Ex 5.2.3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-2-4"><span class="toc-text">Ex 5.2.4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-2-6"><span class="toc-text">Ex 5.2.6</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-3-1"><span class="toc-text">Ex 5.3.1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-3-2"><span class="toc-text">Ex 5.3.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-3-3"><span class="toc-text">Ex 5.3.3</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shankar-ch-6"><span class="toc-text">Shankar_ch.6</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Adaboost"><span class="toc-text">Adaboost</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E5%89%8D%E5%90%91%E5%88%86%E6%AD%A5%E7%AE%97%E6%B3%95%E8%AF%B4%E8%B5%B7"><span class="toc-text">从前向分步算法说起</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E5%90%91%E5%88%86%E6%AD%A5%E7%AE%97%E6%B3%95"><span class="toc-text">前向分步算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A8%E5%AF%BC%E5%87%BAAdaboost"><span class="toc-text">推导出Adaboost</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%B1%E5%BF%97%E7%9A%84Adaboost"><span class="toc-text">励志的Adaboost</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E8%AF%AF%E5%B7%AE%E7%95%8C%E2%80%94%E8%9C%97%E7%89%9B%E7%9A%84%E6%88%90%E5%8A%9F"><span class="toc-text">训练误差界—蜗牛的成功</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4269,7 +4283,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/Shankar-量子力学/","name":"Shankar 量子力学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/02/01/QM2/","name":"基本假设与一维问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基本假设与一维问题","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/02/01/QM2/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/02/01/QM2/","wordCount":0,"datePublished":"2024-02-01T11:17:26.000Z","dateModified":"2024-04-01T09:59:52.739Z","articleSection":"Shankar 量子力学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/统计学习/","name":"统计学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/06/19/statistics5/","name":"Adaboost"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Adaboost","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/06/19/statistics5/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/06/19/statistics5/","wordCount":0,"datePublished":"2024-06-19T07:49:24.000Z","dateModified":"2024-06-19T07:55:57.317Z","articleSection":"统计学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
