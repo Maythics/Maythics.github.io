@@ -42,11 +42,11 @@
 <meta property="og:title" content="Adaboost">
 <meta property="og:url" content="http://maythics.github.io/2024/06/19/statistics5/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
-<meta property="og:description" content="统计学习方法Adaboost这不是一个具体的算法，而是一个进化方法。基于某一个已经有的算法，Adaboost能让它变强 弱分类器：就是一个分类算法，只不过它比较菜，菜到什么程度呢？菜到就比依概率随机分类要强那么一点，比如一个正确率55%的二分类算法 Adaboost的思想是什么呢？和听写一个道理，初始，字都不会写，第一次错了很多，订正的时候把写错的字罚抄10遍，第二次听写时，你着重关注了上次写错的">
+<meta property="og:description" content="统计学习方法Adaboost简介这不是一个具体的算法，而是一个进化方法。基于某一个已经有的算法，Adaboost能让它变强 弱分类器：就是一个分类算法，只不过它比较菜，菜到什么程度呢？菜到就比依概率随机分类要强那么一点，比如一个正确率55%的二分类算法 Adaboost的思想是什么呢？和听写一个道理，初始，字都不会写，第一次错了很多，订正的时候把写错的字罚抄10遍，第二次听写时，你着重关注了上次写">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-06-19T07:49:24.000Z">
-<meta property="article:modified_time" content="2024-06-19T07:55:57.317Z">
+<meta property="article:modified_time" content="2024-06-19T11:03:11.594Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1718784393632),
+    lastupdate: new Date(1718795028706),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2689,9 +2689,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="统计学习方法"><a href="#统计学习方法" class="headerlink" title="统计学习方法"></a>统计学习方法</h1><h2 id="Adaboost"><a href="#Adaboost" class="headerlink" title="Adaboost"></a>Adaboost</h2><p>这不是一个具体的算法，而是一个进化方法。基于某一个已经有的算法，Adaboost能让它变强</p>
+    <h1 id="统计学习方法"><a href="#统计学习方法" class="headerlink" title="统计学习方法"></a>统计学习方法</h1><h2 id="Adaboost"><a href="#Adaboost" class="headerlink" title="Adaboost"></a>Adaboost</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>这不是一个具体的算法，而是一个进化方法。基于某一个已经有的算法，Adaboost能让它变强</p>
 <p>弱分类器：就是一个分类算法，只不过它比较菜，菜到什么程度呢？菜到就比依概率随机分类要强那么一点，比如一个正确率55%的二分类算法</p>
-<p>Adaboost的思想是什么呢？和听写一个道理，初始，字都不会写，第一次错了很多，订正的时候把写错的字罚抄10遍，第二次听写时，你着重关注了上次写错的字，把它们写对了，但是第一次写对的字由于轻视而遗忘了，又写错了，然后再把它们罚抄10遍……一遍一遍罚抄下来，你就能全对了</p>
+<p>Adaboost的思想是什么呢？和听写一个道理，初始，字都不会写，第一次错了很多，订正的时候把写错的字罚抄10遍，第二次听写时，你着重关注了上次写错的字，把它们写对了，但由于轻视第一次对的字，又把它们写错了，然后再把罚抄10遍……一遍一遍罚抄下来，你就能全对了</p>
 <p>思路：</p>
 <ol>
 <li><p>给定训练集，假设已经找到了一个弱分类器，先拿它分分看，发现有一些点分错了，那么就加大这些错分数据点的权重，以示额外关注</p>
@@ -2705,7 +2705,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="从前向分步算法说起"><a href="#从前向分步算法说起" class="headerlink" title="从前向分步算法说起"></a>从前向分步算法说起</h3><h4 id="前向分步算法"><a href="#前向分步算法" class="headerlink" title="前向分步算法"></a>前向分步算法</h4><p>先明确最终要得到的模型长这样，称为<strong>加法模型</strong>：<br>$$<br>f(x)&#x3D;\sum_{m&#x3D;1}^M \beta_m b(x,\gamma_m)<br>$$</p>
 <p>其中$b(x,\gamma_m)$为“基函数”，$\gamma_m$是它的参数，$\beta_m$是它的话语权。“基函数”其实指的就是一个分类器，所以上式的意思是：最终的分类器是很多小分类器群策群力的结果，每个小分类器都能投出$\beta_m$票，其和决定了最终分类结果</p>
 <p>如何学习出这么一个分类器呢？前向分步算法这样说：</p>
-<p>对一个训练集$\set{(x_1,y_1),\dots,(x_N,y_N)}$先规定一个损失函数$\sum\limits_{i&#x3D;1}^N L(y_i,f(x))$，然后走一步看一步，每一步都最小化损失函数，求$\min\limits_{\beta,\gamma} \sum\limits_{i&#x3D;1}^N L(y_i,f_{m-1}(x)+\beta b(x,\gamma))$，意思是前面$m-1$步的模型成果予以保留，在其基础上看看如何加上新的$\beta b(x,\gamma)$使损失最小</p>
+<p>对一个训练集$\set{(x_1,y_1),\dots,(x_N,y_N)}$先规定一个损失函数$\sum\limits_{i&#x3D;1}^N L(y_i,f(x_i))$，然后走一步看一步，每一步都最小化损失函数，求$\min\limits_{\beta,\gamma} \sum\limits_{i&#x3D;1}^N L(y_i,f_{m-1}(x_i)+\beta b(x_i,\gamma))$，意思是前面$m-1$步的模型成果予以保留，在其基础上看看如何加上新的$\beta b(x,\gamma)$使损失最小</p>
 <ol>
 <li><p>初始，已知一个$b(x,\gamma_0)$（比如它是个以$w_0,b_0$为参数的支持向量机）</p>
 </li>
@@ -2716,26 +2716,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ol>
 <p>你可能觉得，这和Adaboost好像有点不像，之前说的什么“增大错分数据的权重”在哪里体现呢？别急，根据前向分步算法的要求慢慢推导，就能得出Adaboost，这个权重会自动浮现！</p>
 <h4 id="推导出Adaboost"><a href="#推导出Adaboost" class="headerlink" title="推导出Adaboost"></a>推导出Adaboost</h4><p>使用前向分步算法训练加法模型，并把损失函数规定为：$L(y,f(x))&#x3D;\exp(-y f(x))$，用的基函数记作$G(x)$，权重为$\alpha$</p>
-<p>按前向分步算法要求，在第$m$步应该求：<br>$$<br>\begin{align*}<br>  \alpha_m,G_m(x) &amp;&#x3D;\arg\min\limits_{\alpha,G} \sum\limits_{i&#x3D;1}^N L(y_i,f_{m-1}(x)+\alpha G_m(x))<br>  \newline<br>  &amp;&#x3D;\arg\min\limits_{\alpha,G} \sum\limits_{i&#x3D;1}^N \exp[-y_i(f_{m-1}(x)+\alpha G_m(x))]<br>  \newline<br>\end{align*}<br>$$</p>
-<p>由于此时，前面$m-1$步的模型成果予以保留，因此$\exp( -y_i f_{m-1}(x))$这一项只是常数，记它为$w_{mi}$</p>
-<p>上式右边的求和部分写为“分类正确”和“分类错误”两部分加和，并且观察到，当分类正确时$G(x_i)&#x3D;y_i$，因此同为$1$或$-1$，所以正确点$G(x_i)y_i&#x3D;1$，就有：</p>
+<p>按前向分步算法要求，在第$m$步应该求：<br>$$<br>\begin{align*}<br>  \alpha_m,G_m(x) &amp;&#x3D;\arg\min\limits_{\alpha,G} \sum\limits_{i&#x3D;1}^N L(y_i,f_{m-1}(x_i)+\alpha G(x_i))<br>  \newline<br>  &amp;&#x3D;\arg\min\limits_{\alpha,G} \sum\limits_{i&#x3D;1}^N \exp[-y_i(f_{m-1}(x_i)+\alpha G(x_i))]<br>\end{align*}<br>$$</p>
+<p>由于此时，前面$m-1$步的模型成果予以保留，因此$\exp( -y_i f_{m-1}(x_i))$这一项与优化$\alpha$和$G$无关，只是常数，记它为$w_{mi}$</p>
+<p>上式右边的求和部分写为“分类正确”和“分类错误”两部分加和，并且观察到，当分类正确时$G(x_i)&#x3D;y_i$，因此同为$1$或$-1$，所以正确点处有$G(x_i)y_i&#x3D;1$，上式右边即为：</p>
 <p>$$<br>\sum_{y_i &#x3D; G(x_i)} w_{mi} e^{-\alpha}+\sum_{y_i \neq G(x_i)} w_{mi} e^{\alpha}<br>$$</p>
 <p>进行配凑并且化简：<br>$$<br>\begin{align*}<br>  &amp;\sum_{y_i &#x3D; G(x_i)} w_{mi} e^{-\alpha}+\sum_{y_i \neq G(x_i)} w_{mi} e^{\alpha}-\sum_{y_i \neq G(x_i)} w_{mi} e^{-\alpha}+\sum_{y_i \neq G(x_i)} w_{mi} e^{-\alpha}<br>  \newline<br>  &#x3D;&amp;(e^{\alpha}-e^{-\alpha} )\sum_{i&#x3D;1}^N w_{mi} I(y_i\notin G(x_i)) +e^{-\alpha}\sum_{i&#x3D;1}^N w_{mi}<br>\end{align*}<br>$$</p>
 <p>先一维搜索$G$，尾项与之无关，只关心：</p>
 <p>$$<br>\begin{equation}<br>  G_m(x) &#x3D;\arg\min_G \sum_{i&#x3D;1}^N w_{mi} I(y_i\notin G(x_i))<br>\end{equation}<br>$$</p>
-<p>含义很明显了，就是在分类器$G_m$之下，在赋权$w_{mi}$意义下错分最少。这里，$w_{mi}$可被诠释为<strong>权重</strong>，因为$w_{mi}$全部等于一的话，上式就指的是错误率，若某一个$x_j$的权重$w_{mj}$特别大的话，要优先把它分对，才能让上式的右侧整体取到minimum，这就是赋权错分率</p>
+<p>含义很明显了，就是要找的分类器$G_m$，在赋权$w_{mi}$意义下的错分最少。这里，$w_{mi}$可被诠释为<strong>权重</strong>，比如，$w_{mi}$全部等于一的话，上式就指的是错误率；又比如，若某一个$x_j$的权重$w_{mj}$特别大的话，要优先把它分对，才能让上式的右侧整体取到minimum。这就是赋权错分率</p>
 <p>定下$G&#x3D;G_m$后再搜寻$\alpha$：</p>
 <p>$$<br>\arg\min_\alpha (e^{\alpha}-e^{-\alpha} )\sum_{i&#x3D;1}^N w_{mi} I(y_i\notin G_m(x_i)) +e^{-\alpha}\sum_{i&#x3D;1}^N w_{mi}<br>$$</p>
 <p>右侧对$\alpha$求偏导并使之为零即可，解得：</p>
 <p>$$<br>\begin{align}<br>  &amp;\alpha_m &#x3D;\frac{1}{2} \log \frac{1-e_m}{e_m}<br>  \newline<br>  &amp;\text{where } e_m&#x3D;\frac{\sum_{i&#x3D;1}^N w_{mi} I(y_i\notin G_m(x_i)) }{\sum_{i&#x3D;1}^N w_{mi}}<br>\end{align}<br>$$</p>
 <p>因此，$\alpha_m$与$G_m(x)$按照(1)和(2)的取法，是最优的，记住它们</p>
-<p>再来关注一下$w_{mi}$的定义，是$\exp( -y_i f_{m-1}(x))$，会随着每一轮新分类器的加入而变化，递推关系为：<br>$$<br>\begin{align}<br>w_{m+1, i}&amp;&#x3D;\exp(-y_i f_{m}(x))&#x3D;\exp[-y_i (f_{m-1}(x)+\alpha_m G_m(x))]<br>\newline<br>&amp;&#x3D;w_{mi}\exp(-y_i \alpha_m G_m(x))<br>\end{align}<br>$$</p>
+<p>再来关注一下$w_{mi}$的定义，是$\exp( -y_i f_{m-1}(x_i))$，会随着每一轮新分类器的加入而变化，递推关系为：<br>$$<br>\begin{align}<br>w_{m+1, i}&amp;&#x3D;\exp(-y_i f_{m}(x_i))&#x3D;\exp[-y_i (f_{m-1}(x_i)+\alpha_m G_m(x_i))]<br>\newline<br>&amp;&#x3D;w_{mi}\exp(-y_i \alpha_m G_m(x_i))<br>\end{align}<br>$$</p>
 <p>这就表示<strong>权重</strong>会更新。一开始我们只是把过往的信息绑定成一个常数，没想到后面这个常数竟然能诠释成分类点的权重，非常神奇啊</p>
 <h3 id="励志的Adaboost"><a href="#励志的Adaboost" class="headerlink" title="励志的Adaboost"></a>励志的Adaboost</h3><p>为什么说Adaboost很励志呢？</p>
 <ol>
 <li><p>一方面，前向分步训练模型的方法就像人的轨迹一样，没有回头路。曾经某步产生的子分类器将永远含在最终分类器里，无法抹去。不能因为现在觉得某个子分类器表现不佳就把它删除，要知道在当时的语境下，这个子分类器可是靠着最小化全局损失函数产生出来的，已经尽最大的努力了，所以不能责怪曾经的自己</p>
 </li>
-<li><p>另一方面，怎样能在当下做出最好的决策，让损失函数最小呢？靠的是吸收教训，每一次都要把之前犯下错误的地方放大来看，加深印象</p>
+<li><p>另一方面，怎样能在当下做出最好的决策，让损失函数最小呢？靠的是吸收教训，每一次都把前一次犯错的地方放大来看，加深印象</p>
 </li>
 </ol>
 <p>综合上面的(1)-(5)式理一下Adaboost算法（和原始的(1)-(5)式相比，做了scaling）：</p>
@@ -2745,9 +2745,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 <li><p>在第$m$步后，在权值分布为$w_{mi}$的情况下找到$G_m$使得赋权错分率$\sum_{i&#x3D;1}^N w_{mi} I(y_i\notin G(x_i))$最小</p>
 </li>
-<li><p>此时这个最小的误差率$\sum_{i&#x3D;1}^N w_{mi} I(y_i\notin G_m(x_i))$记为$e_m$，按照公式$\alpha_m&#x3D;\frac{1}{2}\log \frac{1-e_m}{e_m}$算出$\alpha_m$</p>
+<li><p>此时这个最小的错分率$\sum_{i&#x3D;1}^N w_{mi} I(y_i\notin G_m(x_i))$记为$e_m$，按照公式$\alpha_m&#x3D;\frac{1}{2}\log \frac{1-e_m}{e_m}$算出$\alpha_m$，是这个子分类器的话语权</p>
 </li>
-<li><p>更新权重分布：$w_{m+1, i}&#x3D;\frac{w_{mi}}{Z_m}\exp(-y_i \alpha_m G_m(x))$，（这里的$Z_m$是归一化因子）返回第二步</p>
+<li><p>更新权重分布：$w_{m+1, i}&#x3D;\frac{w_{mi}}{Z_m}\exp(-y_i \alpha_m G_m(x_i))$，（这里的$Z_m$是归一化因子）返回第二步</p>
 </li>
 </ol>
 <p>结束后，把沿途产生的所有子分类器都按照各自的话语权线性加和，前向分步的结果就是：$f(x)&#x3D;\sum\limits_{m&#x3D;1}^M \alpha_m G_m(x)$，这里的$\alpha_m$并不是归一化的，因为没必要归一化，重要的是相对而非绝对大小，最终的分类器就是：<br>$$<br>G(x)&#x3D;\text{sign}(\sum\limits_{m&#x3D;1}^M \alpha_m G_m(x))<br>$$</p>
@@ -2755,7 +2755,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>$$<br>\frac{1}{N}\sum_{i&#x3D;1}^N I(G(x_i)\neq y_i)\leq \prod_m Z_m \leq \exp\left( -2\sum_{m&#x3D;1}^M \gamma_m^2 \right)<br>$$</p>
 <p>这里的$Z_m$是当时的归一化系数，$\gamma_m$是第$\frac{1}{2}-e_m$，即第$m$个子分类器的表现比50%好多少</p>
 <blockquote>
-<p>证明： 代填</p>
+<p>证明： 待填</p>
 </blockquote>
 <p>这个定理之所以非常好，是因为它证明了，只要存在$\epsilon &gt;0$能保证每一次都能有$\gamma_m\geq \epsilon$，那么$\frac{1}{N}\sum\limits_{i&#x3D;1}^N I(G(x_i)\neq y_i)\leq  \exp\left( -2M\epsilon^2 \right)$</p>
 <p>这随着训练次数$M \to \infty$，竟然是趋于0的！即：只要保证每次都能比50%好$\epsilon$，那随着训练次数增多，也能臻于完美，这真是励志的蜗牛啊</p>
@@ -2783,7 +2783,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-06-19T15:55:57+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-06-19T19:03:11+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Jun 19, 2024</p>
@@ -3027,7 +3027,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Adaboost"><span class="toc-text">Adaboost</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E5%89%8D%E5%90%91%E5%88%86%E6%AD%A5%E7%AE%97%E6%B3%95%E8%AF%B4%E8%B5%B7"><span class="toc-text">从前向分步算法说起</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E5%90%91%E5%88%86%E6%AD%A5%E7%AE%97%E6%B3%95"><span class="toc-text">前向分步算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A8%E5%AF%BC%E5%87%BAAdaboost"><span class="toc-text">推导出Adaboost</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%B1%E5%BF%97%E7%9A%84Adaboost"><span class="toc-text">励志的Adaboost</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E8%AF%AF%E5%B7%AE%E7%95%8C%E2%80%94%E8%9C%97%E7%89%9B%E7%9A%84%E6%88%90%E5%8A%9F"><span class="toc-text">训练误差界—蜗牛的成功</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Adaboost"><span class="toc-text">Adaboost</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E5%89%8D%E5%90%91%E5%88%86%E6%AD%A5%E7%AE%97%E6%B3%95%E8%AF%B4%E8%B5%B7"><span class="toc-text">从前向分步算法说起</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E5%90%91%E5%88%86%E6%AD%A5%E7%AE%97%E6%B3%95"><span class="toc-text">前向分步算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A8%E5%AF%BC%E5%87%BAAdaboost"><span class="toc-text">推导出Adaboost</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%B1%E5%BF%97%E7%9A%84Adaboost"><span class="toc-text">励志的Adaboost</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E8%AF%AF%E5%B7%AE%E7%95%8C%E2%80%94%E8%9C%97%E7%89%9B%E7%9A%84%E6%88%90%E5%8A%9F"><span class="toc-text">训练误差界—蜗牛的成功</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4283,7 +4283,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/统计学习/","name":"统计学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/06/19/statistics5/","name":"Adaboost"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Adaboost","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/06/19/statistics5/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/06/19/statistics5/","wordCount":0,"datePublished":"2024-06-19T07:49:24.000Z","dateModified":"2024-06-19T07:55:57.317Z","articleSection":"统计学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/统计学习/","name":"统计学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/06/19/statistics5/","name":"Adaboost"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Adaboost","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/06/19/statistics5/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/06/19/statistics5/","wordCount":0,"datePublished":"2024-06-19T07:49:24.000Z","dateModified":"2024-06-19T11:03:11.594Z","articleSection":"统计学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
