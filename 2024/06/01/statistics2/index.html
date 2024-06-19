@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-06-01T06:38:42.000Z">
-<meta property="article:modified_time" content="2024-06-01T07:00:32.239Z">
+<meta property="article:modified_time" content="2024-06-19T07:27:01.684Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1718107876133),
+    lastupdate: new Date(1718782082876),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2701,7 +2701,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 <li><p>得到的新变量互<strong>不相关</strong>（概率论中概念），即$\text{Cov}(y_i,y_j)&#x3D;0\quad ,i\neq j$</p>
 </li>
-<li><p>按方差大小排序：变量$y_1$是所有$y_i$中方差最大的，$y_2$则是所有与$y_1$不想关的$\vec{x}$的线性变换中，方差次大的……</p>
+<li><p>按方差大小排序：变量$y_1$是所有$y_i$中方差最大的，$y_2$则是所有与$y_1$不相关的$\vec{x}$的线性变换中，方差次大的……</p>
 </li>
 </ol>
 <p>怎么找呢？其实这和特征值有关</p>
@@ -2710,8 +2710,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>证明：</p>
 <p>使用Lagrange乘数法，因为这里有约束条件$\vec{\alpha_i}^T\vec{\alpha_i}&#x3D;1$以及与之前的成分不相关，在这些约束之下想要方差最大</p>
 <p>对于首个主成分，求解的问题是：</p>
-<p>$$<br>\begin{align*}<br>\max_{\vec{\alpha_1}} \vec{\alpha_1}^T\Sigma\vec{\alpha_1} \<br>\text{s.t. } \vec{\alpha_1}^T\vec{\alpha_1}&#x3D;1<br>\end{align*}<br>$$<br>因此$\mathscr{L}:&#x3D;\vec{\alpha_1}^T\Sigma\vec{\alpha_1}-\lambda(\vec{\alpha_1}^T\vec{\alpha_1}-1)$<br>对$\vec{\alpha_1}$的各个分量分别求偏导并使之为零，能得到好几个方程，将这些方程拼起来是一个很好的向量式：<br>$$<br>\Sigma\vec{\alpha_1}-\lambda\vec{\alpha_1}&#x3D;0<br>$$<br>神奇地发现这是特征方程的形式，因此目标函数就是$\max_{\vec{\alpha_1}} \lambda&#x3D;\lambda_1$，取到时就有$\alpha_1$是$\lambda_1$对应的特征向量</p>
-<p>对于第二个分量，仍然类似，只不过约束多了一个“和第一个不相关”，因此Lagrange函数变为：<br>$$<br>\mathscr{L}:&#x3D;\vec{\alpha_2}^T\Sigma\vec{\alpha_2}-\lambda(\vec{\alpha_2}^T\vec{\alpha_2}-1)-\mu\vec{\alpha_2}^T\Sigma\vec{\alpha_1}<br>$$<br>注意到已知$\vec{\alpha_1}$是特征向量，那么上式就是：<br>$$<br>\mathscr{L}:&#x3D;\vec{\alpha_2}^T\Sigma\vec{\alpha_2}-\lambda(\vec{\alpha_2}^T\vec{\alpha_2}-1)-\mu\lambda_1\vec{\alpha_2}^T\vec{\alpha_1}<br>$$<br>而且根据定义正交性要求，其实尾项就是零，因此该Lagrange函数形式上和第一个一模一样，仍能得出一个特征方程形式……<br>$\square$</p>
+<p>$$<br>\begin{align*}<br>\max_{\vec{\alpha_1}} \vec{\alpha_1}^T\Sigma\vec{\alpha_1} \\<br>\text{s.t. } \vec{\alpha_1}^T\vec{\alpha_1}&#x3D;1<br>\end{align*}<br>$$<br>因此$\mathscr{L}:&#x3D;\vec{\alpha_1}^T\Sigma\vec{\alpha_1}-\lambda(\vec{\alpha_1}^T\vec{\alpha_1}-1)$<br>对$\vec{\alpha_1}$的各个分量分别求偏导并使之为零，能得到好几个方程，将这些方程拼起来是一个很好的向量式：<br>$$<br>\Sigma\vec{\alpha_1}-\lambda\vec{\alpha_1}&#x3D;0<br>$$<br>神奇地发现这是特征方程的形式，因此目标函数就是$\max\limits_{\vec{\alpha_1}} \vec{\alpha_1}^T\Sigma\vec{\alpha_1} &#x3D;\max\limits_{\vec{\alpha_1}} \lambda$，取到最大时，$\vec{\alpha_1}$是特征向量，而且是<strong>最大</strong>的那个特征值$\lambda_1$对应的特征向量</p>
+<p>对于第二个分量，仍然类似，只不过约束多了一个“和第一个不相关”，因此Lagrange函数变为：<br>$$<br>\mathscr{L}:&#x3D;\vec{\alpha_2}^T\Sigma\vec{\alpha_2}-\lambda(\vec{\alpha_2}^T\vec{\alpha_2}-1)-\mu\vec{\alpha_2}^T\Sigma\vec{\alpha_1}<br>$$<br>注意到已知$\vec{\alpha_1}$是特征向量，那么上式就是：<br>$$<br>\mathscr{L}:&#x3D;\vec{\alpha_2}^T\Sigma\vec{\alpha_2}-\lambda(\vec{\alpha_2}^T\vec{\alpha_2}-1)-\mu\lambda_1\vec{\alpha_2}^T\vec{\alpha_1}<br>$$<br>而且根据定义正交性要求，其实尾项就是零，因此该Lagrange函数形式实际和之前的一模一样，仍能得出一个特征方程形式……<br>取到最大时，$\vec{\alpha_2}$是特征向量，而且是除去$\lambda_1$后最大的那个特征值对应的特征向量……<br>$\square$</p>
 </blockquote>
 <blockquote>
 <p>补充：可能会问，凭什么一定存在呢？万一根本不能满足$\Sigma\vec{\alpha_1}-\lambda\vec{\alpha_1}&#x3D;0$有解怎么办？的确，这里还缺了一小步论证</p>
@@ -2729,7 +2729,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>代入就有：$\text{Tr}(\Sigma)&#x3D;\text{Tr}(A\Lambda A^T)&#x3D;\text{Tr}(\Lambda)$（已经用了迹的换序性质），就是$\lambda_i$之和，而$\text{Var}(y_i)&#x3D;\lambda_i$，所以等式右侧就是后来的$\vec{y}$的方差之和</p>
 <p>$\square$</p>
 </blockquote>
-<h3 id="有何作用？"><a href="#有何作用？" class="headerlink" title="有何作用？"></a>有何作用？</h3><p>和SVD一样，目的都是用更更少的数据代替原始数据，实现“压缩”。主成分分析已经把随机变量中的几根骨架找出来了，那么，哪几根骨架权重最大，说明比较重要，就予以保留，哪些权重较小，就说明不大重时要，就予以抛弃（这和控制理论中的“仅保留主导极点”一样）</p>
+<h3 id="有何作用？"><a href="#有何作用？" class="headerlink" title="有何作用？"></a>有何作用？</h3><p>和SVD一样，目的都是用更更少的数据代替原始数据，实现“压缩”。主成分分析已经把随机变量中的几根骨架找出来了，那么，哪几根骨架权重最大，说明比较重要，就予以保留，哪些权重较小，就说明不大重要，就予以抛弃（这和控制理论中的“仅保留主导极点”一样）</p>
 <p>符合“主成分”字面意思的，就是把最主要的成分保留下来，无关紧要的成分抛弃了，实现一种逼近。</p>
 <p>那主成分分析是在何种意义下的最优逼近呢？是在方差意义下的：</p>
 <p><strong>定理</strong> 考虑某个正交变换$\vec{y}&#x3D;B^T\vec{x}$，这里的$B$不是方阵，而是“$m$维降到$q$维”的$B^T\in R^{q\times m}$。下面考察$\vec{y}$的协方差矩阵$\Sigma_y&#x3D;B^T\Sigma B$，请问$B$取什么时$\text{Tr}(\Sigma_y)$最大？答案就是：可以根据主成分分析得来的$A$构造！$B$由正交矩阵$A$的前$q$列组成时，$\text{Tr}(\Sigma_y)$一定能取到最大（但没说是取到最大的唯一方法）</p>
@@ -2744,14 +2744,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>因为根据$C^T C&#x3D;I$这一点，可以把$C$视为一个正交方阵$D$的前$q$列，这样，必然有$D$的行向量模长平方为一，即$\sum_{k&#x3D;1}^m d_{jk}^2&#x3D;1$，推出$\sum_{k&#x3D;1}^q d_{jk}^2\leq 1$，当然由于$C$是$D$的一部分，所以$c_{jk}&#x3D;d_{jk},k&#x3D;1,\dots,q$，所以这就是$\sum_{k&#x3D;1}^q c_{jk}^2\leq 1$</p>
 </blockquote>
 <blockquote>
-<p>对外积展开的补充：对外积不熟悉，可以先想矩阵的线性性质，比如$C^T C$可以想成$C^T$分成某一列仍不变，而其他列都是$0$的矩阵加和，即分成如下三个小矩阵，叫它们左1、中1、右1：<br>$$<br>\begin{pmatrix}<br>c_{11}&amp;0&amp;0\\<br>c_{21}&amp;0&amp;0\\<br>c_{31}&amp;0&amp;0\\<br>\end{pmatrix} +\begin{pmatrix}<br>0&amp;c_{12}&amp;0\\<br>0&amp;c_{22}&amp;0\\<br>0&amp;c_{32}&amp;0\\<br>\end{pmatrix}+\begin{pmatrix}<br>0&amp;0&amp;c_{13}\\<br>0&amp;0&amp;c_{23}\\<br>0&amp;0&amp;c_{33}\\<br>\end{pmatrix}<br>$$<br>同样，$C$也是如此，分成三个矩阵，叫它们左2，中2，右2:<br>$$<br>\begin{pmatrix}<br>c_{11}&amp;c_{12}&amp;c_{13}\\<br>0&amp;0&amp;0\\<br>0&amp;0&amp;0\\<br>\end{pmatrix} +\begin{pmatrix}<br>0&amp;0&amp;0\\<br>c_{21}&amp;c_{22}&amp;c_{23}\\<br>0&amp;0&amp;0\\<br>\end{pmatrix}+\begin{pmatrix}<br>0&amp;0&amp;0\\<br>0&amp;0&amp;0\\<br>c_{31}&amp;c_{32}&amp;c_{33}\\<br>\end{pmatrix}<br>$$<br>一个重要观察就是：只有左1乘左2，中1乘中2，右1乘右2才非零，否则，譬如左1乘中2，，位置不对应的都会得到结果零。至此，可以理解为何$C^T C$外积展开中只有$\vec{c_jk}$自己和自己的转置乘了吧</p>
+<p>对外积展开的补充：对外积不熟悉，可以先想矩阵的线性性质，比如$C^T C$可以想成：</p>
+<p>$C^T$分成某一列仍不变，而其他列都是$0$的矩阵加和，即分成如下三个小矩阵，叫它们左1、中1、右1：<br>$$<br>\begin{pmatrix}<br>c_{11}&amp;0&amp;0\\<br>c_{21}&amp;0&amp;0\\<br>c_{31}&amp;0&amp;0\\<br>\end{pmatrix} +\begin{pmatrix}<br>0&amp;c_{12}&amp;0\\<br>0&amp;c_{22}&amp;0\\<br>0&amp;c_{32}&amp;0\\<br>\end{pmatrix}+\begin{pmatrix}<br>0&amp;0&amp;c_{13}\\<br>0&amp;0&amp;c_{23}\\<br>0&amp;0&amp;c_{33}\\<br>\end{pmatrix}<br>$$<br>同样，$C$也是如此，分成三个矩阵，叫它们左2，中2，右2:<br>$$<br>\begin{pmatrix}<br>c_{11}&amp;c_{12}&amp;c_{13}\\<br>0&amp;0&amp;0\\<br>0&amp;0&amp;0\\<br>\end{pmatrix} +\begin{pmatrix}<br>0&amp;0&amp;0\\<br>c_{21}&amp;c_{22}&amp;c_{23}\\<br>0&amp;0&amp;0\\<br>\end{pmatrix}+\begin{pmatrix}<br>0&amp;0&amp;0\\<br>0&amp;0&amp;0\\<br>c_{31}&amp;c_{32}&amp;c_{33}\\<br>\end{pmatrix}<br>$$<br>一个重要观察就是：只有左1乘左2，中1乘中2，右1乘右2才非零，否则，譬如左1乘中2，位置不对应的都会得到结果零。至此，可以理解为何$C^T C$外积展开中只有$\vec{c_{jk}}$自己和自己的转置乘了吧</p>
 </blockquote>
 <p>同样有定理：</p>
 <p><strong>定理</strong> 考虑某个正交变换$\vec{y}&#x3D;B^T\vec{x}$，$B^T\in R^{p\times m}$。下面考察$\vec{y}$的协方差矩阵$\Sigma_y&#x3D;B^T\Sigma B$，请问$B$取什么时$\text{Tr}(\Sigma_y)$最小？$B$由正交矩阵$A$的后$p$列组成时，$\text{Tr}(\Sigma_y)$能取到最小</p>
 <h3 id="样本主成分以及算法"><a href="#样本主成分以及算法" class="headerlink" title="样本主成分以及算法"></a>样本主成分以及算法</h3><p>由于以上只是考虑“总体”的主成分而已，对于实际情况，往往是根据多次观测得到一组样本，然后写出样本的协方差矩阵，再求其特征值，然后结合实际，取最大的几个特征值，它们对应的特征向量就是主成分……</p>
 <p>虽之前都基于总体协方差矩阵，但这里替换成样本协方差矩阵也没问题，是因为：样本协方差矩阵是总体协方差矩阵的<strong>无偏估计</strong></p>
 <blockquote>
-<p>即证明每一个位置都对应：样本的协方差矩阵中的每一个元素，其期望都是总体协方差矩阵中对应元素</p>
+<p>证明：即证每一个位置都对应：样本的协方差矩阵中的每一个元素，其期望都是总体协方差矩阵中对应元素</p>
 <p>记样本拼成的矩阵为$X$，其每一列都是一次观测得到结果，某一行代表某一个属性，样本的协方差矩阵即为$\frac{1}{n-1}\tilde{X}\tilde{X}^T$，这里的$\tilde{X}$代表把原来的样本中每一个属性都均值为零处理后的矩阵，$i$行$j$列的元素就是$X_{ij}-\bar{X}_{i}$</p>
 <p>因此样本协方差阵的某一个元素$S_{ij}$可表示为：$\frac{1}{n-1}\sum _ r (X _ {ir}-\bar{X} _ i)(X _ {rj}^T-\bar{X} _ j)&#x3D;\frac{1}{n-1}\sum _ r (X _ {ir}-\bar{X} _ i)(X _ {rj}-\bar{X} _ j)$，因此：<br>$$<br>\begin{align*}<br>  &amp;E[\sum _ r (X _ {ir}-\bar{X} _ i)(X _ {jr}-\bar{X} _ j)]<br>  \newline<br>  &#x3D;&amp;E[\sum _ r (X _ {ir} X _ {jr}- \bar{X} _ i X _ {jr} - \bar{X} _ jX _ {ir} +\bar{X} _ i\bar{X} _ j)]<br>  \newline<br>  &#x3D;&amp; nE[X_ {ir} X _ {jr}] - E[ n\bar{X} _ i \bar{X} _ {j} + n\bar{X} _ j\bar{X} _ {i} -n\bar{X} _ i\bar{X} _ j]<br>  \newline<br>  &#x3D;&amp; nE[X _ {i} X _ {j}] -n E[ \bar{X} _ i \bar{X} _ j]<br>  \newline<br>  &#x3D;&amp; nE[X _ {i} X _ {j}] -n \left(\text{Cov}(\bar{X} _{i},\bar{X}_j)+E[ \bar{X} _ i]E[ \bar{X} _ j] \right)<br>  \newline<br>  &#x3D;&amp; nE[X _ {i} X _ {j}] -n \left( \frac{1}{n^2}<br>  \sum_r \text{Cov}({X} _ {ir},{X} _ {jr})+E[ X _ i]E[ X _ j] \right)<br>  \newline<br>  &#x3D;&amp; nE[X _ {i} X _ {j}] -n \left( \frac{1}{n}\text{Cov}({X} _ {i},{X} _ {j})+E[ X _ i]E[ X _ j] \right)<br>  \newline<br>  &#x3D;&amp; (n-1)\text{Cov}({X} _ {i},{X} _ {j})<br>\end{align*}<br>$$<br>其中，提取出$\frac{1}{n^2}$一步已经使用了协方差的线性性质<br>$\square$</p>
 </blockquote>
@@ -2787,10 +2788,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-06-01T15:00:32+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-06-19T15:27:01+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jun 1, 2024</p>
+    <p>更新于：Jun 19, 2024</p>
   </a>
 </div>
 
@@ -4257,7 +4258,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/统计学习/","name":"统计学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/06/01/statistics2/","name":"PCA"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"PCA","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/06/01/statistics2/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/06/01/statistics2/","wordCount":0,"datePublished":"2024-06-01T06:38:42.000Z","dateModified":"2024-06-01T07:00:32.239Z","articleSection":"统计学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/统计学习/","name":"统计学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/06/01/statistics2/","name":"PCA"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"PCA","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/06/01/statistics2/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/06/01/statistics2/","wordCount":0,"datePublished":"2024-06-01T06:38:42.000Z","dateModified":"2024-06-19T07:27:01.684Z","articleSection":"统计学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
