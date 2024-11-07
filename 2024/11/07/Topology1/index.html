@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://maythics.github.io/2024/09/11/diff-geometry/"/>
+  <link rel="canonical" href="http://maythics.github.io/2024/11/07/topology1/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>微分几何入门 - (.O w O.)?</title>
+  <title>拓扑的基本概念 - (.O w O.)?</title>
   <meta name="keywords" content="physics">
   <meta desc name="description" content="emmm - Maythics - (.O w O.)?">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="微分几何入门">
-<meta property="og:url" content="http://maythics.github.io/2024/09/11/diff-geometry/index.html">
+<meta property="og:title" content="拓扑的基本概念">
+<meta property="og:url" content="http://maythics.github.io/2024/11/07/Topology1/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
-<meta property="og:description" content="微分几何入门微广 by 梁灿彬 拓扑空间基本的拓扑知识回忆 定义 拓扑集合$X$上的拓扑指：有一个其子集构成的集合$\mathscr{T}$，开集就定义为它其中的元素，满足：  空集和$X$本身是开集  开集的有限交仍是开集  开集的任意并仍是开集   我们知道，在一般的拓扑空间中，连续的定义是“开集的逆像仍开”，而在度量空间上这等价于$\epsilon-\delta$的连续定义，梁老画图给出了这">
+<meta property="og:description" content="Topology拓扑基本概念这些例子解开了数学家们心中的谜：“一个集合和一扇门究竟有什么不同呢？”  拓扑的基定义 (拓扑) 集合$X$上的拓扑（topology）指：有一个子集构成的集合$\mathscr{T}$，开集（open sets）定义为它其中的元素，满足：  $\varnothing$和$X$本身是开集  开集的有限交仍是开集  开集的任意并仍是开集   定义了拓扑的集合，就升格为一个">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-09-11T08:01:37.000Z">
-<meta property="article:modified_time" content="2024-09-11T08:45:32.655Z">
+<meta property="article:published_time" content="2024-11-07T03:09:23.000Z">
+<meta property="article:modified_time" content="2024-11-07T03:24:35.167Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -2611,7 +2611,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/09/11/diff-geometry/">
+  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/11/07/Topology1/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="(.O w O.)?">
   </span>
@@ -2632,7 +2632,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        微分几何入门
+        拓扑的基本概念
       </h1>
       <div class='new-meta-box'>
         
@@ -2651,10 +2651,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/">微分几何</a>
+    <a class="category-link" href="/categories/%E6%8B%93%E6%89%91%E5%AD%A6/">拓扑学</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/" itemprop="url"><span itemprop="name">微分几何</span></a>
+        <a href="/categories/%E6%8B%93%E6%89%91%E5%AD%A6/" itemprop="url"><span itemprop="name">拓扑学</span></a>
       </span>
     
   </div>
@@ -2663,10 +2663,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-09-11T16:01:37+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-11-07T11:09:23+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Sep 11, 2024</p>
+    <p>发布于：Nov 7, 2024</p>
   </a>
 </div>
 
@@ -2689,69 +2689,125 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="微分几何入门"><a href="#微分几何入门" class="headerlink" title="微分几何入门"></a>微分几何入门</h2><p>微广 by 梁灿彬</p>
-<h3 id="拓扑空间"><a href="#拓扑空间" class="headerlink" title="拓扑空间"></a>拓扑空间</h3><p>基本的拓扑知识回忆</p>
-<p><strong>定义</strong> <strong>拓扑</strong><br>集合$X$上的拓扑指：有一个其子集构成的集合$\mathscr{T}$，<strong>开集</strong>就定义为它其中的元素，满足：</p>
+    <h1 id="Topology"><a href="#Topology" class="headerlink" title="Topology"></a>Topology</h1><h2 id="拓扑基本概念"><a href="#拓扑基本概念" class="headerlink" title="拓扑基本概念"></a>拓扑基本概念</h2><div class="note quote"><p>这些例子解开了数学家们心中的谜：“一个集合和一扇门究竟有什么不同呢？”</p></div>
+
+<h3 id="拓扑的基"><a href="#拓扑的基" class="headerlink" title="拓扑的基"></a>拓扑的基</h3><p><strong>定义 (拓扑)</strong> 集合$X$上的拓扑（topology）指：有一个子集构成的集合$\mathscr{T}$，开集（open sets）定义为它其中的元素，满足：</p>
 <ol>
-<li><p>空集和$X$本身是开集</p>
+<li><p>$\varnothing$和$X$本身是开集</p>
 </li>
 <li><p>开集的有限交仍是开集</p>
 </li>
 <li><p>开集的任意并仍是开集</p>
 </li>
 </ol>
-<p>我们知道，在一般的拓扑空间中，连续的定义是“开集的逆像仍开”，而在度量空间上这等价于$\epsilon-\delta$的连续定义，梁老画图给出了这一等价性的直观理解（图1-2），很有意思</p>
-<p><strong>定义</strong> <strong>同胚</strong><br>两个拓扑空间互相同胚，指的是其之间存在一个双射$f$，且$f$与$f^{-1}$均连续（这个双射也称同胚映射）</p>
-<blockquote>
-<p>两个拓扑空间互相同胚，已经是目前有的结构里的最高配置了，两个拓扑空间“像的不能再像”</p>
-</blockquote>
-<p><strong>定义</strong> <strong>连通</strong><br>称拓扑空间$(X,\mathscr{T})$是<strong>连通</strong>的，如果仅$\varnothing, X$两者是既开又闭的</p>
-<p>拓扑不变性：指在同胚映射下保持不变的性质，比如紧性、连通性、Hausdorff性</p>
-<h3 id="微分流形"><a href="#微分流形" class="headerlink" title="微分流形"></a>微分流形</h3><p><strong>定义</strong> <strong>微分流形</strong><br>拓扑空间$(X,\mathscr{T})$称为<strong>n维微分流形</strong>，如果：有开覆盖$X&#x3D;\bigcup\limits_\alpha O_\alpha$，满足：</p>
+<p>定义了拓扑的集合，就升格为一个拓扑空间。以下$x$的邻域这一名词均指含$x$的开集</p>
+<p><strong>定义（基）</strong> 集合$X$有这样一个子集族$\mathscr{B}$，满足下面这两点，那么就是基（basis），其中的元素叫基元素：</p>
 <ol>
-<li><p>$\forall \alpha, \exists \psi_\alpha$（同胚映射）$: O_\alpha \to V_\alpha$ 而$V_\alpha$是$\mathbb{R}^n$中的开集</p>
+<li><p>$\forall x\in X$，$\exists B\in \mathscr{B}$，s.t. $x\in B$</p>
 </li>
-<li><p>对于$O_\alpha \bigcap O_\beta \not&#x3D;{\varnothing}$，满足$\psi_\beta \circ \psi_\alpha^{-1}$是$C^\infty$无穷可微映射（这里仅讨论光滑流形）</p>
+<li><p>若$B_1,B_2\in \mathscr{B}$，且$x\in B_1 \cap B_2$，则存在$B_3\in \mathscr{B}$，s.t. $x\in B_3\subset B_1 \cap B_2 $</p>
 </li>
 </ol>
-<p>第二条称为<strong>相容性</strong>条件，很直观</p>
-<p>遵循如上记号，我们称$(O_\alpha,\psi_\alpha)$为局域坐标系，或图，因为$\psi_\alpha$把$O_\alpha$中的点映射到一个$n$维欧式空间中，获得了坐标。所有图的都装到一个叫图册的大集合里。</p>
-<p><strong>定义</strong> <strong>$C^r$映射</strong><br>$f:M \to M’$是两个流形之间的映射，什么情况下，$f$是$C^r$映射呢？随意取一个$p\in M$，那么选好包含$p$的图$\set{O_\alpha,\psi_\alpha}$，和包含$f(p)$的图$\set{O_\beta’,\psi_\beta’}$后，均有$\psi’_\beta \circ f \circ \psi_\alpha^{-1} \in C^r$</p>
-<p><strong>定义</strong> <strong>微分同胚</strong><br>两个流形$M,M’$称为互相微分同胚，如果$\exists f :M\to M’$，且$f$是个双射，且$f$与$f^{-1}$都是$C^\infty$的</p>
-<p><strong>定义</strong> <strong>标量场</strong><br>首先有个流形$M$，那么$f:M\to \mathbb{R}$就叫一个$M$上的标量场。若还是$C^\infty$的，那么$f$就叫$M$上的一个光滑标量场。全体$M$上的光滑标量场记为$\mathscr{F}_M$</p>
-<h3 id="矢量"><a href="#矢量" class="headerlink" title="矢量"></a>矢量</h3><p><strong>定义</strong> <strong>矢量&#x2F;向量</strong><br>什么是矢量？在点$p\in M$处的矢量是这样一种映射$v :\mathscr{F}_M \to \mathbb{R}$，对于$\forall f,g\in\mathscr{F}_M$，都满足：</p>
-<ol>
-<li><p>（线性性） $v(\alpha f +\beta g)&#x3D; \alpha v(f) +\beta v (g)$</p>
+<p>若成功规定好了基，便可由如下算法，用基生成拓扑：</p>
+<p><strong>定义（基生成的拓扑）</strong> 有了基$\mathscr{B}$后，用下面这句“开集检验”规则来定义$X$的一个子集$U$是否为开集：若对于$\forall x\in U$，均存在一个基元素$B$，s.t $x\in B\subset U$，那么$U$就是开集</p>
+<blockquote>
+<p>这个规则定义出的拓扑确实是个拓扑，证明很容易：证任意并仍开，只需调用基满足的第一条要求；证有限交仍开，只需调用基满足的第二条要求</p>
+</blockquote>
+<p><strong>定理（基生成拓扑的形式）</strong> 一旦调用如上方法，用基生成了一个拓扑$\mathscr{T}$后，能发现，$\mathscr{T}$中的每个元素竟然都形如$\mathscr{B}$中元素的并！而且，$\mathscr{B}$中任意多个元素的并，也都在$\mathscr{T}$中，总之：$\mathscr{T} &#x3D; \set{\bigcup\limits_{B\in \beta} B : \beta \subset \mathscr{B}}$</p>
+<blockquote>
+<p>先证第一句话：</p>
+<p>只需拿出任意一个$U\in \mathscr{B}$来，根据“它是基生成的拓扑中的一个开集”这一条件，就能知道，$\forall x\in U$，均有$x\in B_x\subset  U$。这样，根据$U&#x3D; \bigcup\limits_{x\in U}B_x$（很经典的方法），就把$U$表示成$\mathscr{B}$中元素的并了！</p>
+<p>再证第二句话：</p>
+<p>由于在$\mathscr{B}$生成拓扑的过程中，所有基元素们也能通过“开集检验”，所以当然基元素们也是开集，而开集任意并后仍开，故也在$\mathscr{T}$中</p>
+</blockquote>
+<p><strong>定理（由拓扑找对应的基）</strong> 给定$\mathscr{T}$，$\mathscr{B}$一旦满足下面这句条件，那么它就是一个基，而且$\mathscr{T}$恰好是由该基生成的：$\mathscr{B}$是$\mathscr{T}$的子集，满足对于$\mathscr{T}$中的每个元素$U$，$\forall x\in U$，均存在$B\in \mathscr{B}$使得$x\in B\subset U$</p>
+<blockquote>
+<p>首先，证明的确是一个基：按部就班，根据基的那两个要求验证就行了</p>
+<ul>
+<li><p>第一个要求：由于$X\in \mathscr{T}$，那么根据题设条件，$\forall x\in X , \exists B$ s.t. $ x\in B\subset X$</p>
 </li>
-<li><p>（莱布尼兹律） $v(fg) &#x3D; v(f) g|_p+ f|_p v(g)$</p>
+<li><p>第二个要求：由于$\mathscr{B}$中的两个元素，就是$\mathscr{T}$中的两个元素，其交是在$\mathscr{T}$内的一个新元素，对于这个$\mathscr{T}$中的新元素用题设就行了</p>
 </li>
-</ol>
-<p>在$p\in M$点处的所有矢量装入集合$V_p$中，按照很自然的方式定义一下矢量加法和数乘，可发现$V_p$符合曾经的矢量空间定义，且该矢量空间维数与流形的维数一样，即$\dim V_p &#x3D; \dim M &#x3D;n$</p>
-<p>给个具体例子，比如固定了$p$点后，$X_\mu$就是点$p$处的一个向量，它的定义是什么呢？对于一个已知的标量场$f\in\mathscr{F}_M$，选一个图$\set{O,\psi}$，那么$f\circ\psi^{-1}$就是一个很普通的$\mathbb{R}^n\to \mathbb{R}$的函数（高数就学过的那种）记为$F(x^1,x^2\dots,x^n)$，简记为$F(x)$，甚至简记为$f(x)$，那么就有定义式：<br>$$<br>X_\mu (f):&#x3D;\left.\frac{\partial F(x)}{\partial x^\mu}\right|_p&#x3D;_\text{denoted as} \left.\frac{\partial f(x)}{\partial x^\mu}\right|_p<br>$$<br>的确在$p$点处把$f$映成一个实数，且是满足线性性与莱布尼兹律的</p>
-<blockquote>
-<p>注意：我反复强调“在$p$点处”，因为必须指定一个点，谈论矢量这个概念才有意义。比如指定$p$后，$V_p$成为一个矢量空间，两个不同点之间的矢量是不能做加法的……</p>
+</ul>
+<p>再者，证明该基生成了$\mathscr{T}$，双向包含：</p>
+<ul>
+<li><p>一方面，用$\mathscr{B}$生成的拓扑是精细于$\mathscr{T}$的，因为每个$\mathscr{T}$中的元素，按照“基生成拓扑”的规则，都能通过“开集检验”</p>
+</li>
+<li><p>另一方面，本来这个$\mathscr{B}$就在$\mathscr{T}$里，一个基生成的拓扑就是基元素并啊并的结果（见定理<strong>基生成拓扑的形式</strong>），那$\mathscr{T}$里的元素，怎么并都仍然在里面。所以，$\mathscr{B}$生成的拓扑在$\mathscr{T}$里面，即$\mathscr{T}$比$\mathscr{B}$生成的拓扑更加精细</p>
+</li>
+</ul>
 </blockquote>
-<p>此外，$X_1,X_2\dots X_n$就构成了$V_p$的基，比如随便来一个$V_p$中的元素$v$，都能用$X_\mu$们展开$v &#x3D; v(x^\mu) X_\mu$，这里的$v(x^\mu)$就是<strong>坐标分量</strong></p>
+<p><strong>定义（子基）</strong> $X$的一个子集族$\mathscr{S}$，其中元素之并等于$X$，就称为子基(subbasis)</p>
+<p><strong>定义（子基生成的拓扑）</strong> $X$的一个子基$\mathscr{S}$中的元素进行有限交，再进行任意并，得到的集族，叫做子基生成的拓扑。即：</p>
+<p>$\mathscr{T}&#x3D;\set{\bigcup\limits_{B\in\mathscr{B’}}B:\mathscr{B’}\subset \mathscr{B}}$，其中$\mathscr{B’}&#x3D;\set{S_1\cap S_2\cap\dots\cap S_n:S_i\in \mathscr{S},i&#x3D;1,2,\dots n; n\in \mathbb{Z}^+ }$</p>
 <blockquote>
-<p>仔细看看这里的写法，$x^\mu$就是把一个点打到其所在图的某一坐标分量的实值函数，即$x^\mu \in \mathscr{F}_M$，那么$v(x^\mu)$这个写法是有意义的，因为矢量作用的对象就是标量场</p>
+<p>验证这个规则定义出的$\mathscr{T}$确实是个拓扑，可以换一个角度，验证这个子基中的元素有限交后得到的集族$\mathscr{B}$是个基。根据定理（基生成拓扑的形式），这一点验证后，$\mathscr{T}$确实是个拓扑</p>
+<ul>
+<li><p>验证基的第一个条件：$\forall x\in X$，存在$S\in \mathscr{S}$，s.t. $x\in S$（根据子基定义），而$S\in\mathscr{B}$也是天然的</p>
+</li>
+<li><p>验证基的第二个条件：取出$\mathscr{B}$的两个元素来，一个是$B_1 &#x3D; S_1\cap\dots\cap S_m$，另一个是$B_2 &#x3D; S_1’\cap\dots \cap S_n’$，因此其交$B_1\cap B_2 &#x3D; S_1\cap\dots\cap S_m\cap S_1’\cap\dots \cap S_n’$仍然是一个有限交的形式，根据$\mathscr{B}$的定义，在$\mathscr{B}$内</p>
+</li>
+</ul>
 </blockquote>
-<p><strong>定理</strong> <strong>坐标分量变换关系</strong><br>$\set{x^\mu}$与$\set{x’^\nu}$为两个坐标系（图），其中共有一点$p$，$v\in V_p$，且$\set{v^\mu}$与$\set{v’^\nu}$是同个$v$向量在两个系中的分量，则有：<br>$$<br>v’^\nu &#x3D; \left.\frac{\partial x’^\nu}{\partial x^\mu}\right|_p v^\mu<br>$$</p>
+<h3 id="子空间拓扑"><a href="#子空间拓扑" class="headerlink" title="子空间拓扑"></a>子空间拓扑</h3><p><strong>定义（子空间拓扑）</strong> 设$(X,\mathscr{T})$是一个拓扑空间，若$Y$是其子集，则族$\mathscr{T}_Y &#x3D; \set{Y\cap U: U\in\mathscr{T}}$就称为$Y$上的拓扑，叫子空间拓扑</p>
 <blockquote>
-<p>证明：两个坐标系就有两组坐标基矢$\set{X_\mu},\set{X’_\nu}$，作用在$f$这个标量场上，有：<br>$$<br>\begin{align*}<br>X_\mu (f) &amp;&#x3D; \left.\frac{\partial f(x)}{\partial x^\mu}\right|_p<br>\newline<br>\newline<br>X’_\nu(f) &amp;&#x3D; \left.\frac{\partial f’(x’)}{\partial x’^\nu}\right|_p<br>\end{align*}<br>$$<br>回忆这里的$f(x)$其实是$F(x^1,x^2\dots,x^n)$的简记，同样的$f’(x’)$其实是$F’(x’^1,x’^2\dots,x’^n)$的简记<br>现在，由于本身两个坐标系都是$\mathbb{R}^n$里的且需要符合相容性条件，因此可以这样写：$x’^\nu&#x3D;x’^\nu(x)$，即加撇的某一分量是不加撇的一个n元函数，而且由于$f|_p$的值与坐标的选取无关，有$f(x)&#x3D;f’(x’)&#x3D;f’(x’(x))$（请回忆这个$f$其实是$F$），故：<br>$$<br>X_\mu (f) &#x3D; \left.\frac{\partial f(x)}{\partial x^\mu} \right|_p &#x3D; \left. \frac{\partial f’(x’(x))}{\partial x^\mu} \right|_p&#x3D;\left. \frac{\partial f’(x’)}{\partial x’^\nu}\frac{\partial x’^\nu}{\partial x^\mu}\right|_p &#x3D; \left. \frac{\partial x’^\nu}{\partial x^\mu}\right|_p X’_\nu (f)<br>$$</p>
+<p>验证一下的确是个拓扑：拓扑的三条都很容易验证。</p>
 </blockquote>
-<p><strong>定义</strong> <strong>曲线</strong><br>设$I$为$\mathbb{R}$的一个区间，则$C^r$类映射$C:I\to M$称为流形$M$上的一个曲线（今后默认光滑，是$C^\infty$类的）</p>
-<p><strong>定义</strong> <strong>曲线的切矢</strong><br>设$C(t)$是在微分流形$M$上的一个$C^1$类曲线，则线上的$C(t _ 0)$点的切于$C(t)$的切矢$T$是一个在$C(t _ 0)$点的矢量，它是怎么定义的呢？对于$\forall f\in \mathscr{F} _ M$：<br>$$<br>T(f):&#x3D; \left.\frac{d(f\circ C)}{dt}\right| _ {t _ 0}<br>$$</p>
+<p><strong>定理（子空间拓扑的基）</strong> 如上，若$X$的拓扑$\mathscr{T}$对应的基为$\mathscr{B}$，则$\mathscr{B}_Y  &#x3D;\set{B\cap Y:B\in \mathscr{B}}$就是$Y$上子空间拓扑的基</p>
 <blockquote>
-<p>注：易证的确是矢量</p>
+<p>证明：现在已经有了子空间拓扑，要看其基，不难想到使用定理（由拓扑找对应的基），那么，只需验证：</p>
+<ul>
+<li><p>$\mathscr{B}_Y$是$\mathscr{T}_Y$的一个子集，由于$B\in\mathscr{B}\subset\mathscr{T}$，这点显然</p>
+</li>
+<li><p>对于$\mathscr{T}_Y$中的每个元素$U\cap Y$，$\forall x\in U\cap  Y$，那么自然$x\in U$，根据$X$里面的基要求有的性质，存在$B\in \mathscr{B}$使得$x\in B\subset U$，所以$x\in B\cap Y\subset U\cap Y$</p>
+</li>
+</ul>
+<p>以上两条得到验证，这个$\mathscr{B}_Y$就是子空间拓扑对应的基</p>
 </blockquote>
-<p>今后把$T$记为$\left.\frac{\partial }{\partial t}\right| _ {C(t _ 0)}$，更加生动形象地表明的确是个向量。如果参数就是坐标线上的$x^\mu$，那么这切矢不就是坐标基矢之一了嘛！</p>
-<p><strong>定理</strong> <strong>曲线切矢用坐标基底展开</strong><br>比如曲线$C(t)$在某个坐标系（图）中的参数写法为$x^\mu &#x3D; x^\mu(t)$，那么该坐标系（图）内有：<br>$$<br>\frac{\partial}{\partial t}&#x3D;\frac{dx^\mu}{dt} \frac{\partial}{\partial x^\mu}<br>$$</p>
+<p><strong>定理（开集，开集？开集！）</strong> 若$Y$是拓扑空间$X$的开子集，则$Y$的子集$V$是$Y$（子空间拓扑下）的开集，当且仅当$V$是$X$中的开集</p>
 <blockquote>
-<p>证明：这式子看上去很熟悉，但其诠释与初等微积分中完全不一样。在这里，左边是一个$C(t_0)$点的矢量，那么自然可以被$V_{C(t_0)}$中的基矢量展开，回忆一下“坐标分量”那里的展开$v &#x3D; v(x^\mu) X_\mu$，这里无非就是把字母替换掉：<br>$$<br>\left.\frac{\partial}{\partial t}\right| _ {C(t _ 0)} &#x3D;\left.\frac{\partial x^\mu}{\partial t}\right| _ {C(t _ 0)} \cdot\frac{\partial}{\partial x^\mu}&#x3D;\left.\frac{d x^\mu}{d t}\right| _ {C(t _ 0)} \cdot\frac{\partial}{\partial x^\mu}<br>$$<br>当然$t_0$是可以任意取的，因此不用写$| _ {C(t _ 0)}$了</p>
+<p>要看清楚取的是原来的拓扑还是子空间拓扑哦</p>
+<p>一方面，在原始空间里，若$V$已经是$X$的开集，但$V$本来又是$Y$的子集，所以$V&#x3D;V\cap Y$，根据子空间拓扑的定义，就是子空间拓扑下的开集</p>
+<p>另一方面，在子空间里如果是开集，则形如$V&#x3D;U\cap Y$，而这不就是两个开集之交的形式嘛！当然开</p>
 </blockquote>
-<p>如果$M$上的没一点都定义有一个矢量，那么就得到一个矢量场，矢量场能把某一个标量场变为另外一个标量场</p>
-<p>矢量场也可以定义光滑与否，$C^r$类的矢量场的定义就是：作用于$C^\infty$类的标量场后能得到$C^r$类标量场（今后简单起见都默光滑）</p>
-<p><strong>定义</strong> <strong>积分曲线</strong><br>有一个$M$上的光滑矢量场$v$，则积分曲线是这样一条曲线，其上每一点处的曲线切矢都等于矢量场在该点的取值</p>
+<h3 id="闭集"><a href="#闭集" class="headerlink" title="闭集"></a>闭集</h3><p><strong>定义（闭集）</strong> 拓扑空间$X$中，$A$称为一个闭集，当且仅当$X-A$开。（用闭集定义拓扑的方法不再赘述，总之闭集任意交还是闭，有限开还是开）</p>
+<p><strong>定理（子空间拓扑下的闭集）</strong> $X$的一个子空间$Y$，则$Y$的子集$A$是$Y$中（子空间拓扑下）的闭集当且仅当$A$是$X$中的一个闭集与$Y$之交</p>
+<blockquote>
+<p>证明很简单，两边都不难</p>
+</blockquote>
+<p><strong>定理（闭集，闭集？闭集！）</strong> 若$Y$是拓扑空间$X$的闭子集，则$Y$的子集$A$是$Y$（子空间拓扑下）的闭集，当且仅当$A$是$X$中的闭集</p>
+<blockquote>
+<p>一方面，若$A$真是$X$中闭集，那么$A&#x3D;A\cap Y $形如闭交$Y$，根据上一条定理（子空间拓扑下的闭集），知道$A$也是子空间拓扑下的闭集</p>
+<p>另一方面，若$A$是子空间拓扑下的闭集，根据上一条定理（子空间拓扑下的闭集），$A&#x3D;K\cap Y$，其中$K$是$X$中的闭集，这样子，形如$X$中的两个闭集之交，当然在$X$中仍闭！</p>
+</blockquote>
+<h3 id="闭包与极限"><a href="#闭包与极限" class="headerlink" title="闭包与极限"></a>闭包与极限</h3><p><strong>定义（内部与闭包）</strong> 拓扑空间$X$的一个子集$A$的内部（interior），指的是所有含于$A$内的开集之并（当然也开），其闭包（closure）则定义为所有包含$A$的闭集之交（当然也闭）</p>
+<p><strong>定理（子空间拓扑下闭包的表示）</strong> 若$Y$是$X$的子空间，$A\subset Y$，$\bar{A}$表示$X$中拓扑下$A$的闭包。结论是：$A$在子空间拓扑下的闭包就是$\bar{A}\cap Y$</p>
+<blockquote>
+<p>证明：暂且先给$A$在子空间拓扑下的闭包找个符号，用$A^\ast$记之</p>
+<p>一方面，因为$\bar{A}$在$X$中闭，而且根据定理（子空间拓扑下的闭集）知，$\bar{A}\cap Y$就是子空间拓扑下的闭集，而且$\bar{A}\cap Y\supset A\cap Y &#x3D; A$，故根据闭包定义，只会交的更小，$A^\ast \subset \bar{A}\cap Y$</p>
+<p>另一方面，因为$A^\ast$是子空间意义下的闭集，因此仍然根据定理（子空间拓扑下的闭集）知，存在一个$X$中的闭集$K$，使$A^\ast &#x3D; K\cap Y$，那么，$A\subset K$显然，在$X$中用闭包的定义，可知$\bar{A}\subset K$，因此$\bar{A}\cap Y\subset K\cap Y &#x3D; A^\ast$</p>
+<p>$\square$</p>
+</blockquote>
+<p><strong>定理（借用邻域描述闭包）</strong> 若$A$是拓扑空间$X$之子集，$x\in \bar{A}$当且仅当$x$的所有领域与$A$交集非空</p>
+<blockquote>
+<p>证明：证其逆否命题：$x\notin \bar{A}\iff$存在一含$x$的开集$U$与$A$无交</p>
+<p>因为这样的话，$X-\bar{A}$天然是一个含有$x$的，且与$A$无交的开集。另一方面，如果$U$与$A$无交，则必定$X-U$是含$A$闭集，根据闭包定义，$\bar{A}\subset X-U$，那$x\notin \bar{A}$</p>
+</blockquote>
+<p><strong>定理（借用基描述闭包）</strong> 若$X$的拓扑对应的基为$\mathscr{B}$，则$x\in \bar{A}$当且仅当包含$x$的所有基元素与$A$交集非空</p>
+<blockquote>
+<ul>
+<li><p>一方面，基元素也是开集，所以一旦$x\in \bar{A}$，借用上一条定理（借用邻域描述闭包）即可得基与$A$交集非空</p>
+</li>
+<li><p>另一方面，一旦基元素与$A$之交集非空，那么任取一个$x$的邻域后，根据定义（基生成的拓扑）可知，该邻域内部含个基，基和$A$有交暗示着该邻域和$A$有交，因此再调用上一条定理（借用邻域描述闭包）可知，$x\in \bar{A}$</p>
+</li>
+</ul>
+</blockquote>
+<p>下面两个定义更加自然，在此陈述之：</p>
+<p><strong>定义（极限点）</strong> 拓扑空间$X$的一个子集$A$，若$x\in X$，满足下面这句条件，则$x$称为$A$的极限点（limit point）：任何$x$的邻域与$A$的交集含有除$x$外的点</p>
+<blockquote>
+<p>当然，如果存在一个$x$的邻域与$A$竟然无交，那当然不满足该条件</p>
+</blockquote>
+<p><strong>定义（收敛）</strong> 拓扑空间$X$中有一个序列$x_1,x_2,\dots$，还有一个点$x\in X$，若，对任何一个$x$的邻域，存在一个$N$，使得$n&gt;N$时，$x_n$都在该领域内，则称$\set{x_j}_j$收敛到$x$</p>
 
   </div>
   
@@ -2776,10 +2832,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-09-11T16:45:32+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-11-07T11:24:35+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 11, 2024</p>
+    <p>更新于：Nov 7, 2024</p>
   </a>
 </div>
 
@@ -2798,7 +2854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/09/11/diff-geometry/&title=微分几何入门 - (.O w O.)?&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/11/07/Topology1/&title=拓扑的基本概念 - (.O w O.)?&summary="
           
           >
           
@@ -2810,7 +2866,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/09/11/diff-geometry/&title=微分几何入门 - (.O w O.)?&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/11/07/Topology1/&title=拓扑的基本概念 - (.O w O.)?&summary="
           
           >
           
@@ -2822,7 +2878,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/09/11/diff-geometry/&title=微分几何入门 - (.O w O.)?&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/11/07/Topology1/&title=拓扑的基本概念 - (.O w O.)?&summary="
           
           >
           
@@ -2858,19 +2914,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/11/07/Topology1/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>拓扑的基本概念</p>
-          <p class='content'>Topology拓扑基本概念这些例子解开了数学家们心中的谜：“一个集合和一扇门究竟有什么不同呢？”
+      
+        <a class='next' href='/2024/09/11/diff-geometry/'>
+          <p class='title'>微分几何入门<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>微分几何入门微广 by 梁灿彬
+拓扑空间基本的拓扑知识回忆
+定义 拓扑集合$X$上的拓扑指：有一个其子集构成的集合$\mathscr{T}$，开集就定义为它其中的元素，满足：
 
-拓扑的基定义 (拓扑) 集合$X$上的拓扑（topology）指：有一个子集构成的集合$\m...</p>
-        </a>
-      
-      
-        <a class='next' href='/2024/06/19/statistics4/'>
-          <p class='title'>SVM<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>统计学习方法SVM支持向量机大家耳熟能详，应该没人反对向量机吧
-线性可分支持向量机（硬）本节讨论线性可分数据集的情形
-感知机数据集$\set{(x_i,y_i)},y_i\in \set{-1,...</p>
+空集和$X$本身...</p>
         </a>
       
     </div>
@@ -2886,7 +2937,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/09/11/diff-geometry/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/11/07/Topology1/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2915,7 +2966,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <i class="fa-solid fa-shapes fa-fw" aria-hidden="true"></i><span class='name'>Differential Geometry</span>
+      <i class="fa-solid fa-diagram-project fa-fw" aria-hidden="true"></i><span class='name'>Topology</span>
     
   </header>
 
@@ -2923,14 +2974,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='content'>
     <ul class="list entry navigation">
       
-        <li><a class="flat-box" title="/2024/09/11/diff-geometry/" href="/2024/09/11/diff-geometry/"
+        <li><a class="flat-box" title="/2024/11/07/Topology1/" href="/2024/11/07/Topology1/"
           
           
-          active-action="action-20240911diff-geometry"
+          active-action="action-20241107Topology1"
           >
           <div class='name'>
             
-            微分几何入门
+            拓扑的基本概念
           </div>
           
         </a></li>
@@ -2968,7 +3019,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E5%85%A5%E9%97%A8"><span class="toc-text">微分几何入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%93%E6%89%91%E7%A9%BA%E9%97%B4"><span class="toc-text">拓扑空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2"><span class="toc-text">微分流形</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A2%E9%87%8F"><span class="toc-text">矢量</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%93%E6%89%91%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">拓扑基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%93%E6%89%91%E7%9A%84%E5%9F%BA"><span class="toc-text">拓扑的基</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E7%A9%BA%E9%97%B4%E6%8B%93%E6%89%91"><span class="toc-text">子空间拓扑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AD%E9%9B%86"><span class="toc-text">闭集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AD%E5%8C%85%E4%B8%8E%E6%9E%81%E9%99%90"><span class="toc-text">闭包与极限</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4242,7 +4293,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/微分几何/","name":"微分几何"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/09/11/diff-geometry/","name":"微分几何入门"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"微分几何入门","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/09/11/diff-geometry/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/09/11/diff-geometry/","wordCount":0,"datePublished":"2024-09-11T08:01:37.000Z","dateModified":"2024-09-11T08:45:32.655Z","articleSection":"微分几何","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/拓扑学/","name":"拓扑学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/11/07/Topology1/","name":"拓扑的基本概念"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"拓扑的基本概念","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/11/07/Topology1/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/11/07/Topology1/","wordCount":0,"datePublished":"2024-11-07T03:09:23.000Z","dateModified":"2024-11-07T03:24:35.167Z","articleSection":"拓扑学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

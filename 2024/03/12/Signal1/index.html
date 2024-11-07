@@ -42,11 +42,11 @@
 <meta property="og:title" content="信号分析">
 <meta property="og:url" content="http://maythics.github.io/2024/03/12/Signal1/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
-<meta property="og:description" content="引入问题我曾提了一个问题：为什么在各个“振动问题”中，能量都是和“振幅的平方”有关？ 在机械问题中，振幅的含义是小质量块偏移平衡的位置，有位移的量纲；在光学问题中，振幅的含义是电磁场的振幅，有电场强度的量纲；在电路原理问题中，振幅的含义是电流的幅值，有电流的量纲……振幅各有各的物理含义，彼此不同 为了推导出能流正比于振幅的平方，在机械中用的是机械的动能与势能的公式，在光学中用的是电磁波的坡印廷矢量">
+<meta property="og:description" content="信号分析连续信号  离散信号  滤波器">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-03-12T11:09:14.000Z">
-<meta property="article:modified_time" content="2024-06-07T14:46:00.578Z">
+<meta property="article:modified_time" content="2024-11-07T03:57:29.348Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1730898009836),
+    lastupdate: new Date(1730951966696),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2689,12 +2689,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="引入问题"><a href="#引入问题" class="headerlink" title="引入问题"></a>引入问题</h2><p>我曾提了一个问题：为什么在<strong>各个</strong>“振动问题”中，能量都是和“振幅的平方”有关？</p>
-<p>在机械问题中，振幅的含义是小质量块偏移平衡的位置，有位移的量纲；在光学问题中，振幅的含义是电磁场的振幅，有电场强度的量纲；在电路原理问题中，振幅的含义是电流的幅值，有电流的量纲……振幅各有各的物理含义，彼此不同</p>
-<p>为了推导出能流正比于振幅的平方，在机械中用的是机械的动能与势能的公式，在光学中用的是电磁波的坡印廷矢量公式，在电学中又用的是焦耳定律（虽然也能用坡印廷）……推导中用的定律含义各不相同，互相无关，但最后竟然都得到“能流$\propto$幅值平方”这一结果，是不是巧合？</p>
-<p>我现在提出一种解释：我们得意识到“能量”是最被大自然宠爱的物理量，大自然一定会把最好的数学结构安排给她，保证能量守恒的成立。如果知道了大自然的这点心思，就可以解释上面这个问题</p>
-<p>在振动相关的问题中，用的数学都是Fourier级数，考虑这个数学工具中什么结构是最好的（能够描述能量守恒上）？答案就是“展开系数的平方和绝对收敛到原函数的模方”这一性质</p>
-<p>对连续函数而言，把Parseval等式$|f| _ 2&#x3D;\sum c _ k^2$ 解释成总能量等于各个分能量的加和，正好符合能量相加的结构$E _ {\text{total}}&#x3D;\sum E _ i$，且“模”不随基的变更而改变，能够反映“守恒”的本质，这正合了大自然的心意。因此，如振动问题这样使用Fourier级数描述的问题中，能量都会坐稳“用平方表示”（理解成模的平方）这个位置，因为这个数学结构来描述之太适合不过了。如果采用别的方法表示，哪来这么好的收敛性（保证能量不发散）以及这么好的不变性（体现能量与基的选取无关）？</p>
+    <h2 id="信号分析"><a href="#信号分析" class="headerlink" title="信号分析"></a>信号分析</h2><h3 id="连续信号"><a href="#连续信号" class="headerlink" title="连续信号"></a>连续信号</h3><embed src="./Signals and System.pdf" width="100%" height="750" type="application/pdf">
+
+<h3 id="离散信号"><a href="#离散信号" class="headerlink" title="离散信号"></a>离散信号</h3><embed src="./Discrete Signals.pdf" width="100%" height="750" type="application/pdf">
+
+<h3 id="滤波器"><a href="#滤波器" class="headerlink" title="滤波器"></a>滤波器</h3><embed src="./filters.pdf" width="100%" height="750" type="application/pdf">
 
   </div>
   
@@ -2719,10 +2718,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-06-07T22:46:00+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-11-07T11:57:29+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jun 7, 2024</p>
+    <p>更新于：Nov 7, 2024</p>
   </a>
 </div>
 
@@ -2865,7 +2864,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%85%A5%E9%97%AE%E9%A2%98"><span class="toc-text">引入问题</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90"><span class="toc-text">信号分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E4%BF%A1%E5%8F%B7"><span class="toc-text">连续信号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E4%BF%A1%E5%8F%B7"><span class="toc-text">离散信号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="toc-text">滤波器</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -2875,6 +2874,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -4126,7 +4129,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/工科魔法/","name":"工科魔法"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/03/12/Signal1/","name":"信号分析"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"信号分析","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/03/12/Signal1/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/03/12/Signal1/","wordCount":0,"datePublished":"2024-03-12T11:09:14.000Z","dateModified":"2024-06-07T14:46:00.578Z","articleSection":"工科魔法","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/工科魔法/","name":"工科魔法"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/03/12/Signal1/","name":"信号分析"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"信号分析","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/03/12/Signal1/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/03/12/Signal1/","wordCount":0,"datePublished":"2024-03-12T11:09:14.000Z","dateModified":"2024-11-07T03:57:29.348Z","articleSection":"工科魔法","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
