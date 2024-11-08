@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>拓扑的基本概念 - (.O w O.)?</title>
+  <title>拓扑基本概念 - (.O w O.)?</title>
   <meta name="keywords" content="physics">
   <meta desc name="description" content="emmm - Maythics - (.O w O.)?">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="拓扑的基本概念">
+<meta property="og:title" content="拓扑基本概念">
 <meta property="og:url" content="http://maythics.github.io/2024/11/07/Topology1/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
 <meta property="og:description" content="Topology拓扑基本概念这些例子解开了数学家们心中的谜：“一个集合和一扇门究竟有什么不同呢？”  拓扑的基定义 (拓扑) 集合$X$上的拓扑（topology）指：有一个子集构成的集合$\mathscr{T}$，开集（open sets）定义为它其中的元素，满足：  $\varnothing$和$X$本身是开集  开集的有限交仍是开集  开集的任意并仍是开集   定义了拓扑的集合，就升格为一个">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-11-07T03:09:23.000Z">
-<meta property="article:modified_time" content="2024-11-07T04:03:03.398Z">
+<meta property="article:modified_time" content="2024-11-08T03:53:22.030Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1730985401025),
+    lastupdate: new Date(1731038148925),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2632,7 +2632,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        拓扑的基本概念
+        拓扑基本概念
       </h1>
       <div class='new-meta-box'>
         
@@ -2770,7 +2770,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>一方面，在原始空间里，若$V$已经是$X$的开集，但$V$本来又是$Y$的子集，所以$V&#x3D;V\cap Y$，根据子空间拓扑的定义，就是子空间拓扑下的开集</p>
 <p>另一方面，在子空间里如果是开集，则形如$V&#x3D;U\cap Y$，而这不就是两个开集之交的形式嘛！当然开</p>
 </blockquote>
-<h3 id="闭集"><a href="#闭集" class="headerlink" title="闭集"></a>闭集</h3><p><strong>定义（闭集）</strong> 拓扑空间$X$中，$A$称为一个闭集，当且仅当$X-A$开。（用闭集定义拓扑的方法不再赘述，总之闭集任意交还是闭，有限开还是开）</p>
+<h3 id="闭集"><a href="#闭集" class="headerlink" title="闭集"></a>闭集</h3><h4 id="闭集相关"><a href="#闭集相关" class="headerlink" title="闭集相关"></a>闭集相关</h4><p><strong>定义（闭集）</strong> 拓扑空间$X$中，$A$称为一个闭集，当且仅当$X-A$开。（用闭集定义拓扑的方法不再赘述，总之闭集任意交还是闭，有限开还是开）</p>
 <p><strong>定理（子空间拓扑下的闭集）</strong> $X$的一个子空间$Y$，则$Y$的子集$A$是$Y$中（子空间拓扑下）的闭集当且仅当$A$是$X$中的一个闭集与$Y$之交</p>
 <blockquote>
 <p>证明很简单，两边都不难</p>
@@ -2780,7 +2780,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>一方面，若$A$真是$X$中闭集，那么$A&#x3D;A\cap Y $形如闭交$Y$，根据上一条定理（子空间拓扑下的闭集），知道$A$也是子空间拓扑下的闭集</p>
 <p>另一方面，若$A$是子空间拓扑下的闭集，根据上一条定理（子空间拓扑下的闭集），$A&#x3D;K\cap Y$，其中$K$是$X$中的闭集，这样子，形如$X$中的两个闭集之交，当然在$X$中仍闭！</p>
 </blockquote>
-<h3 id="闭包与极限"><a href="#闭包与极限" class="headerlink" title="闭包与极限"></a>闭包与极限</h3><p><strong>定义（内部与闭包）</strong> 拓扑空间$X$的一个子集$A$的内部（interior），指的是所有含于$A$内的开集之并（当然也开），其闭包（closure）则定义为所有包含$A$的闭集之交（当然也闭）</p>
+<h4 id="闭包与极限"><a href="#闭包与极限" class="headerlink" title="闭包与极限"></a>闭包与极限</h4><p><strong>定义（内部与闭包）</strong> 拓扑空间$X$的一个子集$A$的内部（interior），指的是所有含于$A$内的开集之并（当然也开），其闭包（closure）则定义为所有包含$A$的闭集之交（当然也闭）</p>
 <p><strong>定理（子空间拓扑下闭包的表示）</strong> 若$Y$是$X$的子空间，$A\subset Y$，$\bar{A}$表示$X$中拓扑下$A$的闭包。结论是：$A$在子空间拓扑下的闭包就是$\bar{A}\cap Y$</p>
 <blockquote>
 <p>证明：暂且先给$A$在子空间拓扑下的闭包找个符号，用$A^\ast$记之</p>
@@ -2808,6 +2808,65 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>当然，如果存在一个$x$的邻域与$A$竟然无交，那当然不满足该条件</p>
 </blockquote>
 <p><strong>定义（收敛）</strong> 拓扑空间$X$中有一个序列$x_1,x_2,\dots$，还有一个点$x\in X$，若，对任何一个$x$的邻域，存在一个$N$，使得$n&gt;N$时，$x_n$都在该领域内，则称$\set{x_j}_j$收敛到$x$</p>
+<h3 id="连续映射"><a href="#连续映射" class="headerlink" title="连续映射"></a>连续映射</h3><p><strong>定义（连续映射）</strong> 这个定义也是耳熟能详的，$X$与$Y$两个拓扑空间，$f:X\to Y$是连续的，意思是任何一个$Y$中开集$V$的逆像$f^{-1}(V)$是$X$中的开集</p>
+<h4 id="连续映射的性质"><a href="#连续映射的性质" class="headerlink" title="连续映射的性质"></a>连续映射的性质</h4><p><strong>定理（连续，用“闭”描述）</strong> 两个拓扑空间间的映射$f: X\to Y$，以下条件是等价的：</p>
+<ol>
+<li><p>$f$连续</p>
+</li>
+<li><p>$\forall A\subset X$，都有$f(\overline{A})\subset \overline{f(A)}$</p>
+</li>
+<li><p>对于$Y$任意一个闭集$B$，其逆像$f^{-1}(B)$在$X$中闭</p>
+</li>
+</ol>
+<blockquote>
+<p>证明顺序：1推2推3推1</p>
+<ul>
+<li><p>若连续，欲证一旦$x\in \bar{A}$，就有$f(x)\in \overline{f(A)}$，回顾定理（借用邻域描述闭包），即证明“一旦$x\in \bar{A}$，就有$f(x)$的所有邻域都与$f(A)$有交”。如何证之？任取$f(x)$的邻域$V$，其逆像$f^{-1}(V)$为开且天然含$x$，再由该定理（借用邻域描述闭包），该逆像$f^{-1}(V)$中必然有$A$中的点，不妨记它为$a$，所以有$f(a)\in V$，这就说明$f(x)$怎么取邻域都会和$f(A)$碰在一起，再由该定理（借用邻域描述闭包）即得$f(x)\in \overline{f(A)}$</p>
+</li>
+<li><p>若满足第二条，推第三条如下：任取$Y$中闭集$B$，若证出$f^{-1}(B)\supset \overline{f^{-1}(B)}$就结束了，那就开始吧！任取$x\in \overline{f^{-1}(B)}$，由假设，$f(x)\in \overline{f(f^{-1}(B))}\subset \overline{B}&#x3D;B$（这里的包含于关系，请回顾初等集合论，是“集之常情”），因此$x\in f^{-1}(B)$，结束</p>
+</li>
+<li><p>若满足第三条，欲推出连续。光读这题面就知道，用一下开闭的互补关系就好了</p>
+</li>
+</ul>
+</blockquote>
+<p>下面这个定理，我加了引号表虚拟语气，因为我们讨论的不是真正的$\epsilon-\delta$定义。毕竟，我们面对的不一定是度量空间，哪来的距离概念呢？但是这里和以前$\epsilon-\delta$定义的那种精神是一样的，所以我给它取这个名字</p>
+<p><strong>定理（与“$\epsilon-\delta$”定义的等价）</strong> 两个拓扑空间间的映射$f: X\to Y$是连续的，当且仅当对于所有$x\in X$均有：任取$f(x)$的一个邻域$V$，都能找到$x$的邻域$U$使得$f(U)\subset V$</p>
+<blockquote>
+<p>证：</p>
+<p>连续推“$\epsilon-\delta$”，直接令$U&#x3D;f^{-1}(V)$即可</p>
+<p>“$\epsilon-\delta$”推连续，任取一个开集$V$，$f^{-1}(V)$中每一个$x$都有$x\in U_x\subset f^{-1}(V)$，而且$f^{-1}(V) &#x3D; \bigcup\limits_{ x\in f^{-1}(V)}U_x$，形如开集之并，因此开</p>
+</blockquote>
+<h4 id="同胚"><a href="#同胚" class="headerlink" title="同胚"></a>同胚</h4><p><strong>定义（同胚）</strong> $X$与$Y$是拓扑空间，$f:X\to Y$是一个双射，若$f$和其逆映射均连续，则称$f$为同胚（homeomorphism）</p>
+<p>同胚就是说两个拓扑空间“很像”的最高要求，同胚映射是保持代数结构的。$f$是同胚，当且仅当$f(U)$是开集的充要条件是$U$是开集</p>
+<h4 id="构造连续函数"><a href="#构造连续函数" class="headerlink" title="构造连续函数"></a>构造连续函数</h4><p><strong>定理（各种连续函数列举）</strong> 设$X$，$Y$，$Z$均为拓扑空间：</p>
+<p>1 常值函数</p>
+<blockquote>
+<p>证明：对其逆像进行列举，要么$\varnothing$要么$X$，当然都是开的</p>
+</blockquote>
+<p>2 内射，即对于$X$的子集$A$，内射$j: A\to X$</p>
+<blockquote>
+<p>证明：因为$j^{-1}(U) &#x3D; U\cap A$，按子空间拓扑，的确开</p>
+</blockquote>
+<p>3 连续映射复合</p>
+<blockquote>
+<p>证明：略</p>
+</blockquote>
+<p>4 连续函数被限制定义域后$f|A: A\to Y$连续</p>
+<blockquote>
+<p>证明：$f|A &#x3D; f \circ j$，复合自然也连续</p>
+</blockquote>
+<p>5 限制或扩大$Y$，$f:X\to Y$连续，$Z$满足$f(X)\subset Z\subset Y$，则$f$限制为$g:X\to Z$也连续；若$Z\supset Y$，则扩大$h:X\to Z$也连续</p>
+<blockquote>
+<p>证明：</p>
+<p>对于$g$而言，$Z$中的一个开集$V$，根据子空间拓扑必有$V&#x3D;U\cap Z$，其中$U$是$Y$中的一个开集，因此$g^{-1}(V)&#x3D;f^{-1}(U\cap Z) &#x3D; f^{-1}(U)\cap f^{-1}(Z)$，根据$f(X)\subset Z$，可知$X &#x3D; f^{-1}(Z)$，因此$g^{-1}(V) &#x3D; f^{-1}(U)$根据$f$连续，知$g^{-1}(V)$开</p>
+<p>对于$h$而言，$h &#x3D; f\circ j$，因此连续</p>
+</blockquote>
+<p>6 局部连续促成连续：若$X&#x3D;\bigcup\limits_\alpha U_\alpha$，其中每一个$U_\alpha$都是开集。$f$限制后，每一个$f|_{U_\alpha}$均连续，则$f$连续</p>
+<blockquote>
+<p>证明：</p>
+<p>第一步，任取$Y$中一个开集$V$，利用$f^{-1}(V)\cap U_\alpha &#x3D; \set{x:f(x)\in V , x\in U_\alpha} &#x3D; f|_{U_\alpha}^{-1}(V)$，由假设，该集合是$U_\alpha$中的开集，由定理（开集，开集？开集！）得，也是$X$中的开集</p>
+<p>第二步，由于$f^{-1}(V) &#x3D; \bigcup (f^{-1}(V)\cap U_\alpha) $，可$f^{-1}(V)$就是这么多$X$中开集的并，因此是$X$中的开集</p>
+</blockquote>
 
   </div>
   
@@ -2832,10 +2891,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-11-07T12:03:03+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-11-08T11:53:22+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Nov 7, 2024</p>
+    <p>更新于：Nov 8, 2024</p>
   </a>
 </div>
 
@@ -2854,7 +2913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/11/07/Topology1/&title=拓扑的基本概念 - (.O w O.)?&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/11/07/Topology1/&title=拓扑基本概念 - (.O w O.)?&summary="
           
           >
           
@@ -2866,7 +2925,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/11/07/Topology1/&title=拓扑的基本概念 - (.O w O.)?&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/11/07/Topology1/&title=拓扑基本概念 - (.O w O.)?&summary="
           
           >
           
@@ -2878,7 +2937,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/11/07/Topology1/&title=拓扑的基本概念 - (.O w O.)?&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/11/07/Topology1/&title=拓扑基本概念 - (.O w O.)?&summary="
           
           >
           
@@ -2981,7 +3040,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           >
           <div class='name'>
             
-            拓扑的基本概念
+            拓扑基本概念
           </div>
           
         </a></li>
@@ -3019,7 +3078,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%93%E6%89%91%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">拓扑基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%93%E6%89%91%E7%9A%84%E5%9F%BA"><span class="toc-text">拓扑的基</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E7%A9%BA%E9%97%B4%E6%8B%93%E6%89%91"><span class="toc-text">子空间拓扑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AD%E9%9B%86"><span class="toc-text">闭集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AD%E5%8C%85%E4%B8%8E%E6%9E%81%E9%99%90"><span class="toc-text">闭包与极限</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%93%E6%89%91%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">拓扑基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%93%E6%89%91%E7%9A%84%E5%9F%BA"><span class="toc-text">拓扑的基</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E7%A9%BA%E9%97%B4%E6%8B%93%E6%89%91"><span class="toc-text">子空间拓扑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AD%E9%9B%86"><span class="toc-text">闭集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AD%E9%9B%86%E7%9B%B8%E5%85%B3"><span class="toc-text">闭集相关</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AD%E5%8C%85%E4%B8%8E%E6%9E%81%E9%99%90"><span class="toc-text">闭包与极限</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E6%98%A0%E5%B0%84"><span class="toc-text">连续映射</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E6%98%A0%E5%B0%84%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-text">连续映射的性质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8C%E8%83%9A"><span class="toc-text">同胚</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E8%BF%9E%E7%BB%AD%E5%87%BD%E6%95%B0"><span class="toc-text">构造连续函数</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -4293,7 +4352,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/拓扑学/","name":"拓扑学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/11/07/Topology1/","name":"拓扑的基本概念"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"拓扑的基本概念","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/11/07/Topology1/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/11/07/Topology1/","wordCount":0,"datePublished":"2024-11-07T03:09:23.000Z","dateModified":"2024-11-07T04:03:03.398Z","articleSection":"拓扑学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/拓扑学/","name":"拓扑学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/11/07/Topology1/","name":"拓扑基本概念"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"拓扑基本概念","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/11/07/Topology1/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/11/07/Topology1/","wordCount":0,"datePublished":"2024-11-07T03:09:23.000Z","dateModified":"2024-11-08T03:53:22.030Z","articleSection":"拓扑学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
