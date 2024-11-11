@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-11-07T03:09:23.000Z">
-<meta property="article:modified_time" content="2024-11-08T03:53:22.030Z">
+<meta property="article:modified_time" content="2024-11-11T15:57:02.594Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1731078943689),
+    lastupdate: new Date(1731340765414),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2809,6 +2809,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <p><strong>定义（收敛）</strong> 拓扑空间$X$中有一个序列$x_1,x_2,\dots$，还有一个点$x\in X$，若，对任何一个$x$的邻域，存在一个$N$，使得$n&gt;N$时，$x_n$都在该领域内，则称$\set{x_j}_j$收敛到$x$</p>
 <h3 id="连续映射"><a href="#连续映射" class="headerlink" title="连续映射"></a>连续映射</h3><p><strong>定义（连续映射）</strong> 这个定义也是耳熟能详的，$X$与$Y$两个拓扑空间，$f:X\to Y$是连续的，意思是任何一个$Y$中开集$V$的逆像$f^{-1}(V)$是$X$中的开集</p>
+<p><strong>定理（连续？看基&#x2F;子基）</strong> 如果想要证明一个映射是连续的，按定义的做法是：任取一个开集，然后证明其逆像是开集。不过事实上，只需证明基元素的逆像仍开，或者只需证明子基元素的逆像仍开就行了</p>
+<blockquote>
+<p>证明：用了“逆像保交并”这一十分良好的性质，证明十分简单：若基元素$B_\beta$上都验证了，那$f^{-1}(V)&#x3D;f^{-1}(\bigcup B_\alpha)&#x3D;\bigcup f^{-1} (B_\alpha)$，自然是开集之并仍开……子基同</p>
+</blockquote>
 <h4 id="连续映射的性质"><a href="#连续映射的性质" class="headerlink" title="连续映射的性质"></a>连续映射的性质</h4><p><strong>定理（连续，用“闭”描述）</strong> 两个拓扑空间间的映射$f: X\to Y$，以下条件是等价的：</p>
 <ol>
 <li><p>$f$连续</p>
@@ -2891,10 +2895,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-11-08T11:53:22+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-11-11T23:57:02+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Nov 8, 2024</p>
+    <p>更新于：Nov 11, 2024</p>
   </a>
 </div>
 
@@ -2973,6 +2977,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='/2024/11/11/Topology2/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>序、积、商拓扑</p>
+          <p class='content'>Topology序、积、商拓扑在本篇中，我们将引入一些新的结构：序、笛卡尔积……手中能用的上的工具是第一篇中讲述的所有概念与性质
+常用技术提示：
+
+$f^{-1}(\bigcap A_\alph...</p>
+        </a>
+      
       
         <a class='next' href='/2024/09/11/diff-geometry/'>
           <p class='title'>微分几何入门<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
@@ -3041,6 +3053,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <div class='name'>
             
             拓扑基本概念
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2024/11/11/Topology2/" href="/2024/11/11/Topology2/"
+          
+          
+          active-action="action-20241111Topology2"
+          >
+          <div class='name'>
+            
+            序、积、商拓扑
           </div>
           
         </a></li>
@@ -4352,7 +4376,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/拓扑学/","name":"拓扑学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/11/07/Topology1/","name":"拓扑基本概念"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"拓扑基本概念","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/11/07/Topology1/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/11/07/Topology1/","wordCount":0,"datePublished":"2024-11-07T03:09:23.000Z","dateModified":"2024-11-08T03:53:22.030Z","articleSection":"拓扑学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/拓扑学/","name":"拓扑学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/11/07/Topology1/","name":"拓扑基本概念"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"拓扑基本概念","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/11/07/Topology1/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/11/07/Topology1/","wordCount":0,"datePublished":"2024-11-07T03:09:23.000Z","dateModified":"2024-11-11T15:57:02.594Z","articleSection":"拓扑学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
