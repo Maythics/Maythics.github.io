@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-11-11T15:52:34.000Z">
-<meta property="article:modified_time" content="2024-11-12T08:11:35.652Z">
+<meta property="article:modified_time" content="2024-11-19T15:05:19.975Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1731399303414),
+    lastupdate: new Date(1732028945377),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2706,9 +2706,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>首先来明确几个记号吧！全序集$X$中，$(a,b)$这个记号就是$\set{x\in X: a&lt;x&lt;b}$的意思，名字叫做区间，还有$(a,b]$，$[a,b)$，$[a,b]$这几种区间，定义方式都和你想象的一样</p>
 <p><strong>定义</strong> <strong>（序拓扑）</strong><br>含有多于一个元素的全序集$X$，设$\mathscr{B}$为以下这些集合形成的族，则$\mathscr{B}$是一个基，它生成的拓扑叫序拓扑：</p>
 <ol>
-<li>形如$(a,b)$的区间</li>
-<li>形如$[a_0,b)$的区间，其中$a_0$是$X$中的最小元（若存在）</li>
-<li>形如$(a,b_0]$的区间，其中$b_0$是$X$中的最大元（若存在）</li>
+<li><p>形如$(a,b)$的区间</p>
+</li>
+<li><p>形如$[a_0,b)$的区间，其中$a_0$是$X$中的最小元（若存在）</p>
+</li>
+<li><p>形如$(a,b_0]$的区间，其中$b_0$是$X$中的最大元（若存在）</p>
+</li>
 </ol>
 <blockquote>
 <p>当然，这个集合配不配称做“基”，还需验证：</p>
@@ -2753,7 +2756,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>因此，这个基元素形如$\prod U _ \alpha$，其中$n$个元素是各自$X _ \alpha$中的开集$U _ {\beta _ i}$（根据投影映射定义）。其余的呢？当$\alpha\notin \beta _ 1,\beta _ 2,\dots,\beta _ n$时，$U _ \alpha$就是$X _ \alpha$本身</p>
 <p>“均是开集，且除了有限个外都等于$X_\beta$本身”这个形式很重要，记住！</p>
 </blockquote>
-<p><strong>定理</strong> <strong>（子空间拓扑）</strong> 对于每个$\alpha\in J$，$A_\alpha$是$X_\alpha$的一个子空间，则在$\prod X_\alpha$采取积拓扑时：$\prod A_\alpha$自己采取积拓扑，或者，$\prod A_\alpha$采取从$\prod X_\alpha$继承出来的子空间拓扑，都是一样的</p>
+<p><strong>定理</strong> <strong>（子空间拓扑和积拓扑）</strong> 对于每个$\alpha\in J$，$A_\alpha$是$X_\alpha$的一个子空间，则在$\prod X_\alpha$采取积拓扑时：$\prod A_\alpha$自己采取积拓扑，或者，$\prod A_\alpha$采取从$\prod X_\alpha$继承出来的子空间拓扑，都是一样的</p>
 <p>这个表述很拗口啊，不如给个直观的例子：<br>$A$是$X$的子空间，$B$是$Y$的子空间，则$A\times B$的积拓扑，和它从$X\times Y$那里继承的子空间拓扑是一样的！</p>
 <blockquote>
 <p>证明（General Case）：证明很长的原因是语言不得不绕来绕去的，本质其实很简单</p>
@@ -2826,10 +2829,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-11-12T16:11:35+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-11-19T23:05:19+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Nov 12, 2024</p>
+    <p>更新于：Nov 19, 2024</p>
   </a>
 </div>
 
@@ -2907,6 +2910,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
     <div class="prev-next">
+      
+        <a class='prev' href='/2024/11/19/Topology3/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Hausdorff、连通</p>
+          <p class='content'>Topology本篇讨论拓扑不变量，所谓拓扑不变量，就是互相同胚的空间中保持一致的一个性质。这个性质的用场是，如果你想证明$X$和$Y$空间是“不同”的（在同胚意义下），该怎么说明呢？用同胚映射...</p>
+        </a>
       
       
         <a class='next' href='/2024/11/07/Topology1/'>
@@ -2986,6 +2994,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <div class='name'>
             
             序、积、商拓扑
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2024/11/19/Topology3/" href="/2024/11/19/Topology3/"
+          
+          
+          active-action="action-20241119Topology3"
+          >
+          <div class='name'>
+            
+            Hausdorff、连通
           </div>
           
         </a></li>
@@ -4297,7 +4317,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/拓扑学/","name":"拓扑学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/11/11/Topology2/","name":"序、积、商拓扑"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"序、积、商拓扑","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/11/11/Topology2/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/11/11/Topology2/","wordCount":0,"datePublished":"2024-11-11T15:52:34.000Z","dateModified":"2024-11-12T08:11:35.652Z","articleSection":"拓扑学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/拓扑学/","name":"拓扑学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/11/11/Topology2/","name":"序、积、商拓扑"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"序、积、商拓扑","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/11/11/Topology2/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/11/11/Topology2/","wordCount":0,"datePublished":"2024-11-11T15:52:34.000Z","dateModified":"2024-11-19T15:05:19.975Z","articleSection":"拓扑学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

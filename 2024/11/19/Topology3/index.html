@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://maythics.github.io/2024/01/26/mathematical_physics_2/"/>
+  <link rel="canonical" href="http://maythics.github.io/2024/11/19/topology3/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>PDE基础 - (.O w O.)?</title>
+  <title>Hausdorff、连通 - (.O w O.)?</title>
   <meta name="keywords" content="physics">
   <meta desc name="description" content="emmm - Maythics - (.O w O.)?">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="PDE基础">
-<meta property="og:url" content="http://maythics.github.io/2024/01/26/mathematical_physics_2/index.html">
+<meta property="og:title" content="Hausdorff、连通">
+<meta property="og:url" content="http://maythics.github.io/2024/11/19/Topology3/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
-<meta property="og:description" content="click here to save the pdf version of this article  Mathematical PhysicsPartial Differential EquationThe Classes of PDEWe only discuss PDE with two variables. Basic PDE ExampleWhat matters is to find">
+<meta property="og:description" content="Topology本篇讨论拓扑不变量，所谓拓扑不变量，就是互相同胚的空间中保持一致的一个性质。这个性质的用场是，如果你想证明$X$和$Y$空间是“不同”的（在同胚意义下），该怎么说明呢？用同胚映射不容易，因为万一同胚映射真的存在，只不过你没找到而已。拓扑不变量可以来帮忙，有哪个拓扑不变量，在$X$中是这样在$Y$中却是那样，就证明了两者必定不同胚！ Hausdorff、连通Hausdorff性定义">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-01-26T14:05:02.000Z">
-<meta property="article:modified_time" content="2024-05-13T06:57:47.942Z">
+<meta property="article:published_time" content="2024-11-19T15:05:59.000Z">
+<meta property="article:modified_time" content="2024-11-19T15:08:03.465Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -2611,7 +2611,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/01/26/mathematical_physics_2/">
+  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/11/19/Topology3/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="(.O w O.)?">
   </span>
@@ -2632,7 +2632,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        PDE基础
+        Hausdorff、连通
       </h1>
       <div class='new-meta-box'>
         
@@ -2651,10 +2651,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95/">数理方法</a>
+    <a class="category-link" href="/categories/%E6%8B%93%E6%89%91%E5%AD%A6/">拓扑学</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95/" itemprop="url"><span itemprop="name">数理方法</span></a>
+        <a href="/categories/%E6%8B%93%E6%89%91%E5%AD%A6/" itemprop="url"><span itemprop="name">拓扑学</span></a>
       </span>
     
   </div>
@@ -2663,10 +2663,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-01-26T22:05:02+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-11-19T23:05:59+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jan 26, 2024</p>
+    <p>发布于：Nov 19, 2024</p>
   </a>
 </div>
 
@@ -2689,105 +2689,77 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="note paperclip cyan"><p>click <a target="_blank" rel="noopener" href="https://mypikpak.com/s/VNuOhcReSkNS3vSpiam6aLWxo1">here</a> to save the pdf version of this article</p></div>
-
-<h1 id="Mathematical-Physics"><a href="#Mathematical-Physics" class="headerlink" title="Mathematical Physics"></a>Mathematical Physics</h1><h2 id="Partial-Differential-Equation"><a href="#Partial-Differential-Equation" class="headerlink" title="Partial Differential Equation"></a>Partial Differential Equation</h2><h3 id="The-Classes-of-PDE"><a href="#The-Classes-of-PDE" class="headerlink" title="The Classes of PDE"></a>The Classes of PDE</h3><p>We only discuss PDE with two variables.</p>
-<h4 id="Basic-PDE-Example"><a href="#Basic-PDE-Example" class="headerlink" title="Basic PDE Example"></a>Basic PDE Example</h4><p>What matters is to find the characteristics of a PDE (<strong>constant</strong> coefficient):<br>$$<br>\mathcal{L}(u)&#x3D;0<br>$$ where $$<br>\mathcal{L}&#x3D;a\frac{\partial^2 }{\partial x^2}+2b\frac{\partial^2 }{\partial x\partial y}+c\frac{\partial^2 }{\partial y^2}<br>$$<br>If we find the characteristic, then the equation become <strong>single variable equation</strong> of the characteristic.<br>To achieve this, we factorize the above equation:</p>
-<p>$$<br>\mathcal{L}&#x3D;\left(\frac{b+\sqrt{\Delta }}{c^{1&#x2F;2}}\dfrac{\partial }{\partial x}+c^{1&#x2F;2}\dfrac{\partial }{\partial y}\right) \left(\frac{b-\sqrt{\Delta }}{c^{1&#x2F;2}}\dfrac{\partial }{\partial x}+c^{1&#x2F;2}\dfrac{\partial }{\partial y}\right)<br>$$</p>
-<p>where $\Delta:&#x3D;b^2-ac$<br>Note that the two factors are commutative, hence if $\Delta\neq 0$, the two factors implies two characteristics separately.<br>If $\Delta &#x3D;0$, there’s only one characteristic line.<br>And the characteristic is given by<br>$$<br>\frac{dy}{dx}&#x3D;\frac{b\pm \sqrt{\Delta}}{a}<br>$$<br>Because any $x, y$ with this relation (i.e. $y(x)$) would imply $\mathcal{L}&#x3D;0$ and the $u(x,y)$ actually becomes $u(x,y(x))$, single valued.</p>
-<p>To achieve the <strong>canonical form</strong> of the second order PDE, we import such variables:$\xi&#x3D;\sqrt{c}x-\frac{b}{\sqrt{c}}y;\eta &#x3D;\frac{1}{\sqrt{c}}y$.<br>$$<br>\mathcal{L}&#x3D;\left(\frac{b+\sqrt{\Delta }}{c^{1&#x2F;2}}\sqrt{c}\frac{\partial }{\partial \xi}+c^{1&#x2F;2}\frac{-b}{\sqrt{c}}\frac{\partial }{\partial \xi}+c^{1&#x2F;2}\frac{1}{\sqrt{c}}\frac{\partial}{\partial \eta}\right)\times<br>$$<br>$$<br>\left(\frac{b-\sqrt{\Delta }}{c^{1&#x2F;2}}\sqrt{c}\frac{\partial }{\partial \xi}+c^{1&#x2F;2}\frac{-b}{\sqrt{c}}\frac{\partial }{\partial \xi}+c^{1&#x2F;2}\frac{1}{\sqrt{c}}\frac{\partial}{\partial \eta}\right)<br>$$<br>$$<br>&#x3D;\left(\sqrt{\Delta}\frac{\partial}{\partial \xi}+\partial \eta \right)\left(-\sqrt{\Delta}\frac{\partial}{\partial \xi}+\partial \eta \right)&#x3D;-\Delta \frac{\partial^2}{\partial \xi^2}+\frac{\partial^2}{\partial \eta^2}<br>$$</p>
-<h4 id="Systematic-Process"><a href="#Systematic-Process" class="headerlink" title="Systematic Process"></a>Systematic Process</h4><p>The equation is:<br>$$<br>\mathcal{L}(u)&#x3D;g<br>$$ where:<br>$$<br>\mathcal{L}&#x3D;a\frac{\partial^2 }{\partial x^2}+2b\frac{\partial^2 }{\partial x\partial y}+c\frac{\partial^2 }{\partial y^2}+d\frac{\partial }{\partial x}+e\frac{\partial }{\partial y}+f<br>$$<br>Attention: $a$ to $g$ are all functions of $x$ and $y$, they’re <strong>not constant</strong> generally.<br>Replacing the variables by:<br>$$<br>\xi &#x3D;\xi (x,y) \quad \eta&#x3D;\eta (x,y)<br>$$<br>Apply <em>Chain Rule</em> and calculate, we got:<br>$$<br>\left(A\frac{\partial^2 }{\partial \xi^2}+2B\frac{\partial^2 }{\partial \xi\partial \eta}+C\frac{\partial^2 }{\partial \eta^2}+D\frac{\partial }{\partial \xi}+E\frac{\partial }{\partial \eta}+F\right)(u)&#x3D;G<br>$$<br>where $A$ and $C$ have the same form:<br>$$<br>a(\frac{\partial W}{\partial x})^2+2b\frac{\partial W}{\partial x}\frac{\partial W}{\partial y}+c(\frac{\partial W }{\partial y})^2<br>$$<br>In $A$’s case $W&#x3D;\xi$, in $C$’s case $W&#x3D;\eta$.</p>
-<p>Suppose the solution is $W(x,y)&#x3D;\text{const}$, then by <strong>Implicit Function</strong> theorem, $y’&#x3D;-\frac{\partial W &#x2F; \partial x}{\partial W &#x2F; \partial y}$, so that the equation above will be:<br>$$<br>a{y’}^2-2by’+c&#x3D;0 \qquad\therefore y’&#x3D;\frac{b\pm \sqrt{\Delta}}{a}<br>$$<br>If you successfully solve the last differential equation we got $\xi(x,y)&#x3D;\text{const}$ and $\eta(x,y)&#x3D;\text{const}$, which are exactly two characteristics.</p>
+    <h1 id="Topology"><a href="#Topology" class="headerlink" title="Topology"></a>Topology</h1><p>本篇讨论拓扑不变量，所谓拓扑不变量，就是互相同胚的空间中保持一致的一个性质。这个性质的用场是，如果你想证明$X$和$Y$空间是“不同”的（在同胚意义下），该怎么说明呢？用同胚映射不容易，因为万一同胚映射真的存在，只不过你没找到而已。拓扑不变量可以来帮忙，有哪个拓扑不变量，在$X$中是这样在$Y$中却是那样，就证明了两者必定不同胚！</p>
+<h2 id="Hausdorff、连通"><a href="#Hausdorff、连通" class="headerlink" title="Hausdorff、连通"></a>Hausdorff、连通</h2><h3 id="Hausdorff性"><a href="#Hausdorff性" class="headerlink" title="Hausdorff性"></a>Hausdorff性</h3><p><strong>定义</strong> <strong>（Hausdorff）</strong><br>一个拓扑空间，如果其中的任取两不同的$x_1,x_2$，存在邻域$x_1\in U_1$，$x_2\in U_2$使得$U_1\cap U_2&#x3D;\varnothing$，则称该空间为Hausdorff的</p>
+<p><strong>定理</strong> <strong>（Hausdorff空间的有限集都是闭集）</strong><br>Hausdorff空间的有限集都是闭集</p>
+<blockquote>
+<p>证明：只需证单点集闭，然后归纳就行了。</p>
+<p>一个单点集$\set{x_0}$，要证明$X-\set{x_0}$开，那么，随便取一个$x\in X-\set{x_0}$，根据Hausdorff性，能够取到$x\in U$以及$x_0\in V$，且$U\cap V&#x3D;\varnothing$</p>
+<p>因此，任何一个$x\in X-\set{x_0}$，都在$X-\set{x_0}$的内部，而$x$可取遍整个$X-\set{x_0}$呀，所以，$X-\set{x_0}$就等于自己的内部，因此它是开集，即$\set{x_0}$闭</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（Hausdorff空间的序列至多收敛到一个点）</strong><br>Hausdorff空间的序列至多收敛到一个点（注意：这里的收敛采取的定义请回顾拓扑空间中的收敛定义）</p>
+<blockquote>
+<p>反证法，若收敛到多于一点，则任取两个点，由Hausdorff……与收敛定义相悖</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（Hausdorff性是拓扑不变量）</strong><br>若拓扑空间$X$是Hausdorff的，而拓扑空间$Y$与之同胚，则$Y$也是Hausdorff的</p>
+<blockquote>
+<p>证明：同胚映射$f:X\to Y$，任取$Y$中两个点$y_1,y_2$，先找$x_1&#x3D;f^{-1}(y_1)$，再找$x_2&#x3D;f^{-1}(y_2)$，由于$x_1\neq x_2$，因此根据$X$是Hausdorff的假设，存在$x_1\in U_1$以及$x_2\in U_2$且$U_1\cap U_2&#x3D;\varnothing$，因此$y_1 \in f(U_1)$以及$y_2\in f(U_2)$，而且……</p>
+</blockquote>
+<h3 id="连通性"><a href="#连通性" class="headerlink" title="连通性"></a>连通性</h3><h4 id="连通性质—General-Idea"><a href="#连通性质—General-Idea" class="headerlink" title="连通性质—General Idea"></a>连通性质—General Idea</h4><p><strong>定义</strong> <strong>（分割）</strong><br>拓扑空间$X$的一个分割（separation），指的是$X$的一对非空无交开集$U,V$，且$U\cup V&#x3D;X$</p>
+<p><strong>定义</strong> <strong>（连通）</strong><br>拓扑空间$X$如果不存在分割，则称为连通的</p>
+<p><strong>定理</strong> <strong>（极限点描述连通）</strong><br>$X$是拓扑空间，$Y$是其一个子空间，不存在$Y$的两个非空子集$A,B$，使得：其并等于$Y$，并且$A$和$B$互相不包含对方的极限点。这样的$Y$是连通的</p>
+<blockquote>
+<p>之前也经常拿它作为连通的定义。这种“不存在……”的表述，证明就证逆否命题</p>
+<p>证明：</p>
+<p>一方面，若不是连通的，则存在两个开集$A\cup B&#x3D;Y$，两者非空不交且开。这样，由于$A$和$B$在$Y$中既开又闭，由第一篇中的定理（子空间拓扑下闭包的表示），$A&#x3D;\overline{A}\cap Y$，故根据假设，就有$\overline{A}\cap Y\cap B&#x3D;\varnothing$，把$Y\cap B&#x3D;B$吸收掉$Y$，即推出$\overline{A}\cap B&#x3D;\varnothing$……不符合该命题</p>
+<p>另一方面，若不符合这个命题，即：存在非空的$A$与$B$两集合，其并为$Y$，互不包含对方的极限点。则由于极限点含在闭包里，该假设即$\overline{A}\cap B&#x3D;\varnothing$，给上式再交上$Y$毫不影响，即$(Y\cap\overline{A})\cap B&#x3D;\varnothing$，当然由于$A,B$之并为$Y$，必有$(\overline{A}\cap Y)\cup B&#x3D;Y$，根据定理（子空间拓扑下闭包的表示），翻译一下：$A$在$Y$中的闭包即$\overline{A}\cap Y$，根据闭集定义，知道了$B$是$Y$中开集。同理，$A$也是$Y$中开集……不连通</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（连通子空间脚踏一只船）</strong><br>若$X$是不连通的拓扑空间，分割为$C$和$D$，$Y$是$X$的连通子空间，则$Y\subset C$或者$Y\subset D$</p>
+<blockquote>
+<p>证明：子空间拓扑，$C\cap Y$与$D\cap Y$当然是$Y$中开集；$C,D$本就不交，限制在$Y$后更不可能交；其并当然是$Y$。万事俱备，只欠“两者均非空”这一东风，就能说明$Y$不连通了。这东风不能给，因此必有一者为空</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（连通集们牵手仍连通）</strong><br>拓扑空间$X$的连通子空间族，成员含有一公共点，则成员之并连通</p>
+<blockquote>
+<p>证明：设连通子集族为$\set{A_\alpha}$，含有$p$这一公共点，欲证$\bigcup A_\alpha$连通</p>
+<p>反证：假设$\bigcup A_\alpha&#x3D;C\cup D$，$C,D$符合分割的那些条件，$p$只能属于其一，譬如$p\in C$，则$A_\beta\cap C\neq \varnothing$，由定理（连通子空间脚踏一只船），得$A_\beta\subset C$，这对所有$\beta$成立，因此$\bigcup A_\alpha\subset C$，故$D$竟然空，矛盾</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（连通拖家带口仍连通）</strong><br>拓扑空间$X$有一连通子空间$A$，则对任何满足$A\subset B\subset \overline{A}$的$B$，$B$均连通</p>
+<blockquote>
+<p>反证：若$B$不连通，则$B&#x3D;C\cup D$，其中$C,D$满足……调用定理（连通子空间脚踏一只船），$A\subset C$或者$A\subset D$，则$\overline{A}\subset\overline{C}$，则根据定理（极限点描述连通），$\overline{A}\cap D&#x3D;\varnothing$，则$B\cap D&#x3D;\varnothing$，矛盾</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（连通的连续像仍连通）</strong><br>两个拓扑空间之间，$f:X\to Y$连续，已知$X$连通，则$f(X)$连通。因此，与连通空间同胚的空间也连通</p>
+<blockquote>
+<p>证明：由于第一篇的定理（连续函数构造）已知，限制值后仍连续，则限制$g: X\to f(X)$仍连续</p>
+<p>反证：假设$f(X)&#x3D;C\cup D$，其中$C,D$……，则$g^{-1}(C)$与$g^{-1}(D)$也开，且满足不互交，其并为$X$。这不是个分割吗！矛盾</p>
+</blockquote>
+<p>这一定理的推论为：连通性是拓扑不变量！</p>
+<p><strong>定理</strong> <strong>（介值定理）</strong><br>设$f:X\to Y$是从连通空间$X$到具有序拓扑的全序集$Y$的一个连续映射。若$a,b\in X$，且$r$是$Y$中介于$f(a),f(b)$之间的一个点，则$X$中存在一个点$c$使得$f(c)&#x3D;r$</p>
+<blockquote>
+<p>证明：在这个体系里证明十分优雅。$A&#x3D;f(X)\cap (-\infty,r)$以及$B&#x3D;f(X)\cap (r,\infty)$，两者当然无交，由于$f(a)\in A,f(b)\in B$，因此两者非空，且两者都是$f(X)$的开集（子空间拓扑下），那么，如果$r\notin f(X)$，那不就是分割了嘛！这说明$f(X)$不连续，但是定理（连通的连续像仍连通）与之矛盾，证毕</p>
+</blockquote>
+<h4 id="实直线上的连通"><a href="#实直线上的连通" class="headerlink" title="实直线上的连通"></a>实直线上的连通</h4><p><strong>定义</strong> <strong>（线性连续统）</strong><br>元素多于一个的全序集$L$，满足下面两个条件后，被称为线性连续统（linear continuum）：</p>
 <ol>
-<li><p>If there are two solutions and they are real, that’s typical <em>hyperbola</em> type equation, hence we get:<br>$$<br>\frac{\partial^2 u}{\partial \xi\partial \eta}&#x3D;\dots<br>$$<br>or you may as well adjust it to $\frac{\partial^2 u}{\partial \alpha^2}-\frac{\partial^2 u}{\partial \beta^2}&#x3D;\dots$ by letting $\alpha&#x3D;\frac{1}{2}(\xi+\eta)$ and $\beta&#x3D;\frac{1}{2}(\xi-\eta)$.</p>
+<li><p>$L$有最小上确界性质</p>
 </li>
-<li><p>If there’s only one solution (i.e. <em>parabolic</em>), then another characteristic can be chosen by yourself, as long as it’s independent with the previous one. The one you chose randomly namely is $\eta$, then the equation be like:<br>$$<br>\frac{\partial^2 u}{\partial \eta^2}&#x3D;\dots<br>$$</p>
-</li>
-<li><p>If the solutions $\notin \mathbb{R}$, then extract the $ W$ ‘s <strong>real</strong> and <strong>imaginary</strong> part to be $\xi$ and $\eta$ separately. (it can be proved by simply plugging in that such arrangement is indeed the appropriate solution) And we get <em>elliptical</em> equation:<br>$$<br>\frac{\partial^2 u}{\partial \xi^2}+\frac{\partial^2 u}{\partial \eta^2}&#x3D;\dots<br>$$</p>
+<li><p>若$x &lt; y$，则存在$z$使得$x&lt;z&lt;y$</p>
 </li>
 </ol>
-<h3 id="D’Almbert-Method"><a href="#D’Almbert-Method" class="headerlink" title="D’Almbert Method"></a>D’Almbert Method</h3><p>To solve the vibrating equation:<br>$$<br>\frac{\partial^2 u}{\partial t^2}-a^2\frac{\partial^2 u}{\partial t^2}&#x3D;0<br>$$<br>written as<br>$$<br>(\frac{\partial }{\partial t}+a\frac{\partial }{\partial x})(\frac{\partial }{\partial t}-a\frac{\partial }{\partial x})u&#x3D;0<br>$$<br>The general solution would be $f_1(x+at)+f_2(x-at)$.<br>$$<br>u(x,t)&#x3D;\frac{1}{2}(\phi(x+at)+\phi(x-at))+\frac{1}{2a}\int_{x-at}^{x+at} \psi(\xi) d\xi<br>$$</p>
-<h3 id="Boundary-Condition"><a href="#Boundary-Condition" class="headerlink" title="Boundary Condition"></a>Boundary Condition</h3><h4 id="Mechanical-Example"><a href="#Mechanical-Example" class="headerlink" title="Mechanical Example"></a>Mechanical Example</h4><img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="blackboard" style="width:400px;height:200px;">
-
-<p>Consider the example of a rod oscillates longitudinal with a spring sticking to its the end.<br>Analysis the small segment in Rod’s part: $u(x)$ represents the small displacement at the point $x$, and note <em>rightward</em> as the positive direction. Calculate the new length of the segment:<br>$$<br>(x+\Delta x+u(x+\Delta x))-(x+u(x))&#x3D;\Delta x+ \frac{\partial u}{\partial x}\Delta x<br>$$ Such that the extension is $\frac{\partial u}{\partial x}\Delta x$. From Hook’s Law, the <strong>relative extension</strong> is proportional to the quotient of the force and sectional area:<br>$$<br>\frac{\frac{\partial u}{\partial x}\Delta x}{\Delta x}&#x3D;\frac{F}{SY} \quad<br>\therefore F&#x3D;SY\frac{\partial u}{\partial x}<br>$$ Analysis the force to get Dynamic Equation:<br>$$<br>SY\left( \frac{\partial u}{\partial x}\left.\right\vert_{x+\Delta x}-\frac{\partial u}{\partial x}\left.\right\vert_{x} \right )&#x3D;\frac{\partial^2 u}{\partial t^2} \rho S \Delta x<br>$$<br>Hence the equation is:<br>$$<br>\frac{Y}{\rho} \frac{\partial^2 u}{\partial x^2}&#x3D;\frac{\partial^2 u}{\partial t^2}<br>$$<br>The Boundary Condition shall be given by analyzing the small segment at the end of the rod, adjust the Dynamic Equation above:<br>$$ F_{x+\Delta x}+SY\left( -\frac{\partial u}{\partial x}\left.\right\vert_{x} \right )&#x3D;\frac{\partial^2 u}{\partial t^2} \rho S \Delta x<br>$$ $$<br>F_{L^+}+SY\left(-\frac{\partial u}{\partial x}\left.\right\vert_{L-\Delta x} \right )&#x3D;\frac{\partial^2 u}{\partial t^2} \rho S \Delta x<br>$$ $$<br>-ku\left.\right\vert_{L}+SY\left( -\frac{\partial u}{\partial x}\left.\right\vert_{L-\Delta x} \right )&#x3D;\frac{\partial^2 u}{\partial t^2} \rho S \Delta x<br>$$<br>Now let $\Delta x\rightarrow 0$, to achieve the final goal:<br>$$<br>-ku\left.\right\vert_{L}+\frac{S}{Y}\left( -\frac{\partial u}{\partial x}\left.\right\vert_{L} \right )&#x3D;0<br>$$<br>When $k$ is large enough, the $\frac{S}{Y}\left( -\frac{\partial u}{\partial L}\left.\right\vert_{L} \right )$ part is $o(k)$ and is legal to be ignored, corresponding the situation with fixed end (the first type, <em>Dirichlet Boundary Condition</em>).<br>When $k$ is small enough, the first section $-ku\left.\right\vert_{L}$ could be ignored and thus verified the Boundary Condition of free end (the second type, <em>Neumann Boundary Condition</em>).<br>In conclusion, the boundary condition exhibits a lower order of small infinitesimal quantity. At the end of the rod, the $\Delta x$ could be regarded as zero, which differs from the interior of the rod.</p>
-<h4 id="Thermodynamical-Example"><a href="#Thermodynamical-Example" class="headerlink" title="Thermodynamical Example"></a>Thermodynamical Example</h4><p>To understand BC, you shall first understand where the equation comes from, for a small fragment of the rod:<br>$$<br>\left(-\kappa S \Delta t \frac{\partial u}{\partial x}\right)\vert_{x}-\left(-\kappa S \Delta t \frac{\partial u}{\partial x}\right)\vert_{x+\Delta x}&#x3D;c(S \Delta x \rho) \Delta u<br>$$<br>which can be simplified to<br>$$<br>\kappa \frac{\partial^2 u}{\partial x^2}&#x3D;c\rho\frac{\Delta u}{\Delta t}<br>$$</p>
-<p>For a rod’s temperature distribution, the Dirichlet BC means the temperature was shown directly. If it states that some hot stream $f(t)$ flows out, that’s the Neumann BC, and the general equation at the right end should be:<br>$$<br>\left(-\kappa S \Delta t \frac{\partial u}{\partial x}\right)|_{L}-\Delta t Sf(t)&#x3D;c(S \Delta x \rho) \Delta u<br>$$</p>
-<p>Eliminate $\Delta t$ and let $\Delta x\to 0$,</p>
-<p>$$<br>-\kappa \frac{\partial u}{\partial x}|_{x&#x3D;L}&#x3D;f(t)<br>$$<br>or more generally<br>$$<br>-\kappa \frac{\partial u}{\partial n}&#x3D;f(t)<br>$$</p>
-<p>where at the left end, $\frac{\partial u}{\partial n}&#x3D;-\frac{\partial u}{\partial x}$, while at the right end $\frac{\partial u}{\partial n}&#x3D;\frac{\partial u}{\partial x}$, the normal $\vec{n}$ is pointing outward of the rod!</p>
-<p>When the end is adiabatic, the BC becomes $\frac{\partial u}{\partial n}&#x3D;0$.</p>
-<p>There’s another possibility that the boundary obeys Newton’s cooling law, which corresponds to the <em>spring</em> in above mechanical example, because the $\text{force} \propto \Delta \text{displacement}$ corresponds to $\text{flow}\propto \Delta\text{temperature}$.</p>
-<p>thus the BC:<br>$$<br>-\kappa\frac{\partial u}{\partial n}\vert_{\text{somewhere}} &#x3D; h(u\vert_{\text{somewhere}}-\theta)<br>$$</p>
-<h3 id="Different-Types-Different-Methods"><a href="#Different-Types-Different-Methods" class="headerlink" title="Different Types, Different Methods"></a>Different Types, Different Methods</h3><h4 id="Homogenous-BC-and-Homogenous-Eq"><a href="#Homogenous-BC-and-Homogenous-Eq" class="headerlink" title="Homogenous BC and Homogenous Eq"></a>Homogenous BC and Homogenous Eq</h4><p>The easiest one, <em>Separate two variables</em> to get an eigen-value problem.</p>
-<h4 id="Homogenous-BC-and-Non-Homogenous-Eq"><a href="#Homogenous-BC-and-Non-Homogenous-Eq" class="headerlink" title="Homogenous BC and Non-Homogenous Eq"></a>Homogenous BC and Non-Homogenous Eq</h4><p>There are two ways to deal with it:</p>
-<h5 id="Fourier-method"><a href="#Fourier-method" class="headerlink" title="Fourier method"></a>Fourier method</h5><p>  Suppose:<br>  $$<br>  u(x,t)&#x3D;\sum_{n&#x3D;1}^{\infty}T_n(t)X_n(x)<br>  $$<br>  where $X_n(x)$ is the eigen-function which we already know, corresponding to BC, like $\sin(\frac{n\pi}{l}x)$. Plug the above formula into the original Eq to derive $T_n(t)$’s differential equation and solve that ode.</p>
-<h5 id="Momentum-Theorem"><a href="#Momentum-Theorem" class="headerlink" title="Momentum Theorem"></a>Momentum Theorem</h5><p>  To implement Momentum Theorem, we have to convert the original Eq to the following form, with <strong>all zero</strong> <em>Initial Condition</em>, if it’s a Vibrating Equation:<br>$$<br>  u_{tt}-a^2 u_{xx}&#x3D;f(x,t)<br>$$<br>$$<br>  u\vert_{x&#x3D;0}&#x3D;0 \quad u\vert_{x&#x3D;l}&#x3D;0<br>$$<br>$$<br>  u\vert_{t&#x3D;0}&#x3D;0 \quad u_t\vert_{t&#x3D;0}&#x3D;0<br>$$<br>  Then we only need to solve:<br>$$<br>  v_{tt}-a^2 v_{xx}&#x3D;0<br>$$<br>$$<br>  v\vert_{x&#x3D;0}&#x3D;0 \quad v\vert_{x&#x3D;l}&#x3D;0<br>$$<br>$$<br>  v\vert_{t&#x3D;\tau}&#x3D;0 \quad v_t\vert_{t&#x3D;\tau}&#x3D;f(x,\tau)<br>$$</p>
-<p>  If it’s the thermodynamical equation<br>  $$<br>  u_{t}-a^2 u_{xx}&#x3D;f(x,t)<br>$$<br>$$<br>  u\vert_{x&#x3D;0}&#x3D;0 \quad u\vert_{x&#x3D;l}&#x3D;0<br>$$<br>$$<br>  u\vert_{t&#x3D;0}&#x3D;0<br>  $$<br>  Then we only need to solve:<br>  $$<br>  v_{t}-a^2 v_{xx}&#x3D;0<br>$$<br>$$<br>  v\vert_{x&#x3D;0}&#x3D;0 \quad v\vert_{x&#x3D;l}&#x3D;0<br>$$<br>$$<br>  v\vert_{t&#x3D;\tau}&#x3D;f(x,\tau)<br>  $$</p>
-<p>  and the final result is:<br>  $$<br>  u(x,t)&#x3D;\int_0^t v(x,t,\tau) d\tau<br>  $$</p>
+<p><strong>定理</strong> <strong>（序拓扑，凸子集连通的）</strong><br>还记得序拓扑吗？还记得全序集的凸子集的定义吗？若$L$是一个线性连续统，现在对其定义序拓扑，则$L$的所有凸子集（包括自己）也连通</p>
 <blockquote>
-<p>Understanding:<br>The $f(x,t)$ shall be divided into discrete impulses, exerted on different strings (in an ensemble), and the result is the sum of all strings in this ensemble.</p>
+<p>证明：回忆一下第二篇中的序拓扑和凸的定义！然后开始反证法：假设$Y$是$L$的凸子集，且$Y&#x3D;A\cup B$，其中$A,B$满足……现在取$a\in A$以及$b\in B$，由凸子集定义，$[a,b]$（不妨设$a&lt;b$）在$Y$内，因此$[a,b]&#x3D;(A\cap[a,b])\bigcup(B\cap[a,b])$，记前者$A_0$，后者$B_0$</p>
+<p>现在把目光聚焦到$[a,b]$，在其上取子空间拓扑，$A_0$与$B_0$就是一个分割。定义$c&#x3D;\sup A_0$，由于最小上确界性质，$c\in L$，但根据$A_0$定义就知道，$b$是$A_0$的上界，$a$一定是$A_0$中的一个元素，因此$a\leq c\leq b$，即$c\in [a,b]&#x3D;A_0\cup B_0$，准备导出矛盾吧！</p>
+<p><strong>1</strong> 若$c\in B_0$</p>
+<ul>
+<li>则$c&#x3D;b$或$a&lt;c&lt;b$，由于$B_0$是$[a,b]$的分割的一部分，必然在子空间拓扑下开，又根据定理 （凸子集，序拓扑就是子空间拓扑），可知$[a,b]$的子空间拓扑就是其上的序拓扑！所以，$B_0$在$[a,b]$的序拓扑意义下是开集！因为$c\in B_0$，由基的定义，$\exists U$使得$c\in U\subset B_0$，其中$U$是$[a,b]$上序拓扑的基元素，回忆一下，就是那三种区间之一，在这里，$U$就是$(d,c]$或$(d,e)$，其中$d&lt;c&lt;e$</li>
+<li>因为$U$中有$c$作为$A_0$的上界，取$U$中较小的一个元素（$d,c$之间），根据$U\cap A_0\subset B_0\cap A_0&#x3D;\varnothing$，发现$A_0$的任何元素都不再$U$里，没法掺和到这个较小元素和$c$之间。因此，这个较小元素也是$A_0$的上界，这和$c$是最小上界矛盾</li>
+</ul>
+<p><strong>2</strong> 若$c\in A_0$</p>
+<ul>
+<li>$c&#x3D;a$或$a&lt;c&lt;b$，同理，存在$c\in U\subset A_0$，其中$U$为$[c,d)$或者$(e,d)$，其中$e&lt;c&lt;d$</li>
+<li>因为$U$中已有$c$作为$A_0$的上界，但是$U$不管哪种形式，其中都可取得一个较大的元素，因此$A_0$中有比$c$大的，矛盾</li>
+</ul>
 </blockquote>
-<h4 id="Non-Homogenous-BC-and-Homogenous-Eq"><a href="#Non-Homogenous-BC-and-Homogenous-Eq" class="headerlink" title="Non-Homogenous BC and Homogenous Eq"></a>Non-Homogenous BC and Homogenous Eq</h4><p>The goal is to regain homogenous BC and convert it to the last type of equation.</p>
-<p>Let $u&#x3D;v+w$, where $w$ satisfy homogenous BC. To achieve this, suppose $v&#x3D;A(t)x+B(t)$, and adjust two coefficients to satisfy the non-homogenous BC. As a side-effect ,$w$ has to satisfy the non-homogenous equations but we already know how to solve it.</p>
-<h3 id="Poisson-function"><a href="#Poisson-function" class="headerlink" title="Poisson function"></a>Poisson function</h3><p>The form is:<br>$$<br>\Delta u&#x3D;f(x,y,z)<br>$$</p>
-<p>non-homogenous equations, unfortunately not able to solve by Momentum theorem. Thus we have to develop new method:<br><strong>Guess</strong>! Extract a particular solution out, $u&#x3D;v+w$ transferring the equation into a homogenous one $\Delta v&#x3D;0$. Separate variables……</p>
-<p>Note that if the Poisson function is a two dimensional problem with variables $x$ and $y$, the BC must be fine or else we cannot determine its eigen-function (as you extract a particular solution out and worsen the BC).</p>
-<p>While if the variables are $\rho$ and $\phi$, the solution $w$ you extract must have the sysmetric form in terms of $x$ and $y$, in order to combine it to $x^2+y^2&#x3D;\rho^2$, by the way, you will probably encounter <em>Euler</em> type ode then.</p>
-<p>tips: when encounter Euler type ode, let $\rho&#x3D;e^t \dots$. The general solution would be like:<br>$$<br>v(\rho,\phi)&#x3D;\sum_{m&#x3D;1}^\infty \rho^{m}(A_m \cos m\phi+B_m\sin m\phi)<br>+C_0+D_0\ln \rho+\sum_{m&#x3D;1}^\infty \rho^{-m}(C_m \cos m\phi+D_m\sin m\phi)<br>$$</p>
-<h3 id="Solve-ODE-a-Hard-Way"><a href="#Solve-ODE-a-Hard-Way" class="headerlink" title="Solve ODE a Hard Way"></a>Solve ODE a Hard Way</h3><h4 id="Sturm-Liouville-Problem"><a href="#Sturm-Liouville-Problem" class="headerlink" title="Sturm-Liouville Problem"></a>Sturm-Liouville Problem</h4><p>Consider the operator:<br>$$<br>\mathcal{L}y&#x3D;\frac{d}{dx}\left(p_0(x)\frac{dy}{dx} \right)+p_2(x)y<br>$$<br>It is <em>Hermitian</em> in differential equation sense, because for two functions of $x$ denote as $v$ and $u$:<br>$$<br>\int_a^b v^* (\mathcal{L}u) dx&#x3D;\int_a^b (\mathcal{L}v)^* u dx+\left[ v^* p_0(x) \frac{d u}{dx}- \frac{d v^*}{dx} p_0(x) u\right]_{a}^{b}<br>$$<br>where the $[\dots]$ term would vanish when the boundary condition is appropriate.</p>
-<p>An Hermitian operator enable us to gain orthogonal, complete basis consisting of eigen-functions with real eigenvalues.</p>
-<p>Besides, for an arbitrary ode:<br>$$<br>\mathcal{L}y&#x3D;\frac{d^2 y}{dx^2}+a(x)\frac{dy}{dx}+b(x)y<br>$$<br>multiply by $e^{\int a(\xi)d\xi}$ (denote as $w(x)$).<br>$$<br>w(x)\mathcal{L}y&#x3D;\frac{d}{dx}\left[e^{\int a(\xi)d\xi}\frac{dy}{dx}\right]+\left[b(x)e^{\int a(\xi)d\xi}\right]y<br>$$</p>
-<p>successfully transform into a S-L type. But note that the orthogonality might be different:<br>$$<br>\int_a^b v^* (w(x)\mathcal{L}u) dx&#x3D;\int_a^b (w(x)\mathcal{L}v)^* u dx+\left[ v^* w(x) \frac{d u}{dx}- \frac{d v^*}{dx} w(x) u\right]_{a}^{b}<br>$$</p>
-<h4 id="Legendre-Equation"><a href="#Legendre-Equation" class="headerlink" title="Legendre Equation"></a>Legendre Equation</h4><p>$l$ th order Legendre Eq:</p>
-<p>$$<br>(1-x^2)y’’-2xy’+l(l+1)&#x3D;0<br>$$</p>
-<p><em>Frobenius</em> method by making a series expansion, note that at $x_0&#x3D;0$ the expansion has only positive terms, i.e. <em>Taylor expansion</em>:<br>$$<br>y&#x3D;\sum_{n&#x3D;0}^{\infty}a_nx^n<br>$$</p>
-<p>plug it in and get the recursion relation:<br>$$<br>a_{k+2}&#x3D;\frac{(k-l)(k+l+1)}{(k+2)(k+1)} a_k<br>$$</p>
-<p>The general solution:<br>$$<br>y(x)&#x3D;D_0y_0(x)+D_1y_1(x)<br>$$</p>
-<p>A sad fact is that neither $y_0$ nor $y_1$ is convergent, which can be verified by applying Gaussian Criteria:</p>
-<blockquote>
-<p>Gaussian Criteria<br>the infinite series is $\sum u_k$, denote $$G:&#x3D;\lim_{k\to \infty} k\left(\frac{u_k}{u_{k+1}}-1-\frac{1}{k}\right)$$<br>If $G&lt;1$, the series converges; else if $G&gt;1$, it diverges.<br>Proof: The theorem could be verified by consider $\sum \frac{1}{k\ln k}$</p>
-</blockquote>
-<p>Besides the linear combination of these two diverges too.</p>
-<p>The only solution to fit the real physical situation (avoid infinity) is to convert the infinite series into a <em>polynomial</em> (legendre polynomial).</p>
-<p>when $l&#x3D;2n$, $y_0(x)$ is an $2n$ th order polynomial, while $y_1(x)$ is still infinite, thus we assert $a_1&#x3D;0$ to discard it. The solution shall be $y(x)&#x3D;a_0 y_0(x)$.</p>
-<p>when $l&#x3D;2n+1$, $y_1(x)$ is an $2n+1$ th order polynomial. Then we abandon $y_0(x)$ to get the solution $y(x)&#x3D;a_1 y_1(x)$.</p>
-<h4 id="Bessel-Equation"><a href="#Bessel-Equation" class="headerlink" title="Bessel Equation"></a>Bessel Equation</h4><p>$$<br>x^2y’’+xy’+(x^2-\nu^2)y&#x3D;0<br>$$</p>
-<h5 id="The-simple-case"><a href="#The-simple-case" class="headerlink" title="The simple case"></a>The simple case</h5><p>where $2\nu \notin \mathbb{Z} $</p>
-<p>suppose<br>$$<br>y&#x3D;\sum_{k&#x3D;0}^{\infty} a_k z^{s+k}<br>$$</p>
-<p>In convention we select $a_0\neq 0$</p>
-<p>the $x^s$ term’s coefficient is $(s^2-\nu^2)a_0$, which yields $s&#x3D;\nu$ or $s&#x3D;-\nu$</p>
-<p>thus the recursion relation is:</p>
-<p>$$<br>a_k&#x3D;\frac{-1}{(s+k+\nu)(s+k-\nu)}a_{k-2}<br>$$</p>
-<p>Besides, the $x^{s+1}$ term’s coefficient implies $a_1&#x3D;0$, thus $a_{2k+1}&#x3D;0$</p>
-<p>A great property of Bessel Eq’s solution is that its convergent radii is $\infty$.</p>
-<p>select<br>$$ a_0&#x3D;\frac{1}{2^\nu}\Gamma(\nu+1) $$</p>
-<p>and denote the solution now as $J_\nu (x)$ and $J_{-\nu}(x)$ corresponding to $s&#x3D;\pm \nu$</p>
-<p>$$<br>J_\nu(x)&#x3D;\sum_{m&#x3D;0}^{\infty}\frac{(-1)^m}{m!\Gamma(m+\nu+1)}\left(\frac{x}{2}\right)^{2m+\nu}<br>$$</p>
-<p>$$<br>J_{-\nu}(x)&#x3D;\sum_{m&#x3D;0}^{\infty}\frac{(-1)^m}{m!\Gamma(m-\nu+1)}\left(\frac{x}{2}\right)^{2m-\nu}<br>$$</p>
-<p>They are linear independent, which enables us to form its general solution:<br>$$<br>y(x)&#x3D;C_1 J_\nu(x)+C_2 J_{-\nu}(x)<br>$$</p>
-<h5 id="The-1-2-case"><a href="#The-1-2-case" class="headerlink" title="The 1&#x2F;2 case"></a>The 1&#x2F;2 case</h5><p>when $\nu&#x3D;\frac{1}{2}$, the above formula also satisfies.<br>$$<br>J_{\frac{1}{2}}(x)&#x3D;\sqrt{\frac{2}{\pi x}}\sin x<br>$$<br>$$<br>J_{-\frac{1}{2}}(x)&#x3D;\sqrt{\frac{2}{\pi x}}\cos x<br>$$<br>General solution:<br>$$<br>y(x)&#x3D;C_1 J_\nu(x)+C_2 J_{-\nu}(x)<br>$$</p>
-<h5 id="The-tough-case"><a href="#The-tough-case" class="headerlink" title="The tough case"></a>The tough case</h5><p>$\nu$ is an integer, which implies $J_\nu(x)$ and $J_{-\nu}(x)$ is linear independent.</p>
-<p>The first $J_\nu(x)$ still holds, the purpose is to find another solution which is linear independent with it. <em>Neumann function</em>:<br>$$<br>Y_\nu(x)&#x3D;\lim_{\alpha\to \nu}\frac{J_\alpha(x)\cos\alpha x-J_{-\alpha}(x)}{\sin\alpha x}<br>$$</p>
-<p>thus the solution takes the form of:<br>$$<br>y(x)&#x3D;AJ_\nu(x)+BY_\nu(x)<br>$$</p>
-<h2 id="Appendix"><a href="#Appendix" class="headerlink" title="Appendix"></a>Appendix</h2><p>Derive the Laplacian $\Delta&#x3D;\nabla\cdot\nabla$ in a smarter way:</p>
-<p>first consider the <em>gradient</em>:<br>$$<br>  \nabla u &#x3D;\lim_{\text{Displacement}} \vec{e_r}\frac{\Delta u}{\Delta r}+\vec{e_\theta}\frac{\Delta u}{r\Delta \theta}+\vec{e_\phi}\frac{\Delta u}{r\sin\theta \Delta \phi}<br>$$<br>$$<br>&#x3D;\vec{e_r}\frac{\partial u}{\partial r}+\vec{e_\theta}\frac{1}{r}\frac{\partial u}{\partial \theta}+\vec{e_\phi}\frac{1}{r\sin \theta}\frac{\partial u}{\partial \phi}<br>$$</p>
-<p>Then consider the partial derivative of the three orthonormal vectors $\vec{e_r}$ $\vec{e_\theta}$ $\vec{e_\phi}$ :</p>
-<p>$$<br>\frac{\partial \vec{e_r}}{\partial r}&#x3D;\frac{\partial \vec{e_\theta}}{\partial r}&#x3D;\frac{\partial \vec{e_\phi}}{\partial r}&#x3D;0<br>$$<br>which is obvious because when $\theta$ and $\phi$ are fixed, the three vectors won’t change their directions.</p>
-<p>$$<br>\frac{\partial \vec{e_r}}{\partial \theta}&#x3D;\vec{e_\theta}<br>$$<br>$$<br>\frac{\partial\vec{e_\theta}}{\partial \theta}&#x3D;-\vec{e_r}<br>$$<br>$$<br>\frac{\partial\vec{e_\phi}}{\partial \theta}&#x3D;0<br>$$<br>Which is natural too, because the first two equation is the same as what we learnt earlier in the <em>polar coordinate</em> case. And the last one could be observed directly from the figure, unchanged.</p>
-<p>$$<br>\frac{\partial \vec{e_r}}{\partial \phi}&#x3D;\sin\theta \vec{e_\phi}<br>$$<br>$$<br>\frac{\partial\vec{e_\theta}}{\partial \phi}&#x3D;\cos\theta\vec{e_\phi}<br>$$<br>$$<br>\frac{\partial\vec{e_\phi}}{\partial \phi}&#x3D;-\sin\theta\vec{e_r}-\cos\theta\vec{e_\theta}<br>$$</p>
-<p>The first equation could be verified by drawing the infinitesimal displacement angle. The above $\vec{e_r}$ shift angle $\Delta\alpha$, which satisfy $r\Delta\alpha&#x3D;r\sin\theta\Delta\phi$ , i.e. $\Delta \alpha&#x3D;\sin\theta\Delta\phi$:</p>
-<img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-1.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="fig" style="width:270px;height:270px;">
-for the second equation, much the same:
-<img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-3.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="fig" style="width:270px;height:270px;">
-
-<p>as for $\vec{e_\phi}$, $\Delta\vec{e_\phi}$ points inward to the origin (similar to polar coordinate case), thus the direction is a linear combination of $\vec{e_r}$ and $\vec{e_\phi}$:<br>$$<br>\sin\theta\vec{e_r}+\cos\theta\vec{e_\theta}<br>$$</p>
-<img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-2.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image-2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="fig" style="width:200px;height:200px;">
-
-<p>thus the Laplacian:</p>
-<p>$$<br>\begin{align*}<br>\nabla\cdot\nabla<br>&amp;&#x3D;\nabla\cdot\left(\vec{e_r}\frac{\partial u}{\partial r}+\vec{e_\theta}\frac{1}{r}\frac{\partial u}{\partial \theta}+\vec{e_\phi}\frac{1}{r\sin \theta}\frac{\partial u}{\partial \phi}\right)<br>\newline<br><br>\newline<br>&amp;&#x3D;\left([\vec{e_r}\frac{\partial }{\partial r}]+[\vec{e_\theta}\frac{1}{r}\frac{\partial }{\partial \theta}]+[\vec{e_\phi}\frac{1}{r\sin \theta}\frac{\partial }{\partial \phi}]\right)<br>\left(\vec{e_r}\frac{\partial u}{\partial r}+\vec{e_\theta}\frac{1}{r}\frac{\partial u}{\partial \theta}+\vec{e_\phi}\frac{1}{r\sin \theta}\frac{\partial u}{\partial \phi}\right)<br>\newline<br><br>\newline<br>&amp;&#x3D;[\frac{\partial^2 u}{\partial r^2}]+[\frac{1}{r}\frac{\partial u}{\partial r}+\frac{1}{r^2}\frac{\partial^2 u}{\partial \theta^2}]<br>+[\frac{1}{r\sin\theta}(\sin\theta\frac{\partial u}{\partial r}+\cos\theta\frac{1}{r}\frac{\partial u}{\partial\theta}+\frac{1}{r\sin\theta}\frac{\partial^2 u}{\partial \phi^2})]<br>\end{align*}<br>$$</p>
-<p>where three $[\dots]$ linked the corresponding terms to three dot products in divergence.<br>$\square$</p>
-<p>The pdf version of Mathematical_Physics series:</p>
-<embed src="./Mathematical_Physics.pdf" width="100%" height="750" type="application/pdf">
+<p>因此，这个定理告诉我们，线性连续统上的区间和射线（都凸）都是连通的，具体的，实直线就是一个特例！</p>
 
   </div>
   
@@ -2812,10 +2784,10 @@ for the second equation, much the same:
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-13T14:57:47+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-11-19T23:08:03+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：May 13, 2024</p>
+    <p>更新于：Nov 19, 2024</p>
   </a>
 </div>
 
@@ -2834,7 +2806,7 @@ for the second equation, much the same:
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/01/26/mathematical_physics_2/&title=PDE基础 - (.O w O.)?&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/11/19/Topology3/&title=Hausdorff、连通 - (.O w O.)?&summary="
           
           >
           
@@ -2846,7 +2818,7 @@ for the second equation, much the same:
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/01/26/mathematical_physics_2/&title=PDE基础 - (.O w O.)?&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/11/19/Topology3/&title=Hausdorff、连通 - (.O w O.)?&summary="
           
           >
           
@@ -2858,7 +2830,7 @@ for the second equation, much the same:
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/01/26/mathematical_physics_2/&title=PDE基础 - (.O w O.)?&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/11/19/Topology3/&title=Hausdorff、连通 - (.O w O.)?&summary="
           
           >
           
@@ -2894,17 +2866,13 @@ for the second equation, much the same:
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/01/29/Analog-circiut/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>魔法电子技术</p>
-          <p class='content'>Analog CircuitsPhysics and Basic DevicesBand TheoryCore Analogy:A Band is just like a tube with w...</p>
-        </a>
       
-      
-        <a class='next' href='/2024/01/25/mathematical_physics_1/'>
-          <p class='title'>复变函数与积分变换<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>click here to save the pdf version of this article
+        <a class='next' href='/2024/11/11/Topology2/'>
+          <p class='title'>序、积、商拓扑<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Topology序、积、商拓扑在本篇中，我们将引入一些新的结构：序、笛卡尔积……手中能用的上的工具是第一篇中讲述的所有概念与性质
+常用技术提示：
 
-Mathematical PhysicsBased on Qiao Gu’s and Li...</p>
+$f^{-1}(\bigcap A_\alph...</p>
         </a>
       
     </div>
@@ -2920,7 +2888,7 @@ Mathematical PhysicsBased on Qiao Gu’s and Li...</p>
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/01/26/mathematical_physics_2/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/11/19/Topology3/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2949,7 +2917,7 @@ Mathematical PhysicsBased on Qiao Gu’s and Li...</p>
   
   <header>
     
-      <i class="fa-solid fa-signature fa-fw" aria-hidden="true"></i><span class='name'>Mathematical Physics</span>
+      <i class="fa-solid fa-diagram-project fa-fw" aria-hidden="true"></i><span class='name'>Topology</span>
     
   </header>
 
@@ -2957,26 +2925,38 @@ Mathematical PhysicsBased on Qiao Gu’s and Li...</p>
   <div class='content'>
     <ul class="list entry navigation">
       
-        <li><a class="flat-box" title="/2024/01/25/mathematical_physics_1/" href="/2024/01/25/mathematical_physics_1/"
+        <li><a class="flat-box" title="/2024/11/07/Topology1/" href="/2024/11/07/Topology1/"
           
           
-          active-action="action-20240125mathematical_physics_1"
+          active-action="action-20241107Topology1"
           >
           <div class='name'>
             
-            复变函数与积分变换
+            拓扑基本概念
           </div>
           
         </a></li>
       
-        <li><a class="flat-box" title="/2024/01/26/mathematical_physics_2/" href="/2024/01/26/mathematical_physics_2/"
+        <li><a class="flat-box" title="/2024/11/11/Topology2/" href="/2024/11/11/Topology2/"
           
           
-          active-action="action-20240126mathematical_physics_2"
+          active-action="action-20241111Topology2"
           >
           <div class='name'>
             
-            PDE基础
+            序、积、商拓扑
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2024/11/19/Topology3/" href="/2024/11/19/Topology3/"
+          
+          
+          active-action="action-20241119Topology3"
+          >
+          <div class='name'>
+            
+            Hausdorff、连通
           </div>
           
         </a></li>
@@ -3014,7 +2994,7 @@ Mathematical PhysicsBased on Qiao Gu’s and Li...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Partial-Differential-Equation"><span class="toc-text">Partial Differential Equation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Classes-of-PDE"><span class="toc-text">The Classes of PDE</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Basic-PDE-Example"><span class="toc-text">Basic PDE Example</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Systematic-Process"><span class="toc-text">Systematic Process</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#D%E2%80%99Almbert-Method"><span class="toc-text">D’Almbert Method</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boundary-Condition"><span class="toc-text">Boundary Condition</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Mechanical-Example"><span class="toc-text">Mechanical Example</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Thermodynamical-Example"><span class="toc-text">Thermodynamical Example</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Different-Types-Different-Methods"><span class="toc-text">Different Types, Different Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Homogenous-BC-and-Homogenous-Eq"><span class="toc-text">Homogenous BC and Homogenous Eq</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Homogenous-BC-and-Non-Homogenous-Eq"><span class="toc-text">Homogenous BC and Non-Homogenous Eq</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Fourier-method"><span class="toc-text">Fourier method</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Momentum-Theorem"><span class="toc-text">Momentum Theorem</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Non-Homogenous-BC-and-Homogenous-Eq"><span class="toc-text">Non-Homogenous BC and Homogenous Eq</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Poisson-function"><span class="toc-text">Poisson function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Solve-ODE-a-Hard-Way"><span class="toc-text">Solve ODE a Hard Way</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Sturm-Liouville-Problem"><span class="toc-text">Sturm-Liouville Problem</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Legendre-Equation"><span class="toc-text">Legendre Equation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Bessel-Equation"><span class="toc-text">Bessel Equation</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#The-simple-case"><span class="toc-text">The simple case</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#The-1-2-case"><span class="toc-text">The 1&#x2F;2 case</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#The-tough-case"><span class="toc-text">The tough case</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Appendix"><span class="toc-text">Appendix</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hausdorff%E3%80%81%E8%BF%9E%E9%80%9A"><span class="toc-text">Hausdorff、连通</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hausdorff%E6%80%A7"><span class="toc-text">Hausdorff性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E9%80%9A%E6%80%A7"><span class="toc-text">连通性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9E%E9%80%9A%E6%80%A7%E8%B4%A8%E2%80%94General-Idea"><span class="toc-text">连通性质—General Idea</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%9B%B4%E7%BA%BF%E4%B8%8A%E7%9A%84%E8%BF%9E%E9%80%9A"><span class="toc-text">实直线上的连通</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -4091,6 +4071,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 <pjax>
 
         <script>
+  // https://www.micdz.cn/article/katex-on-volantis/
+  if (typeof renderMathInElement == "undefined") {
+    volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.css")
+    function pjax_katex() {
+      volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/contrib/auto-render.min.js").then(()=>{
+        renderMathInElement(document.body);
+      })
+    }
+    volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.js").then(pjax_katex)
+    volantis.pjax.push(pjax_katex)
+  }
+</script>
+        <script>
   // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
   if (typeof MathJax === 'undefined') {
     window.MathJax = {
@@ -4275,7 +4268,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/数理方法/","name":"数理方法"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/01/26/mathematical_physics_2/","name":"PDE基础"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"PDE基础","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/01/26/mathematical_physics_2/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/01/26/mathematical_physics_2/","wordCount":0,"datePublished":"2024-01-26T14:05:02.000Z","dateModified":"2024-05-13T06:57:47.942Z","articleSection":"数理方法","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/拓扑学/","name":"拓扑学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/11/19/Topology3/","name":"Hausdorff、连通"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hausdorff、连通","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/11/19/Topology3/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/11/19/Topology3/","wordCount":0,"datePublished":"2024-11-19T15:05:59.000Z","dateModified":"2024-11-19T15:08:03.465Z","articleSection":"拓扑学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
