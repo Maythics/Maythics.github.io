@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Hausdorff、连通 - (.O w O.)?</title>
+  <title>Hausdorff、连通、紧致 - (.O w O.)?</title>
   <meta name="keywords" content="physics">
   <meta desc name="description" content="emmm - Maythics - (.O w O.)?">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hausdorff、连通">
+<meta property="og:title" content="Hausdorff、连通、紧致">
 <meta property="og:url" content="http://maythics.github.io/2024/11/19/Topology3/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
-<meta property="og:description" content="Topology本篇讨论拓扑不变量，所谓拓扑不变量，就是互相同胚的空间中保持一致的一个性质。这个性质的用场是，如果你想证明$X$和$Y$空间是“不同”的（在同胚意义下），该怎么说明呢？用同胚映射不容易，因为万一同胚映射真的存在，只不过你没找到而已。拓扑不变量可以来帮忙，有哪个拓扑不变量，在$X$中是这样在$Y$中却是那样，就证明了两者必定不同胚！ Hausdorff、连通Hausdorff性定义">
+<meta property="og:description" content="TopologyHausdorff、连通、紧致本篇讨论拓扑不变量，所谓拓扑不变量，就是互相同胚的空间中保持一致的一个性质。这个性质的用场是，如果你想证明$X$和$Y$空间是“不同”的（在同胚意义下），该怎么说明呢？用同胚映射不容易，因为万一同胚映射真的存在，只不过你没找到而已。拓扑不变量可以来帮忙，有哪个拓扑不变量，在$X$中是这样在$Y$中却是那样，就证明了两者必定不同胚！ Hausdorff性">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-11-19T15:05:59.000Z">
-<meta property="article:modified_time" content="2024-11-19T15:08:03.465Z">
+<meta property="article:modified_time" content="2024-11-20T14:40:24.443Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1732028945377),
+    lastupdate: new Date(1732113689548),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2632,7 +2632,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Hausdorff、连通
+        Hausdorff、连通、紧致
       </h1>
       <div class='new-meta-box'>
         
@@ -2689,8 +2689,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="Topology"><a href="#Topology" class="headerlink" title="Topology"></a>Topology</h1><p>本篇讨论拓扑不变量，所谓拓扑不变量，就是互相同胚的空间中保持一致的一个性质。这个性质的用场是，如果你想证明$X$和$Y$空间是“不同”的（在同胚意义下），该怎么说明呢？用同胚映射不容易，因为万一同胚映射真的存在，只不过你没找到而已。拓扑不变量可以来帮忙，有哪个拓扑不变量，在$X$中是这样在$Y$中却是那样，就证明了两者必定不同胚！</p>
-<h2 id="Hausdorff、连通"><a href="#Hausdorff、连通" class="headerlink" title="Hausdorff、连通"></a>Hausdorff、连通</h2><h3 id="Hausdorff性"><a href="#Hausdorff性" class="headerlink" title="Hausdorff性"></a>Hausdorff性</h3><p><strong>定义</strong> <strong>（Hausdorff）</strong><br>一个拓扑空间，如果其中的任取两不同的$x_1,x_2$，存在邻域$x_1\in U_1$，$x_2\in U_2$使得$U_1\cap U_2&#x3D;\varnothing$，则称该空间为Hausdorff的</p>
+    <h1 id="Topology"><a href="#Topology" class="headerlink" title="Topology"></a>Topology</h1><h2 id="Hausdorff、连通、紧致"><a href="#Hausdorff、连通、紧致" class="headerlink" title="Hausdorff、连通、紧致"></a>Hausdorff、连通、紧致</h2><p>本篇讨论拓扑不变量，所谓拓扑不变量，就是互相同胚的空间中保持一致的一个性质。这个性质的用场是，如果你想证明$X$和$Y$空间是“不同”的（在同胚意义下），该怎么说明呢？用同胚映射不容易，因为万一同胚映射真的存在，只不过你没找到而已。拓扑不变量可以来帮忙，有哪个拓扑不变量，在$X$中是这样在$Y$中却是那样，就证明了两者必定不同胚！</p>
+<h3 id="Hausdorff性"><a href="#Hausdorff性" class="headerlink" title="Hausdorff性"></a>Hausdorff性</h3><p><strong>定义</strong> <strong>（Hausdorff）</strong><br>一个拓扑空间，如果其中的任取两不同的$x_1,x_2$，存在邻域$x_1\in U_1$，$x_2\in U_2$使得$U_1\cap U_2&#x3D;\varnothing$，则称该空间为Hausdorff的</p>
 <p><strong>定理</strong> <strong>（Hausdorff空间的有限集都是闭集）</strong><br>Hausdorff空间的有限集都是闭集</p>
 <blockquote>
 <p>证明：只需证单点集闭，然后归纳就行了。</p>
@@ -2737,29 +2737,78 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>证明：在这个体系里证明十分优雅。$A&#x3D;f(X)\cap (-\infty,r)$以及$B&#x3D;f(X)\cap (r,\infty)$，两者当然无交，由于$f(a)\in A,f(b)\in B$，因此两者非空，且两者都是$f(X)$的开集（子空间拓扑下），那么，如果$r\notin f(X)$，那不就是分割了嘛！这说明$f(X)$不连续，但是定理（连通的连续像仍连通）与之矛盾，证毕</p>
 </blockquote>
-<h4 id="实直线上的连通"><a href="#实直线上的连通" class="headerlink" title="实直线上的连通"></a>实直线上的连通</h4><p><strong>定义</strong> <strong>（线性连续统）</strong><br>元素多于一个的全序集$L$，满足下面两个条件后，被称为线性连续统（linear continuum）：</p>
-<ol>
-<li><p>$L$有最小上确界性质</p>
+<h3 id="紧致性"><a href="#紧致性" class="headerlink" title="紧致性"></a>紧致性</h3><p>快速复习一下这些基础，不赘述</p>
+<p><strong>定义</strong> <strong>（覆盖）</strong><br>集合$X$的一个子集族$\mathscr{A}$，若$\mathscr{A}$的成员之并等于$X$，则称$\mathscr{A}$为$X$的一个覆盖（covering）</p>
+<p><strong>定义</strong> <strong>（紧致）</strong><br>拓扑空间$X$的任何一个开覆盖中，均能找到一个有限子覆盖，则称$X$紧致</p>
+<p><strong>定理</strong> <strong>（子空间的紧致性）</strong><br>紧致拓扑空间$X$的子集$Y$，（在子空间拓扑意义下）是紧致空间，当且仅当任意一个由$X$的开子集组成的、成员之并包含$Y$的子集族，都有个有限子集族，其并仍能包含$Y$</p>
+<blockquote>
+<p>一方面，若$Y$紧致，任找$X$的一个开子集族能覆盖$Y$，每个成员都和$Y$相交，是个（子空间拓扑下）$Y$的开覆盖，根据$Y$紧致的假设，找到有限子集族。另一方面同理</p>
+</blockquote>
+<p>我了解了个人之前理解时一些不严谨的地方，如，Munkres这个严谨的体系下，“紧致”这个形容词描述的是一个拓扑空间，而不是拓扑空间的一个子集，但默认了拓扑空间的子集都被赋予了子空间拓扑后，那也有资格说它们“紧致”与否了</p>
+<p>在这个前提下，判断子空间是否紧致，刚才这个定理保证了，以前常用的那种方法是对的</p>
+<p>注：遵循约定，今后对拓扑空间的子集都默认取了子空间拓扑，讨论“子集是不是紧致的”是合法的。“$Y$的覆盖”这个词在后文也泛指：原空间$X$的子集族，且其并包含子集$Y$</p>
+<h4 id="紧致集与闭集的关系"><a href="#紧致集与闭集的关系" class="headerlink" title="紧致集与闭集的关系"></a>紧致集与闭集的关系</h4><p><strong>定理</strong> <strong>（紧空间的闭子集紧）</strong><br>紧致空间的闭子集，仍是紧致的</p>
+<blockquote>
+<p>证明：方法是过河拆桥！紧致空间$X$的闭子集$A$，假设有个开覆盖，那再多添个$A^c$，则新的开覆盖都覆盖$X$了，由紧致性，当然能找到有限个开覆盖覆盖$X$！这有限个里，去掉$A^c$，就是要找的那个，覆盖$A$且有限的子覆盖 $\square$</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（Hausdorff空间的紧集闭）</strong><br>Hausdorff空间的紧致子空间，都是闭集</p>
+<blockquote>
+<p>证明：拓扑空间$X$是Hausdorff的，有个紧致子集$Y$，欲证$X-Y$开。即：对于任意的$x\in X-Y$，欲找其一个邻域在$X-Y$中。具体怎么找呢？</p>
+<p>固定好刚才那个$x$，然后，对于每一个$y\in Y$，由Hausdorff性，存在$x\in U_y$以及$y\in V_y$，这样，$\bigcup\limits_{y\in Y} V_y\supset Y$自然成立</p>
+<p>由$\bigcup\limits_{y\in Y} V_y\supset Y$及紧致假设，找到有限集$B$使得$\bigcup\limits_{y\in B} V_y\supset Y$，因此$\bigcap\limits_{y\in B} U_y\subset X-Y$，而且为有限个开集交，仍开，此即所求的$x$的邻域</p>
+</blockquote>
+<h4 id="与连续映射相关"><a href="#与连续映射相关" class="headerlink" title="与连续映射相关"></a>与连续映射相关</h4><p><strong>定理</strong> <strong>（紧集的连续像紧）</strong><br>紧致空间的连续像是紧致的</p>
+<blockquote>
+<p>证明：$f:X\to Y$是两个拓扑空间间的连续映射，则任意$f(X)$的开覆盖$\set{U _ \alpha} _ \alpha$，找$\set{f^{-1}(U _ \alpha)} _ \alpha$，发现这就是$X$的开覆盖，因此缩小成有限个，还能覆盖$X$的：$\set{f^{-1}(U _ \alpha)} _ {\alpha\in I}$（其中$I$是个有限的指标集）</p>
+<p>这样，$\set{U_\alpha}_{\alpha\in I}$其实就是所求的$f(X)$的有限子覆盖，找到了 $\square$</p>
+</blockquote>
+<p>这个定理的推论是：紧致性也是一个拓扑不变量！</p>
+<p><strong>定理</strong> <strong>（判断同胚）</strong><br>两个拓扑空间之间的映射$f:X\to Y$是连续的，且$X$紧致，$Y$Hausdorff，则$f$是个同胚</p>
+<blockquote>
+<p>证明：回顾同胚的定义，我们只剩$f^{-1}$的连续性需要证明了。这里，我们用连续函数的等价刻画之：闭集的逆像仍闭</p>
+<p>那么，任取一个$X$中闭集$U$，欲证：$(f^{-1})^{-1}(U)$仍是闭集（由于可逆嘛），即待证$f(U)$是闭集，而$f(U)$是紧致集的连续像，由定理（紧集的连续像紧），知$f(U)$紧致，而又由定理（Hausdorff空间的紧集闭），知$f(U)$闭。</p>
+<p>至此，证明了闭集在$f^{-1}$下的逆像仍闭 $\square$</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（用有限交刻画紧致）</strong><br>拓扑空间$X$是紧致的，当且仅当$X$中具有有限交性质的所有闭子集族$\set{C_\alpha}_\alpha$，其所成员之交$\bigcap C_\alpha$非空</p>
+<blockquote>
+<p>证明：套路很明确，用开&#x2F;闭集的对偶关系以及De Morgan律</p>
+<p>一方面，用反证法证明紧致。假设不紧致，则能取到一个开覆盖，它不存在有限子覆盖。现在，考察其中开覆盖逐个元素取补后，得到的一个闭集族，那么，这些闭集族之交为空（因为本身是开覆盖嘛）。而且“不存在有限子覆盖”即是说，这个闭集族的任意有限个之交不为空。但是闭子集族的“有限交性质”理应会推出“全体交仍非空”，矛盾！</p>
+<p>另一方面，已知紧致，已有某一个具备有限交性质的闭子集族，欲证其全体交非空。翻译一下，将这个闭子集族中的所有成员取补，得到一个开子集族，欲证这个开子集族不覆盖$X$！这好办，用反证法，假设覆盖，则根据紧致假设，必有有限子覆盖，因此，原始的闭子集族中的有限个交为空，矛盾</p>
+</blockquote>
+<p>这个定理很有用，是后续证明的一个强力武器，要记住！</p>
+<h4 id="预热—紧致空间的有限积"><a href="#预热—紧致空间的有限积" class="headerlink" title="预热—紧致空间的有限积"></a>预热—紧致空间的有限积</h4><p>之后有个大定理是Tychonoff定理，讲的就是紧致空间之（任意）笛卡尔积仍然紧致。今天先证有限笛卡尔积热热身吧</p>
+<p><strong>定理</strong> <strong>（Tube Lemma）</strong><br>两个拓扑空间之积$X\times Y$，其中$Y$紧致，如果$N$是$X\times Y$中包含了薄片$x_0\times Y$的一个开集，则$N$必然包含着一个管子（tube）$W\times Y$，其中$W$是$x_0$在$X$中的邻域</p>
+<blockquote>
+<p>思路：</p>
+<ul>
+<li><p>想象一下二维版本的画面，$x_0\times Y$就是一个竖直细线，周围盖着一个开集$N$，然后细线可以被一个细的开管道包含住，开管道含在$N$里。</p>
 </li>
-<li><p>若$x &lt; y$，则存在$z$使得$x&lt;z&lt;y$</p>
+<li><p>但是，万一$N$是个一端大、另一端逐渐缩小的开集怎么办？逐渐缩小有可能导致，不存在一个宽度能够塞入$W$了！想到这里，证明思路就出来了，正是紧致性（化无限为有限）保证了，不会逐渐缩小到任意小！</p>
+</li>
+</ul>
+<p>证明：</p>
+<ul>
+<li><p>取定$x_0$后，由于所有$(x_0,y), \forall y\in Y$都在开集$N$里，根据定义（基生成的拓扑），必然有$U_\alpha \times V_\alpha$使得$(x_0,y)\in U_\alpha \times V_\alpha\subset N$，而$x_0\times Y$同胚于$Y$，因此是个紧致集！故减少到$\set{U_i \times V_i}_{i&#x3D;1\dots n}$有限个就够了</p>
+</li>
+<li><p>现在，我就让$W:&#x3D;U_1\cap\dots \cap U_n$即可，接下来看看是不是符合要求，符合的话就结束了！</p>
+</li>
+</ul>
+<ol>
+<li><p>$x_0\in W$这个显然，$W$当然也开</p>
+</li>
+<li><p>验证$\set{U_i\times V_i}_i$形成了一个$W\times Y$的开覆盖：按定义来呗，随便取一个$(x,y)\in W\times Y$，那么$x$自然在所有的$U_i$中，所以“横坐标”根本不用验证，再看“纵坐标”：回顾当时$(x_0,y)$这个点，必然有$j$使得$(x_0,y)\in U_j\times V_j$里，这保证$y\in V_j$！所以，$(x,y)\in U_j\times V_j$。因此，的确形成$W\times Y$的开覆盖</p>
+</li>
+<li><p>验证$W\times Y$在$N$中。这一点只要结合第一个bullet point以及上面的第2条即可说明：$W\times Y$被$\set{U_i\times V_i}$覆盖，而$\set{U_\alpha\times V_\alpha}$本身全在$N$里头，所以$W\times Y$在$N$里头</p>
 </li>
 </ol>
-<p><strong>定理</strong> <strong>（序拓扑，凸子集连通的）</strong><br>还记得序拓扑吗？还记得全序集的凸子集的定义吗？若$L$是一个线性连续统，现在对其定义序拓扑，则$L$的所有凸子集（包括自己）也连通</p>
-<blockquote>
-<p>证明：回忆一下第二篇中的序拓扑和凸的定义！然后开始反证法：假设$Y$是$L$的凸子集，且$Y&#x3D;A\cup B$，其中$A,B$满足……现在取$a\in A$以及$b\in B$，由凸子集定义，$[a,b]$（不妨设$a&lt;b$）在$Y$内，因此$[a,b]&#x3D;(A\cap[a,b])\bigcup(B\cap[a,b])$，记前者$A_0$，后者$B_0$</p>
-<p>现在把目光聚焦到$[a,b]$，在其上取子空间拓扑，$A_0$与$B_0$就是一个分割。定义$c&#x3D;\sup A_0$，由于最小上确界性质，$c\in L$，但根据$A_0$定义就知道，$b$是$A_0$的上界，$a$一定是$A_0$中的一个元素，因此$a\leq c\leq b$，即$c\in [a,b]&#x3D;A_0\cup B_0$，准备导出矛盾吧！</p>
-<p><strong>1</strong> 若$c\in B_0$</p>
-<ul>
-<li>则$c&#x3D;b$或$a&lt;c&lt;b$，由于$B_0$是$[a,b]$的分割的一部分，必然在子空间拓扑下开，又根据定理 （凸子集，序拓扑就是子空间拓扑），可知$[a,b]$的子空间拓扑就是其上的序拓扑！所以，$B_0$在$[a,b]$的序拓扑意义下是开集！因为$c\in B_0$，由基的定义，$\exists U$使得$c\in U\subset B_0$，其中$U$是$[a,b]$上序拓扑的基元素，回忆一下，就是那三种区间之一，在这里，$U$就是$(d,c]$或$(d,e)$，其中$d&lt;c&lt;e$</li>
-<li>因为$U$中有$c$作为$A_0$的上界，取$U$中较小的一个元素（$d,c$之间），根据$U\cap A_0\subset B_0\cap A_0&#x3D;\varnothing$，发现$A_0$的任何元素都不再$U$里，没法掺和到这个较小元素和$c$之间。因此，这个较小元素也是$A_0$的上界，这和$c$是最小上界矛盾</li>
-</ul>
-<p><strong>2</strong> 若$c\in A_0$</p>
-<ul>
-<li>$c&#x3D;a$或$a&lt;c&lt;b$，同理，存在$c\in U\subset A_0$，其中$U$为$[c,d)$或者$(e,d)$，其中$e&lt;c&lt;d$</li>
-<li>因为$U$中已有$c$作为$A_0$的上界，但是$U$不管哪种形式，其中都可取得一个较大的元素，因此$A_0$中有比$c$大的，矛盾</li>
-</ul>
 </blockquote>
-<p>因此，这个定理告诉我们，线性连续统上的区间和射线（都凸）都是连通的，具体的，实直线就是一个特例！</p>
+<p><strong>定理</strong> <strong>（紧致空间的有限积紧致）</strong><br>有限多个紧致空间的笛卡尔积是紧致的</p>
+<blockquote>
+<p>证明：只需考察两个乘积$X\times Y$的形式。首先，假设$X\times Y$被一个开覆盖$\mathscr{A}$覆盖。因为$x\times Y$是紧致的，因此可以找到$\mathscr{A}$中有限个开集覆盖它，这有限个开集记为$\set{A_1,\dots ,A_n}$</p>
+<p>回想刚证的定理（tube lemma），$\bigcup\limits_{i&#x3D;1}^n A_i$的地位就是之前$N$的地位，然后套用一下，知，能够塞入一个tube，记为$W_x\times Y$，使得$x\times Y\subset W_x\times Y\subset \bigcup\limits_{i&#x3D;1}^n A_i$</p>
+<p>现在，我们把$x$跑起来。就有一族子集$\set{W_x\times Y}_x$。那么，$W_x$本身形成了$X$的开覆盖，因此有有限子覆盖$\set{W_1,\dots,W_m}$，那么，每一个$W_k\times Y$都回顾其构造时的那些有限开集$\set{A_1\dots A_n}$，所以，最后有限个有限开子集就覆盖了整个$X\times Y$，这就是$\mathscr{A}$的一个有限子覆盖</p>
+<p>$\square$</p>
+</blockquote>
 
   </div>
   
@@ -2784,10 +2833,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-11-19T23:08:03+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-11-20T22:40:24+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Nov 19, 2024</p>
+    <p>更新于：Nov 20, 2024</p>
   </a>
 </div>
 
@@ -2806,7 +2855,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/11/19/Topology3/&title=Hausdorff、连通 - (.O w O.)?&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/11/19/Topology3/&title=Hausdorff、连通、紧致 - (.O w O.)?&summary="
           
           >
           
@@ -2818,7 +2867,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/11/19/Topology3/&title=Hausdorff、连通 - (.O w O.)?&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/11/19/Topology3/&title=Hausdorff、连通、紧致 - (.O w O.)?&summary="
           
           >
           
@@ -2830,7 +2879,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/11/19/Topology3/&title=Hausdorff、连通 - (.O w O.)?&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/11/19/Topology3/&title=Hausdorff、连通、紧致 - (.O w O.)?&summary="
           
           >
           
@@ -2956,7 +3005,7 @@ $f^{-1}(\bigcap A_\alph...</p>
           >
           <div class='name'>
             
-            Hausdorff、连通
+            Hausdorff、连通、紧致
           </div>
           
         </a></li>
@@ -2994,7 +3043,7 @@ $f^{-1}(\bigcap A_\alph...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hausdorff%E3%80%81%E8%BF%9E%E9%80%9A"><span class="toc-text">Hausdorff、连通</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hausdorff%E6%80%A7"><span class="toc-text">Hausdorff性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E9%80%9A%E6%80%A7"><span class="toc-text">连通性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9E%E9%80%9A%E6%80%A7%E8%B4%A8%E2%80%94General-Idea"><span class="toc-text">连通性质—General Idea</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%9B%B4%E7%BA%BF%E4%B8%8A%E7%9A%84%E8%BF%9E%E9%80%9A"><span class="toc-text">实直线上的连通</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hausdorff%E3%80%81%E8%BF%9E%E9%80%9A%E3%80%81%E7%B4%A7%E8%87%B4"><span class="toc-text">Hausdorff、连通、紧致</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hausdorff%E6%80%A7"><span class="toc-text">Hausdorff性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E9%80%9A%E6%80%A7"><span class="toc-text">连通性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9E%E9%80%9A%E6%80%A7%E8%B4%A8%E2%80%94General-Idea"><span class="toc-text">连通性质—General Idea</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B4%A7%E8%87%B4%E6%80%A7"><span class="toc-text">紧致性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B4%A7%E8%87%B4%E9%9B%86%E4%B8%8E%E9%97%AD%E9%9B%86%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">紧致集与闭集的关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8E%E8%BF%9E%E7%BB%AD%E6%98%A0%E5%B0%84%E7%9B%B8%E5%85%B3"><span class="toc-text">与连续映射相关</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%84%E7%83%AD%E2%80%94%E7%B4%A7%E8%87%B4%E7%A9%BA%E9%97%B4%E7%9A%84%E6%9C%89%E9%99%90%E7%A7%AF"><span class="toc-text">预热—紧致空间的有限积</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -4268,7 +4317,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/拓扑学/","name":"拓扑学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/11/19/Topology3/","name":"Hausdorff、连通"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hausdorff、连通","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/11/19/Topology3/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/11/19/Topology3/","wordCount":0,"datePublished":"2024-11-19T15:05:59.000Z","dateModified":"2024-11-19T15:08:03.465Z","articleSection":"拓扑学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/拓扑学/","name":"拓扑学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/11/19/Topology3/","name":"Hausdorff、连通、紧致"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hausdorff、连通、紧致","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/11/19/Topology3/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/11/19/Topology3/","wordCount":0,"datePublished":"2024-11-19T15:05:59.000Z","dateModified":"2024-11-20T14:40:24.443Z","articleSection":"拓扑学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
