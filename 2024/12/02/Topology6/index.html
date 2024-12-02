@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://maythics.github.io/2024/11/11/topology2/"/>
+  <link rel="canonical" href="http://maythics.github.io/2024/12/02/topology6/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>序、积、商拓扑 - (.O w O.)?</title>
+  <title>可数、分离 - (.O w O.)?</title>
   <meta name="keywords" content="Topology,physics">
   <meta desc name="description" content="emmm - Maythics - (.O w O.)?">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="序、积、商拓扑">
-<meta property="og:url" content="http://maythics.github.io/2024/11/11/Topology2/index.html">
+<meta property="og:title" content="可数、分离">
+<meta property="og:url" content="http://maythics.github.io/2024/12/02/Topology6/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
-<meta property="og:description" content="Topology序、积、商拓扑在本篇中，我们将引入一些新的结构：序、笛卡尔积……手中能用的上的工具是第一篇中讲述的所有概念与性质 常用技术提示：  $f^{-1}(\bigcap A_\alpha)&#x3D;\bigcap f^{-1}(A_\alpha)$，$f^{-1}(\bigcup A_\alpha)&#x3D;\bigcup f^{-1}(A_\alpha)$  $(f\circ g)">
+<meta property="og:description" content="Topology可数、分离可数性下面只讲更强的第二可数（第一可数略），第二可数非常强，有些度量空间甚至不是第二可数的 定义 （可数性）若拓扑空间$X$具有可数基，则称$X$满足第二可数性公理，或称$X$是第二可数的 定义 （稠密）拓扑空间$X$的子集$A$，若满足$\overline{A}&#x3D;X$，则被称为是稠密的， 定理 （第二可数继承）第二可数空间的子空间是第二可数的  证明：注意到，">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-11-11T15:52:34.000Z">
-<meta property="article:modified_time" content="2024-12-02T11:23:18.945Z">
+<meta property="article:published_time" content="2024-12-02T11:09:15.000Z">
+<meta property="article:modified_time" content="2024-12-02T11:23:34.155Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="Topology">
 <meta name="twitter:card" content="summary">
@@ -2611,7 +2611,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/11/11/Topology2/">
+  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/12/02/Topology6/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="(.O w O.)?">
   </span>
@@ -2632,7 +2632,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        序、积、商拓扑
+        可数、分离
       </h1>
       <div class='new-meta-box'>
         
@@ -2663,10 +2663,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-11-11T23:52:34+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-12-02T19:09:15+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Nov 11, 2024</p>
+    <p>发布于：Dec 2, 2024</p>
   </a>
 </div>
 
@@ -2689,122 +2689,112 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="Topology"><a href="#Topology" class="headerlink" title="Topology"></a>Topology</h1><h2 id="序、积、商拓扑"><a href="#序、积、商拓扑" class="headerlink" title="序、积、商拓扑"></a>序、积、商拓扑</h2><p>在本篇中，我们将引入一些新的结构：序、笛卡尔积……手中能用的上的工具是第一篇中讲述的所有概念与性质</p>
-<p>常用技术提示：</p>
+    <h1 id="Topology"><a href="#Topology" class="headerlink" title="Topology"></a>Topology</h1><h2 id="可数、分离"><a href="#可数、分离" class="headerlink" title="可数、分离"></a>可数、分离</h2><h3 id="可数性"><a href="#可数性" class="headerlink" title="可数性"></a>可数性</h3><p>下面只讲更强的第二可数（第一可数略），第二可数非常强，有些度量空间甚至不是第二可数的</p>
+<p><strong>定义</strong> <strong>（可数性）</strong><br>若拓扑空间$X$具有可数基，则称$X$满足第二可数性公理，或称$X$是第二可数的</p>
+<p><strong>定义</strong> <strong>（稠密）</strong><br>拓扑空间$X$的子集$A$，若满足$\overline{A}&#x3D;X$，则被称为是稠密的，</p>
+<p><strong>定理</strong> <strong>（第二可数继承）</strong><br>第二可数空间的子空间是第二可数的</p>
+<blockquote>
+<p>证明：注意到，子空间$A$的基就是原空间的基与$A$之交（见第一篇）</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（第二可数空间的性质）</strong><br>设$X$有一个可数基（就是说$X$是第二可数的），则有两条很好的性质：</p>
 <ol>
-<li><p>$f^{-1}(\bigcap A_\alpha)&#x3D;\bigcap f^{-1}(A_\alpha)$，$f^{-1}(\bigcup A_\alpha)&#x3D;\bigcup f^{-1}(A_\alpha)$</p>
+<li><p>$X$的每一个开覆盖都有一个可数子覆盖</p>
 </li>
-<li><p>$(f\circ g)^{-1}(A)&#x3D;g^{-1}(f^{-1}(A))$</p>
-</li>
-<li><p>$p^{-1}(p(A))\supset A$，当单射时取等</p>
-</li>
-<li><p>$p(p^{-1}(A))\subset A$，当满射时取等</p>
+<li><p>$X$存在一个可数子集在$X$中稠密</p>
 </li>
 </ol>
-<p>如下，不加说明时，一个拓扑空间的子空间，均取子空间拓扑！</p>
-<h3 id="序拓扑"><a href="#序拓扑" class="headerlink" title="序拓扑"></a>序拓扑</h3><p>对于含有“序关系$&lt;$”的集合而言，可以借用序这个结构来定义拓扑</p>
-<p>首先来明确几个记号吧！全序集$X$中，$(a,b)$这个记号就是$\set{x\in X: a&lt;x&lt;b}$的意思，名字叫做区间，还有$(a,b]$，$[a,b)$，$[a,b]$这几种区间，定义方式都和你想象的一样</p>
-<p><strong>定义</strong> <strong>（序拓扑）</strong><br>含有多于一个元素的全序集$X$，设$\mathscr{B}$为以下这些集合形成的族，则$\mathscr{B}$是一个基，它生成的拓扑叫序拓扑：</p>
-<ol>
-<li><p>形如$(a,b)$的区间</p>
-</li>
-<li><p>形如$[a_0,b)$的区间，其中$a_0$是$X$中的最小元（若存在）</p>
-</li>
-<li><p>形如$(a,b_0]$的区间，其中$b_0$是$X$中的最大元（若存在）</p>
-</li>
-</ol>
-<blockquote>
-<p>当然，这个集合配不配称做“基”，还需验证：</p>
-<ol>
-<li><p>$\forall x\in X$，若非最小&#x2F;最大元（或$X$不存在最小&#x2F;最大元），自然能找到比它更小的和更大的$(a,b)$，包含它；若刚好$x$是最大&#x2F;最小，那显然用2、3型的区间即可</p>
-</li>
-<li><p>两个成员之交，要么是空集，要么还是上面几种之一</p>
-</li>
-</ol>
-<p>$\square$</p>
-</blockquote>
-<p><strong>定义</strong> <strong>（射线）</strong><br>全序集$X$中某个元素$a$，则$a$决定的射线（ray）可以指如下两种开射线：$(a,\infty)&#x3D;\set{x:x&gt;a}$，$(-\infty,a)&#x3D;\set{x:x&lt;a}$；以及如下两种闭射线：$[a,\infty)&#x3D;\set{x:x\geq a}$，$(-\infty,a]&#x3D;\set{x:x\leq a}$</p>
-<p><strong>定理</strong> <strong>（开射线组成子基）</strong><br>这些射线当做子基，调用“子基生成的拓扑”的方法，得到的拓扑就是序拓扑没错！</p>
-<blockquote>
-<p>先回顾子基定义，显然这些射线有资格当子基。下面证明命题：</p>
-<ol>
-<li><p>一方面，所有的开射线，其实都是“序拓扑意义下的开集”，事实上，$(a,\infty)&#x3D;\bigcup\limits_x (a,x)$。所以，有限交啊、再任意并啊等等都逃不出去，仍是在序拓扑意义下的开集，故：以开射线为子基生成的拓扑比序拓扑粗糙</p>
-</li>
-<li><p>另一方面，所有的序拓扑基元素，都可以被开射线之交表示，因此开射线有限交后，就涵盖了序拓扑的基元素，因此：以开射线为子基生成的拓扑比序拓扑精细</p>
-</li>
-</ol>
-</blockquote>
-<p><strong>定义</strong> <strong>（全序集的凸子集）</strong><br>全序集$X$有个子集$Y$，若$Y$中一旦有一序对$a&lt;b$，则$X$中的区间$(a,b)$都在$Y$内，就称$Y$是凸的</p>
-<p><strong>定理</strong> <strong>（凸子集，序拓扑就是子空间拓扑）</strong><br>全序集$X$取了序拓扑，$Y$是$X$的一个凸子集，那么$Y$中取序拓扑，或者，$Y$取从$X$诱导出的子空间拓扑，是一样的</p>
-<blockquote>
-<p>双向包含：</p>
-<p><strong>1</strong> 证序拓扑精细于子空间拓扑：</p>
-<ul>
-<li>首先，考察原空间的子基，取一个代表$(a,\infty)$（别的也一样），这个代表在$Y$中表现为$(a,\infty)\cap Y &#x3D; \set{x\in Y:x&gt;a}$，如果$a\in Y$，这不就是$Y$中由$a$决定的开射线的定义嘛；若$a\notin Y$，则结果为$\varnothing$或者$Y$本身（这是用凸保证的！）。因此结论是，原空间的子基在$Y$中的限制是$Y$中的射线！</li>
-<li>这样一来，子空间拓扑的基元素：$(a,b)\cap Y &#x3D; ((a,\infty)\cap Y) \bigcap((-\infty,b)\cap Y)$，就被表示成形如两个$Y$中射线之交，调用定理（射线组成子基），就知道子空间拓扑的基元素，果然也是$Y$的序拓扑基元素之一呀！</li>
-</ul>
-<p><strong>2</strong> 证子空间拓扑精细于序拓扑：</p>
-<ul>
-<li>把握住序拓扑的子基，刚才那个方向的第一个bullet point已说明$Y$中的开射线都是$X$中一个开射线与$Y$的交集，这不就形如“开$\cap Y$”了嘛！因此，这些子集都是子空间拓扑意义下的开集，而序拓扑的基就是子基元素有限交再任意并，逃不出去，仍是子空间拓扑意义下的开集</li>
-</ul>
-</blockquote>
-<h3 id="积拓扑"><a href="#积拓扑" class="headerlink" title="积拓扑"></a>积拓扑</h3><p>在这，我们不关心箱拓扑，只关心积拓扑，防止混淆视听：</p>
-<p>以下，记号$\pi_\beta$就代指投影映射，将笛卡尔积空间的元素，映到第$\beta$个坐标，$\pi_\beta :\prod X_\alpha \to X_\beta$</p>
-<p><strong>定义</strong> <strong>（积拓扑）</strong><br>积拓扑，是这样定义的，首先，记号$S_\beta &#x3D; \set{\pi_\beta^{-1}(U_\beta):U_\beta \text{ is open in } X_\beta}$，<br>然后，记$S&#x3D;\bigcup\limits_{\beta\in J}S_\beta$。用这个$S$作为子基，生成的拓扑就是积拓扑！</p>
-<blockquote>
-<p>基元素不就是子基元素的有限交嘛！所以该拓扑中的一个典型基元素是：$B &#x3D; \pi^{-1} _ {\beta _ 1} (U _ {\beta _ 1}) \cap \pi^{-1} _ {\beta _ 2} (U _ {\beta _ 2})\cap \dots \cap \pi^{-1} _ {\beta _ n} (U _ {\beta _ n})$</p>
-<p>因此，这个基元素形如$\prod U _ \alpha$，其中$n$个元素是各自$X _ \alpha$中的开集$U _ {\beta _ i}$（根据投影映射定义）。其余的呢？当$\alpha\notin \beta _ 1,\beta _ 2,\dots,\beta _ n$时，$U _ \alpha$就是$X _ \alpha$本身</p>
-<p>“均是开集，且除了有限个外都等于$X_\beta$本身”这个形式很重要，记住！</p>
-</blockquote>
-<p><strong>定理</strong> <strong>（子空间拓扑和积拓扑）</strong> 对于每个$\alpha\in J$，$A_\alpha$是$X_\alpha$的一个子空间，则在$\prod X_\alpha$采取积拓扑时：$\prod A_\alpha$自己采取积拓扑，或者，$\prod A_\alpha$采取从$\prod X_\alpha$继承出来的子空间拓扑，都是一样的</p>
-<p>这个表述很拗口啊，不如给个直观的例子：<br>$A$是$X$的子空间，$B$是$Y$的子空间，则$A\times B$的积拓扑，和它从$X\times Y$那里继承的子空间拓扑是一样的！</p>
-<blockquote>
-<p>证明（General Case）：证明很长的原因是语言不得不绕来绕去的，本质其实很简单</p>
-<p>1 “自己采取积拓扑”精细于“继承下来的子空间拓扑”</p>
-<ul>
-<li><p>直接从$\prod X_\alpha$继承子空间拓扑时，根据第一篇中的定理（子空间拓扑的基），可知基元素形如$\prod U_\alpha \cap \prod A_\alpha$。其中，$\prod U_\alpha$是$\prod X_\alpha$的一个基元素，满足有限个以外都有$U_\beta &#x3D;X_\beta$这一条件</p>
-</li>
-<li><p>而这个交呢，根据定义就得$&#x3D;\prod (U_\alpha\cap A_\alpha)$，观察一下，每一个$U_\beta\cap A_\beta$，不就是$A_\beta$这个空间中的开集嘛！而且除有限个外，均是$X_\beta \cap A_\beta&#x3D; A_\beta$这种的</p>
-</li>
-<li><p>因此，这个方向证完了！总结成一句话：继承下来的子空间拓扑的基，都形如$\prod (U_\alpha\cap A_\alpha)$开集之笛卡尔积，且除了有限个外都是$A_\beta$，这不正好是“自己采取积拓扑”的基嘛！</p>
-</li>
-</ul>
-<p>2 “自己采取积拓扑”粗糙于“继承下来的子空间拓扑”</p>
-<ul>
-<li>自己采取积拓扑的话，$\prod A_\alpha$中的基元素会长啥样？就是$\prod V_\alpha$这样，其中$V_{\beta}$除有限个外，都是$A_\alpha$本身</li>
-<li>来看看那有限个吧！它们都是$A_\alpha$中开集，因此（别忘了默认用子空间拓扑）形如$V_{\beta_i}&#x3D;U_{\beta_i}\cap A_{\beta_i}$</li>
-<li>再看看那无限个，很容易啊！因为它们就是$A_\alpha$，把它们写成$A_\alpha\cap X_\alpha$</li>
-<li>结合上两个bullet point，“自己采取的积拓扑”的基形如$\prod (U_\alpha\cap A_\alpha)&#x3D;\prod U_\alpha \cap \prod A_\alpha$，这就是$\prod X_\alpha$中的基元素（快速想一下$\prod U_\alpha$的确合格）和$\prod A_\alpha$之交，正是“继承下来的子空间拓扑”的基！</li>
-</ul>
-</blockquote>
-<p><strong>定理</strong> <strong>（闭包之笛卡尔积等于笛卡尔积之闭包）</strong><br>对每一个$\alpha$均有$A_\alpha\subset X_\alpha$，则对$\prod X_\alpha$取积拓扑后，有$\prod\overline{A_\alpha}&#x3D;\overline{\prod A_\alpha}$</p>
 <blockquote>
 <p>证明：</p>
 <ol>
-<li><p>先证$\prod\overline{A_\alpha}\subset \overline{\prod A_\alpha}$，任取一个$x\in\prod\overline{A_\alpha}$，随便找一个含有$x$的基元素$\prod U_\alpha$。由于$x_\alpha\in \overline{A_\alpha}$，而且$x_\alpha\in U_\alpha$，回顾第一篇中的定理（借用基描述闭包），可知$U_\alpha\cap A_\alpha \neq \varnothing$，这对于所有$\alpha$都成立！于是，任取的一个$\prod U_\alpha$都有：$\prod U_\alpha\cap\prod A_\alpha\neq \varnothing$，根据定理（借用基描述闭包），得$x\in \overline{\prod A_\alpha}$</p>
+<li><p>随便来一个开覆盖$\mathscr{A}$，欲找一个子覆盖。由于基是可数的，则对于每一个自然数$n$，都能对应一个基元素 $B_n$，然后，这样去找这个子覆盖：记$\mathscr{B}&#x3D;\set{B_i:\exists A\in \mathscr{A}\text{ s.t. }A\supset B_i}$，这样以后，对于每一个$B_k\in \mathscr{B}$，取一个$A_k\supset B_k$且$A_k\in \mathscr{A}$（根据$\mathscr{B}$本身构建的定义必能取到！），这样收集来的$\set{A_k}_k$就是所求！唯一令人不安的一点是，这凭什么就是开覆盖了呢？原来，任何$x\in X$，由于开覆盖定义都能找到$A\in \mathscr{A}$使得$x\in A$，又由于基定义拓扑的关系，能找到$x\in B_i\subset A$，这证明了$B_i\in\mathscr{B}$，而那个$A_i$就恰好是满足$B_i\subset A_i$这样找出来的，因此$x\in A_i$，故$\set{A_k}_k$是一个覆盖</p>
 </li>
-<li><p>再证$\prod\overline{A_\alpha}\supset \overline{\prod A_\alpha}$，任取$x\in \overline{\prod A_\alpha}$，任取一个包含$x_\beta$的开集$V_\beta$，由于$\pi_\beta^{-1}(V_\beta)$是在积拓扑中的开集，而且含$x$，因此根据第一篇的定理（借用开集描述闭包）知，$\pi_\beta^{-1}(V_\beta)\cap \prod A_\alpha\neq \varnothing$，我们就盯着这个式子中的$\beta$分量看，发现$V_\beta\cap A_\beta\neq\varnothing$，于是定理（借用开集描述闭包）说明，$x_\beta\in \overline{A_\beta}$，所有$\beta$都有这个关系，因此$x\in \prod \overline{A_\alpha}$</p>
+<li><p>沿袭记法，该拓扑空间的基记为$\set{B_j}_j$，现在，我在每个基中各取一个元素，如$x_i\in B_i$，这样收集得到$\set{x_i}_i$，这个集合就是所求的稠密子集！原因很简单，回顾定理（借用基描述闭包）便知</p>
 </li>
 </ol>
 </blockquote>
-<p><strong>定理</strong> <strong>（总体连续当且仅当分量连续）</strong><br>映射$f:A\to \prod\limits_{\alpha\in J} X_\alpha$被定义为$f(a)&#x3D;(f_\alpha(a))_{\alpha\in J}$，而对于每一个$\alpha$，均有$f_\alpha: A\to X_\alpha$，设$\prod X_\alpha$取积拓扑，则$f$连续当且仅当每一个$f_\alpha$连续</p>
+<ul>
+<li><p>Lindelof空间，指的就是“每一个开覆盖都有一个可数子覆盖”的空间，上面这个定理即说明了，第二可数空间是Lindelof的</p>
+</li>
+<li><p>可分的空间（separable），指的就是“有可数稠密子集”空间，上面这个定理即说明了，第二可数空间是可分的</p>
+</li>
+</ul>
+<h3 id="分离性"><a href="#分离性" class="headerlink" title="分离性"></a>分离性</h3><p>分离性最弱的有T1（即所有单点集都闭的空间），再强一点有Hausdorff（T2），这之前也很熟悉了，下面讨论更强的分离性</p>
+<p><strong>定义</strong> <strong>（正则）</strong><br>设拓扑空间$X$中的所有单点集在$X$中都闭（即，首先得是T1的）。然后，若对于任何一个点$x$以及不包含它的任一闭集$B$，存在无交的两个开集，分别包含$x$和$B$，则$X$是正则的（regular）</p>
+<p><strong>定义</strong> <strong>（正规）</strong><br>设拓扑空间$X$中的所有单点集在$X$中都闭（即，首先得是T1的）。然后，任何一对无交闭集$A,B$，总存在无交开集分别包含它们，则$X$是正规的（normal）</p>
+<p>易知，正规强于正则，正则强于Hausdorff，Hausdorff强于T1。这里的“a强于b”的意思就是若是a，那么必然b</p>
+<p><strong>定理</strong> <strong>（用“荷叶饼”刻画正则，用“汉堡”刻画正规）</strong></p>
+<p>若已知$X$中所有单点集都是闭集，则：</p>
+<ol>
+<li><p>$X$是正则的，当且仅当对于$X$中任意的点$x$以及其某邻域$U$，存在$x$的邻域$V$，使得$\overline{V}\subset U$</p>
+</li>
+<li><p>$X$是正规的，当且仅当对于$X$中任意的闭集$A$以及包含它的任一开集$U$，存在一个$V$，使得$A\subset V\subset \overline{V}\subset U$</p>
+</li>
+</ol>
+<blockquote>
+<p>第1条证明：</p>
+<ul>
+<li><p>若$X$正则，则任一$x$的邻域$U$，取$X-U$，就是与$x$无交的的闭集了，用正则的定义，即能找无交开集$V$与$W$，使得$x\in V$且$X-U \subset W$，这个$V$即是所求，因为任何$X-U$中的点，都有$W$这个邻域，与$V$无交。根据定理（借用邻域描述闭包），这说明 $\overline{V}\cap (X-U)&#x3D;\varnothing$，即 $\overline{V}\subset U$</p>
+</li>
+<li><p>另一方面，随便取一个$x$以不含它的闭集$B$，令$U&#x3D;X-B$，则根据假设就能得到$x \in V\subset \overline{V}\subset X-B$，因此$X-\overline{V}$就是要找的含$B$开集，$V$和$X-\overline{V}$这两个无交开集就被找到了，因此正则</p>
+</li>
+</ul>
+<p>第2条证明：同上</p>
+</blockquote>
+<p>我把第一条的这种包含称为“荷叶饼式包含”，回忆北京烤鸭的荷叶饼（荷叶饼，下放一张纸，下面再是一层荷叶饼……），随意找一层荷叶饼$U$，存在一个在它下面（更小的）的荷叶饼$V$，使得荷叶饼$V$的闭包（荷叶饼$V$连同粘着的那层纸）也在荷叶饼$U$下面（包含）</p>
+<p>我把第二条的这种集合的包含称之为“汉堡式包含”，因为在汉堡的例子里，方形的肉饼（让人想到方括号，联想到闭集）含在拱形的面包（让人想到圆括弧，联想到开集）里，那么，存在包含肉饼的蔬菜，且蔬菜的闭包（蔬菜加沙拉酱）也含在面包里</p>
+<p>总之，这条定理说明了：</p>
+<ul>
+<li><p>$X$是正则的，当且仅当，任何的两个开集之间的包含关系，其实都是“荷叶饼式”的</p>
+</li>
+<li><p>$X$是正规的，当且仅当，任何开集包含闭集的包含关系，其实都是“汉堡式”的</p>
+</li>
+</ul>
+<p><strong>定理</strong> <strong>（子&#x2F;积空间仍保持Hausdorff性与正则性）</strong><br>Hausdorff空间的子空间仍Hausdorff，Hausdorff空间的积空间仍Hausdorff。正则空间的子空间仍正则，正则空间的积空间仍正则</p>
 <blockquote>
 <p>证明：</p>
-<ol>
-<li><p>若$f$连续，欲证$f_\alpha$连续。易知$\pi_\beta$是连续的，原因在于$\pi_\beta^{-1}(U_\beta)$根据定义是子基成员，当然是开的！则$f_\alpha &#x3D; \pi_\alpha\circ f$，连续函数之复合连续</p>
+<p><strong>1.</strong> Hausdorff</p>
+<ul>
+<li><p>Hausdorff的子空间显然Hausdorff</p>
 </li>
-<li><p>若$f_\alpha$连续，欲证$f$连续。根据第一篇的定理（连续？看基&#x2F;子基），只用对子基动刀！则任取一个子基元素$\pi_\beta^{-1}(U_\beta)$，待考察的就是其逆像$f^{-1}(\pi_\beta^{-1}(U_\beta))$，有趣的是，$f_\beta &#x3D; \pi_\beta \circ f$，而逆像对于函数的复合又有良好的性质，即$f^{-1}(\pi_\beta^{-1}(U_\beta))&#x3D;f_\beta^{-1}(U_\beta)$天然成立，因此是开的</p>
+<li><p>对于积空间$\prod X_\alpha$，首先取两个不同的点$(x_\alpha)\neq (y_\alpha)$，既然不同，必有$\beta\text{ s.t. }x_\beta\neq y_\beta$，那么利用$X_\beta$空间的Hausdorff性质不就行了！找到 $U_\beta,V_\beta$，然后$\pi_\beta^{-1}(U_\beta)$和$\pi_\beta^{-1}(V_\beta)$就是所要找的用来分离的无交开集</p>
 </li>
-</ol>
+</ul>
+<p><strong>2.</strong> 正则：</p>
+<ul>
+<li><p>对于子空间$Y$，随意取一个$x$以及一个子空间拓扑下的闭集$B$，由定理（子空间拓扑下的闭集），可以用$\overline{B}\cap Y$来代表$B$，此处的$\overline{B}$是集合$B$在原空间$X$中的闭包，因此，$x$和$\overline{B}$在原空间里利用的正则性能被分开，为无交开集$U$和$V$分别包裹，最后，$U\cap Y$和$V\cap Y$就是所求！（验证一下，容易）</p>
+</li>
+<li><p>对于积空间，首先得验证T1满足，因为这是正则（包括正规）的大前提，这点利用刚证的“Hausdorff的积空间仍然Hausdorff”就能说明。剩余部分，有请定理（用“荷叶饼”刻画正则）来解决，任取一个点$(x_\alpha)\in \prod X_\alpha$，其一个邻域是$U_\alpha$，现在，逐一去看其每一个$U_\alpha$，如果是$U_\alpha &#x3D; X_\alpha$，那就取$V_\alpha &#x3D; X_\alpha$，否则，根据本身就是正则的假设，能够取到“荷叶饼”$V_\alpha$使得$x_\alpha\in V_\alpha\subset \overline{V_\alpha}\subset U_\alpha$，这样，得到的$\prod V_\alpha$就是一个$(x_\alpha)$的邻域，而且调用定理 （闭包之笛卡尔积等于笛卡尔积之闭包），其闭包$\overline{\prod V_\alpha}&#x3D;\prod \overline{V_\alpha}$，可化为逐分量形式，而且既然逐分量已经得证，因此整个就是是含在$\prod U_\alpha$内的！</p>
+</li>
+</ul>
 </blockquote>
-<h3 id="商拓扑"><a href="#商拓扑" class="headerlink" title="商拓扑"></a>商拓扑</h3><p>以下仅仅阐述相关定义，原因在于商拓扑相关的定理十分较难证，且现阶段还不知道该用在哪，所以先放一放</p>
-<p><strong>定义</strong> <strong>（商映射）</strong><br>两个拓扑空间$X$和$Y$，首先，$p:X\to Y$得是满射；其次，$Y$中的子集$U$是开集，当且仅当$p^{-1}(U)$是开集，满足这样性质的$p$被称为商映射</p>
-<p><strong>定义</strong> <strong>（商拓扑）</strong><br>$X$是一拓扑空间，$A$是一普通集合。手头的情况是，我们已有个$p:X\to A$是满的了；现在，我们构造$A$中的拓扑，使$p$成为商映射。这个过程中构造出来的拓扑被称为商拓扑</p>
-<p><strong>定义</strong> <strong>（商空间）</strong><br>设$X$是一拓扑空间，$X^\ast$是$X$的一个分拆（$X^\ast$中元素是$X$的子集），满射$p:X\to X^\ast$把$X$中的每一点映到$X^\ast$中包含它的那个元素。这个$p$已经是满射了哦，而$X^\ast$是一个普通集合，现在我们定义个$X^\ast$上的拓扑$\mathscr{T} _ { X^\ast}$，把$p$变成商映射，这样得到的$(X^\ast,\mathscr{T} _ {X^\ast})$就叫商空间</p>
-<p>解释一下这几个定义。个人认为可先看商拓扑的定义，然后这样去想：我已经有一个$X$的拓扑空间了，也有一个$p$映射。现在呢，想在$A$上定义一个拓扑，使得$A$里面的开集越多越好，同时又要保证$p$是连续的，这样弄出来的拓扑就是商拓扑！</p>
-<p>总结：商拓扑是使得已有映射连续的最精细的拓扑！商空间中的拓扑是使得自然映射连续的最精细的拓扑！</p>
-<p>这个自然映射，或者说，$X^\ast$的构造，就是在原先的集合上定义一个等价类，等价类相当于把一些点黏连起来，这就是有意思的服务于该几何操作的观点</p>
-<h3 id="度量拓扑"><a href="#度量拓扑" class="headerlink" title="度量拓扑"></a>度量拓扑</h3><p>度量空间大家都知道，度量拓扑就是在度量空间中，以全体$\epsilon$球为基，生成的拓扑就是啦，这个拓扑大家早就接触了，在数学分析中就已经讨论过基础性质，此略</p>
+<h3 id="谁是正规的？"><a href="#谁是正规的？" class="headerlink" title="谁是正规的？"></a>谁是正规的？</h3><div class="note quote"><p>“离它远一点，它不是正规的！”</p></div>
+
+<p>从上面这句古话中能悟出，正规是很好的结构这一点，能得到很有用的结论（之后将看到），所以在此，先分享“怎么样的一个空间是正规的”这个问题</p>
+<p><strong>定理</strong> <strong>（正则+可数基，正规）</strong><br>有可数基的正则空间，是正规的</p>
+<blockquote>
+<p>证明：设$X$是一个有可数基$\mathscr{B}$的正则空间，而$A$与$B$是两个无交闭子集，欲找到分别包裹它俩的无交开集。</p>
+<ul>
+<li><p>首先固定$x\in A$，那么把正则性应用到$x$和$B$上，就能够得到$x\in U$使得$U$与$B$无交，然后再用一下定理（用“荷叶饼”刻画正则），找到一个“小荷叶饼”$V$使得$x\in V\subset \overline{V}\subset U$，然后根据基生成拓扑的关系，能找到$U_n\in \mathscr{B}$使得 $x\in U_n\subset V$，这个$U_n$就是辛辛苦苦找到的成员，遍历$x\in A$，能找到$\set{U_i}_i$，是一个$A$的可数开覆盖，满足其成员的闭包与$B$无交（因为$\overline{U_i}\subset \overline{V}\subset U$嘛！）</p>
+</li>
+<li><p>换位思考，对$B$做一样的事，得到$B$的可数开覆盖$\set{V_i}_i$，且其中成员的闭包都与$A$无交</p>
+</li>
+<li><p>那么，有了$\set{U _ i} _ i$和$\set{V _ i} _ i$后，定义$U’ _ n &#x3D; U _ n- \bigcup\limits _ {i&#x3D;1}^n\overline{ V _ i}$以及$V’ _ n &#x3D; V _ n-\bigcup\limits _ {i&#x3D;1}^n\overline{U _ i}$（是开集哦），这样以后，我们最开始要找的包裹$A$的开集其实就是$\bigcup\limits _ {n\in \mathbb{Z^+}} U _ n’$，包裹$B$的开集其实就是$\bigcup\limits _ {n\in \mathbb{Z^+}} V _  n’$！验证一下它俩无交：原因是，假设$z\in \bigcup\limits _ {n\in \mathbb{Z^+}} U _ n’\bigcap \bigcup\limits _ {n\in \mathbb{Z^+}} V _ n’$，易知，必有$z\in U’ _ j\cap V’ _ k$，不妨设$j\leq k$，那么，$z\in  V’ _ k$这一点其实暗示了$z\notin \overline{U} _ j$，这和$z\in U’ _ j\cap V’ _ k $其实矛盾，所以，$\bigcup\limits _ {n\in \mathbb{Z^+}} U _ n’\bigcap \bigcup\limits _ {n\in \mathbb{Z^+}} V _ n’&#x3D;\varnothing$</p>
+</li>
+</ul>
+</blockquote>
+<p><strong>定理</strong> <strong>（度量空间正规）</strong><br>可度量化空间是正规的</p>
+<blockquote>
+<p>证明：这很简单，对于两个开集$A,B$，遍历$A$中每一点都取以它为中心的小球使得该球与$B$无交，小球为$B(a,\epsilon_a)$，而$\bigcup\limits_{a \in A} B(a,\frac{\epsilon_a}{2})$就是所求包裹$A$的开集！而同样的操作对于$B$，得到$\bigcup\limits_{b\in B}B(b,\frac{\epsilon_b}{2})$，注意这个除以2很关键，因为要验证这两个开集的确无交，三角不等式要用，矛盾来自$d(a,b)&lt;\frac{\epsilon_a+\epsilon_b}{2}$，将与球的构造方法相悖！</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（紧致的Hausdorff空间正规）</strong><br>紧致的Hausdorff空间，是正规的</p>
+<blockquote>
+<p>证明：</p>
+<p><strong>1.</strong> 先证是正则的：</p>
+<p>对于一个$x\in X$以及一个闭集$Y$，由定理（紧空间的闭子集紧）可知，事实上$Y$是紧致的，回顾一下定理 （Hausdorff空间的紧集闭）的证明过程，发现，实际上在证明中已然构造了两个开集，分别包含$x\in X$和不含它的紧致集$Y$，因此，那个证明的过程直接拿来就得知该空间是正则的</p>
+<p><strong>2.</strong> 再证是正规的：</p>
+<p>可以拿刚才的正则来用了！对于$A,B$两个闭集，可以先固定$x\in A$，然后利用正则性，得到$U_x$和$V_x$分别包含$x$与$B$，这样遍历$x\in A$以后，就有 $\bigcup U_x$与 $\bigcap V_x$分别覆盖$A$与$B$，最后，由于$A$是紧致空间的闭子集从而紧，因此可以降为有限个开覆盖 $\bigcup\limits_{i&#x3D;1}^n U_{x_i}\supset A$，从而 $\bigcap\limits_{i&#x3D;1}^n V_{x_i}\supset B$，这就是要找的两个无交开集</p>
+</blockquote>
+<p>有意思的是，正规空间的子空间不一定是正规的，正规空间的积（甚至有限积）也不一定是正规的</p>
 
   </div>
   
@@ -2829,7 +2819,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-12-02T19:23:18+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-12-02T19:23:34+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Dec 2, 2024</p>
@@ -2855,7 +2845,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/11/11/Topology2/&title=序、积、商拓扑 - (.O w O.)?&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/12/02/Topology6/&title=可数、分离 - (.O w O.)?&summary="
           
           >
           
@@ -2867,7 +2857,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/11/11/Topology2/&title=序、积、商拓扑 - (.O w O.)?&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/12/02/Topology6/&title=可数、分离 - (.O w O.)?&summary="
           
           >
           
@@ -2879,7 +2869,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/11/11/Topology2/&title=序、积、商拓扑 - (.O w O.)?&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/12/02/Topology6/&title=可数、分离 - (.O w O.)?&summary="
           
           >
           
@@ -2915,17 +2905,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/11/19/Topology3/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Hausdorff、连通、紧致</p>
-          <p class='content'>TopologyHausdorff、连通、紧致本篇讨论拓扑不变量，所谓拓扑不变量，就是互相同胚的空间中保持一致的一个性质。这个性质的用场是，如果你想证明$X$和$Y$空间是“不同”的（在同胚意义...</p>
-        </a>
       
-      
-        <a class='next' href='/2024/11/07/Topology1/'>
-          <p class='title'>拓扑基本概念<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>Topology拓扑基本概念这些例子解开了数学家们心中的谜：“一个集合和一扇门究竟有什么不同呢？”
-
-拓扑的基定义 (拓扑) 集合$X$上的拓扑（topology）指：有一个子集构成的集合$\m...</p>
+        <a class='next' href='/2024/11/22/Topology5/'>
+          <p class='title'>实物图---实轴<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Topology之前讲了那么多抽象的结构，本次就来见一下实物图吧
+当然，实物图也不完全是真实具象的，我们的讨论仍然基于提取出的实轴的一些抽象特征
+本篇跳过，也不会有任何抽象层面的影响
+实物图—实...</p>
         </a>
       
     </div>
@@ -2941,7 +2927,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/11/11/Topology2/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/12/02/Topology6/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -3083,7 +3069,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E3%80%81%E7%A7%AF%E3%80%81%E5%95%86%E6%8B%93%E6%89%91"><span class="toc-text">序、积、商拓扑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%8F%E6%8B%93%E6%89%91"><span class="toc-text">序拓扑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%AF%E6%8B%93%E6%89%91"><span class="toc-text">积拓扑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%95%86%E6%8B%93%E6%89%91"><span class="toc-text">商拓扑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%A6%E9%87%8F%E6%8B%93%E6%89%91"><span class="toc-text">度量拓扑</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E6%95%B0%E3%80%81%E5%88%86%E7%A6%BB"><span class="toc-text">可数、分离</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E6%95%B0%E6%80%A7"><span class="toc-text">可数性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%A6%BB%E6%80%A7"><span class="toc-text">分离性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%81%E6%98%AF%E6%AD%A3%E8%A7%84%E7%9A%84%EF%BC%9F"><span class="toc-text">谁是正规的？</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4160,6 +4146,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 <pjax>
 
         <script>
+  // https://www.micdz.cn/article/katex-on-volantis/
+  if (typeof renderMathInElement == "undefined") {
+    volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.css")
+    function pjax_katex() {
+      volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/contrib/auto-render.min.js").then(()=>{
+        renderMathInElement(document.body);
+      })
+    }
+    volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.js").then(pjax_katex)
+    volantis.pjax.push(pjax_katex)
+  }
+</script>
+        <script>
   // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
   if (typeof MathJax === 'undefined') {
     window.MathJax = {
@@ -4211,19 +4210,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   }
 </script>
 
-        <script>
-  // https://www.micdz.cn/article/katex-on-volantis/
-  if (typeof renderMathInElement == "undefined") {
-    volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.css")
-    function pjax_katex() {
-      volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/contrib/auto-render.min.js").then(()=>{
-        renderMathInElement(document.body);
-      })
-    }
-    volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.js").then(pjax_katex)
-    volantis.pjax.push(pjax_katex)
-  }
-</script>
 
 
 </pjax>
@@ -4357,7 +4343,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/拓扑学/","name":"拓扑学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/11/11/Topology2/","name":"序、积、商拓扑"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"序、积、商拓扑","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/11/11/Topology2/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/11/11/Topology2/","wordCount":0,"datePublished":"2024-11-11T15:52:34.000Z","dateModified":"2024-12-02T11:23:18.945Z","articleSection":"拓扑学","keywords":"Topology","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/拓扑学/","name":"拓扑学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/12/02/Topology6/","name":"可数、分离"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"可数、分离","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/12/02/Topology6/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/12/02/Topology6/","wordCount":0,"datePublished":"2024-12-02T11:09:15.000Z","dateModified":"2024-12-02T11:23:34.155Z","articleSection":"拓扑学","keywords":"Topology","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
