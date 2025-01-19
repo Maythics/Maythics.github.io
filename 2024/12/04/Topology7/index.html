@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-12-04T15:10:39.000Z">
-<meta property="article:modified_time" content="2024-12-04T15:20:48.953Z">
+<meta property="article:modified_time" content="2025-01-19T08:43:12.279Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="Topology">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1733325657638),
+    lastupdate: new Date(1737276286166),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2705,7 +2705,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p><strong>2.</strong></p>
 <ul>
-<li>至此，所有$[0,1]$的有理数都被安置妥当了，现在扩充到整个$\mathbb{R}$上去，用这个方法：若$r&lt;0$则$U_r&#x3D;\varnothing$，若$r&gt;1$则$U_r&#x3D;X$，因此，回顾前面的take away，$p&lt;q \implies \overline{U_p}\subset U_q$ 这一点在仍正确</li>
+<li>至此，所有$[0,1]$的有理数都被安置妥当了，现在扩充到整个$\mathbb{R}$上去，用这个方法：若$r&lt;0$则$U_r&#x3D;\varnothing$，若$r&gt;1$则$U_r&#x3D;X$，因此，回顾前面的take away，$p&lt;q \implies \overline{U_p}\subset U_q$ 这一点仍正确</li>
 </ul>
 <p><strong>3.</strong></p>
 <ul>
@@ -2721,7 +2721,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><strong>1</strong> 若$x\in \overline{U_r}$，且假设$f(x)&gt;r$，那么在$f(x)$与$r$之间必然存在一个有理数，不妨记为$q$，那么$q$对应的那个集合$U_q$就符合$x\notin U_q$（否则q不就落在$\mathbb{Q}(x)$里了嘛！），但是，$r&gt;q\implies \overline{U_r}\subset U_q$（这是条目 <strong>1.</strong> 的 take-away）矛盾！</p>
 <p><strong>2</strong> 若$x\notin U_r$，那么，任何来一个比$r$小的有理数$q$，都满足$x\notin U_q$（根据条目 <strong>1.</strong> 的 take-away），因此，$\mathbb{Q}(x)$不含有比$r$小的有理数，因此$\inf \mathbb{Q}(x)\geq r$</p>
 </li>
-<li><p>使用引理，证明$f$的连续性：随意给定一个$x_0$和包含$f(x_0)$的开区间$(c,d)$，欲找到$U$使得$f(U)\subset (c,d)$由于能够取到$c&lt;p&lt;f(x_0)&lt;q&lt;d$，其中$p,q$为有理数，这样，$U&#x3D;U_q-\overline{U_p}$就是所求，原因是，若$x\in U_q -\overline{U_p} \subset \overline{U_q}$，则由引理1，$f(x)\leq q$，而$x \notin \overline{U_q}$蕴含$x\notin U_p$，由引理2，$f(x)\geq p$，因此$f(U)\subset [p,q]\subset(c,d)$，定理得证</p>
+<li><p>使用引理，证明$f$的连续性：随意给定一个$x_0$和包含$f(x_0)$的开区间$(c,d)$，欲找到$U$使得$f(U)\subset (c,d)$。由于能够取到$c&lt;p&lt;f(x_0)&lt;q&lt;d$，其中$p,q$为有理数，这样，$U&#x3D;U_q-\overline{U_p}$就是所求，原因是，若$x\in U_q -\overline{U_p} \subset \overline{U_q}$，则由引理1，$f(x)\leq q$，而$x \notin \overline{U_p}$蕴含$x\notin U_p$，由引理2，$f(x)\geq p$，因此$f(U)\subset [p,q]\subset(c,d)$，定理得证</p>
 </li>
 </ul>
 <p>$\square$</p>
@@ -2750,10 +2750,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-12-04T23:20:48+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-01-19T16:43:12+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Dec 4, 2024</p>
+    <p>更新于：Jan 19, 2025</p>
   </a>
 </div>
 
@@ -4284,7 +4284,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/拓扑学/","name":"拓扑学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/12/04/Topology7/","name":"Urysohn引理"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Urysohn引理","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/12/04/Topology7/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/12/04/Topology7/","wordCount":0,"datePublished":"2024-12-04T15:10:39.000Z","dateModified":"2024-12-04T15:20:48.953Z","articleSection":"拓扑学","keywords":"Topology","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/拓扑学/","name":"拓扑学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/12/04/Topology7/","name":"Urysohn引理"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Urysohn引理","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/12/04/Topology7/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/12/04/Topology7/","wordCount":0,"datePublished":"2024-12-04T15:10:39.000Z","dateModified":"2025-01-19T08:43:12.279Z","articleSection":"拓扑学","keywords":"Topology","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
