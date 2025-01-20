@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://maythics.github.io/2024/06/19/statistics4/"/>
+  <link rel="canonical" href="http://maythics.github.io/2025/01/20/mira1/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>SVM - (.O w O.)?</title>
+  <title>测度空间（MIRA） - (.O w O.)?</title>
   <meta name="keywords" content="physics">
   <meta desc name="description" content="emmm - Maythics - (.O w O.)?">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="SVM">
-<meta property="og:url" content="http://maythics.github.io/2024/06/19/statistics4/index.html">
+<meta property="og:title" content="测度空间（MIRA）">
+<meta property="og:url" content="http://maythics.github.io/2025/01/20/MIRA1/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
-<meta property="og:description" content="统计学习方法SVM支持向量机大家耳熟能详，应该没人反对向量机吧 线性可分支持向量机（硬）本节讨论线性可分数据集的情形 感知机数据集$\set{(x_i,y_i)},y_i\in \set{-1,1}$是线性可分的，指存在一个平面：$$w^\ast \cdot x+b^\ast &#x3D;0$$能将标签是$-1$和$1$的数据点划分开 当$x$从该平面的一侧变到另一侧时，$w^\ast \cdot">
+<meta property="og:description" content="Real Analysis测度空间（MIRA）回顾与铺垫常用技术回顾： （逆像的优秀性质）  $f^{-1}(\bigcap A_\alpha)&#x3D;\bigcap f^{-1}(A_\alpha)$，$f^{-1}(\bigcup A_\alpha)&#x3D;\bigcup f^{-1}(A_\alpha)$  对于$f:X\to Y$，$f^{-1}(Y-A)&#x3D;X-f^{-1">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-06-19T07:46:16.000Z">
-<meta property="article:modified_time" content="2024-07-02T13:43:29.091Z">
+<meta property="article:published_time" content="2025-01-20T11:58:34.000Z">
+<meta property="article:modified_time" content="2025-01-20T12:03:09.930Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -2611,7 +2611,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/06/19/statistics4/">
+  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2025/01/20/MIRA1/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="(.O w O.)?">
   </span>
@@ -2632,7 +2632,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        SVM
+        测度空间（MIRA）
       </h1>
       <div class='new-meta-box'>
         
@@ -2651,10 +2651,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/">统计学习</a>
+    <a class="category-link" href="/categories/%E5%AE%9E%E5%88%86%E6%9E%90/">实分析</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">统计学习</span></a>
+        <a href="/categories/%E5%AE%9E%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">实分析</span></a>
       </span>
     
   </div>
@@ -2663,10 +2663,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-06-19T15:46:16+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-01-20T19:58:34+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jun 19, 2024</p>
+    <p>发布于：Jan 20, 2025</p>
   </a>
 </div>
 
@@ -2689,59 +2689,122 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="统计学习方法"><a href="#统计学习方法" class="headerlink" title="统计学习方法"></a>统计学习方法</h1><h2 id="SVM"><a href="#SVM" class="headerlink" title="SVM"></a>SVM</h2><p>支持向量机大家耳熟能详，<del>应该没人反对向量机吧</del></p>
-<h3 id="线性可分支持向量机（硬）"><a href="#线性可分支持向量机（硬）" class="headerlink" title="线性可分支持向量机（硬）"></a>线性可分支持向量机（硬）</h3><p>本节讨论线性可分数据集的情形</p>
-<h4 id="感知机"><a href="#感知机" class="headerlink" title="感知机"></a>感知机</h4><p>数据集$\set{(x_i,y_i)},y_i\in \set{-1,1}$是<strong>线性可分</strong>的，指存在一个平面：<br>$$<br>w^\ast \cdot x+b^\ast &#x3D;0<br>$$<br>能将标签是$-1$和$1$的数据点划分开</p>
-<p>当$x$从该平面的一侧变到另一侧时，$w^\ast \cdot x+b^\ast$会从正的变到负的（或相反），它的符号，就表征了数据点在哪一侧，也就是属于哪类</p>
-<p>很自然的，这种决策用数学表达就是：<br>$$<br>f(x)&#x3D;\text{sign}(w^\ast \cdot x+b^\ast)<br>$$</p>
-<p>这就是感知机（perceptron）。不过，可能存在很多个平面都能够将两类点分开，因此感知机不唯一</p>
-<h4 id="两种间隔"><a href="#两种间隔" class="headerlink" title="两种间隔"></a>两种间隔</h4><p>加上限制—“最大化间隔”，这能让平面唯一确定下来，在直观上让该平面离两类数据点都“比较远”。最大化间隔的感知机也就是<strong>线性可分支持向量机</strong></p>
-<p>在此之前，需先弄清楚间隔是什么</p>
-<p><strong>几何间隔</strong> 其实就是点到平面的距离。平面$w^\ast \cdot x+b^\ast &#x3D;0$的单位法向量为$\frac{w^\ast}{\Vert w^\ast\Vert}$，设某点$x’$恰好在该平面上，那么$x_i$到它的向量就是$x’-x_i$，$x_i$到平面的距离就是该向量与平面法向量的内积，再取绝对值：</p>
-<p>$$<br>\gamma_i:&#x3D;\left\vert \frac{w^\ast}{\Vert w^\ast\Vert}\cdot (x’-x_i)\right\vert&#x3D;\left\vert \frac{-b^\ast}{\Vert w^\ast\Vert}-\frac{w^\ast}{\Vert w^\ast\Vert}\cdot x_i\right\vert&#x3D;\frac{y_i}{\Vert w^\ast \Vert}(w^\ast\cdot x_i+b^\ast)<br>$$</p>
-<p>最后一步把绝对值摘掉，用了$y_i$是$\pm 1$能够自动调整正负这一事实</p>
-<p>而对于某个数据集，它到该平面的几何间隔就定义为其中所有点到平面几何间隔的最小值$\gamma :&#x3D;\min\limits_i \gamma_i$</p>
-<p><strong>函数间隔</strong> 和几何间隔差不多，只不过把$\Vert w^\ast\Vert$这个调整比例的系数都去掉了，这样更简单：</p>
-<p>$$<br>\hat{\gamma}_i:&#x3D;y_i(w^\ast\cdot x_i+b^\ast)<br>$$</p>
-<p>同样，数据集到该平面的函数间隔$\hat{\gamma} :&#x3D;\min\limits_i \hat{\gamma}_i$</p>
-<h4 id="问题的形式化描述"><a href="#问题的形式化描述" class="headerlink" title="问题的形式化描述"></a>问题的形式化描述</h4><p>目标：让感知机用的平面恰是“数据集到该平面<strong>几何间隔</strong>最大”的那个平面</p>
-<p>$$<br>\begin{align*}<br>  &amp;\max_{w,b} \gamma<br>  \newline<br>&amp;\text{s.t. }\frac{y_i}{\Vert w \Vert}(w\cdot x_i+b) \geq \gamma \quad \forall i<br>\end{align*}<br>$$</p>
-<p>由于集合间隔和函数间隔就差一个$\Vert w\Vert$，所以该问题也就是：</p>
-<p>$$<br>\begin{align*}<br>  &amp;\max_{w,b} \frac{\hat{\gamma}}{\Vert w\Vert}<br>  \newline<br>&amp;\text{s.t. }y_i(w\cdot x_i+b) \geq \hat{\gamma}<br>\end{align*}<br>$$</p>
-<p>可以看出，若$\hat{\gamma}$和$\Vert w\Vert$同时变大10倍，问题并不会变，决定问题的是它们的比值！因此不妨直接令$\hat{\gamma}&#x3D;1$，原问题：<br>$$<br>\begin{align*}<br>  &amp;\max_{w,b} \frac{1}{\Vert w\Vert}<br>  \newline<br>&amp;\text{s.t. }y_i(w\cdot x_i+b) \geq 1 \quad \forall i<br>\end{align*}<br>$$</p>
-<p>再等效为：</p>
-<p>$$<br>\begin{align*}<br>  &amp;\min_{w,b} \frac{1}{2}\Vert w \Vert^2<br>  \newline<br>&amp;\text{s.t. }y_i(w\cdot x_i+b)-1 \geq 0 \quad \forall i<br>\end{align*}<br>$$</p>
-<p>这样清爽许多！这里目标函数和取这个形式，是因为它求导后比较好看</p>
-<h4 id="对偶变形与求解"><a href="#对偶变形与求解" class="headerlink" title="对偶变形与求解"></a>对偶变形与求解</h4><p>上述就是在约束条件$y_i(w\cdot x_i+b)-1 \geq 0$下的优化问题，使用Lagrange乘数法，乘子$\alpha&#x3D;(\alpha_1,\alpha_2\dots)$，构建：</p>
-<p>$$<br>L(w,b,\alpha)&#x3D;\frac{1}{2}\Vert w \Vert^2 -\sum_{i&#x3D;1}^N \alpha_i (y_i(w\cdot x_i+b)-1)<br>$$</p>
-<p>原始问题：$\min\limits_{w,b}\max\limits_{\alpha} L(w,b,\alpha)$<br>对偶问题：$\max\limits_{\alpha}\min\limits_{w,b} L(w,b,\alpha)$</p>
-<p>在此处，原始问题的求解可转化为对偶问题的求解（原因参见<strong>对偶</strong>章节，此处为强对偶）</p>
-<p>现在开始求对偶问题吧！先求内部$\min\limits_{w,b} L(w,b,\alpha)$，即对$w,b$偏导并令之为零：</p>
-<p>$$<br>\begin{align*}<br>  \nabla_w L&amp;&#x3D;w-\sum_{i&#x3D;1}^N \alpha_i y_i x_i &#x3D; 0<br>  \newline<br>  \nabla_b L&amp;&#x3D;-\sum_{i&#x3D;1}^N \alpha_i y_i &#x3D; 0<br>\end{align*}<br>$$</p>
-<p>解出：$w&#x3D; \sum\limits_{i&#x3D;1}^N \alpha_i y_i x_i$，还得到等式$\sum\limits_{i&#x3D;1}^N \alpha_i y_i &#x3D; 0$，把这两者代回Lagrange函数：</p>
-<p>$$<br>\begin{align*}<br>  L&amp;&#x3D;\frac{1}{2} \sum\limits_{j&#x3D;1}^N \sum\limits_{i&#x3D;1}^N \alpha_j\alpha_i y_j  y_i(x_j \cdot x_i)-\sum_{i&#x3D;1}^N \alpha_i (y_i( \sum\limits_{j&#x3D;1}^N \alpha_j y_j x_j \cdot x_i+b)-1)<br>  \newline<br>  &amp;&#x3D;-\frac{1}{2} \sum\limits_{j&#x3D;1}^N \sum\limits_{i&#x3D;1}^N \alpha_j\alpha_i y_j  y_i(x_j \cdot x_i)+\sum_{i&#x3D;1}^N \alpha_i<br>\end{align*}<br>$$</p>
-<p>离最终目标，只剩求解外部的极大问题，把极大问题的目标函数取个负号，又写成极小问题如下：<br>$$<br>\begin{align*}<br>  &amp;\min_\alpha \frac{1}{2} \sum\limits_{j&#x3D;1}^N \sum\limits_{i&#x3D;1}^N \alpha_j\alpha_i y_j  y_i(x_j \cdot x_i)-\sum_{i&#x3D;1}^N \alpha_i<br>  \newline<br>  &amp;\text{s.t. }\sum_{i&#x3D;1}^N \alpha_i y_i &#x3D; 0 \quad \alpha_i\geq 0 \quad \forall i<br>\end{align*}<br>$$</p>
-<p>这就是历经重重变形得来的，求解“几何间隔最大化”的等价问题！</p>
-<p>设法解出这个问题后，利用$w&#x3D; \sum\limits_{i&#x3D;1}^N \alpha_i y_i x_i$公式得到$w^\ast$，这样平面的法方向已经定下来了，还剩$b$未定，$b$这个量能够让平面上下平移，一个重要观察是，这个上下平移的量的多少最终是被数据点中距离分离平面最近的那几个决定的，这些点就叫<strong>支持向量</strong>！</p>
-<p>这些点上，约束$y_i(w\cdot x_i+b)-1 \geq 0$的重担压在了它们的身上，变成$y_i(w\cdot x_i+b)-1 &#x3D; 0$，是“支撑”点，因此得名。其余点其实都是打酱油的，去掉几个其余的点，平面不变，因为顶梁柱还在</p>
-<p>由此，可以用支持向量倒推出$b$的值：先找$\alpha_j\neq 0$，那么第$j$个不等式约束就是起作用的，是等式约束，那么：</p>
-<p>$$<br>y_j(w^\ast \cdot x_j +b^\ast )-1&#x3D;0<br>$$</p>
-<p>解出$b^\ast$即可</p>
-<h3 id="线性支持向量机（软）"><a href="#线性支持向量机（软）" class="headerlink" title="线性支持向量机（软）"></a>线性支持向量机（软）</h3><p>再讨论数据集<strong>非线性可分</strong>的情况，不存在一个平面能够完全分离两类，这时候“间隔”的概念又要拓展：</p>
-<h4 id="软间隔"><a href="#软间隔" class="headerlink" title="软间隔"></a>软间隔</h4><p>因为线性不可分即是说$y_i(w\cdot x_i+b) \geq 1$不可能所有$i$都满足，那宽容一点，改成$y_i(w\cdot x_i+b) \geq 1-\xi$，但是也要为体现由于宽容带来的惩罚</p>
-<p>由此，原问题写为：</p>
-<p>$$<br>\begin{align*}<br>  &amp;\min_{w,b,\xi} \frac{1}{2}\Vert w \Vert^2+C\sum_{i&#x3D;1}^N \xi_i<br>  \newline<br>&amp;\text{s.t. }y_i(w\cdot x_i+b)-1+\xi_i \geq 0 \quad \xi_i\geq 0\quad \forall i<br>\end{align*}<br>$$</p>
-<p>这称作软间隔最大化问题，$C\gt 0$是惩罚系数</p>
-<h4 id="对偶问题与求解"><a href="#对偶问题与求解" class="headerlink" title="对偶问题与求解"></a>对偶问题与求解</h4><p>同样可以得到</p>
-<p>$$<br>\begin{align*}<br>  &amp;\min_\alpha \frac{1}{2} \sum\limits_{j&#x3D;1}^N \sum\limits_{i&#x3D;1}^N \alpha_j\alpha_i y_j  y_i(x_j \cdot x_i)-\sum_{i&#x3D;1}^N \alpha_i<br>  \newline<br>  &amp;\text{s.t. }\sum_{i&#x3D;1}^N \alpha_i y_i &#x3D; 0 \quad  0 \leq \alpha_i \leq C \quad \forall i<br>\end{align*}<br>$$</p>
-<p>解出$\alpha$后，仍然用$w&#x3D; \sum\limits_{i&#x3D;1}^N \alpha_i y_i x_i$公式得到$w^\ast$，不过$b^\ast$就可能不唯一了</p>
-<p>此时的支持向量，就是对应的$\alpha_j&gt;0$的那些数据点$x_j$</p>
-<h3 id="非线性支持向量机"><a href="#非线性支持向量机" class="headerlink" title="非线性支持向量机"></a>非线性支持向量机</h3><p>之前，我们一直用的是欧式空间中的一个平面去划分数据点，倘若数据点的边界是弯弯的，一个平面显然不能分的很好</p>
-<p>你可能会想，是不是不该在欧式空间中求解？如果把数据点映射到一个新的赋范线性空间中去，会不会分布的就非常好了，能用新空间中的平面来划分？</p>
-<p>假设已经映射到新的空间中了，在新的空间中用先前线性支持向量机的算法，算到对偶问题为止，应该会得到：</p>
-<p>$$<br>\begin{align*}<br>  &amp;\min_\alpha \frac{1}{2} \sum\limits_{j&#x3D;1}^N \sum\limits_{i&#x3D;1}^N \alpha_j\alpha_i y_j  y_iK(x_j,x_i)-\sum_{i&#x3D;1}^N \alpha_i<br>  \newline<br>  &amp;\text{s.t. }\sum_{i&#x3D;1}^N \alpha_i y_i &#x3D; 0 \quad  0 \leq \alpha_i \leq C \quad \forall i<br>\end{align*}<br>$$</p>
-<p>其中$K(x_j,x_i)$是$x_i\mapsto x_i’,x_j\mapsto x_j’$后，新空间里的$x_j’$与$x_i’$的内积。$K$就称之为<strong>核函数</strong>。所以，对于求解来说，原空间到新空间的映射的表达式不重要，核函数才重要</p>
-<p>核函数可以自己选，比如选$K(x_i,x_j)&#x3D;(x_i\cdot x_j +1)^p$，总之，选定以后，就是已知的值了，因为数据点都是有的，可以算出来，这样问题仍然和原本的线性支持向量机无异</p>
+    <h1 id="Real-Analysis"><a href="#Real-Analysis" class="headerlink" title="Real Analysis"></a>Real Analysis</h1><h2 id="测度空间（MIRA）"><a href="#测度空间（MIRA）" class="headerlink" title="测度空间（MIRA）"></a>测度空间（MIRA）</h2><h3 id="回顾与铺垫"><a href="#回顾与铺垫" class="headerlink" title="回顾与铺垫"></a>回顾与铺垫</h3><p>常用技术回顾： <strong>（逆像的优秀性质）</strong></p>
+<ol>
+<li><p>$f^{-1}(\bigcap A_\alpha)&#x3D;\bigcap f^{-1}(A_\alpha)$，$f^{-1}(\bigcup A_\alpha)&#x3D;\bigcup f^{-1}(A_\alpha)$</p>
+</li>
+<li><p>对于$f:X\to Y$，$f^{-1}(Y-A)&#x3D;X-f^{-1}(A)$</p>
+</li>
+<li><p>$(f\circ g)^{-1}(A)&#x3D;g^{-1}(f^{-1}(A))$</p>
+</li>
+<li><p>$p^{-1}(p(A))\supset A$，当单射时取等</p>
+</li>
+<li><p>$p(p^{-1}(A))\subset A$，当满射时取等</p>
+</li>
+</ol>
+<p>拓扑回顾：（<strong>关于$\mathbb{R}$上拓扑的陈述</strong>）<br>我们以后取$\mathbb{R}$上的拓扑就是由通常的序拓扑规定的（或由度量拓扑也一样），这样的话，一切“开集”、“闭集”都和我们旧的认知相符合</p>
+<p>此外，我们熟知的结论有，$\mathbb{R}$上的任何开集都可以表示成<strong>可数个</strong>开区间之并（可见Stein或者MIRA补充材料0.59），这得益于实轴上的通常拓扑具有第二可数性公理！</p>
+<p>回顾“生成”的概念，由…<strong>生成</strong>的xx结构，指的就是含有…的、最小的xx结构</p>
+<h3 id="测度前传"><a href="#测度前传" class="headerlink" title="测度前传"></a>测度前传</h3><p>先来讲讲外测度，首先在$\mathbb{R}$的开区间上定义一个取值为广义实数的映射—长度（length）：若$I&#x3D;(a,b)$，则<br>$$<br>l(I):&#x3D;\begin{cases}<br> b-a &amp; a,b\in \mathbb{R} \\<br> 0 &amp; I&#x3D;\varnothing \\<br> \infty &amp; \text{else} \\<br>\end{cases}<br>$$</p>
+<p><strong>定义</strong> <strong>（outer measure）</strong><br>任一集合$A\subseteq \mathbb{R}$，其外测度定义为：<br>$$<br>|A|&#x3D;\inf \set{\sum_{k&#x3D;1}^\infty l(I_k) : I_1,I_2 \dots \text{are open intervals such that }A\subset \bigcup_{k&#x3D;1}^\infty I_k }<br>$$</p>
+<p>用几何级数求和的方法，可证明可数集合的外测度都是$0$</p>
+<p>外测度有很好的性质：保序（取序关系为集合包含关系）、平移不变、可数次可加性……而且在开&#x2F;闭区间的外测度都和直观上的长度概念一致。但是，唯独不满足（可数）<strong>可加性</strong>，其中一个来搅局的反例就是Vitali集（没错，它的构造要用选择公理）</p>
+<p>但是，也不能责怪外测度这个定义还不够好，因为可以证明，一个定义在$\mathbb{R}$的全体子集上的非负实值函数，是不可能同时满足所有这些性质的，实在令人悲伤</p>
+<p>不忍心抛弃外测度这个还不错的东西呀！我们不如掩耳盗铃，直接把那些“不好的”集合无视掉，把定义域限制在“好的”集合上，这样不就可以了？emmm，这是一条未曾设想的道路，好像有点道理……</p>
+<p>但是，谁是“好的”谁又是“不好的”呢？接下来就得处理好这件事</p>
+<h3 id="可测空间"><a href="#可测空间" class="headerlink" title="可测空间"></a>可测空间</h3><p><strong>定义</strong> <strong>（$\sigma$ Algebra）</strong><br>集合$X$的子集族$\mathcal{S}$，满足以下三条性质，则被称为$\sigma$代数</p>
+<ol>
+<li><p>$\varnothing\in \mathcal{S}$</p>
+</li>
+<li><p>若$A\in\mathcal{S}$，则$X-A\in\mathcal{S}$</p>
+</li>
+<li><p>若$A_i\in \mathcal{S},i&#x3D;1,2\dots $，则$\bigcup\limits_{i&#x3D;1}^\infty A_i \in \mathcal{S}$</p>
+</li>
+</ol>
+<p><strong>定义</strong> <strong>（Measurable Set  &amp; Measurable Space）</strong><br>集合$X$上定义了$\sigma$代数$\mathcal{S}$后，$\mathcal{S}$中的成员就叫可测集合，定义了这个结构的集合$X$，常记为$(X,\mathcal{S})$，就被称为可测空间</p>
+<p>显然的，$\sigma$代数中，含有全集$X$（结合1和2），而且易得，在有限并下也封闭（第3条后面的全取$\varnothing$即可），又易得，在可数交下封闭（结合2和3），同理，在有限交下封闭，在此基础上易知，在“集合的差”下封闭（利用“有限交下封闭”和2）……这些简单的性质就过一下，不赘述了</p>
+<h3 id="Borel集合与可测函数"><a href="#Borel集合与可测函数" class="headerlink" title="Borel集合与可测函数"></a>Borel集合与可测函数</h3><h4 id="两者的定义"><a href="#两者的定义" class="headerlink" title="两者的定义"></a>两者的定义</h4><!--
+（前言：MIRA这本书上的很多定义和别处可能有所不同，比如Measurable Function的定义，就借助了Borel集合的定义，原因估计是这里主要和实轴打交道，而没有抽象到一般的拓扑空间层面吧。在本系列里，就遵循MIRA中的定义与路线走下去） -->
+
+<p><strong>定义</strong> <strong>（Borel Set）</strong><br>在$\mathbb{R}$上，所有$\mathbb{R}$中开集生成的$\sigma$代数，其中的成员就称为Borel集</p>
+<p><strong>定义</strong> <strong>（Measurable Function）</strong><br>假设$(X,\mathcal{S})$是可测空间，则一个函数$f:X\to \mathbb{R}$，如果符合$f^{-1}(B)\in \mathcal{S}$对于任何的$\mathbb{R}$上的Borel集$B$都成立，则称$f$是$\mathcal{S}$-Measurable Function</p>
+<p>当然，特征函数$\chi_E$满足：它是可测函数，当且仅当集合$E$是可测集合。原因在于，其取值就是0或1，因此随便来一个$\mathbb{R}$的子集，在其下的逆像都很简单（就四种情况），都是$\sigma$代数$\mathcal{S}$中的成员</p>
+<p><strong>定理</strong> <strong>（可测函数的等价条件）</strong><br>假设$(X,\mathcal{S})$是可测空间，一个函数$f$是measurable的，等价于$f^{-1}((a,\infty))\in\mathcal{S}$对于所有的$a\in \mathbb{R}$成立</p>
+<!-- （这条定理，就得知此处的定义和周性伟书中一致） -->
+
+<blockquote>
+<p>证明：</p>
+<p><strong>1.</strong> 如果$f$真是measurable的，那当然$(a,\infty)$的逆像在$\sigma$代数里，因此只用证另一个方面。</p>
+<p><strong>2.</strong> 另一个方面：若已满足$f^{-1}((a,\infty))$都在$\sigma$代数里（对所有$a$成立），下欲证任何一个Borel集，其在$f$下的逆像都在$\sigma$代数里。我们可以逐步简化这个原问题，直到变成一个小菜一碟的问题为止：</p>
+<ul>
+<li><p>换一下视角，把“在$f$下的逆像落在$\sigma$代数里”的那些集合都收集起来：$\mathcal{T}&#x3D;\set{A\subseteq \mathbb{R}:f^{-1}(A)\in\mathcal{S}}$，下面只用证明所有的Borel集都落在这个$\mathcal{T}$里头就行了！</p>
+</li>
+<li><p>用一下“逆像的优秀性质”很容易发现，集合$\mathcal{T}$含有$\varnothing$、在作差下封闭、在可数并下封闭，故$\mathcal{T}$其实是个$\sigma$代数！</p>
+</li>
+<li><p>既然Borel集，指的就是“含有开集的最小$\sigma$代数”里的元素，那么，作为$\sigma$代数的$\mathcal{T}$，假如包含所有的开集，那么也一定包含所有Borel集！所以，下面只用证明所有的开集都在$\mathcal{T}$里就行啦</p>
+</li>
+<li><p>回顾一下实轴的拓扑，满足第二可数性公理，因此，所有的开集都是基元素的可数并，而可数并在$\sigma$代数里是封闭的！这进一步简化了问题：只用证明所有的基元素都在$\mathcal{T}$里就行！</p>
+</li>
+<li><p>证明基元素都在$\mathcal{T}$里，只用证$(a,b)$在$\mathcal{T}$里：由于$(a,\infty)$和$(b,\infty)$都在里面（根据假设），而$(a,b)&#x3D;(a,\infty)-(b,\infty)$，$\mathcal{T}$作为一个$\sigma$代数，关于差也是封闭的，因此$(a,b)$也在里面</p>
+</li>
+</ul>
+<p>$\square$</p>
+</blockquote>
+<h4 id="荡开一笔—Borel可测"><a href="#荡开一笔—Borel可测" class="headerlink" title="荡开一笔—Borel可测"></a>荡开一笔—Borel可测</h4><p><strong>定义</strong> <strong>（Borel Measurable Function）</strong><br>假设此时，$X\subseteq \mathbb{R}$，那么$f:X\to \mathbb{R}$，如果满足：对所有$\mathbb{R}$中的Borel集合$B$，都有$f^{-1}(B)$也是Borel集，则$f$被称为是一个Borel可测的函数</p>
+<p>根据这个定义就知道，如果$X\subseteq \mathbb{R}$与$\mathbb{R}$之间有一个Borel可测的函数，那么，$X$自己一定是一个Borel集合（因为$X &#x3D; f^{-1}(\mathbb{R})$）。这即是说，若连$X$自己都不是Borel集合的话，想构造Borel可测的函数直接免谈！</p>
+<p>根据这个定义，如果$X\subseteq \mathbb{R}$并且$f:X\to\mathbb{R}$，那么$f$是Borel可测的函数，当且仅当$f^{-1}((a,\infty))$都是Borel可测的集合，这点是定理（可测函数的等价条件）的一个特例</p>
+<!--
+由于$\mathbb{R}$是个有非常多结构的空间，比如，它是Hausdorff的，那么单点集就是闭集，因此单点集的可数并---序列，也是Borel Set -->
+
+<p><strong>定理</strong> <strong>（连续函数是Borel可测的）</strong><br>假设$X\subseteq \mathbb{R}$且是一个Borel集，那么，如果$f:X\to\mathbb{R}$是连续的，它必是Borel可测的</p>
+<blockquote>
+<p>由于定理（可测函数的等价条件），只用验证$f^{-1}((a,\infty))$是一个Borel集即可，下面给出一个（不同于书本的）拓扑风格的证明：</p>
+<p>连续函数下，开集的逆像仍开，因此这是一个开集，而这个“开”是在$X$中开（即在子空间拓扑意义下的开集），因此可写为$f^{-1}((a,\infty)) &#x3D; X\cap V$，其中$V$是$\mathbb{R}$上的开集，别忘了$X$本身也是Borel集，故$X\cap V$就是两个Borel集合之并，仍然是Borel集，验证完毕。</p>
+</blockquote>
+<h4 id="可测函数的代数性质"><a href="#可测函数的代数性质" class="headerlink" title="可测函数的代数性质"></a>可测函数的代数性质</h4><p><strong>定理</strong> <strong>（可测函数复合仍可测）</strong><br>$(X,\mathcal{S})$是一个可测空间，而$f: X\to \mathbb{R}$是可测函数，$g:Y\to\mathbb{R}$则是一个Borel可测的函数，且$Y\supset f(X)$，则$g\circ f$是一个可测函数</p>
+<blockquote>
+<p>证明：用一下逆像的优良性质即可</p>
+</blockquote>
+<p>这个定理的推论就包括：若$f$是可测函数，那么$-f,\frac{1}{2}f,|f|,f^2$全是可测的！</p>
+<h4 id="可测函数的分析性质"><a href="#可测函数的分析性质" class="headerlink" title="可测函数的分析性质"></a>可测函数的分析性质</h4><p><strong>定理</strong> <strong>（可测函数的极限仍可测）</strong><br>可测空间$(X,\mathcal{S})$上定义的可测函数列$f_1,f_2 … :X\to \mathbb{R}$，若其逐点极限存在$\lim\limits_{k \to \infty} f_k(x)&#x3D;f(x)$，则这样定义的$f:X\to \mathbb{R}$也是可测函数</p>
+<blockquote>
+<p>证明：使用定理（可测函数的等价条件），可知只需验证$f^{-1}((a,\infty))\in \mathcal{S}$即可，而它又可以被表示成（验证双向包含）：<br>$$<br>f^{-1}((a,\infty)) &#x3D; \bigcup_{j&#x3D;1}^\infty \bigcup_{m&#x3D;1}^\infty \bigcap_{k&#x3D;m}^\infty f_k^{-1}((a+\frac{1}{j},\infty))<br>$$<br>而$f_k^{-1}((a+\frac{1}{j},\infty))$根据定理（可测函数的等价条件）确是在$\mathcal{S}$中的，因此在$\sigma$代数中进行可数交、并后，仍然在内<br>$\square$</p>
+</blockquote>
+<h4 id="荡开一笔—扩展到广义实数系"><a href="#荡开一笔—扩展到广义实数系" class="headerlink" title="荡开一笔—扩展到广义实数系"></a>荡开一笔—扩展到广义实数系</h4><p>当扩展到广义实数系上后，Borel集合的定义更改为：一个集合$B$是$[-\infty,\infty]$上的Borel集合，当且仅当其与$\mathbb{R}$的交集，是$\mathbb{R}$上的Borel集合</p>
+<p>然后，可测函数的定义依旧（只不过Borel集合已经不再是原来的那个定义而已），可以同样得到定理（可测函数的等价条件）：$f$可测当且仅当$f^{-1}((a,\infty])\in\mathcal{S}$均成立……不过这个证明略复杂些</p>
+<p>然后，就得到和“可测函数的极限仍然可测”类似的结论：</p>
+<p><strong>定理</strong> <strong>（可测函数的上下极限仍可测）</strong><br>可测空间$(X,\mathcal{S})$上定义的可测函数列$f_1,f_2 … :X\to [-\infty,\infty]$，则：<br>$g(x)&#x3D;\inf\set{f_k(x):k\in \mathbb{Z^+}}$以及$h(x)&#x3D;\sup\set{f_k(x):k\in \mathbb{Z^+}}$均是可测函数</p>
+<blockquote>
+<p>证明：核心在于：$h^{-1}((a,\infty]) &#x3D; \bigcup\limits_{k&#x3D;1}^\infty f_k^{-1}((a,\infty])$，这样，supremum是可测的就证出来了</p>
+<p>此外，由于infimum直接可以由supremum表示：$g(x) &#x3D; -\sup\set{-f(x):k\in \mathbb{Z^+}}$，调用supremum的结论即得证</p>
+</blockquote>
+<h3 id="测度"><a href="#测度" class="headerlink" title="测度"></a>测度</h3><h4 id="测度的定义"><a href="#测度的定义" class="headerlink" title="测度的定义"></a>测度的定义</h4><p><strong>定义</strong> <strong>（Measure）</strong><br>可测空间$(X,\mathcal{S})$的基础上，定义函数$\mu: \mathcal{S}\to [0,\infty]$，满足：$\mu(\varnothing) &#x3D; 0$以及<br>$$<br>\mu(\bigcup_{k&#x3D;1}^\infty E_k) &#x3D; \sum_{k&#x3D;1}^\infty \mu(E_k)<br>$$<br>对于无交的可测集合$E_1,E_2\dots$均成立。这个$\mu$就称为测度</p>
+<p><strong>定义</strong> <strong>（Measure Space）</strong><br>$X$上定义了一个$\sigma$代数$\mathcal{S}$，得到可测空间$(X,\mathcal{S})$，然后在该可测空间上定义测度$\mu$，最后的这个结构$(X,\mathcal{S},\mu)$就称为测度空间</p>
+<p>显然，有这些性质：</p>
+<ul>
+<li><p>把测度定义式中的$\infty$符号全部换为有限值时，也成立（只用后面补空集就行）</p>
+</li>
+<li><p>“保序性”，即，对于两个可测的集合，若满足$A\subseteq B$，则$\mu(A)\leq \mu(B)$（先用“差分”，得到无交集合，再用定义即可）</p>
+</li>
+<li><p>对于两个可测的集合，若满足$A\subseteq B$且$\mu(A)&lt;\infty$，则$\mu(B-A) &#x3D; \mu(B) - \mu(A)$</p>
+</li>
+<li><p>可数次可加性：对于$E_1,E_2,\dots\in \mathcal{S}$ ，$\mu(\bigcup\limits_{k&#x3D;1}^\infty E_k) \leq \sum\limits_{k&#x3D;1}^\infty \mu(E_k)$</p>
+</li>
+<li><p>“容斥原理”：对于两个可测的集合，若满足$\mu(A\cap B)&lt;\infty$，则$\mu(A\cup B)&#x3D;\mu(A)+\mu(B)-\mu(A\cap B)$</p>
+</li>
+</ul>
+<h4 id="测度的分析学性质"><a href="#测度的分析学性质" class="headerlink" title="测度的分析学性质"></a>测度的分析学性质</h4><p><strong>定理</strong> <strong>（递增集合的测度极限）</strong><br>测度空间$(X,\mathcal{S},\mu)$上，“递增”的可测集合序列$E_1\subset E_2\subset \cdots$，则：<br>$$<br>\mu(\bigcup_{k&#x3D;1}^\infty E_k) &#x3D; \lim\limits_{j\to\infty} \mu(E_j)<br>$$</p>
+<blockquote>
+<p>证明：若任何一个$E_j$满足$\mu(E_j) &#x3D; \infty$，那么平凡地成立。否则，记$E_0 &#x3D; \varnothing$，然后使用“差分方法”如下：</p>
+<p>$\bigcup\limits_{k&#x3D;1}^\infty E_k &#x3D; \bigcup\limits_{k&#x3D;1}^\infty (E_k-E_{k-1})$因此$\mu(\bigcup\limits_{k&#x3D;1}^\infty E_k) &#x3D; \sum\limits_{k&#x3D;1}^\infty \mu(E_k-E_{k-1})&#x3D;\lim\limits_{m\to\infty}\sum\limits_{k&#x3D;1}^ m \mu(E_k-E_{k-1})&#x3D;\lim\limits_{m\to\infty}\mu(E_k)$ 最后一步来自展开裂项</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（递减集合的测度极限）</strong><br>测度空间$(X,\mathcal{S},\mu)$上，“递减”的可测集合序列$E_1\supset E_2\supset \cdots$，且$\mu(E_1)&lt;\infty$，则：<br>$$<br>\mu(\bigcap_{k&#x3D;1}^\infty E_k) &#x3D; \lim\limits_{j\to\infty} \mu(E_j)<br>$$</p>
+<blockquote>
+<p>使用上面的结论以及De Morgan律：</p>
+<p>$E_1 - \bigcap\limits_{k&#x3D;1}^\infty E_k&#x3D;\bigcup\limits_{k&#x3D;1}^\infty (E_1-E_k)$，而恰好这$E_1-E_k$是个递增列，因此$\mu(E_1 - \bigcap\limits_{k&#x3D;1}^\infty E_k) &#x3D; \lim\limits_{k\to\infty}\mu(E_1-E_k)$ （注意，都为有限值）</p>
+<p>此即$\mu(E_1) - \mu(\bigcap\limits_{k&#x3D;1}^\infty E_k) &#x3D; \mu(E_1) - \lim\limits_{k\to\infty} \mu(E_k)$，左右各消去$\mu(E_1)$即可</p>
+<p>$\square$</p>
+</blockquote>
 
   </div>
   
@@ -2766,10 +2829,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-02T21:43:29+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-01-20T20:03:09+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jul 2, 2024</p>
+    <p>更新于：Jan 20, 2025</p>
   </a>
 </div>
 
@@ -2788,7 +2851,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/06/19/statistics4/&title=SVM - (.O w O.)?&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2025/01/20/MIRA1/&title=测度空间（MIRA） - (.O w O.)?&summary="
           
           >
           
@@ -2800,7 +2863,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/06/19/statistics4/&title=SVM - (.O w O.)?&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2025/01/20/MIRA1/&title=测度空间（MIRA） - (.O w O.)?&summary="
           
           >
           
@@ -2812,7 +2875,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/06/19/statistics4/&title=SVM - (.O w O.)?&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2025/01/20/MIRA1/&title=测度空间（MIRA） - (.O w O.)?&summary="
           
           >
           
@@ -2848,20 +2911,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/09/11/diff-geometry/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>微分几何入门</p>
-          <p class='content'>微分几何入门微广 by 梁灿彬
-拓扑空间基本的拓扑知识回忆
-定义 拓扑集合$X$上的拓扑指：有一个其子集构成的集合$\mathscr{T}$，开集就定义为它其中的元素，满足：
-
-空集和$X$本身...</p>
-        </a>
       
-      
-        <a class='next' href='/2024/06/18/statistics5/'>
-          <p class='title'>Adaboost<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>统计学习方法Adaboost简介这不是一个具体的算法，而是一个进化方法。基于某一个已经有的算法，Adaboost能让它变强
-弱分类器：就是一个分类算法，只不过它比较菜，菜到什么程度呢？菜到就比依...</p>
+        <a class='next' href='/2025/01/19/Topology8/'>
+          <p class='title'>度量化<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Topology度量化基本概念什么是度量？相信大家早已倒背如流：满足正定、对称、三角不等式的balabala，所以我们直接进入正题，本节的问题是：哪些拓扑空间，能被度量化呢？
+定义 （度量拓扑）...</p>
         </a>
       
     </div>
@@ -2877,7 +2931,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/06/19/statistics4/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2025/01/20/MIRA1/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2906,7 +2960,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <i class="fa-solid fa-chart-line fa-fw" aria-hidden="true"></i><span class='name'>Statistical Learning</span>
+      <i class="fa-solid fa-r fa-fw" aria-hidden="true"></i><span class='name'>Real Analysis</span>
     
   </header>
 
@@ -2914,74 +2968,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='content'>
     <ul class="list entry navigation">
       
-        <li><a class="flat-box" title="/2024/04/04/statistics1/" href="/2024/04/04/statistics1/"
+        <li><a class="flat-box" title="/2025/01/20/MIRA1/" href="/2025/01/20/MIRA1/"
           
           
-          active-action="action-20240404statistics1"
+          active-action="action-20250120MIRA1"
           >
           <div class='name'>
             
-            Entropy
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/06/17/statistics6/" href="/2024/06/17/statistics6/"
-          
-          
-          active-action="action-20240617statistics6"
-          >
-          <div class='name'>
-            
-            Decision Tree
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/06/01/statistics2/" href="/2024/06/01/statistics2/"
-          
-          
-          active-action="action-20240601statistics2"
-          >
-          <div class='name'>
-            
-            PCA
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/06/19/statistics4/" href="/2024/06/19/statistics4/"
-          
-          
-          active-action="action-20240619statistics4"
-          >
-          <div class='name'>
-            
-            SVM
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/06/18/statistics5/" href="/2024/06/18/statistics5/"
-          
-          
-          active-action="action-20240618statistics5"
-          >
-          <div class='name'>
-            
-            Adaboost
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/06/10/statistic3/" href="/2024/06/10/statistic3/"
-          
-          
-          active-action="action-20240610statistic3"
-          >
-          <div class='name'>
-            
-            MCMC
+            测度空间（MIRA）
           </div>
           
         </a></li>
@@ -3019,7 +3013,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SVM"><span class="toc-text">SVM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E5%8F%AF%E5%88%86%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA%EF%BC%88%E7%A1%AC%EF%BC%89"><span class="toc-text">线性可分支持向量机（硬）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%84%9F%E7%9F%A5%E6%9C%BA"><span class="toc-text">感知机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E9%97%B4%E9%9A%94"><span class="toc-text">两种间隔</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E7%9A%84%E5%BD%A2%E5%BC%8F%E5%8C%96%E6%8F%8F%E8%BF%B0"><span class="toc-text">问题的形式化描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E5%81%B6%E5%8F%98%E5%BD%A2%E4%B8%8E%E6%B1%82%E8%A7%A3"><span class="toc-text">对偶变形与求解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA%EF%BC%88%E8%BD%AF%EF%BC%89"><span class="toc-text">线性支持向量机（软）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AF%E9%97%B4%E9%9A%94"><span class="toc-text">软间隔</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E5%81%B6%E9%97%AE%E9%A2%98%E4%B8%8E%E6%B1%82%E8%A7%A3"><span class="toc-text">对偶问题与求解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA"><span class="toc-text">非线性支持向量机</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E5%BA%A6%E7%A9%BA%E9%97%B4%EF%BC%88MIRA%EF%BC%89"><span class="toc-text">测度空间（MIRA）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E9%A1%BE%E4%B8%8E%E9%93%BA%E5%9E%AB"><span class="toc-text">回顾与铺垫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E5%BA%A6%E5%89%8D%E4%BC%A0"><span class="toc-text">测度前传</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E6%B5%8B%E7%A9%BA%E9%97%B4"><span class="toc-text">可测空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Borel%E9%9B%86%E5%90%88%E4%B8%8E%E5%8F%AF%E6%B5%8B%E5%87%BD%E6%95%B0"><span class="toc-text">Borel集合与可测函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%A4%E8%80%85%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">两者的定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8D%A1%E5%BC%80%E4%B8%80%E7%AC%94%E2%80%94Borel%E5%8F%AF%E6%B5%8B"><span class="toc-text">荡开一笔—Borel可测</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E6%B5%8B%E5%87%BD%E6%95%B0%E7%9A%84%E4%BB%A3%E6%95%B0%E6%80%A7%E8%B4%A8"><span class="toc-text">可测函数的代数性质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E6%B5%8B%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%86%E6%9E%90%E6%80%A7%E8%B4%A8"><span class="toc-text">可测函数的分析性质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8D%A1%E5%BC%80%E4%B8%80%E7%AC%94%E2%80%94%E6%89%A9%E5%B1%95%E5%88%B0%E5%B9%BF%E4%B9%89%E5%AE%9E%E6%95%B0%E7%B3%BB"><span class="toc-text">荡开一笔—扩展到广义实数系</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E5%BA%A6"><span class="toc-text">测度</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E5%BA%A6%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">测度的定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E5%BA%A6%E7%9A%84%E5%88%86%E6%9E%90%E5%AD%A6%E6%80%A7%E8%B4%A8"><span class="toc-text">测度的分析学性质</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -4284,7 +4278,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/统计学习/","name":"统计学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/06/19/statistics4/","name":"SVM"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"SVM","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/06/19/statistics4/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/06/19/statistics4/","wordCount":0,"datePublished":"2024-06-19T07:46:16.000Z","dateModified":"2024-07-02T13:43:29.091Z","articleSection":"统计学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/实分析/","name":"实分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/01/20/MIRA1/","name":"测度空间（MIRA）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"测度空间（MIRA）","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/01/20/MIRA1/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/01/20/MIRA1/","wordCount":0,"datePublished":"2025-01-20T11:58:34.000Z","dateModified":"2025-01-20T12:03:09.930Z","articleSection":"实分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
