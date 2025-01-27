@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://maythics.github.io/2024/11/19/topology3/"/>
+  <link rel="canonical" href="http://maythics.github.io/2025/01/22/mira2/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,21 +34,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Hausdorff、连通、紧致 - (.O w O.)?</title>
-  <meta name="keywords" content="Topology,physics">
+  <title>Lebesgue测度（MIRA） - (.O w O.)?</title>
+  <meta name="keywords" content="physics">
   <meta desc name="description" content="emmm - Maythics - (.O w O.)?">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hausdorff、连通、紧致">
-<meta property="og:url" content="http://maythics.github.io/2024/11/19/Topology3/index.html">
+<meta property="og:title" content="Lebesgue测度（MIRA）">
+<meta property="og:url" content="http://maythics.github.io/2025/01/22/MIRA2/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
-<meta property="og:description" content="TopologyHausdorff、连通、紧致本篇讨论拓扑不变量，所谓拓扑不变量，就是互相同胚的空间中保持一致的一个性质。这个性质的用场是，如果你想证明$X$和$Y$空间是“不同”的（在同胚意义下），该怎么说明呢？用同胚映射不容易，因为万一同胚映射真的存在，只不过你没找到而已。拓扑不变量可以来帮忙，有哪个拓扑不变量，在$X$中是这样在$Y$中却是那样，就证明了两者必定不同胚！ Hausdorff性">
+<meta property="og:description" content="Real AnalysisLebesgue的博士论文指导老师正是Borel  Lebesgue测度（MIRA）核心内容梗概上一篇中，了解到外测度的缺陷。此外，辛辛苦苦定义了许多抽象结构（描述了理想的测度是什么样的结构）。现在终于是时候来构建一个具体的测度看看了 也就是说，我们给出什么是“好的”集合，然后把外测度限制在这些“好的”集合上，这样就行了!这无伤大雅。因为我们将看到，“不好的”集合都是很变">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-11-19T15:05:59.000Z">
-<meta property="article:modified_time" content="2024-12-21T13:42:51.495Z">
+<meta property="article:published_time" content="2025-01-21T16:02:52.000Z">
+<meta property="article:modified_time" content="2025-01-27T16:12:07.045Z">
 <meta property="article:author" content="Maythics">
-<meta property="article:tag" content="Topology">
+<meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2611,7 +2611,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/11/19/Topology3/">
+  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2025/01/22/MIRA2/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="(.O w O.)?">
   </span>
@@ -2632,7 +2632,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Hausdorff、连通、紧致
+        Lebesgue测度（MIRA）
       </h1>
       <div class='new-meta-box'>
         
@@ -2651,10 +2651,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E6%8B%93%E6%89%91%E5%AD%A6/">拓扑学</a>
+    <a class="category-link" href="/categories/%E5%AE%9E%E5%88%86%E6%9E%90/">实分析</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E6%8B%93%E6%89%91%E5%AD%A6/" itemprop="url"><span itemprop="name">拓扑学</span></a>
+        <a href="/categories/%E5%AE%9E%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">实分析</span></a>
       </span>
     
   </div>
@@ -2663,10 +2663,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-11-19T23:05:59+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-01-22T00:02:52+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Nov 19, 2024</p>
+    <p>发布于：Jan 22, 2025</p>
   </a>
 </div>
 
@@ -2689,127 +2689,77 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="Topology"><a href="#Topology" class="headerlink" title="Topology"></a>Topology</h1><h2 id="Hausdorff、连通、紧致"><a href="#Hausdorff、连通、紧致" class="headerlink" title="Hausdorff、连通、紧致"></a>Hausdorff、连通、紧致</h2><p>本篇讨论拓扑不变量，所谓拓扑不变量，就是互相同胚的空间中保持一致的一个性质。这个性质的用场是，如果你想证明$X$和$Y$空间是“不同”的（在同胚意义下），该怎么说明呢？用同胚映射不容易，因为万一同胚映射真的存在，只不过你没找到而已。拓扑不变量可以来帮忙，有哪个拓扑不变量，在$X$中是这样在$Y$中却是那样，就证明了两者必定不同胚！</p>
-<h3 id="Hausdorff性"><a href="#Hausdorff性" class="headerlink" title="Hausdorff性"></a>Hausdorff性</h3><p><strong>定义</strong> <strong>（Hausdorff）</strong><br>一个拓扑空间，如果其中的任取两不同的$x_1,x_2$，存在邻域$x_1\in U_1$，$x_2\in U_2$使得$U_1\cap U_2&#x3D;\varnothing$，则称该空间为Hausdorff的</p>
-<p><strong>定理</strong> <strong>（Hausdorff空间的有限集都是闭集）</strong><br>Hausdorff空间的有限集都是闭集</p>
-<blockquote>
-<p>证明：只需证单点集闭，然后归纳就行了。</p>
-<p>一个单点集$\set{x_0}$，要证明$X-\set{x_0}$开，那么，随便取一个$x\in X-\set{x_0}$，根据Hausdorff性，能够取到$x\in U$以及$x_0\in V$，且$U\cap V&#x3D;\varnothing$</p>
-<p>因此，任何一个$x\in X-\set{x_0}$，都在$X-\set{x_0}$的内部，而$x$可取遍整个$X-\set{x_0}$呀，所以，$X-\set{x_0}$就等于自己的内部，因此它是开集，即$\set{x_0}$闭</p>
-</blockquote>
-<p><strong>定理</strong> <strong>（Hausdorff空间的序列至多收敛到一个点）</strong><br>Hausdorff空间的序列至多收敛到一个点（注意：这里的收敛采取的定义请回顾拓扑空间中的收敛定义）</p>
-<blockquote>
-<p>反证法，若收敛到多于一点，则任取两个点，由Hausdorff……与收敛定义相悖</p>
-</blockquote>
-<p><strong>定理</strong> <strong>（Hausdorff性是拓扑不变量）</strong><br>若拓扑空间$X$是Hausdorff的，而拓扑空间$Y$与之同胚，则$Y$也是Hausdorff的</p>
-<blockquote>
-<p>证明：同胚映射$f:X\to Y$，任取$Y$中两个点$y_1,y_2$，先找$x_1&#x3D;f^{-1}(y_1)$，再找$x_2&#x3D;f^{-1}(y_2)$，由于$x_1\neq x_2$，因此根据$X$是Hausdorff的假设，存在$x_1\in U_1$以及$x_2\in U_2$且$U_1\cap U_2&#x3D;\varnothing$，因此$y_1 \in f(U_1)$以及$y_2\in f(U_2)$，而且……</p>
-</blockquote>
-<h3 id="连通性"><a href="#连通性" class="headerlink" title="连通性"></a>连通性</h3><h4 id="连通性质—General-Idea"><a href="#连通性质—General-Idea" class="headerlink" title="连通性质—General Idea"></a>连通性质—General Idea</h4><p><strong>定义</strong> <strong>（分割）</strong><br>拓扑空间$X$的一个分割（separation），指的是$X$的一对非空无交开集$U,V$，且$U\cup V&#x3D;X$</p>
-<p><strong>定义</strong> <strong>（连通）</strong><br>拓扑空间$X$如果不存在分割，则称为连通的</p>
-<p><strong>定理</strong> <strong>（极限点描述连通）</strong><br>$X$是拓扑空间，$Y$是其一个子空间，不存在$Y$的两个非空子集$A,B$，使得：其并等于$Y$，并且$A$和$B$互相不包含对方的极限点。这样的$Y$是连通的</p>
-<blockquote>
-<p>之前也经常拿它作为连通的定义。这种“不存在……”的表述，证明就证逆否命题</p>
-<p>证明：</p>
-<p>一方面，若不是连通的，则存在两个开集$A\cup B&#x3D;Y$，两者非空不交且开。这样，由于$A$和$B$在$Y$中既开又闭，由第一篇中的定理（子空间拓扑下闭包的表示），$A&#x3D;\overline{A}\cap Y$，故根据假设，就有$\overline{A}\cap Y\cap B&#x3D;\varnothing$，把$Y\cap B&#x3D;B$吸收掉$Y$，即推出$\overline{A}\cap B&#x3D;\varnothing$……不符合该命题</p>
-<p>另一方面，若不符合这个命题，即：存在非空的$A$与$B$两集合，其并为$Y$，互不包含对方的极限点。则由于极限点含在闭包里，该假设即$\overline{A}\cap B&#x3D;\varnothing$，给上式再交上$Y$毫不影响，即$(Y\cap\overline{A})\cap B&#x3D;\varnothing$，当然由于$A,B$之并为$Y$，必有$(\overline{A}\cap Y)\cup B&#x3D;Y$，根据定理（子空间拓扑下闭包的表示），翻译一下：$A$在$Y$中的闭包即$\overline{A}\cap Y$，根据闭集定义，知道了$B$是$Y$中开集。同理，$A$也是$Y$中开集……不连通</p>
-</blockquote>
-<p><strong>定理</strong> <strong>（连通子空间脚踏一只船）</strong><br>若$X$是不连通的拓扑空间，分割为$C$和$D$，$Y$是$X$的连通子空间，则$Y\subset C$或者$Y\subset D$</p>
-<blockquote>
-<p>证明：子空间拓扑，$C\cap Y$与$D\cap Y$当然是$Y$中开集；$C,D$本就不交，限制在$Y$后更不可能交；其并当然是$Y$。万事俱备，只欠“两者均非空”这一东风，就能说明$Y$不连通了。这东风不能给，因此必有一者为空</p>
-</blockquote>
-<p><strong>定理</strong> <strong>（连通集们牵手仍连通）</strong><br>拓扑空间$X$的连通子空间族，成员含有一公共点，则成员之并连通</p>
-<blockquote>
-<p>证明：设连通子集族为$\set{A_\alpha}$，含有$p$这一公共点，欲证$\bigcup A_\alpha$连通</p>
-<p>反证：假设$\bigcup A_\alpha&#x3D;C\cup D$，$C,D$符合分割的那些条件，$p$只能属于其一，譬如$p\in C$，则$A_\beta\cap C\neq \varnothing$，由定理（连通子空间脚踏一只船），得$A_\beta\subset C$，这对所有$\beta$成立，因此$\bigcup A_\alpha\subset C$，故$D$竟然空，矛盾</p>
-</blockquote>
-<p><strong>定理</strong> <strong>（连通拖家带口仍连通）</strong><br>拓扑空间$X$有一连通子空间$A$，则对任何满足$A\subset B\subset \overline{A}$的$B$，$B$均连通</p>
-<blockquote>
-<p>反证：若$B$不连通，则$B&#x3D;C\cup D$，其中$C,D$满足……调用定理（连通子空间脚踏一只船），$A\subset C$或者$A\subset D$，则$\overline{A}\subset\overline{C}$，则根据定理（极限点描述连通），$\overline{A}\cap D&#x3D;\varnothing$，则$B\cap D&#x3D;\varnothing$，矛盾</p>
-</blockquote>
-<p><strong>定理</strong> <strong>（连通的连续像仍连通）</strong><br>两个拓扑空间之间，$f:X\to Y$连续，已知$X$连通，则$f(X)$连通。因此，与连通空间同胚的空间也连通</p>
-<blockquote>
-<p>证明：由于第一篇的定理（连续函数构造）已知，限制值后仍连续，则限制$g: X\to f(X)$仍连续</p>
-<p>反证：假设$f(X)&#x3D;C\cup D$，其中$C,D$……，则$g^{-1}(C)$与$g^{-1}(D)$也开，且满足不互交，其并为$X$。这不是个分割吗！矛盾</p>
-</blockquote>
-<p>这一定理的推论为：连通性是拓扑不变量！</p>
-<!--
-**定理** **（介值定理）**
-设$f:X\to Y$是从连通空间$X$到具有序拓扑的全序集$Y$的一个连续映射。若$a,b\in X$，且$r$是$Y$中介于$f(a),f(b)$之间的一个点，则$X$中存在一个点$c$使得$f(c)=r$
+    <h1 id="Real-Analysis"><a href="#Real-Analysis" class="headerlink" title="Real Analysis"></a>Real Analysis</h1><div class="note info"><p>Lebesgue的博士论文指导老师正是Borel</p></div>
 
-> 证明：在这个体系里证明十分优雅。$A=f(X)\cap (-\infty,r)$以及$B=f(X)\cap (r,\infty)$，两者当然无交，由于$f(a)\in A,f(b)\in B$，因此两者非空，且两者都是$f(X)$的开集（子空间拓扑下），那么，如果$r\notin f(X)$，那不就是分割了嘛！这说明$f(X)$不连续，但是定理（连通的连续像仍连通）与之矛盾，证毕 -->
-
-<h3 id="紧致性"><a href="#紧致性" class="headerlink" title="紧致性"></a>紧致性</h3><p>快速复习一下这些基础，不赘述</p>
-<p><strong>定义</strong> <strong>（覆盖）</strong><br>集合$X$的一个子集族$\mathscr{A}$，若$\mathscr{A}$的成员之并等于$X$，则称$\mathscr{A}$为$X$的一个覆盖（covering）</p>
-<p><strong>定义</strong> <strong>（紧致）</strong><br>拓扑空间$X$的任何一个开覆盖中，均能找到一个有限子覆盖，则称$X$紧致</p>
-<p><strong>定理</strong> <strong>（子空间的紧致性）</strong><br>紧致拓扑空间$X$的子集$Y$，（在子空间拓扑意义下）是紧致空间，当且仅当任意一个由$X$的开子集组成的、成员之并包含$Y$的子集族，都有个有限子集族，其并仍能包含$Y$</p>
+<h2 id="Lebesgue测度（MIRA）"><a href="#Lebesgue测度（MIRA）" class="headerlink" title="Lebesgue测度（MIRA）"></a>Lebesgue测度（MIRA）</h2><h3 id="核心内容梗概"><a href="#核心内容梗概" class="headerlink" title="核心内容梗概"></a>核心内容梗概</h3><p>上一篇中，了解到外测度的缺陷。此外，辛辛苦苦定义了许多抽象结构（描述了理想的测度是什么样的结构）。现在终于是时候来构建一个<strong>具体的测度</strong>看看了</p>
+<p>也就是说，我们给出什么是“好的”集合，然后把外测度限制在这些“好的”集合上，这样就行了!这无伤大雅。<del>因为我们将看到，“不好的”集合都是很变态的，正常人不会遇到</del></p>
+<p>本篇结论：好的集合就是Borel集！（或者Lebesgue可测集合），同时，定义在这些集合上的外测度将成为真正的测度，改名Lebesgue测度</p>
+<h3 id="可加性在特殊情况下成立"><a href="#可加性在特殊情况下成立" class="headerlink" title="可加性在特殊情况下成立"></a>可加性在特殊情况下成立</h3><p><strong>定理</strong> <strong>（有开时，外测度满足有限可加性）</strong><br>假设无交集合$A,G\subseteq \mathbb{R}$，且$G$是开集，则$\vert A \cup G\vert &#x3D; \vert A\vert+\vert G\vert$</p>
 <blockquote>
-<p>一方面，若$Y$紧致，任找$X$的一个开子集族能覆盖$Y$，每个成员都和$Y$相交，是个（子空间拓扑下）$Y$的开覆盖，根据$Y$紧致的假设，找到有限子集族。另一方面同理</p>
-</blockquote>
-<p>我了解了个人之前理解时一些不严谨的地方，如，Munkres这个严谨的体系下，“紧致”这个形容词描述的是一个拓扑空间，而不是拓扑空间的一个子集，但默认了拓扑空间的子集都被赋予了子空间拓扑后，那也有资格说它们“紧致”与否了</p>
-<p>在这个前提下，判断子空间是否紧致，刚才这个定理保证了，以前常用的那种方法是对的</p>
-<p>注：遵循约定，今后对拓扑空间的子集都默认取了子空间拓扑，讨论“子集是不是紧致的”是合法的。“$Y$的覆盖”这个词在后文也泛指：原空间$X$的子集族，且其并包含子集$Y$</p>
-<h4 id="紧致集与闭集的关系"><a href="#紧致集与闭集的关系" class="headerlink" title="紧致集与闭集的关系"></a>紧致集与闭集的关系</h4><p><strong>定理</strong> <strong>（紧空间的闭子集紧）</strong><br>紧致空间的闭子集，仍是紧致的</p>
-<blockquote>
-<p>证明：方法是过河拆桥！紧致空间$X$的闭子集$A$，假设有个开覆盖，那再多添个$A^c$，则新的开覆盖都覆盖$X$了，由紧致性，当然能找到有限个开覆盖覆盖$X$！这有限个里，去掉$A^c$，就是要找的那个，覆盖$A$且有限的子覆盖 $\square$</p>
-</blockquote>
-<p><strong>定理</strong> <strong>（Hausdorff空间的紧集闭）</strong><br>Hausdorff空间的紧致子空间，都是闭集</p>
-<blockquote>
-<p>证明：拓扑空间$X$是Hausdorff的，有个紧致子集$Y$，欲证$X-Y$开。即：对于任意的$x\in X-Y$，欲找其一个邻域在$X-Y$中。具体怎么找呢？</p>
-<p>固定好刚才那个$x$，然后，对于每一个$y\in Y$，由Hausdorff性，存在$x\in U_y$以及$y\in V_y$，这样，$\bigcup\limits_{y\in Y} V_y\supset Y$自然成立</p>
-<p>由$\bigcup\limits_{y\in Y} V_y\supset Y$及紧致假设，找到有限集$B$使得$\bigcup\limits_{y\in B} V_y\supset Y$，因此$\bigcap\limits_{y\in B} U_y\subset X-Y$，而且为有限个开集交，仍开，此即所求的$x$的邻域</p>
-</blockquote>
-<h4 id="与连续映射相关"><a href="#与连续映射相关" class="headerlink" title="与连续映射相关"></a>与连续映射相关</h4><p><strong>定理</strong> <strong>（紧集的连续像紧）</strong><br>紧致空间的连续像是紧致的</p>
-<blockquote>
-<p>证明：$f:X\to Y$是两个拓扑空间间的连续映射，则任意$f(X)$的开覆盖$\set{U _ \alpha} _ \alpha$，找$\set{f^{-1}(U _ \alpha)} _ \alpha$，发现这就是$X$的开覆盖，因此缩小成有限个，还能覆盖$X$的：$\set{f^{-1}(U _ \alpha)} _ {\alpha\in I}$（其中$I$是个有限的指标集）</p>
-<p>这样，$\set{U_\alpha}_{\alpha\in I}$其实就是所求的$f(X)$的有限子覆盖，找到了 $\square$</p>
-</blockquote>
-<p>这个定理的推论是：紧致性也是一个拓扑不变量！</p>
-<p><strong>定理</strong> <strong>（判断同胚）</strong><br>两个拓扑空间之间的映射$f:X\to Y$是连续的双射，且$X$紧致，$Y$Hausdorff，则$f$是个同胚</p>
-<blockquote>
-<p>证明：回顾同胚的定义，我们只剩$f^{-1}$的连续性需要证明了。这里，我们用连续函数的等价刻画之：闭集的逆像仍闭</p>
-<p>那么，任取一个$X$中闭集$U$，欲证：$(f^{-1})^{-1}(U)$仍是闭集（由于可逆嘛），即待证$f(U)$是闭集，而$f(U)$是紧致集的连续像，由定理（紧集的连续像紧），知$f(U)$紧致，而又由定理（Hausdorff空间的紧集闭），知$f(U)$闭。</p>
-<p>至此，证明了闭集在$f^{-1}$下的逆像仍闭 $\square$</p>
-</blockquote>
-<h4 id="有用的有限交"><a href="#有用的有限交" class="headerlink" title="有用的有限交"></a>有用的有限交</h4><p><strong>定理</strong> <strong>（用有限交刻画紧致）</strong><br>拓扑空间$X$是紧致的，当且仅当$X$中具有有限交性质的所有闭子集族$\set{C_\alpha}_\alpha$，其所成员之交$\bigcap C_\alpha$非空</p>
-<blockquote>
-<p>证明：套路很明确，用开&#x2F;闭集的对偶关系以及De Morgan律</p>
-<p>一方面，用反证法证明紧致。假设不紧致，则能取到一个开覆盖，它不存在有限子覆盖。现在，考察其中开覆盖逐个元素取补后，得到的一个闭集族，那么，这些闭集族之交为空（因为本身是开覆盖嘛）。而且“不存在有限子覆盖”即是说，这个闭集族的任意有限个之交不为空。但是闭子集族的“有限交性质”理应会推出“全体交仍非空”，矛盾！</p>
-<p>另一方面，已知紧致，已有某一个具备有限交性质的闭子集族，欲证其全体交非空。翻译一下，将这个闭子集族中的所有成员取补，得到一个开子集族，欲证这个开子集族不覆盖$X$！这好办，用反证法，假设覆盖，则根据紧致假设，必有有限子覆盖，因此，原始的闭子集族中的有限个交为空，矛盾</p>
-</blockquote>
-<p>这个定理很有用，是后续证明的一个强力武器，要记住！</p>
-<h4 id="预热—紧致空间的有限积"><a href="#预热—紧致空间的有限积" class="headerlink" title="预热—紧致空间的有限积"></a>预热—紧致空间的有限积</h4><p>之后有个大定理是Tychonoff定理，讲的就是紧致空间之（任意）笛卡尔积仍然紧致。今天先证有限笛卡尔积热热身吧</p>
-<p><strong>定理</strong> <strong>（Tube Lemma）</strong><br>两个拓扑空间之积$X\times Y$，其中$Y$紧致，如果$N$是$X\times Y$中包含了薄片$x_0\times Y$的一个开集，则$N$必然包含着一个管子（tube）$W\times Y$，其中$W$是$x_0$在$X$中的邻域</p>
-<blockquote>
-<p>思路：</p>
+<p>证明：由于两者之一测度为无穷时，平凡地成立，故只用讨论两者测度均有限。又由于次可加性本来就成立，所以只需证明$\vert A \cup G\vert \geq \vert A\vert+\vert G\vert$</p>
+<p><strong>1.</strong> 当$G$本身是开区间$(a,b)$时：</p>
 <ul>
-<li><p>想象一下二维版本的画面，$x_0\times Y$就是一个竖直细线，周围盖着一个开集$N$，然后细线可以被一个细的开管道包含住，开管道含在$N$里。</p>
+<li><p>不妨设$a,b\notin A$（因为我们已知可数个点组成的外测度为零，所以该假设不影响结果），因此任何开区间$I$可以被分为三部分：$(-\infty,a)\cap I$，$(a,b)\cap I$，$(b,\infty)\cap I$</p>
 </li>
-<li><p>但是，万一$N$是个一端大、另一端逐渐缩小的开集怎么办？逐渐缩小有可能导致，不存在一个宽度能够塞入$W$了！想到这里，证明思路就出来了，正是紧致性（化无限为有限）保证了，不会逐渐缩小到任意小！</p>
+<li><p>根据外测度定义着手证明：先随意找一个开区间序列$I_1,I_2 \dots$覆盖$A\cup G$，因此所有$I_n$均被分为：$J_n &#x3D; (-\infty,a)\cap I_n$，$K_n(a,b)\cap I_n$，$L_n &#x3D; (b,\infty)\cap I_n$三部分，有长度关系：$l(I_n) &#x3D; l(J_n)+l(K_n)+l(L_n)$</p>
+</li>
+<li><p>由于$K_1，K_2\dots$最终覆盖了$G$，而$J_1,L_1,J_2,L_2\dots$最后覆盖了$A$，因此$\sum\limits_{n&#x3D;1}^\infty l(K_n) \geq \vert G\vert$以及$\sum\limits_{n&#x3D;1}^\infty l(J_n)+l(L_n) \geq \vert A\vert$</p>
+</li>
+<li><p>$\sum\limits_{n&#x3D;1}^\infty l(I_n) &#x3D; \sum\limits_{n&#x3D;1}^\infty l(K_n)+\sum\limits_{n&#x3D;1}^\infty l(J_n)+l(L_n) \geq\vert G\vert+ \vert A\vert$对于任意的$\set{I_n}_n$都成立，即表明$\vert A \cup G\vert \geq \vert A\vert+\vert G\vert$</p>
 </li>
 </ul>
-<p>证明：</p>
+<p><strong>2.</strong> 当$G$是一般开集时：</p>
 <ul>
-<li><p>取定$x_0$后，由于所有$(x_0,y), \forall y\in Y$都在开集$N$里，根据定义（基生成的拓扑），必然有$U_\alpha \times V_\alpha$使得$(x_0,y)\in U_\alpha \times V_\alpha\subset N$，而$x_0\times Y$同胚于$Y$，因此是个紧致集！故减少到$\set{U_i \times V_i}_{i&#x3D;1\dots n}$有限个就够了</p>
+<li><p>先将“$G$为一个开区间”的情形推广到“$G$为有限个无交开区间之并”，$\vert A \cup G\vert \geq \vert A\vert+\vert G\vert$仍然成立</p>
 </li>
-<li><p>现在，我就让$W:&#x3D;U_1\cap\dots \cap U_n$即可，接下来看看是不是符合要求，符合的话就结束了！</p>
+<li><p>由于最一般的情况下，开集$G$可表示成可数个无交开区间的并$\bigcup\limits_{n&#x3D;1}^\infty I_n$，先用一下外测度的“保序性”$\vert A\cup G\vert\geq \vert A \cup  \bigcup\limits_{n&#x3D;1}^m I_n\vert$，再结合刚才那个bullet point中的说明，即知$\vert A \cup  \bigcup\limits_{n&#x3D;1}^m I_n\vert \geq \vert A\vert+\vert\bigcup\limits_{n&#x3D;1}^m I_n \vert &#x3D; \vert A\vert+\sum\limits_{n&#x3D;1}^m l(I_n)$</p>
+</li>
+<li><p>综合一下，即$\vert A\cup G\vert\geq \vert A\vert+\sum\limits_{n&#x3D;1}^m l(I_n)$对于任何的$m\in\mathbb{Z^+}$均成立，因此：$\vert A\cup G\vert\geq \vert A\vert+\sum\limits_{n&#x3D;1}^\infty l(I_n) \geq \vert A\vert+\vert G\vert$（最后一步来自外测度定义）</p>
 </li>
 </ul>
-<ol>
-<li><p>$x_0\in W$这个显然，$W$当然也开</p>
-</li>
-<li><p>验证$\set{U_i\times V_i}_i$形成了一个$W\times Y$的开覆盖：按定义来呗，随便取一个$(x,y)\in W\times Y$，那么$x$自然在所有的$U_i$中，所以“横坐标”根本不用验证，再看“纵坐标”：回顾当时$(x_0,y)$这个点，必然有$j$使得$(x_0,y)\in U_j\times V_j$里，这保证$y\in V_j$！所以，$(x,y)\in U_j\times V_j$。因此，的确形成$W\times Y$的开覆盖</p>
-</li>
-<li><p>验证$W\times Y$在$N$中。这一点只要结合第一个bullet point以及上面的第2条即可说明：$W\times Y$被$\set{U_i\times V_i}$覆盖，而$\set{U_\alpha\times V_\alpha}$本身全在$N$里头，所以$W\times Y$在$N$里头</p>
-</li>
-</ol>
-</blockquote>
-<p><strong>定理</strong> <strong>（紧致空间的有限积紧致）</strong><br>有限多个紧致空间的笛卡尔积是紧致的</p>
-<blockquote>
-<p>证明：只需考察两个乘积$X\times Y$的形式。首先，假设$X\times Y$被一个开覆盖$\mathscr{A}$覆盖。因为$x\times Y$是紧致的，因此可以找到$\mathscr{A}$中有限个开集覆盖它，这有限个开集记为$\set{A_1,\dots ,A_n}$</p>
-<p>回想刚证的定理（tube lemma），$\bigcup\limits_{i&#x3D;1}^n A_i$的地位就是之前$N$的地位，然后套用一下，知，能够塞入一个tube，记为$W_x\times Y$，使得$x\times Y\subset W_x\times Y\subset \bigcup\limits_{i&#x3D;1}^n A_i$</p>
-<p>现在，我们把$x$跑起来。就有一族子集$\set{W_x\times Y}_x$。那么，$W_x$本身形成了$X$的开覆盖，因此有有限子覆盖$\set{W_1,\dots,W_m}$，那么，每一个$W_k\times Y$都回顾其构造时的那些有限开集$\set{A_1\dots A_n}$，所以，最后有限个有限开子集就覆盖了整个$X\times Y$，这就是$\mathscr{A}$的一个有限子覆盖</p>
 <p>$\square$</p>
+</blockquote>
+<p>利用上述定理，可以再推出平行的结论：</p>
+<p><strong>定理</strong> <strong>（有闭时，外测度满足有限可加性）</strong><br>假设无交集合$A,F\subseteq \mathbb{R}$，且$F$是闭集，则$\vert A \cup F\vert &#x3D; \vert A\vert+\vert F\vert$</p>
+<h3 id="Borel集合与闭集的关系"><a href="#Borel集合与闭集的关系" class="headerlink" title="Borel集合与闭集的关系"></a>Borel集合与闭集的关系</h3><p><strong>定理</strong> <strong>（从内部用闭集逼近Borel集）</strong><br>假设$B\subset \mathbb{R}$是一个Borel集，对于任何$\varepsilon&gt;0$，均存在一个闭集$\subset B$，满足$\vert B-F\vert&lt;\varepsilon$</p>
+<blockquote>
+<p>证明：用代数方法来帮忙，我们先将“能从内部用闭集逼近”的集合收集起来：$\mathcal{L}&#x3D;\set{A\subseteq \mathbb{R}:\forall\varepsilon &gt;0, \exists F \subset A \text{ s.t. }\vert A-F\vert&lt;\varepsilon}$，然后发现这个集合是一个$\sigma$代数（请验证那三条）！之后，由于所有闭集都在$\mathcal{L}$里，所以得知所有开集都在$\mathcal{L}$。因此，$\mathcal{L}$是一个“包含所有开集”的$\sigma$代数，那么Borel集都在$\mathcal{L}$里，证毕</p>
+</blockquote>
+<h3 id="Borel集上的外测度"><a href="#Borel集上的外测度" class="headerlink" title="Borel集上的外测度"></a>Borel集上的外测度</h3><p><strong>定理</strong> <strong>（有Borel集时，外测度满足可加性）</strong><br>假设无交集合$A,B\subseteq \mathbb{R}$， 且$B$是Borel集，则$\vert A \cup B\vert &#x3D; \vert A\vert+\vert B\vert$</p>
+<blockquote>
+<p>结合之前的铺垫，思路显而易见：先找$B$里一个满足$\vert B-F\vert&lt;\varepsilon$的闭集，再使用定理（有闭时，外测度满足有限可加性）,得到$\vert A\cup F\vert &#x3D; \vert A\vert +\vert F\vert$，因此$\vert A\cup B\vert\geq\vert A\cup F \vert &#x3D; \vert A\vert +\vert F\vert \geq  \vert A\vert +\vert B\vert -\varepsilon$，对任意的$\varepsilon$均成立，故有限时的情形得证</p>
+<p>针对可数的情况：一系列Borel集$B_1,B_2\dots$有：$\vert \bigcup\limits_{k&#x3D;1}^\infty B_k\vert \geq \vert \bigcup\limits_{k&#x3D;1}^N B_k \vert &#x3D; \sum\limits_{k&#x3D;1}^N \vert B_k\vert$（最后一步来自刚才的有限可加性），这对于任何的$N\in \mathbb{Z^+}$都成立，即表明$\vert \bigcup\limits_{k&#x3D;1}^\infty B_k\vert \geq \sum\limits_{k&#x3D;1}^\infty \vert B_k\vert$</p>
+<p>$\square$</p>
+</blockquote>
+<p><strong>定义</strong> <strong>（Lebesgue测度1）</strong><br>至此，我们可以记$\mathcal{B}$为包含所有开集的最小的$\sigma$代数，因此$(\mathbb{R},\mathcal{B})$就是一个可测空间，外测度在其上满足可加性，成为一个真正的测度，称之为Lebesgue测度</p>
+<h3 id="Lebesgue可测"><a href="#Lebesgue可测" class="headerlink" title="Lebesgue可测"></a>Lebesgue可测</h3><p><strong>定义</strong> <strong>（Lebesgue可测集）</strong><br>一个集合$A\subset \mathbb{R}$被称为Lebesgue可测的，如果它就是Borel集，或者存在一个Borel集$B\subset A$使得$\vert A-B\vert &#x3D; 0$</p>
+<blockquote>
+<p>验证的确形成一个$\sigma$代数</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（Lebesgue可测集的等价定义）</strong><br>$A\subset \mathbb{R}$，以下几个条件等价：</p>
+<p>a) $A$是Lebesgue可测的</p>
+<p>b) 对于任意的$\varepsilon&gt;0$，均存在闭集$F \subset A$使得$\vert A-F \vert&lt;\varepsilon$</p>
+<p>c) 存在$A$内的闭集$F_1,F_2,\dots$使得$\vert A-\bigcup\limits _ {k&#x3D;1}^\infty F_k \vert &#x3D; 0$</p>
+<p>d) 对于任意的$\varepsilon&gt;0$，均存在开集$G \supset A$使得$\vert G-A \vert&lt;\varepsilon$</p>
+<p>e) 存在包含$A$的开集$G_1,G_2,\dots$使得$\vert \bigcap\limits _ {k&#x3D;1}^\infty G_k -A\vert &#x3D; 0$</p>
+<p>f) 存在一个Borel集$B\supset A$且$\vert B-A\vert&#x3D;0$</p>
+<blockquote>
+<p>证明：</p>
+<p>先证明a)$\iff$b)$\iff$c)</p>
+<p>a) $\Rightarrow$ b) 首先，满足b)条件的所有$\mathbb{R}$中子集收集起来，记为$\mathcal{L}$，它已在定理（从内部用闭集逼近Borel集）的证明中得知，是一个$\sigma$代数，且包含所有的Borel集，也包含所有的外测度为0的集合（用闭集$\varnothing$逼近即可），因此任何和Borel集仅差外测度为零的集合仍然落在这个$\mathcal{L}$中（代数运算下封闭）</p>
+<p>b) $\Rightarrow$ c) 假设b)成立，那么对于任何一个$n$都能找到一个$F_n$满足$\vert A-F_n\vert&lt; \frac{1}{n}$，那么$\bigcup\limits_{n&#x3D;1}^\infty F_n$即为所求</p>
+<p>c) $\Rightarrow$ a) 显然，因为刚才的那个$\bigcup\limits_{n&#x3D;1}^\infty F_n$就是Borel集</p>
+<p>再证明b)$\iff$d)$\iff$ e)$\iff$f)</p>
+<p>b) $\Rightarrow$ d) 思路也显然是用“补”捣鼓两下：由于$\mathcal{L}$是一个$\sigma$代数，因此在补下封闭，故$\mathbb{R}-A\in\mathcal{L}$，因而，可为它找到其内的一个$F$满足$\vert\mathbb{R}-A-F\vert&lt;\varepsilon$，从而$\mathbb{R}-F$就是所求的开集</p>
+<p>d) $\Rightarrow$ e) 和b) $\Rightarrow$ c)完全一样</p>
+<p>e) $\Rightarrow$ f) 显然，刚才那个开集可数交就是一个Borel集</p>
+<p>f) $\Rightarrow$ b) 由于$A&#x3D;B\cap (\mathbb{R} -(B-A)) $，第一项$B$是Borel集在$\mathcal{L}$中，又因为$(B-A)$是外测度为零的集合，在$\mathcal{L}$中，因此$\mathbb{R} -(B-A)$也在$\mathcal{L}$中，总之，$A$形如两个$\mathcal{L}$中成员之交，仍在内，得证</p>
+<p>$\square$</p>
+</blockquote>
+<p>这个定理很重要！之后会多次调用它</p>
+<p><strong>定义</strong> <strong>（Lebesgue测度2）</strong><br>记$\mathcal{L}$为包含所有开集以及外测度为零的集合的最小的$\sigma$代数，$(\mathbb{R},\mathcal{L})$就是一个可测空间，外测度在其上满足可加性，成为一个真正的测度，称之为Lebesgue测度</p>
+<blockquote>
+<p>这里的$\mathcal{L}$就是之前那个，根据定理（Lebesgue可测集的等价定义）知，这些描述方法都是一致的</p>
 </blockquote>
 
   </div>
@@ -2835,10 +2785,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-12-21T21:42:51+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-01-28T00:12:07+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Dec 21, 2024</p>
+    <p>更新于：Jan 28, 2025</p>
   </a>
 </div>
 
@@ -2846,10 +2796,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Topology/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Topology</p></a></div>
-  <span hidden itemprop="keywords">Topology</span>
-
 
         
       
@@ -2861,7 +2807,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/11/19/Topology3/&title=Hausdorff、连通、紧致 - (.O w O.)?&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2025/01/22/MIRA2/&title=Lebesgue测度（MIRA） - (.O w O.)?&summary="
           
           >
           
@@ -2873,7 +2819,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/11/19/Topology3/&title=Hausdorff、连通、紧致 - (.O w O.)?&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2025/01/22/MIRA2/&title=Lebesgue测度（MIRA） - (.O w O.)?&summary="
           
           >
           
@@ -2885,7 +2831,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/11/19/Topology3/&title=Hausdorff、连通、紧致 - (.O w O.)?&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2025/01/22/MIRA2/&title=Lebesgue测度（MIRA） - (.O w O.)?&summary="
           
           >
           
@@ -2921,20 +2867,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/11/21/Topology4/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Tychonoff定理</p>
-          <p class='content'>Topology“深刻的大定理”
-Tychonoff 定理在积拓扑下，紧致空间的任意积还是紧致的
-两个引理定理 （含$\mathscr{A}$且有限交性质的极大集族$\mathscr{D}$）一...</p>
+        <a class='prev' href='/2025/01/28/MIRA3/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>可测函数收敛专题（MIRA）</p>
+          <p class='content'>Real AnalysisLuzin的博士论文指导老师正是Egorov
+
+可测函数收敛专题（MIRA）本篇核心内容梗概两个定理—Egorov定理和Luzin定理
+Egorov定理我们都知道，一致...</p>
         </a>
       
       
-        <a class='next' href='/2024/11/11/Topology2/'>
-          <p class='title'>序、积、商拓扑<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>Topology序、积、商拓扑在本篇中，我们将引入一些新的结构：序、笛卡尔积……手中能用的上的工具是第一篇中讲述的所有概念与性质
-常用技术提示：
+        <a class='next' href='/2025/01/20/MIRA1/'>
+          <p class='title'>测度空间（MIRA）<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Real Analysis测度空间（MIRA）回顾与铺垫常用技术回顾： （逆像的优秀性质）
 
-$f^{-1}(\bigcap A_\alph...</p>
+$f^{-1}(\bigcap A_\alpha)&#x3D;\bigcap f^{-1}(A_\a...</p>
         </a>
       
     </div>
@@ -2950,7 +2896,7 @@ $f^{-1}(\bigcap A_\alph...</p>
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/11/19/Topology3/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2025/01/22/MIRA2/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2979,7 +2925,7 @@ $f^{-1}(\bigcap A_\alph...</p>
   
   <header>
     
-      <i class="fa-solid fa-diagram-project fa-fw" aria-hidden="true"></i><span class='name'>Topology</span>
+      <i class="fa-solid fa-r fa-fw" aria-hidden="true"></i><span class='name'>Real Analysis</span>
     
   </header>
 
@@ -2987,98 +2933,38 @@ $f^{-1}(\bigcap A_\alph...</p>
   <div class='content'>
     <ul class="list entry navigation">
       
-        <li><a class="flat-box" title="/2024/11/07/Topology1/" href="/2024/11/07/Topology1/"
+        <li><a class="flat-box" title="/2025/01/20/MIRA1/" href="/2025/01/20/MIRA1/"
           
           
-          active-action="action-20241107Topology1"
+          active-action="action-20250120MIRA1"
           >
           <div class='name'>
             
-            拓扑基本概念
+            测度空间（MIRA）
           </div>
           
         </a></li>
       
-        <li><a class="flat-box" title="/2024/11/11/Topology2/" href="/2024/11/11/Topology2/"
+        <li><a class="flat-box" title="/2025/01/22/MIRA2/" href="/2025/01/22/MIRA2/"
           
           
-          active-action="action-20241111Topology2"
+          active-action="action-20250122MIRA2"
           >
           <div class='name'>
             
-            序、积、商拓扑
+            Lebesgue测度（MIRA）
           </div>
           
         </a></li>
       
-        <li><a class="flat-box" title="/2024/11/19/Topology3/" href="/2024/11/19/Topology3/"
+        <li><a class="flat-box" title="/2025/01/28/MIRA3/" href="/2025/01/28/MIRA3/"
           
           
-          active-action="action-20241119Topology3"
+          active-action="action-20250128MIRA3"
           >
           <div class='name'>
             
-            Hausdorff、连通、紧致
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/11/21/Topology4/" href="/2024/11/21/Topology4/"
-          
-          
-          active-action="action-20241121Topology4"
-          >
-          <div class='name'>
-            
-            Tychonoff定理
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/11/22/Topology5/" href="/2024/11/22/Topology5/"
-          
-          
-          active-action="action-20241122Topology5"
-          >
-          <div class='name'>
-            
-            实物图---实轴
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/12/02/Topology6/" href="/2024/12/02/Topology6/"
-          
-          
-          active-action="action-20241202Topology6"
-          >
-          <div class='name'>
-            
-            可数、分离
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/12/04/Topology7/" href="/2024/12/04/Topology7/"
-          
-          
-          active-action="action-20241204Topology7"
-          >
-          <div class='name'>
-            
-            Urysohn引理
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2025/01/19/Topology8/" href="/2025/01/19/Topology8/"
-          
-          
-          active-action="action-20250119Topology8"
-          >
-          <div class='name'>
-            
-            度量化
+            可测函数收敛专题（MIRA）
           </div>
           
         </a></li>
@@ -3116,7 +3002,7 @@ $f^{-1}(\bigcap A_\alph...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hausdorff%E3%80%81%E8%BF%9E%E9%80%9A%E3%80%81%E7%B4%A7%E8%87%B4"><span class="toc-text">Hausdorff、连通、紧致</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hausdorff%E6%80%A7"><span class="toc-text">Hausdorff性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E9%80%9A%E6%80%A7"><span class="toc-text">连通性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9E%E9%80%9A%E6%80%A7%E8%B4%A8%E2%80%94General-Idea"><span class="toc-text">连通性质—General Idea</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B4%A7%E8%87%B4%E6%80%A7"><span class="toc-text">紧致性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B4%A7%E8%87%B4%E9%9B%86%E4%B8%8E%E9%97%AD%E9%9B%86%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">紧致集与闭集的关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8E%E8%BF%9E%E7%BB%AD%E6%98%A0%E5%B0%84%E7%9B%B8%E5%85%B3"><span class="toc-text">与连续映射相关</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E7%94%A8%E7%9A%84%E6%9C%89%E9%99%90%E4%BA%A4"><span class="toc-text">有用的有限交</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%84%E7%83%AD%E2%80%94%E7%B4%A7%E8%87%B4%E7%A9%BA%E9%97%B4%E7%9A%84%E6%9C%89%E9%99%90%E7%A7%AF"><span class="toc-text">预热—紧致空间的有限积</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Lebesgue%E6%B5%8B%E5%BA%A6%EF%BC%88MIRA%EF%BC%89"><span class="toc-text">Lebesgue测度（MIRA）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%86%85%E5%AE%B9%E6%A2%97%E6%A6%82"><span class="toc-text">核心内容梗概</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E5%8A%A0%E6%80%A7%E5%9C%A8%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5%E4%B8%8B%E6%88%90%E7%AB%8B"><span class="toc-text">可加性在特殊情况下成立</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Borel%E9%9B%86%E5%90%88%E4%B8%8E%E9%97%AD%E9%9B%86%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">Borel集合与闭集的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Borel%E9%9B%86%E4%B8%8A%E7%9A%84%E5%A4%96%E6%B5%8B%E5%BA%A6"><span class="toc-text">Borel集上的外测度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lebesgue%E5%8F%AF%E6%B5%8B"><span class="toc-text">Lebesgue可测</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4197,19 +4083,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 <pjax>
 
         <script>
-  // https://www.micdz.cn/article/katex-on-volantis/
-  if (typeof renderMathInElement == "undefined") {
-    volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.css")
-    function pjax_katex() {
-      volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/contrib/auto-render.min.js").then(()=>{
-        renderMathInElement(document.body);
-      })
-    }
-    volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.js").then(pjax_katex)
-    volantis.pjax.push(pjax_katex)
-  }
-</script>
-        <script>
   // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
   if (typeof MathJax === 'undefined') {
     window.MathJax = {
@@ -4394,7 +4267,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/拓扑学/","name":"拓扑学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/11/19/Topology3/","name":"Hausdorff、连通、紧致"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hausdorff、连通、紧致","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/11/19/Topology3/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/11/19/Topology3/","wordCount":0,"datePublished":"2024-11-19T15:05:59.000Z","dateModified":"2024-12-21T13:42:51.495Z","articleSection":"拓扑学","keywords":"Topology","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/实分析/","name":"实分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/01/22/MIRA2/","name":"Lebesgue测度（MIRA）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Lebesgue测度（MIRA）","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/01/22/MIRA2/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/01/22/MIRA2/","wordCount":0,"datePublished":"2025-01-21T16:02:52.000Z","dateModified":"2025-01-27T16:12:07.045Z","articleSection":"实分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
