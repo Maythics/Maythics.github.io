@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-01-21T16:02:52.000Z">
-<meta property="article:modified_time" content="2025-01-27T16:12:07.045Z">
+<meta property="article:modified_time" content="2025-01-29T09:12:07.644Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1737994939954),
+    lastupdate: new Date(1738142725119),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2723,7 +2723,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><strong>定理</strong> <strong>（有闭时，外测度满足有限可加性）</strong><br>假设无交集合$A,F\subseteq \mathbb{R}$，且$F$是闭集，则$\vert A \cup F\vert &#x3D; \vert A\vert+\vert F\vert$</p>
 <h3 id="Borel集合与闭集的关系"><a href="#Borel集合与闭集的关系" class="headerlink" title="Borel集合与闭集的关系"></a>Borel集合与闭集的关系</h3><p><strong>定理</strong> <strong>（从内部用闭集逼近Borel集）</strong><br>假设$B\subset \mathbb{R}$是一个Borel集，对于任何$\varepsilon&gt;0$，均存在一个闭集$\subset B$，满足$\vert B-F\vert&lt;\varepsilon$</p>
 <blockquote>
-<p>证明：用代数方法来帮忙，我们先将“能从内部用闭集逼近”的集合收集起来：$\mathcal{L}&#x3D;\set{A\subseteq \mathbb{R}:\forall\varepsilon &gt;0, \exists F \subset A \text{ s.t. }\vert A-F\vert&lt;\varepsilon}$，然后发现这个集合是一个$\sigma$代数（请验证那三条）！之后，由于所有闭集都在$\mathcal{L}$里，所以得知所有开集都在$\mathcal{L}$。因此，$\mathcal{L}$是一个“包含所有开集”的$\sigma$代数，那么Borel集都在$\mathcal{L}$里，证毕</p>
+<p>证明：用代数方法来帮忙，我们先将“能从内部用闭集逼近”的集合收集起来：$\mathcal{L}&#x3D;\set{A\subseteq \mathbb{R}:\forall\varepsilon &gt;0, \exists \text{ closed }F \subset A \text{ s.t. }\vert A-F\vert&lt;\varepsilon}$，然后发现这个集合是一个$\sigma$代数（请验证那三条）！之后，由于所有闭集都在$\mathcal{L}$里（显然），所以得知所有开集都在$\mathcal{L}$。因此，$\mathcal{L}$是一个“包含所有开集”的$\sigma$代数，那么Borel集都在$\mathcal{L}$里，证毕</p>
 </blockquote>
 <h3 id="Borel集上的外测度"><a href="#Borel集上的外测度" class="headerlink" title="Borel集上的外测度"></a>Borel集上的外测度</h3><p><strong>定理</strong> <strong>（有Borel集时，外测度满足可加性）</strong><br>假设无交集合$A,B\subseteq \mathbb{R}$， 且$B$是Borel集，则$\vert A \cup B\vert &#x3D; \vert A\vert+\vert B\vert$</p>
 <blockquote>
@@ -2785,10 +2785,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-01-28T00:12:07+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-01-29T17:12:07+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jan 28, 2025</p>
+    <p>更新于：Jan 29, 2025</p>
   </a>
 </div>
 
@@ -2872,7 +2872,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='content'>Real AnalysisLuzin的博士论文指导老师正是Egorov
 
 可测函数收敛专题（MIRA）本篇核心内容梗概两个定理—Egorov定理和Luzin定理
-Egorov定理我们都知道，一致...</p>
+Egorov定理
+
+引入动机：早...</p>
         </a>
       
       
@@ -4267,7 +4269,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/实分析/","name":"实分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/01/22/MIRA2/","name":"Lebesgue测度（MIRA）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Lebesgue测度（MIRA）","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/01/22/MIRA2/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/01/22/MIRA2/","wordCount":0,"datePublished":"2025-01-21T16:02:52.000Z","dateModified":"2025-01-27T16:12:07.045Z","articleSection":"实分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/实分析/","name":"实分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/01/22/MIRA2/","name":"Lebesgue测度（MIRA）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Lebesgue测度（MIRA）","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/01/22/MIRA2/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/01/22/MIRA2/","wordCount":0,"datePublished":"2025-01-21T16:02:52.000Z","dateModified":"2025-01-29T09:12:07.644Z","articleSection":"实分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
