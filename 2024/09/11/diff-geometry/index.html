@@ -42,11 +42,11 @@
 <meta property="og:title" content="微分几何入门">
 <meta property="og:url" content="http://maythics.github.io/2024/09/11/diff-geometry/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
-<meta property="og:description" content="微分几何入门微广 by 梁灿彬 拓扑空间基本的拓扑知识回忆 定义 拓扑集合$X$上的拓扑指：有一个其子集构成的集合$\mathscr{T}$，开集就定义为它其中的元素，满足：  空集和$X$本身是开集  开集的有限交仍是开集  开集的任意并仍是开集   我们知道，在一般的拓扑空间中，连续的定义是“开集的逆像仍开”，而在度量空间上这等价于$\epsilon-\delta$的连续定义，梁老画图给出了这">
+<meta property="og:description" content="微分几何入门教材：微广 by 梁灿彬 （物理学导向） 拓扑空间基本的拓扑知识回忆 定义 （拓扑）集合$X$上的拓扑指：有一个其子集构成的集合$\mathscr{T}$，开集就定义为它其中的元素，满足：  空集和$X$本身是开集  开集的有限交仍是开集  开集的任意并仍是开集   我们知道，在一般的拓扑空间中，连续的定义是“开集的逆像仍开”，而在度量空间上这等价于$\epsilon-\delta$的">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-09-11T08:01:37.000Z">
-<meta property="article:modified_time" content="2024-12-02T11:19:10.544Z">
+<meta property="article:modified_time" content="2025-02-05T07:16:58.543Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="Basic Concepts">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1738562258338),
+    lastupdate: new Date(1738915865200),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2689,9 +2689,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="微分几何入门"><a href="#微分几何入门" class="headerlink" title="微分几何入门"></a>微分几何入门</h2><p>微广 by 梁灿彬</p>
+    <h2 id="微分几何入门"><a href="#微分几何入门" class="headerlink" title="微分几何入门"></a>微分几何入门</h2><p>教材：微广 by 梁灿彬 （物理学导向）</p>
 <h3 id="拓扑空间"><a href="#拓扑空间" class="headerlink" title="拓扑空间"></a>拓扑空间</h3><p>基本的拓扑知识回忆</p>
-<p><strong>定义</strong> <strong>拓扑</strong><br>集合$X$上的拓扑指：有一个其子集构成的集合$\mathscr{T}$，<strong>开集</strong>就定义为它其中的元素，满足：</p>
+<p><strong>定义</strong> <strong>（拓扑）</strong><br>集合$X$上的拓扑指：有一个其子集构成的集合$\mathscr{T}$，<strong>开集</strong>就定义为它其中的元素，满足：</p>
 <ol>
 <li><p>空集和$X$本身是开集</p>
 </li>
@@ -2700,14 +2700,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>开集的任意并仍是开集</p>
 </li>
 </ol>
-<p>我们知道，在一般的拓扑空间中，连续的定义是“开集的逆像仍开”，而在度量空间上这等价于$\epsilon-\delta$的连续定义，梁老画图给出了这一等价性的直观理解（图1-2），很有意思</p>
-<p><strong>定义</strong> <strong>同胚</strong><br>两个拓扑空间互相同胚，指的是其之间存在一个双射$f$，且$f$与$f^{-1}$均连续（这个双射也称同胚映射）</p>
+<p>我们知道，在一般的拓扑空间中，连续的定义是“开集的逆像仍开”，而在度量空间上这等价于$\epsilon-\delta$的连续定义，画图给出了这一等价性的直观理解（见书上的图1-2），很有意思</p>
+<p><strong>定义</strong> <strong>（同胚）</strong><br>两个拓扑空间互相同胚，指的是其之间存在一个双射$f$，且$f$与$f^{-1}$均连续（这个双射也称同胚映射）</p>
 <blockquote>
 <p>两个拓扑空间互相同胚，已经是目前有的结构里的最高配置了，两个拓扑空间“像的不能再像”</p>
 </blockquote>
-<p><strong>定义</strong> <strong>连通</strong><br>称拓扑空间$(X,\mathscr{T})$是<strong>连通</strong>的，如果仅$\varnothing, X$两者是既开又闭的</p>
+<p><strong>定义</strong> <strong>（连通）</strong><br>称拓扑空间$(X,\mathscr{T})$是<strong>连通</strong>的，如果仅$\varnothing, X$两者是既开又闭的</p>
 <p>拓扑不变性：指在同胚映射下保持不变的性质，比如紧性、连通性、Hausdorff性</p>
-<h3 id="微分流形"><a href="#微分流形" class="headerlink" title="微分流形"></a>微分流形</h3><p><strong>定义</strong> <strong>微分流形</strong><br>拓扑空间$(X,\mathscr{T})$称为<strong>n维微分流形</strong>，如果：有开覆盖$X&#x3D;\bigcup\limits_\alpha O_\alpha$，满足：</p>
+<h3 id="微分流形"><a href="#微分流形" class="headerlink" title="微分流形"></a>微分流形</h3><div class="note warning"><p>流形的定义还有分离性（Hausdorff）以及可数性（第二可数）的要求，但本着为学物理&#x2F;工程而入门微分流形的目的，暂且不去管这些。这几篇是速成课！</p></div>
+
+<p><strong>定义</strong> <strong>（微分流形）</strong><br>拓扑空间$(X,\mathscr{T})$称为<strong>n维微分流形</strong>，如果：有开覆盖$X&#x3D;\bigcup\limits_\alpha O_\alpha$，满足：</p>
 <ol>
 <li><p>$\forall \alpha, \exists \psi_\alpha$（同胚映射）$: O_\alpha \to V_\alpha$ 而$V_\alpha$是$\mathbb{R}^n$中的开集</p>
 </li>
@@ -2715,11 +2717,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ol>
 <p>第二条称为<strong>相容性</strong>条件，很直观</p>
-<p>遵循如上记号，我们称$(O_\alpha,\psi_\alpha)$为局域坐标系，或图，因为$\psi_\alpha$把$O_\alpha$中的点映射到一个$n$维欧式空间中，获得了坐标。所有图的都装到一个叫图册的大集合里。</p>
-<p><strong>定义</strong> <strong>$C^r$映射</strong><br>$f:M \to M’$是两个流形之间的映射，什么情况下，$f$是$C^r$映射呢？随意取一个$p\in M$，那么选好包含$p$的图$\set{O_\alpha,\psi_\alpha}$，和包含$f(p)$的图$\set{O_\beta’,\psi_\beta’}$后，均有$\psi’_\beta \circ f \circ \psi_\alpha^{-1} \in C^r$</p>
-<p><strong>定义</strong> <strong>微分同胚</strong><br>两个流形$M,M’$称为互相微分同胚，如果$\exists f :M\to M’$，且$f$是个双射，且$f$与$f^{-1}$都是$C^\infty$的</p>
-<p><strong>定义</strong> <strong>标量场</strong><br>首先有个流形$M$，那么$f:M\to \mathbb{R}$就叫一个$M$上的标量场。若还是$C^\infty$的，那么$f$就叫$M$上的一个光滑标量场。全体$M$上的光滑标量场记为$\mathscr{F}_M$</p>
-<h3 id="矢量"><a href="#矢量" class="headerlink" title="矢量"></a>矢量</h3><p><strong>定义</strong> <strong>矢量&#x2F;向量</strong><br>什么是矢量？在点$p\in M$处的矢量是这样一种映射$v :\mathscr{F}_M \to \mathbb{R}$，对于$\forall f,g\in\mathscr{F}_M$，都满足：</p>
+<p>遵循如上记号，我们称$(O_\alpha,\psi_\alpha)$为局域坐标系，或<strong>图</strong>，因为$\psi_\alpha$把$O_\alpha$中的点映射到一个$n$维欧式空间中，这个点在该映射下“获得了坐标”。所有图的都装到一个叫图册的大集合里。</p>
+<p><strong>定义</strong> <strong>（$C^r$映射）</strong><br>$f:M \to M’$是两个流形之间的映射，什么情况下，$f$是$C^r$映射呢？随意取一个$p\in M$，那么选好包含$p$的图$\set{O_\alpha,\psi_\alpha}$，和包含$f(p)$的图$\set{O_\beta’,\psi_\beta’}$后，均有$\psi’_\beta \circ f \circ \psi_\alpha^{-1}$是欧式空间中的$C^r$类函数</p>
+<blockquote>
+<p>两个流形间映射的光滑性，要借助于$\mathbb{R}^n$中映射的光滑性概念</p>
+</blockquote>
+<p><strong>定义</strong> <strong>（微分同胚）</strong><br>两个流形$M,M’$称为互相微分同胚，如果$\exists f :M\to M’$，且$f$是个双射，且$f$与$f^{-1}$都是$C^\infty$的</p>
+<p><strong>定义</strong> <strong>（标量场）</strong><br>首先有个流形$M$，那么$f:M\to \mathbb{R}$就叫$M$上的一个标量场。若还是$C^\infty$的，那么$f$就叫$M$上的一个光滑标量场。全体$M$上的光滑标量场记为$\mathscr{F}_M$</p>
+<h3 id="矢量"><a href="#矢量" class="headerlink" title="矢量"></a>矢量</h3><div class="note info"><p>今后一律使用求和约定。</p></div>
+
+
+<p><strong>定义</strong> <strong>（矢量&#x2F;向量）</strong><br>什么是矢量？在点$p\in M$处的矢量是这样一种映射$v :\mathscr{F}_M \to \mathbb{R}$，对于$\forall f,g\in\mathscr{F}_M$，都满足：</p>
 <ol>
 <li><p>（线性性） $v(\alpha f +\beta g)&#x3D; \alpha v(f) +\beta v (g)$</p>
 </li>
@@ -2727,31 +2735,46 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ol>
 <p>在$p\in M$点处的所有矢量装入集合$V_p$中，按照很自然的方式定义一下矢量加法和数乘，可发现$V_p$符合曾经的矢量空间定义，且该矢量空间维数与流形的维数一样，即$\dim V_p &#x3D; \dim M &#x3D;n$</p>
-<p>给个具体例子，比如固定了$p$点后，$X_\mu$就是点$p$处的一个向量，它的定义是什么呢？对于一个已知的标量场$f\in\mathscr{F}_M$，选一个图$\set{O,\psi}$，那么$f\circ\psi^{-1}$就是一个很普通的$\mathbb{R}^n\to \mathbb{R}$的函数（高数就学过的那种）记为$F(x^1,x^2\dots,x^n)$，简记为$F(x)$，甚至简记为$f(x)$，那么就有定义式：<br>$$<br>X_\mu (f):&#x3D;\left.\frac{\partial F(x)}{\partial x^\mu}\right|_p&#x3D;_\text{denoted as} \left.\frac{\partial f(x)}{\partial x^\mu}\right|_p<br>$$<br>的确在$p$点处把$f$映成一个实数，且是满足线性性与莱布尼兹律的</p>
+<p>给个具体例子，在$n$维流形$M$上，固定了$p$点后，$X_\mu$就是点$p$处的一个向量，它的定义是什么呢？对于一个已知的标量场$f\in\mathscr{F}_M$，选一个图$\set{O,\psi}$，那么$f\circ\psi^{-1}$就是一个很普通的$\mathbb{R}^n\to \mathbb{R}$的函数（高数就学过的那种）记为$F(x^1,x^2\dots,x^n)$，简记为$F(x)$，甚至简记为$f(x)$，那么就有定义式：<br>$$<br>X_\mu (f):&#x3D;\left.\frac{\partial F(x)}{\partial x^\mu}\right|_p \overset{\text{denoted as}}{&#x3D;} \left.\frac{\partial f(x)}{\partial x^\mu}\right|_p<br>$$<br>的确在$p$点处把$f$映成一个实数，且是满足线性性与莱布尼兹律的</p>
 <blockquote>
 <p>注意：我反复强调“在$p$点处”，因为必须指定一个点，谈论矢量这个概念才有意义。比如指定$p$后，$V_p$成为一个矢量空间，两个不同点之间的矢量是不能做加法的……</p>
 </blockquote>
-<p>此外，$X_1,X_2\dots X_n$就构成了$V_p$的基，比如随便来一个$V_p$中的元素$v$，都能用$X_\mu$们展开$v &#x3D; v(x^\mu) X_\mu$，这里的$v(x^\mu)$就是<strong>坐标分量</strong></p>
+<p>此外，$X_1,X_2\dots X_n$就构成了$V_p$这个向量空间的基，比如随便来一个$V_p$中的元素$v$，都能用$X_\mu$们展开$v &#x3D; v(x^\mu) X_\mu$，这里的$v(x^\mu)$就是<strong>坐标分量</strong></p>
 <blockquote>
-<p>仔细看看这里的写法，$x^\mu$就是把一个点打到其所在图的某一坐标分量的实值函数，即$x^\mu \in \mathscr{F}_M$，那么$v(x^\mu)$这个写法是有意义的，因为矢量作用的对象就是标量场</p>
+<p>仔细看看这里的写法，$x^\mu$就是把一个点打到其所在图的某一坐标分量的实值函数，即$x^\mu \in \mathscr{F}_O$（仔细读读这句话，虽然比较绕），那么$v(x^\mu)$这个写法是有意义的，因为矢量作用的对象就是标量场</p>
+<p>今后，写为$v &#x3D; v^\mu X_\mu$即可！心中暗自知道$v^\mu &#x3D; v(x^\mu)$就行</p>
 </blockquote>
-<p><strong>定理</strong> <strong>坐标分量变换关系</strong><br>$\set{x^\mu}$与$\set{x’^\nu}$为两个坐标系（图），其中共有一点$p$，$v\in V_p$，且$\set{v^\mu}$与$\set{v’^\nu}$是同个$v$向量在两个系中的分量，则有：<br>$$<br>v’^\nu &#x3D; \left.\frac{\partial x’^\nu}{\partial x^\mu}\right|_p v^\mu<br>$$</p>
+<p><strong>定理</strong> <strong>（坐标分量变换关系）</strong><br>$\set{x^\mu}$与$\set{x’^\nu}$为两个坐标系（图），其中共有一点$p$，$v\in V_p$，且$\set{v^\mu}$与$\set{v’^\nu}$是同个$v$向量在两个系中的分量，则有：<br>$$<br>v’^\nu &#x3D; \left.\frac{\partial x’^\nu}{\partial x^\mu}\right|_p v^\mu<br>$$</p>
 <blockquote>
-<p>证明：两个坐标系就有两组坐标基矢$\set{X_\mu},\set{X’_\nu}$，作用在$f$这个标量场上，有：<br>$$<br>\begin{align*}<br>X_\mu (f) &amp;&#x3D; \left.\frac{\partial f(x)}{\partial x^\mu}\right|_p<br>\newline<br>\newline<br>X’_\nu(f) &amp;&#x3D; \left.\frac{\partial f’(x’)}{\partial x’^\nu}\right|_p<br>\end{align*}<br>$$<br>回忆这里的$f(x)$其实是$F(x^1,x^2\dots,x^n)$的简记，同样的$f’(x’)$其实是$F’(x’^1,x’^2\dots,x’^n)$的简记<br>现在，由于本身两个坐标系都是$\mathbb{R}^n$里的且需要符合相容性条件，因此可以这样写：$x’^\nu&#x3D;x’^\nu(x)$，即加撇的某一分量是不加撇的一个n元函数，而且由于$f|_p$的值与坐标的选取无关，有$f(x)&#x3D;f’(x’)&#x3D;f’(x’(x))$（请回忆这个$f$其实是$F$），故：<br>$$<br>X_\mu (f) &#x3D; \left.\frac{\partial f(x)}{\partial x^\mu} \right|_p &#x3D; \left. \frac{\partial f’(x’(x))}{\partial x^\mu} \right|_p&#x3D;\left. \frac{\partial f’(x’)}{\partial x’^\nu}\frac{\partial x’^\nu}{\partial x^\mu}\right|_p &#x3D; \left. \frac{\partial x’^\nu}{\partial x^\mu}\right|_p X’_\nu (f)<br>$$</p>
+<p>证明：两个坐标系就有两组坐标基矢$\set{X_\mu},\set{X’_\nu}$，作用在$f$这个标量场上，有：<br>$$<br>\begin{align*}<br>X_\mu (f) &#x3D; \left.\frac{\partial f(x)}{\partial x^\mu}\right|_p \qquad X’_\nu(f) &#x3D; \left.\frac{\partial f’(x’)}{\partial x’^\nu}\right|_p<br>\end{align*}<br>$$<br>回忆这里的$f(x)$其实是$F(x^1,x^2\dots,x^n)$的简记，同样的$f’(x’)$其实是$F’(x’^1,x’^2\dots,x’^n)$的简记</p>
+<p>现在，由于本身两个坐标系都是$\mathbb{R}^n$里的且需要符合相容性条件，因此可以这样写：$x’^\nu&#x3D;x’^\nu(x)$，即加撇的某一分量是不加撇的一个n元函数，而且由于$f|_p$的值与坐标的选取无关，有$f(x)&#x3D;f’(x’)&#x3D;f’(x’(x))$（请回忆这个$f$其实是$F$），故：<br>$$<br>X_\mu (f) &#x3D; \left.\frac{\partial f(x)}{\partial x^\mu} \right|_p &#x3D; \left. \frac{\partial f’(x’(x))}{\partial x^\mu} \right|_p&#x3D;\left. \frac{\partial f’(x’)}{\partial x’^\nu}\frac{\partial x’^\nu}{\partial x^\mu}\right|_p &#x3D; \left. \frac{\partial x’^\nu}{\partial x^\mu}\right|_p X’_\nu (f)<br>$$</p>
 </blockquote>
-<p><strong>定义</strong> <strong>曲线</strong><br>设$I$为$\mathbb{R}$的一个区间，则$C^r$类映射$C:I\to M$称为流形$M$上的一个曲线（今后默认光滑，是$C^\infty$类的）</p>
-<p><strong>定义</strong> <strong>曲线的切矢</strong><br>设$C(t)$是在微分流形$M$上的一个$C^1$类曲线，则线上的$C(t _ 0)$点的切于$C(t)$的切矢$T$是一个在$C(t _ 0)$点的矢量，它是怎么定义的呢？对于$\forall f\in \mathscr{F} _ M$：<br>$$<br>T(f):&#x3D; \left.\frac{d(f\circ C)}{dt}\right| _ {t _ 0}<br>$$</p>
+<p><strong>定义</strong> <strong>（曲线）</strong><br>设$I$为$\mathbb{R}$的一个区间，则$C^r$类映射$C:I\to M$称为流形$M$上的一个曲线（今后默认光滑，是$C^\infty$类的）</p>
+<p><strong>定义</strong> <strong>（曲线的切矢）</strong><br>设$C(t)$是在微分流形$M$上的一个$C^1$类曲线，则线上的$C(t _ 0)$点的、切于$C(t)$的切矢$T$是一个在$C(t _ 0)$点的矢量，它是怎么定义的呢？对于$\forall f\in \mathscr{F} _ M$：<br>$$<br>T(f):&#x3D; \left.\frac{d(f\circ C)}{dt}\right| _ {t _ 0}<br>$$</p>
 <blockquote>
 <p>注：易证的确是矢量</p>
 </blockquote>
-<p>今后把$T$记为$\left.\frac{\partial }{\partial t}\right| _ {C(t _ 0)}$，更加生动形象地表明的确是个向量。如果参数就是坐标线上的$x^\mu$，那么这切矢不就是坐标基矢之一了嘛！</p>
-<p><strong>定理</strong> <strong>曲线切矢用坐标基底展开</strong><br>比如曲线$C(t)$在某个坐标系（图）中的参数写法为$x^\mu &#x3D; x^\mu(t)$，那么该坐标系（图）内有：<br>$$<br>\frac{\partial}{\partial t}&#x3D;\frac{dx^\mu}{dt} \frac{\partial}{\partial x^\mu}<br>$$</p>
+<p>今后把$T$记为$\left.\frac{\partial }{\partial t}\right| _ {C(t _ 0)}$，更加生动形象地表明的确是个向量。如果曲线取成坐标线，参数是坐标线上的$x^\mu$，那么这切矢不就恰好等于$X_\mu$了嘛！</p>
+<p><strong>定理</strong> <strong>（曲线切矢用坐标基底展开）</strong><br>比如曲线$C(t)$在某个坐标系（图）中的参数写法为$x^\mu &#x3D; x^\mu(t)$，那么该坐标系（图）内有：<br>$$<br>\frac{\partial}{\partial t}&#x3D;\frac{dx^\mu}{dt} \frac{\partial}{\partial x^\mu}<br>$$</p>
 <blockquote>
 <p>证明：这式子看上去很熟悉，但其诠释与初等微积分中完全不一样。在这里，左边是一个$C(t_0)$点的矢量，那么自然可以被$V_{C(t_0)}$中的基矢量展开，回忆一下“坐标分量”那里的展开$v &#x3D; v(x^\mu) X_\mu$，这里无非就是把字母替换掉：<br>$$<br>\left.\frac{\partial}{\partial t}\right| _ {C(t _ 0)} &#x3D;\left.\frac{\partial x^\mu}{\partial t}\right| _ {C(t _ 0)} \cdot\frac{\partial}{\partial x^\mu}&#x3D;\left.\frac{d x^\mu}{d t}\right| _ {C(t _ 0)} \cdot\frac{\partial}{\partial x^\mu}<br>$$<br>当然$t_0$是可以任意取的，因此不用写$| _ {C(t _ 0)}$了</p>
 </blockquote>
-<p>如果$M$上的没一点都定义有一个矢量，那么就得到一个矢量场，矢量场能把某一个标量场变为另外一个标量场</p>
-<p>矢量场也可以定义光滑与否，$C^r$类的矢量场的定义就是：作用于$C^\infty$类的标量场后能得到$C^r$类标量场（今后简单起见都默光滑）</p>
-<p><strong>定义</strong> <strong>积分曲线</strong><br>有一个$M$上的光滑矢量场$v$，则积分曲线是这样一条曲线，其上每一点处的曲线切矢都等于矢量场在该点的取值</p>
+<p>如果$M$上的每一点都定义<strong>一个</strong>矢量，那么就得到一个矢量场，矢量场能把某一个标量场变为另外一个标量场</p>
+<p>矢量场也可以定义光滑与否，$C^r$类的矢量场的定义就是：作用于$C^\infty$类的标量场后能得到$C^r$类标量场（今后，简单起见都默认光滑）</p>
+<p><strong>定义</strong> <strong>（积分曲线）</strong><br>有一个$M$上的光滑矢量场$v$，则积分曲线是这样一条曲线，其上每一点处的曲线切矢都等于矢量场在该点的取值</p>
+<p><strong>定义</strong> <strong>（单参微分同胚群）</strong><br>$C^\infty$映射$\phi:\mathbb{R}\times M \to M$能被称为在$M$上的一个单参微分同胚群，若满足：</p>
+<ol>
+<li><p>$\phi_t: M\to M$对于$\forall t\in\mathbb{R}$都是微分同胚</p>
+</li>
+<li><p>$\phi_t \circ \phi_s &#x3D; \phi_{t+s}$ 对$\forall t,s\in \mathbb{R}$成立</p>
+</li>
+</ol>
+<p>注意上面提到的记号，约定为：当$\phi(?,?)$的第一个槽填入$t\in\mathbb{R}$后，$\phi_t :&#x3D; \phi(t,?)$，当第二个槽填入$p\in M$后，$\phi_p &#x3D; \phi(?,p)$</p>
+<blockquote>
+<p>显然，$\phi_t$是一个群</p>
+<p>可以发现，$\phi_p$实际上把$\mathbb{R}$映到$M$，是一个曲线！我们称这个曲线为$p$的<strong>轨道</strong></p>
+<p>若$M$上有了一个单参微分同胚群$\phi$，那么在$p$点定义矢量为轨道$\phi_p(t)$在$t&#x3D;0$处的切矢（这句话是有意义，回顾切矢的定义），按照这个方法，可在流形上的各个点都定义一个矢量。故，$M$上的一个单参微分同胚群给出了$M$上的一个光滑矢量场！</p>
+</blockquote>
 
   </div>
   
@@ -2776,10 +2799,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-12-02T19:19:10+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-02-05T15:16:58+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Dec 2, 2024</p>
+    <p>更新于：Feb 5, 2025</p>
   </a>
 </div>
 
@@ -4250,7 +4273,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/微分几何/","name":"微分几何"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/09/11/diff-geometry/","name":"微分几何入门"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"微分几何入门","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/09/11/diff-geometry/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/09/11/diff-geometry/","wordCount":0,"datePublished":"2024-09-11T08:01:37.000Z","dateModified":"2024-12-02T11:19:10.544Z","articleSection":"微分几何","keywords":"Basic Concepts","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/微分几何/","name":"微分几何"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/09/11/diff-geometry/","name":"微分几何入门"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"微分几何入门","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/09/11/diff-geometry/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/09/11/diff-geometry/","wordCount":0,"datePublished":"2024-09-11T08:01:37.000Z","dateModified":"2025-02-05T07:16:58.543Z","articleSection":"微分几何","keywords":"Basic Concepts","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
