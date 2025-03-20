@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://maythics.github.io/2024/02/02/algebra2/"/>
+  <link rel="canonical" href="http://maythics.github.io/2025/03/20/complex-analysis1-0/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>陪集、群在集合上的作用 - (.O w O.)?</title>
+  <title>认识全纯 - (.O w O.)?</title>
   <meta name="keywords" content="physics">
   <meta desc name="description" content="emmm - Maythics - (.O w O.)?">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="陪集、群在集合上的作用">
-<meta property="og:url" content="http://maythics.github.io/2024/02/02/Algebra2/index.html">
+<meta property="og:title" content="认识全纯">
+<meta property="og:url" content="http://maythics.github.io/2025/03/20/Complex-Analysis1-0/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
-<meta property="og:description" content="陪集、指数陪集的定义与性质左陪集的定义：设$H\leq G$，取$a\in G$则称$aH:&#x3D;\{ax|x\in H\}$为群$G$关于子群$H$的一个左陪集则称$Ha:&#x3D;\{xa|x\in H\}$为群$G$关于子群$H$的一个右陪集 陪集就像是线代中仿射子集的抽象，如仿射子集不是子空间（除了过原点的那个），这里的陪集也不是子群（除了$H$本身） 如同在Done Right中">
+<meta property="og:description" content="Complex Analysis认识全纯本篇核心内容概要“复数的引入”、“指数表示”等部分直接省略，因为很熟悉了（个人喜欢Sheldon Axler以及Serge Lang书中的引入方法，感觉更踏实） 首先，介绍全纯函数的概念，得到著名Cauchy-Riemann公式（大家应该也很熟了） 然后介绍一些积分的概念，看看“原函数”有哪些威力，为将来的Cauchy定理相关内容铺垫 全纯函数基本性质定义">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-02-02T12:08:24.000Z">
-<meta property="article:modified_time" content="2025-02-03T05:50:09.794Z">
+<meta property="article:published_time" content="2025-03-20T09:26:29.000Z">
+<meta property="article:modified_time" content="2025-03-20T09:34:45.504Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -2652,7 +2652,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/02/02/Algebra2/">
+  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2025/03/20/Complex-Analysis1-0/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="(.O w O.)?">
   </span>
@@ -2673,7 +2673,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        陪集、群在集合上的作用
+        认识全纯
       </h1>
       <div class='new-meta-box'>
         
@@ -2692,10 +2692,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/">抽象代数</a>
+    <a class="category-link" href="/categories/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/" itemprop="url"><span itemprop="name">抽象代数</span></a>
+        <a href="/categories/%E5%A4%8D%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">复分析</span></a>
       </span>
     
   </div>
@@ -2704,10 +2704,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-02-02T20:08:24+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-03-20T17:26:29+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Feb 2, 2024</p>
+    <p>发布于：Mar 20, 2025</p>
   </a>
 </div>
 
@@ -2730,63 +2730,64 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="陪集、指数"><a href="#陪集、指数" class="headerlink" title="陪集、指数"></a>陪集、指数</h2><h3 id="陪集的定义与性质"><a href="#陪集的定义与性质" class="headerlink" title="陪集的定义与性质"></a>陪集的定义与性质</h3><p>左陪集的定义：设$H\leq G$，取$a\in G$<br>则称$aH:&#x3D;\{ax|x\in H\}$为群$G$关于子群$H$的一个左陪集<br>则称$Ha:&#x3D;\{xa|x\in H\}$为群$G$关于子群$H$的一个右陪集</p>
-<p>陪集就像是线代中仿射子集的抽象，如仿射子集不是子空间（除了过原点的那个），这里的陪集也不是子群（除了$H$本身）</p>
-<p>如同在Done Right中讲仿射子集的时候有几个等价条件（见下图）</p>
-<img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/affine.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/affine.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="affine subset" height="150" width="380">
-
-<p>左陪集也有平行的等价命题（右陪集同）：</p>
-<ol>
-<li><p>$a^{-1}b\in H$</p>
-</li>
-<li><p>$b\in aH$</p>
-</li>
-<li><p>$aH&#x3D;bH$</p>
-</li>
-<li><p>$aH \bigcap bH\neq \varnothing$</p>
-</li>
-</ol>
-<p>这样，$G$的所有左陪集形成一个<strong>分类</strong>（$a\in aH$保证了“全都被分”，上述的3、4等价保证了“两类不交”）</p>
-<h3 id="左、右陪集对应"><a href="#左、右陪集对应" class="headerlink" title="左、右陪集对应"></a>左、右陪集对应</h3><p>设$H\leq G,\quad L:&#x3D;\{aH| a\in G\},\quad R:&#x3D;\{Ha| a\in G\}$，则存在一个双射$\varphi: aH\mapsto Ha^{-1} $，说明两种陪集阶相等。</p>
-<div class="note warning"><p>此处要验证该$\varphi$定义良好！就像线代里定义在商空间中的映射，合理性都不是天生的。</p></div>
-
+    <h1 id="Complex-Analysis"><a href="#Complex-Analysis" class="headerlink" title="Complex Analysis"></a>Complex Analysis</h1><h2 id="认识全纯"><a href="#认识全纯" class="headerlink" title="认识全纯"></a>认识全纯</h2><h3 id="本篇核心内容概要"><a href="#本篇核心内容概要" class="headerlink" title="本篇核心内容概要"></a>本篇核心内容概要</h3><p>“复数的引入”、“指数表示”等部分直接省略，因为很熟悉了（个人喜欢Sheldon Axler以及Serge Lang书中的引入方法，感觉更踏实）</p>
+<p>首先，介绍全纯函数的概念，得到著名Cauchy-Riemann公式（大家应该也很熟了）</p>
+<p>然后介绍一些积分的概念，看看“原函数”有哪些威力，为将来的Cauchy定理相关内容铺垫</p>
+<h3 id="全纯函数基本性质"><a href="#全纯函数基本性质" class="headerlink" title="全纯函数基本性质"></a>全纯函数基本性质</h3><p><strong>定义</strong> <strong>（复可微）</strong><br>在开集$U$上定义的一个（复）函数$f$，若满足下面的极限存在，则称为是复可微的：$\lim\limits_{h\to 0} \frac{f(z+w)-f(z)}{w}$，极限记为$f’(z)$</p>
 <blockquote>
-<p>若$aH&#x3D;bH\Rightarrow a^{-1}b\in H\Rightarrow a^{-1}(b^{-1})^{-1}\in H\Rightarrow H a^{-1}&#x3D;Hb^{-1}$ well defined!<br>若$Ha&#x3D;Hb\Rightarrow ab^{-1}\in H\Rightarrow (a^{-1})^{-1}b^{-1}\in H\Rightarrow a^{-1}H&#x3D;b^{-1}H$ 这说明$\varphi$ 单。又其满性显然成立，所以是双射</p>
+<p>此后，证明求导的各个性质，比如“前导后不导，后导前不导”、链式法则等具体过程不再赘述。方法是：使用<strong>不带除法的等价表示</strong>：$f(z_0+w)&#x3D;f(z_0)+f’(z_0)w+\sigma(w) w$，其中$\lim\limits_{w\to 0} \sigma(w) &#x3D; 0$然后代入算一下就行</p>
 </blockquote>
-<p>因为是分类，可把群$G$用陪集分解，且一旦有一个左陪集分解$aH\cap bH\cap cH\cap\dots$可立即得到对应的右陪集分解$Ha^{-1}\cap Hb^{-1}\cap Hc^{-1}\cap\dots$，且可知阶有限时$|aH|&#x3D;|bH|$（构造一个双射$ah\mapsto bh$易知）所以立刻得到：</p>
-<h3 id="Lagrange-定理"><a href="#Lagrange-定理" class="headerlink" title="Lagrange 定理"></a>Lagrange 定理</h3><p>设$H$是有限群$G$的一个子群，又记关于子群$H$互异的陪集个数为$(G:H)$，则：<br>$$<br>(G:H)&#x3D;\frac{|G|}{|H|}<br>$$</p>
-<div class="note cyan"><p>图像：想象$G$是一个立方体，中心在原点，$H$是一个过原点的平面，用平行于$H$的刀法把立方体切成一层一层的，每一层就代表一个陪集，共有$(G:H)$层</p></div>
-
-<p>回想线代的仿射子集，商空间维数也与原空间维数之间有类似关系，比如原空间是$V$，用来分解的是$U$，商空间是$\{v+U|v\in V\}$，这样“商空间维数+$U$的维数&#x3D;$V$的维数”</p>
-<p><strong>推论</strong> 有限阶群中的每个元素的阶都整除群的阶!该推论指示<strong>素数阶群必为循环群</strong></p>
-<p>类似两个空间的和，新空间的维数是两者相加当且仅当是直和。这里也有很像的结论：</p>
-<p>$H$与$K$是$G$的两个有限子群，则（不过$HK$并不一定是群！）：<br>$$<br>|HK|&#x3D;\frac{|H|\cdot|K|}{|H\cap K|}<br>$$<br>从而$|HK|&#x3D;|H||K|$当且仅当$H\cap K&#x3D;e$</p>
-<h2 id="群在集合上的作用"><a href="#群在集合上的作用" class="headerlink" title="群在集合上的作用"></a>群在集合上的作用</h2><h3 id="群在集合上作用的定义"><a href="#群在集合上作用的定义" class="headerlink" title="群在集合上作用的定义"></a>群在集合上作用的定义</h3><p>定义：$G$是一个群，$M$是一个集合，若有个从：$G\times M&#x3D;\{(a,x)|a\in G,x\in M\}$到$M$的映射$(a,x)\mapsto a\circ x\in G$且满足以下两条，则称群$G$作用于集合$M$上：</p>
-<ol>
-<li><p>$(ab)\circ x&#x3D;a\circ(b\circ x)\quad \forall a,b\in G,x\in M$</p>
-</li>
-<li><p>$e\circ x&#x3D;x$ （其中$e$是$G$单位元）</p>
-</li>
-</ol>
-<p>回想<strong>Cayley</strong>定理的证明，就引入了一个群中元素$a$对应的变换$\varphi_a: x\mapsto a\circ x$，然后定义$T: a\mapsto \varphi_a$，发现$T$实际上是从$G$到$S(G)$的同态映射，这其实就是<strong>群</strong>$G$在<strong>集合</strong>$G$上的作用。</p>
-<p>由于$G$的一个“作用”指的就是生成一个“定义再集合$M$上的变换”<br>而且规则1保证了可逆，所以一个“作用”还是双射<br>此外$S(M)$中的运算是“变换的乘法”，验证$T: a\mapsto \varphi_a$还是同态</p>
-<p>总结：群$G$在集合$M$上的作用，本质就是群$G$到对称群$S(M)$的一个同态映射</p>
-<h3 id="轨道"><a href="#轨道" class="headerlink" title="轨道"></a>轨道</h3><p>定义“轨道”：设群$G$作用在集合$M$上，$x\in M$，则称子集$M_x:&#x3D;\{a\circ x| a\in G\}$是$x$在群$G$作用下的<strong>轨道</strong></p>
-<div class="note cyan"><p>图像：$x\in M$是一个待“移动”（变化）的元素，群$G$中的所有元素都可以作用在$x$上让它移动，现把整个群作用在它身上的结果命名为其轨道，代表$x$的各种可能发展轨迹</p></div>
-
-<p>各个轨道可以构成集合$M$的分类：</p>
+<p><strong>定义</strong> <strong>（全纯 Holomorphic）</strong><br>如果$f(z)$在开集$U$中固定每一个点都复可微，则称$f$在$U$上是全纯的（holomorphic）</p>
 <blockquote>
-<p>“全都被分”天然成立，“两类不交”可以这样证：若$y\in M_x$，说明$y$一定可通过$x$的某种移动得来，亦即：$y$进行那种逆移动（由于$G$是群，逆移动存在）就能变成$x$<br>所以，任取$M_x$的元素，都可以从$y$发展得来！（只需$y$先变成$x$，再从$x$变成该元素即可）这说明$M_x\subseteq M_y$……$\Rightarrow M_x&#x3D;M_y$</p>
+<p>至此，我们还不清楚复可微的函数，它的实部虚部有啥特性，我们接下来就要谈论这个问题</p>
 </blockquote>
-<p>eg. 群$G$的子群$H$在集合$G$上的作用，能形成一系列轨道，这些轨道就是右陪集！因此用轨道也能导出Lagrange定理</p>
-<p>此外，对于集合$M$中的某一个元素$x$，可能有很多种“作用”都使之不发生移动，这些“作用”构成$x$的稳定子群，即$G_x:&#x3D;\{a|a\in G, a\circ x&#x3D;x\}$ (注：这的确是个子群也要验证一下)</p>
-<p>这里又能想到不变子空间的概念，当引入$T$算符的不变子空间$U$后，取商空间$\{v+U|v\in V\}$，就可以定义商算子$\tilde{T}: \tilde{T}(v+U)&#x3D;Tv+U$这里我们也做同样的事情：</p>
-<p>设群$G$作用于集合$M$上，$x\in M$，则$|M_x|&#x3D;(G:G_x)$，即轨道$M_x$与所有左陪集组成的集合$\{aG_x|a\in G\}$之间可以建立双射</p>
+<p><strong>定理</strong> <strong>（Cauchy-Riemann方程）</strong><br>定义在开集$U$上的函数$f(x+iy) &#x3D; u(x,y) +i v(x,y)$，那么，如果$f$是全纯的，则，其实&#x2F;虚部满足Cauchy-Riemann方程：<br>$$<br>\frac{\partial u}{\partial x} &#x3D; \frac{\partial v}{\partial y}\quad \frac{\partial v}{\partial x} &#x3D; -\frac{\partial u}{\partial y}<br>$$</p>
 <blockquote>
-<p>定义$\varphi : a\circ  x\mapsto aG_x$，满性天然成立。<br>验证单性按照常规走：若$aG_x&#x3D;bG_x$则……$b\circ x&#x3D;a\circ x$<br>所以$\varphi$ 是双射即所求（中间推导的核心就是“稳定”这一性质，就像商算子的定义良好是“不变”保障的）</p>
+<p>声明：以下证明中，$\mathbb{R}^2$中的元素不区分行&#x2F;列表达</p>
+<p>证明：既然都假设可微了，不妨设点$z$处有$f’(z)&#x3D;a+ib$，我们下方的目标就是求出$a,b$的具体表达式</p>
+<p>根据可微，$f(z+w)&#x3D;f(z)+f’(z)w+\sigma(w)w$其中$\lim\limits_{w\to 0}\sigma(w) &#x3D; 0$，现在我把“小位移”$w$具体表示出来：$w&#x3D;h+ik$那么，该式即为：<br>$$<br>f(x+h +i(y+k))&#x3D;f(x+iy)+(ah-bk)+i(bh+ak)+\sigma(h+ik)(h+ik)<br>$$ 现在，定义$F(x,y):\mathbb{R}^2\to \mathbb{R}^2$为：$F(x,y)&#x3D;(u(x,y),v(x,y))$，那么，上式的“实部等于虚部”即是说：<br>$$<br>F(x+h,y+k)&#x3D;F(x,y)+\begin{pmatrix}<br>ah-bk \<br>bh+ak<br>\end{pmatrix}+\begin{pmatrix}<br>? \<br>?<br>\end{pmatrix}<br>$$</p>
+<ul>
+<li>分析一下两个问号处填啥：假设$\sigma(h+ik)&#x3D;\alpha (h,k) +i\beta(h,k)$，那它和$h+ik$乘一下，整理虚实部就得到：<br>$$<br>\begin{pmatrix}<br>? \<br>?<br>\end{pmatrix} &#x3D;<br>\begin{pmatrix}<br>\alpha(h,k) \<br>\beta(h,k)<br>\end{pmatrix} h+<br>\begin{pmatrix}<br>-\beta(h,k) \<br>\alpha(h,k)<br>\end{pmatrix} k&#x3D; \sigma_1(h,k) h+\sigma_2(h,k) k<br>$$<br>最后的记号$\sigma_1,\sigma_2$代表中间两个$\mathbb{R}^2\to \mathbb{R}^2$的映射，由于$\lim\limits_{w\to 0}\sigma(w) &#x3D; 0$，这暗示$\lim\limits_{h,k\to 0}\alpha(h,k) &#x3D;\lim\limits_{h,k\to 0}\beta(h,k) &#x3D;  0$，那么$\lim\limits_{h,k\to 0}\sigma_1(h,k) &#x3D;\lim\limits_{h,k\to 0}\sigma_2(h,k) &#x3D;  (0,0)$</li>
+</ul>
+<p>好，将问号替换掉，现在得到关键的式子：<br>$$<br>F(x+h,y+k)&#x3D;F(x,y)+<br>\begin{pmatrix}<br>a &amp; -b \<br>b &amp; a<br>\end{pmatrix}<br>\begin{pmatrix}<br>h \<br>k<br>\end{pmatrix}<br>+\sigma_1(h,k) h+\sigma_2(h,k) k<br>$$<br>其中$\lim\limits_{h,k\to 0}\sigma_1(h,k) &#x3D;\lim\limits_{h,k\to 0}\sigma_2(h,k) &#x3D;  (0,0)$。回顾多元映射微定义，发现，此式明示$F$在$(x,y)$处可微，且导数为$\begin{pmatrix}<br>a &amp; -b \<br>b &amp; a<br>\end{pmatrix}$</p>
+<p>但是，旧知识又告诉我们，$F$若可微，其导数应该是$\begin{pmatrix}<br>{\partial u}&#x2F;{\partial x} &amp; {\partial u}&#x2F;{\partial y}  \<br>{\partial v}&#x2F;{\partial x}  &amp; {\partial v}&#x2F;{\partial y}<br>\end{pmatrix}$</p>
+<p>因此，两者的相等导致$a&#x3D;\frac{\partial u}{\partial x} &#x3D; \frac{\partial v}{\partial y}$以及$b&#x3D;\frac{\partial v}{\partial x} &#x3D; -\frac{\partial u}{\partial y}$<br>$\square$</p>
 </blockquote>
-<p>结合Lagrange定理：设群$G$作用于集合$M$上，且$G$有限阶，则对任意$x\in M$有：$|G|&#x3D;|G_x||M_x|$</p>
-<div class="note cyan"><p>图像：和物理的“巴普斯定理”一样，一个平面图形跟随元素$x$（质心）的移动，扫过一块空间，体积就是“面积”（稳定子群）与路径（轨道）的乘积。</p></div>
+<p><strong>定理</strong> <strong>（C-R方程推全纯）</strong><br>假如$u(x,y),v(x,y)$是两个一阶偏导连续的函数，且满足Cauchy-Riemann方程，那么借用它们，定义的复函数$f(x+iy)&#x3D;u(x,y)+iv(x,y)$是复可微的</p>
+<blockquote>
+<p>证明同上，每一步都反向就行</p>
+</blockquote>
+<p>上面两个定理，就是C-R方程与可微的等价关系！</p>
+<!--
+保角性质（conformal）：
+
+如果$f'(z_0)\neq 0$，那么曲线$\gamma,\eta$在$z_0$点的夹角和$f \circ \gamma$与$f\circ  \eta$在$f(z_0)$的夹角是一样的 -->
+
+<h3 id="积分的基本概念"><a href="#积分的基本概念" class="headerlink" title="积分的基本概念"></a>积分的基本概念</h3><p>复平面上积分要考虑路径，因此先明确概念：</p>
+<p><strong>定义</strong> <strong>（曲线）</strong><br>曲线就是可微，且导数连续的映射$\gamma:[a,b]\to\mathbb{C}$</p>
+<blockquote>
+<p>提醒：这里的“可微”，和前面讲的复可微不一样哦！因为这里自变量是实的，“微小位移”没有从四面八方来的可能性</p>
+<p>更准确的说，若$\gamma(t) &#x3D; \gamma_1(t)+i\gamma_2(t)$，那么，定义$\gamma$的导数为：$\gamma’(t) &#x3D; \gamma_1’(t) + i\gamma_2’(t)$</p>
+<p>据此，容易验证熟悉的导数运算性质也都成立，包括和全纯函数$f: U\to\mathbb{C}$复合后的$f\circ \gamma$，能证出也可微，且导数满足链式法则！（尽管这个乘积中，一个是复自变量可微，一个是实自变量可微，但证明时统一用不带除法的那种等价表示，其实过程完全一致）</p>
+</blockquote>
+<p><strong>定义</strong> <strong>（道路）</strong><br>道路即是首尾相接的曲线族，具体来说：$\gamma &#x3D; \set{\gamma_1,\gamma_2,\dots,\gamma_n}$，其中$\gamma_j:[a_j,b_j]\to \mathbb{C}$，满足$\gamma_j(b_j)&#x3D;\gamma_{j+1}(a_{j+1})$</p>
+<p><strong>定义</strong> <strong>（实参数复值函数积分）</strong><br>一个连续的复数值函数$F:[a,b]\to\mathbb{C}$，可以表示为$F(t) &#x3D; u(t)+iv(t)$，那么，定义其定积分为：$\int_a^b F(t) dt &#x3D; \int_a^b u(t) dt+ i\int_a^b v(t) dt$</p>
+<p><strong>定义</strong> <strong>（复变函数沿曲线积分）</strong><br>（该定义建立上一个定义的基础上）复平面的开集$U$上的连续函数$f$，假设$\gamma:[a,b]\to\mathbb{C}$是$U$中的一个曲线，那么，$f$沿着$\gamma$的积分就被定义为：$\int_\gamma f &#x3D; \int_a^b f(\gamma(t))\gamma’(t) dt$</p>
+<blockquote>
+<p>容易证明（用虚实部展开+链式法则+实函数积分换元公式）沿曲线积分与参数$t$的选取无关，因此，常记为$\int_\gamma f(z) dz $</p>
+</blockquote>
+<p><strong>定义</strong> <strong>（复变函数沿路径积分）</strong><br>复平面的开集$U$上的连续函数$f$，假设$\gamma&#x3D;\set{\gamma_1,\gamma_2,\dots,\gamma_n}$是$U$中的一个路径，那么，$f$沿着$\gamma$的积分就被定义为：$\int_\gamma f &#x3D; \sum\limits_{k&#x3D;1}^n \int_{\gamma_k} f$</p>
+<p><strong>定义</strong> <strong>（原函数 primitive）</strong><br>现在有个定义在开集$U$上的函数$f$，如果找到一个全纯函数$g$满足$g’&#x3D;f$，则称$g$是$f$在$U$上的原函数</p>
+<p><strong>定理</strong> <strong>（复的微积分基本定理）</strong><br>如果连续函数$f$在开集$U$上有原函数$g$，那么，$\gamma$是$U$上的一个道路，两端为$\alpha,\beta$，则$\int_\gamma f &#x3D;g(\beta)-g(\alpha)$</p>
+<blockquote>
+<p>证明：先证$\gamma$就是一个曲线的情形，此时按照“沿曲线积分”定义：$ \int_\gamma f &#x3D; \int _a^b g’(\gamma(t))\gamma’(t) dt$ ，再调用“曲线”定义下方注记提到的链式法则，等于$\int_a^b (g\circ \gamma)’(t) dt$，现在，调用熟知的实变量的“向量值函数的微积分基本定理”，就得$\int_a^b (g\circ \gamma)’(t) dt&#x3D;g\circ\gamma(b)-g\circ \gamma(a) &#x3D; g(\beta)-g(\alpha)$</p>
+<p>若$\gamma$是个道路，那么利用“首尾相接”抵消中间项即可</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（导数处处为0是常值函数）</strong><br>区域$\Omega$上，若全纯函数$f$，满足$f’&#x3D;0$处处成立，则$f$是常值映射</p>
+<blockquote>
+<p>对任意两点$z_1,z_2$，构造一个道路连接起来，显然$f$是$f’$的原函数，因此调用上一个定理，得到$f’$沿着这个道路的积分$f(z_2)-f(z_1)&#x3D;0$，所以任意两点函数值相等</p>
+<p>注意这个“区域”（道路联通的开集）的假设很重要！没有该假设，两点不一定能连起来</p>
+</blockquote>
 
   </div>
   
@@ -2811,10 +2812,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-02-03T13:50:09+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-03-20T17:34:45+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Feb 3, 2025</p>
+    <p>更新于：Mar 20, 2025</p>
   </a>
 </div>
 
@@ -2833,7 +2834,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/02/02/Algebra2/&title=陪集、群在集合上的作用 - (.O w O.)?&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2025/03/20/Complex-Analysis1-0/&title=认识全纯 - (.O w O.)?&summary="
           
           >
           
@@ -2845,7 +2846,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/02/02/Algebra2/&title=陪集、群在集合上的作用 - (.O w O.)?&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2025/03/20/Complex-Analysis1-0/&title=认识全纯 - (.O w O.)?&summary="
           
           >
           
@@ -2857,7 +2858,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/02/02/Algebra2/&title=陪集、群在集合上的作用 - (.O w O.)?&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2025/03/20/Complex-Analysis1-0/&title=认识全纯 - (.O w O.)?&summary="
           
           >
           
@@ -2893,17 +2894,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/02/04/QM3/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>谐振子</p>
-          <p class='content'>Shankar_ch.77.1 notes讲清楚了为何需要研究谐振子，对角化的方法使得势函数$V$被解耦。保持$p$仍然是对角化的原因在于$p$的矩阵是一个标量乘矩阵形如：$$\begin{pm...</p>
-        </a>
       
-      
-        <a class='next' href='/2024/02/02/Algebra1/'>
-          <p class='title'>基本概念与群初识<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>基本概念代数运算定义：有一个法则使得在集合$M$中任意两个有次序的元素，在$M$中都有唯一的元素对应，则该法则是$M$的一个代数运算
-含有代数运算的集合称为代数系统
-注意：由定义可知，“有代数运...</p>
+        <a class='next' href='/2025/02/07/MIRA5/'>
+          <p class='title'>微分（MIRA）<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Real Analysis微分（MIRA）本篇核心内容梗概首先介绍Hardy-Littlewood极大不等式，不过，为此需介绍一些前置的概念，包括$\mathcal{L}^1(\mathbb{R...</p>
         </a>
       
     </div>
@@ -2919,7 +2913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/02/02/Algebra2/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2025/03/20/Complex-Analysis1-0/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2948,7 +2942,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <i class="fa-solid fa-superscript fa-fw" aria-hidden="true"></i><span class='name'>Abstract Algebra</span>
+      <i class="fa-solid fa-c fa-fw" aria-hidden="true"></i><span class='name'>Complex Analysis</span>
     
   </header>
 
@@ -2956,74 +2950,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='content'>
     <ul class="list entry navigation">
       
-        <li><a class="flat-box" title="/2024/02/02/Algebra1/" href="/2024/02/02/Algebra1/"
+        <li><a class="flat-box" title="/2024/06/03/complex-analysis1/" href="/2024/06/03/complex-analysis1/"
           
           
-          active-action="action-20240202Algebra1"
+          active-action="action-20240603complex-analysis1"
           >
           <div class='name'>
             
-            基本概念与群初识
+            复分析旧版笔记
           </div>
           
         </a></li>
       
-        <li><a class="flat-box" title="/2024/02/02/Algebra2/" href="/2024/02/02/Algebra2/"
+        <li><a class="flat-box" title="/2025/03/20/Complex-Analysis1-0/" href="/2025/03/20/Complex-Analysis1-0/"
           
           
-          active-action="action-20240202Algebra2"
+          active-action="action-20250320Complex-Analysis1-0"
           >
           <div class='name'>
             
-            陪集、群在集合上的作用
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/02/06/Algebra3/" href="/2024/02/06/Algebra3/"
-          
-          
-          active-action="action-20240206Algebra3"
-          >
-          <div class='name'>
-            
-            正规与商群、同态同构
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/02/19/Algebra4/" href="/2024/02/19/Algebra4/"
-          
-          
-          active-action="action-20240219Algebra4"
-          >
-          <div class='name'>
-            
-            Sylow定理与直积
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/02/21/Algebra5/" href="/2024/02/21/Algebra5/"
-          
-          
-          active-action="action-20240221Algebra5"
-          >
-          <div class='name'>
-            
-            有限交换群
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/03/05/Algebra6/" href="/2024/03/05/Algebra6/"
-          
-          
-          active-action="action-20240305Algebra6"
-          >
-          <div class='name'>
-            
-            物理篇---群表示
+            认识全纯
           </div>
           
         </a></li>
@@ -3061,7 +3007,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%AA%E9%9B%86%E3%80%81%E6%8C%87%E6%95%B0"><span class="toc-text">陪集、指数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%AA%E9%9B%86%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%80%A7%E8%B4%A8"><span class="toc-text">陪集的定义与性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A6%E3%80%81%E5%8F%B3%E9%99%AA%E9%9B%86%E5%AF%B9%E5%BA%94"><span class="toc-text">左、右陪集对应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lagrange-%E5%AE%9A%E7%90%86"><span class="toc-text">Lagrange 定理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BE%A4%E5%9C%A8%E9%9B%86%E5%90%88%E4%B8%8A%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">群在集合上的作用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BE%A4%E5%9C%A8%E9%9B%86%E5%90%88%E4%B8%8A%E4%BD%9C%E7%94%A8%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">群在集合上作用的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%A8%E9%81%93"><span class="toc-text">轨道</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86%E5%85%A8%E7%BA%AF"><span class="toc-text">认识全纯</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%A0%B8%E5%BF%83%E5%86%85%E5%AE%B9%E6%A6%82%E8%A6%81"><span class="toc-text">本篇核心内容概要</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E7%BA%AF%E5%87%BD%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8"><span class="toc-text">全纯函数基本性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%AF%E5%88%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">积分的基本概念</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4142,19 +4088,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 <pjax>
 
         <script>
-  // https://www.micdz.cn/article/katex-on-volantis/
-  if (typeof renderMathInElement == "undefined") {
-    volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.css")
-    function pjax_katex() {
-      volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/contrib/auto-render.min.js").then(()=>{
-        renderMathInElement(document.body);
-      })
-    }
-    volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.js").then(pjax_katex)
-    volantis.pjax.push(pjax_katex)
-  }
-</script>
-        <script>
   // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
   if (typeof MathJax === 'undefined') {
     window.MathJax = {
@@ -4206,6 +4139,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   }
 </script>
 
+        <script>
+  // https://www.micdz.cn/article/katex-on-volantis/
+  if (typeof renderMathInElement == "undefined") {
+    volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.css")
+    function pjax_katex() {
+      volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/contrib/auto-render.min.js").then(()=>{
+        renderMathInElement(document.body);
+      })
+    }
+    volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.js").then(pjax_katex)
+    volantis.pjax.push(pjax_katex)
+  }
+</script>
 
 
 </pjax>
@@ -4339,7 +4285,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/抽象代数/","name":"抽象代数"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/02/02/Algebra2/","name":"陪集、群在集合上的作用"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"陪集、群在集合上的作用","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/02/02/Algebra2/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/02/02/Algebra2/","wordCount":0,"datePublished":"2024-02-02T12:08:24.000Z","dateModified":"2025-02-03T05:50:09.794Z","articleSection":"抽象代数","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/复分析/","name":"复分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/03/20/Complex-Analysis1-0/","name":"认识全纯"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"认识全纯","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/03/20/Complex-Analysis1-0/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/03/20/Complex-Analysis1-0/","wordCount":0,"datePublished":"2025-03-20T09:26:29.000Z","dateModified":"2025-03-20T09:34:45.504Z","articleSection":"复分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
