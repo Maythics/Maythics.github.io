@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-03-20T09:26:29.000Z">
-<meta property="article:modified_time" content="2025-03-20T09:41:37.435Z">
+<meta property="article:modified_time" content="2025-04-08T13:33:04.063Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1742463750850),
+    lastupdate: new Date(1744119252188),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2747,7 +2747,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>证明：既然都假设可微了，不妨设点$z$处有$f’(z)&#x3D;a+ib$，我们下方的目标就是求出$a,b$的具体表达式</p>
 <p>根据可微，$f(z+w)&#x3D;f(z)+f’(z)w+\sigma(w)w$其中$\lim\limits_{w\to 0}\sigma(w) &#x3D; 0$，现在我把“小位移”$w$具体表示出来：$w&#x3D;h+ik$那么，该式即为：<br>$$<br>f(x+h +i(y+k))&#x3D;f(x+iy)+(ah-bk)+i(bh+ak)+\sigma(h+ik)(h+ik)<br>$$ 现在，定义$F(x,y):\mathbb{R}^2\to \mathbb{R}^2$为：$F(x,y)&#x3D;(u(x,y),v(x,y))$，那么，上式的“实部等于虚部”即是说：<br>$$<br>F(x+h,y+k)&#x3D;F(x,y)+\begin{pmatrix}<br>ah-bk \\<br>bh+ak<br>\end{pmatrix}+\begin{pmatrix}<br>? \\<br>?<br>\end{pmatrix}<br>$$</p>
 <ul>
-<li>分析一下两个问号处填啥：假设$\sigma(h+ik)&#x3D;\alpha (h,k) +i\beta(h,k)$，那它和$h+ik$乘一下，整理虚实部就得到：<br>$$<br>\begin{pmatrix}<br>? \\<br>?<br>\end{pmatrix} &#x3D;<br>\begin{pmatrix}<br>\alpha(h,k) \\<br>\beta(h,k)<br>\end{pmatrix} h+<br>\begin{pmatrix}<br>-\beta(h,k) \\<br>\alpha(h,k)<br>\end{pmatrix} k&#x3D; \sigma_1(h,k) h+\sigma_2(h,k) k<br>$$<br>最后的记号$\sigma_1,\sigma_2$代表中间两个$\mathbb{R}^2\to \mathbb{R}^2$的映射，由于$\lim\limits_{w\to 0}\sigma(w) &#x3D; 0$，这暗示$\lim\limits_{h,k\to 0}\alpha(h,k) &#x3D;\lim\limits_{h,k\to 0}\beta(h,k) &#x3D;  0$，那么$\lim\limits_{h,k\to 0}\sigma_1(h,k) &#x3D;\lim\limits_{h,k\to 0}\sigma_2(h,k) &#x3D;  (0,0)$</li>
+<li><p>分析一下两个问号处填啥：假设$\sigma(h+ik)&#x3D;\alpha (h,k) +i\beta(h,k)$，那它和$h+ik$乘一下，整理虚实部就得到：<br>$$<br>\begin{pmatrix}<br>? \\<br>?<br>\end{pmatrix} &#x3D;<br>\begin{pmatrix}<br>\alpha(h,k) \\<br>\beta(h,k)<br>\end{pmatrix} h+<br>\begin{pmatrix}<br>-\beta(h,k) \\<br>\alpha(h,k)<br>\end{pmatrix} k&#x3D; \sigma_1(h,k) h+\sigma_2(h,k) k<br>$$</p>
+</li>
+<li><p>最后的记号$\sigma_1,\sigma_2$代表中间两个$\mathbb{R}^2\to \mathbb{R}^2$的映射，由于$\lim\limits_{w\to 0}\sigma(w) &#x3D; 0$，这暗示$\lim\limits_{h,k\to 0}\alpha(h,k) &#x3D;\lim\limits_{h,k\to 0}\beta(h,k) &#x3D;  0$，那么$\lim\limits_{h,k\to 0}\sigma_1(h,k) &#x3D;\lim\limits_{h,k\to 0}\sigma_2(h,k) &#x3D;  (0,0)$</p>
+</li>
 </ul>
 <p>好，将问号替换掉，现在得到关键的式子：<br>$$<br>F(x+h,y+k)&#x3D;F(x,y)+<br>\begin{pmatrix}<br>a &amp; -b \\<br>b &amp; a<br>\end{pmatrix}<br>\begin{pmatrix}<br>h \\<br>k<br>\end{pmatrix}<br>+\sigma_1(h,k) h+\sigma_2(h,k) k<br>$$<br>其中$\lim\limits_{h,k\to 0}\sigma_1(h,k) &#x3D;\lim\limits_{h,k\to 0}\sigma_2(h,k) &#x3D;  (0,0)$。回顾多元映射微定义，发现，此式明示$F$在$(x,y)$处可微，且导数为$\begin{pmatrix}<br>a &amp; -b \\<br>b &amp; a<br>\end{pmatrix}$</p>
 <p>但是，旧知识又告诉我们，$F$若可微，其导数应该是$\begin{pmatrix}<br>{\partial u}&#x2F;{\partial x} &amp; {\partial u}&#x2F;{\partial y}  \\<br>{\partial v}&#x2F;{\partial x}  &amp; {\partial v}&#x2F;{\partial y}<br>\end{pmatrix}$</p>
@@ -2776,7 +2779,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>容易证明（用虚实部展开+链式法则+实函数积分换元公式）沿曲线积分与参数$t$的选取无关，因此，常记为$\int_\gamma f(z) dz $</p>
 </blockquote>
-<p><strong>定义</strong> <strong>（复变函数沿路径积分）</strong><br>复平面的开集$U$上的连续函数$f$，假设$\gamma&#x3D;\set{\gamma_1,\gamma_2,\dots,\gamma_n}$是$U$中的一个路径，那么，$f$沿着$\gamma$的积分就被定义为：$\int_\gamma f &#x3D; \sum\limits_{k&#x3D;1}^n \int_{\gamma_k} f$</p>
+<p><strong>定义</strong> <strong>（复变函数沿路径积分）</strong><br>复平面的开集$U$上的连续函数$f$，假设$\gamma&#x3D;\set{\gamma_1,\gamma_2,\dots,\gamma_n}$是$U$中的一个路径，那么，$f$沿着$\gamma$的积分就被定义为：$\int_\gamma f(z) dz &#x3D; \sum\limits_{k&#x3D;1}^n \int_{\gamma_k} f$</p>
 <p><strong>定义</strong> <strong>（原函数 primitive）</strong><br>现在有个定义在开集$U$上的函数$f$，如果找到一个全纯函数$g$满足$g’&#x3D;f$，则称$g$是$f$在$U$上的原函数</p>
 <p><strong>定理</strong> <strong>（复的微积分基本定理）</strong><br>如果连续函数$f$在开集$U$上有原函数$g$，那么，$\gamma$是$U$上的一个道路，两端为$\alpha,\beta$，则$\int_\gamma f &#x3D;g(\beta)-g(\alpha)$</p>
 <blockquote>
@@ -2812,10 +2815,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-03-20T17:41:37+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-04-08T21:33:04+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Mar 20, 2025</p>
+    <p>更新于：Apr 8, 2025</p>
   </a>
 </div>
 
@@ -4285,7 +4288,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/复分析/","name":"复分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/03/20/Complex-Analysis1-0/","name":"认识全纯"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"认识全纯","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/03/20/Complex-Analysis1-0/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/03/20/Complex-Analysis1-0/","wordCount":0,"datePublished":"2025-03-20T09:26:29.000Z","dateModified":"2025-03-20T09:41:37.435Z","articleSection":"复分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/复分析/","name":"复分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/03/20/Complex-Analysis1-0/","name":"认识全纯"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"认识全纯","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/03/20/Complex-Analysis1-0/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/03/20/Complex-Analysis1-0/","wordCount":0,"datePublished":"2025-03-20T09:26:29.000Z","dateModified":"2025-04-08T13:33:04.063Z","articleSection":"复分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

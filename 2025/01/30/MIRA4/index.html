@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-01-30T15:41:49.000Z">
-<meta property="article:modified_time" content="2025-02-18T09:18:04.424Z">
+<meta property="article:modified_time" content="2025-04-08T13:32:00.932Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1742463750850),
+    lastupdate: new Date(1744119252188),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2764,6 +2764,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>再取$t\to 1$即可得到$\lim\limits_{k\to\infty}\int f_k d\mu \geq \sum\limits_{j&#x3D;1}^m c_j\mu(A_j)$。注意到，我们没有对$A_j$怎么选取做任何假定，因此对于任何的$\mathcal{S}$分拆$P$，这个不等式都成立，因此：$\lim\limits_{k\to\infty}\int f_k d\mu \geq\sup\set{ \sum\limits_{j&#x3D;1}^m c_j\mu(A_j) : \forall \text{ partition }P}$，故$\lim\limits_{k\to\infty}\int f_k d\mu \geq \int f d\mu$</p>
 <p>$\square$</p>
 </blockquote>
+<p><strong>定理</strong> <strong>（Fatou引理）</strong><br>测度空间$(X,\mathcal{S},\mu)$中，可测函数列$f_1,f_2\dots$且都是非负的$f_i:X\to[0,\infty],\forall i\in\mathbb{Z}$，则：<br>$$<br>\int \underset{n\to \infty}{\lim\inf} f_n \leq \underset{n\to \infty}{\lim\inf} \int f_n<br>$$</p>
+<blockquote>
+<p>证明：记$g_k(x) &#x3D; \inf\limits_{n\geq k} f_n(x)$，则显然$g_k\leq f_k$，故：$\int g_k d\mu \leq \int f_k d\mu$，考察$k$趋于无穷的情况，就会得到欲证不等式，下面是详细步骤：</p>
+<p>同时，$g_1,g_2\dots$形成一个单增序列，且$g_k$全是可测的（因为可测函数的inf仍可测），而且$\lim\limits_{k\to\infty}g_k &#x3D; \underset{n\to \infty}{\lim\inf} f_n$</p>
+<p>$k$趋于无穷时，根据定理（单调收敛），可知：$\lim\limits_{k\to\infty}\int g_k d\mu &#x3D;\int \lim\limits_{k\to\infty} g_k d\mu &#x3D;\int  \underset{n\to \infty}{\lim\inf} f_n d\mu$，得证</p>
+</blockquote>
 <!--
 下面这个定理解决了简单函数的表示方法不唯一的问题，因为不同表示实际上并不影响结果： -->
 <!--
@@ -2836,7 +2842,7 @@ $$
 </blockquote>
 <p><strong>定义</strong> <strong>（几乎处处）</strong><br>测度空间$(X,\mathcal{S},\mu)$中，有人说了某一个命题。然后，若能找到一个零测集$E\in\mathcal{S},\mu(E)&#x3D;0$，使得该命题在$X-E$上成立，就称该命题几乎处处成立</p>
 <p>在讨论积分的时候，“几乎处处”和“处处”其实效果一样（在零测集上修改函数值而积分不变），所以，我们经常可以把条件松弛到“几乎处处”，如下面这个关键定理</p>
-<p><strong>定理</strong> <strong>（控制收敛定理）</strong><br>测度空间$(X,\mathcal{S},\mu)$中，可测函数$f:X\to[-\infty,\infty]$以及有个序列$f_1,f_2\dots:X\to[-\infty,\infty]$，满足几乎处处$\lim\limits_{k\to\infty} f_k(x)&#x3D;f(x)$成立。现在，若能找到一个可测函数$g:X\to[0,\infty]$且$\int g d\mu&lt;\infty$，满足能够几乎处处控制（dominate）住序列$\vert f_k(x)\vert\leq g(x),\forall  k$，则：<br>$$<br>\int f d\mu &#x3D; \lim_{k\to\infty}\int f_k d\mu<br>$$</p>
+<p><strong>定理</strong> <strong>（控制收敛定理）</strong><br>测度空间$(X,\mathcal{S},\mu)$中，有个可测函数$f:X\to[-\infty,\infty]$，还有个序列$f_1,f_2\dots:X\to[-\infty,\infty]$，满足几乎处处$\lim\limits_{k\to\infty} f_k(x)&#x3D;f(x)$成立。现在，若能找到一个可测函数$g:X\to[0,\infty]$且$\int g d\mu&lt;\infty$，满足能够几乎处处控制（dominate）住序列$\vert f_k(x)\vert\leq g(x),\forall  k$，则：<br>$$<br>\int f d\mu &#x3D; \lim_{k\to\infty}\int f_k d\mu<br>$$</p>
 <blockquote>
 <p>证明：对于任何$E\in \mathcal{S}$都有<br>$$<br>\begin{align*}<br>&amp; \left\vert \int f_k d\mu -\int f d\mu  \right\vert &#x3D; \left\vert \int_{X-E} f_k d\mu -\int_{X-E} f d\mu + \int_{E} f_k d\mu -\int_{E} f d\mu  \right\vert \\<br>\leq &amp; \left\vert \int_{X-E} f_k d\mu  \right\vert +\left\vert \int_{X-E} f d\mu  \right\vert +  \left\vert \int_{E} f_k d\mu -\int_{E} f d\mu  \right\vert \\<br>\leq &amp; 2\int_{X-E} g d\mu + \left\vert \int_{E} f_k d\mu -\int_{E} f d\mu  \right\vert<br>\end{align*}<br>$$</p>
 <p><strong>1.</strong> $\mu(X)&lt;\infty$时</p>
@@ -2874,10 +2880,10 @@ $$
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-02-18T17:18:04+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-04-08T21:32:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Feb 18, 2025</p>
+    <p>更新于：Apr 8, 2025</p>
   </a>
 </div>
 
@@ -4382,7 +4388,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/实分析/","name":"实分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/01/30/MIRA4/","name":"积分（MIRA）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"积分（MIRA）","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/01/30/MIRA4/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/01/30/MIRA4/","wordCount":0,"datePublished":"2025-01-30T15:41:49.000Z","dateModified":"2025-02-18T09:18:04.424Z","articleSection":"实分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/实分析/","name":"实分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/01/30/MIRA4/","name":"积分（MIRA）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"积分（MIRA）","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/01/30/MIRA4/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/01/30/MIRA4/","wordCount":0,"datePublished":"2025-01-30T15:41:49.000Z","dateModified":"2025-04-08T13:32:00.932Z","articleSection":"实分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
