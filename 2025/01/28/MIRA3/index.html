@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-01-27T16:08:26.000Z">
-<meta property="article:modified_time" content="2025-01-29T14:03:36.491Z">
+<meta property="article:modified_time" content="2025-04-13T12:56:39.133Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1744119252188),
+    lastupdate: new Date(1744549038688),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2771,28 +2771,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>这个收敛相关的结论也是容易的：$\vert f_k(x)-f(x)\vert\leq \frac{1}{2^k} \quad \forall x\in X \text{ s.t. }f(x)\in [-k,k]$</p>
 <img src = "https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/image1.jpg" alt = "simple approx" width=400 height =200>
 </blockquote>
-<h3 id="Luzin定理"><a href="#Luzin定理" class="headerlink" title="Luzin定理"></a>Luzin定理</h3><h4 id="Version-1"><a href="#Version-1" class="headerlink" title="Version 1"></a>Version 1</h4><p>引入动机：之前已有定理 （连续函数是Borel可测的），那么反之何如呢？Luzin定理回答了这个问题：<strong>反之，差不多也是对的</strong></p>
+<h3 id="Luzin定理"><a href="#Luzin定理" class="headerlink" title="Luzin定理"></a>Luzin定理</h3><p>下面陈述两个版本的Luzin定理</p>
+<h4 id="Version-1"><a href="#Version-1" class="headerlink" title="Version 1"></a>Version 1</h4><p>引入动机：之前已有定理 （连续函数是Borel可测的），那么反之何如呢？Luzin定理回答了这个问题：<strong>反之，差不多也是对的</strong></p>
 <p><strong>定理</strong> <strong>（Luzin ver.1）</strong><br>设$g:\mathbb{R}\to\mathbb{R}$是一个Borel可测的函数，那么对任意$\varepsilon&gt;0$，存在一个闭集$F\subset \mathbb{R}$使得$|\mathbb{R} - F|&lt;\varepsilon$，而且$g\vert_F$是$F$上的连续函数</p>
 <blockquote>
 <p>注意：这里已经把“可测”指明了是“Borel可测”，即：明确了$\sigma$代数。所以调用之前的定理时，多带一个Borel前缀</p>
 <p>证明：先挑软柿子捏，证明$g$是一个简单函数时成立。成功了以后，结合定理“用简单函数逼近可测函数”解决整个问题</p>
 <p><strong>1.</strong> 若$g&#x3D; d_1\chi_{D_1}+ d_2\chi_{D_2}\dots d_n\chi_{D_n}$：</p>
 <p>那么，根据定理“lebesgue可测集的等价定义”，可以为每一个$D_k$都找到开集$G_k$与闭集$F_k$挨着它，满足$F_k\subset D_k\subset G_k$且$\vert G_k-D_k\vert &lt;\frac{\varepsilon}{2n}$以及$\vert D_k-F_k \vert &lt;\frac{\varepsilon}{2n}$ 因此，$\vert G_k-F_k \vert&lt;\frac{\varepsilon}{n}$</p>
-<p>最后，令$F &#x3D; \bigcup\limits_{k&#x3D;1}^n F_k \cup  \bigcap\limits_{k&#x3D;1}^n (\mathbb{R} - G_k)$，就ok了！为什么呢？原因有二：第一，这个$F$很大，$\vert\mathbb{R} - F\vert &#x3D; \vert \bigcup\limits_{k&#x3D;1}^n (G_k-F_k)\vert &lt;\varepsilon$；第二，因为在$g\vert _ {F _ k}$根本是常值函数，当然连续，因此$g\vert_F$连续（由于$F$为$F_k$们的无交并，易验证合并起来连续）</p>
+<p>最后，令$F &#x3D; \bigcup\limits_{k&#x3D;1}^n F_k \cup  \bigcap\limits_{k&#x3D;1}^n (\mathbb{R} - G_k)$，就ok了！为什么呢？原因有二：第一，这个$F$很大，$\vert\mathbb{R} - F\vert &#x3D; \vert \bigcup\limits_{k&#x3D;1}^n (G_k-F_k)\vert &lt;\varepsilon$；第二，因为$g\vert _ {F _ k}$根本是常值函数，$g\vert _ {\bigcap_{k&#x3D;1}^n (\mathbb{R} - G_k)}$上直接是0，各自当然连续，因此$g\vert_F$连续（由于$F$为它们的无交并，易验证，在无交的集合上各自连续，那么合并起来也连续）</p>
 <p><strong>2.</strong> 讨论一般情形，$g$用简单Borel可测函数序列$g_1,g_2,\dots$逼近</p>
 <p>首先，调用<strong>1</strong>的结论，可知对于每一个固定的$k$，都能找到一个闭集$C_k$使得$\vert \mathbb{R}-C_k\vert&lt;\frac{\varepsilon}{2^{k+1}}$而且$g _ k\vert_{C _ k}$是连续的。这样，记$C &#x3D; \bigcap \limits_{k&#x3D;1}^\infty C_k$，这样的$C$仍是一个闭集且很大：$\vert\mathbb{R} -C\vert &lt;\frac{\varepsilon}{2}$</p>
-<p>欲得$g$的连续性，使用熟知的定理“一致收敛的连续函数序列，其极限连续”，企图让$g_k$序列一致连续。但是一致连续又是从哪来的呢？可以利用Egorov定理！这下，思路就全建立好了</p>
+<p>欲得$g$的连续性，使用熟知的定理“一致收敛的连续函数序列，其极限连续”，企图让$\set{g_k\vert_C}_k$序列一致收敛。但是一致收敛又怎么得到呢？可以利用Egorov定理！这下，思路就建立好了</p>
 <ol>
-<li><p>先用Egorov定理：把实轴分成一段一段的，由于$g_k\vert_{(m,m+1)}$是连续的且逐点收敛到$g\vert_{(m,m+1)}$，因此存在一个Borel可测的集合$E_m\subset(m,m+1)$使得$g_k$序列在其上是一致收敛到$g$的，满足$\vert (m,m+1) - E_m\vert&lt; \frac{\varepsilon}{2^{\vert m\vert+3}} $这样的好处是，$\vert \bigcup\limits_{m\in \mathbb{Z}} ((m,m+1)-E_m)\vert \leq \frac{3\varepsilon}{8}$</p>
+<li><p>先用Egorov定理：以整数点为断点，把实轴分成一段一段的。由于$g_k\vert_{(m,m+1)}$逐点收敛到$g\vert_{(m,m+1)}$，因此，Egorov定理告诉我们，存在一个Borel可测的集合$E_m\subset(m,m+1)$使得$g_k$序列在其上是一致收敛到$g$的，满足$\vert (m,m+1) - E_m\vert&lt; \frac{\varepsilon}{2^{\vert m\vert+3}} $。这样的好处是，$\vert \bigcup\limits_{m\in \mathbb{Z}} ((m,m+1)-E_m)\vert \leq \frac{3\varepsilon}{8}$</p>
 </li>
 <li><p>至此，$\set{g _ k \vert _ {C\cap E  _ m }} _ k$这个序列，不仅每一项是连续的，而且还是一致收敛的，经典的“一致收敛+连续$\to$连续”，得到$g\vert _ {C\cap E _ m}$是连续的</p>
 </li>
-<li><p>全实轴的$g\vert_{C\cap E_m}$联合起来！得到$g\vert_{\bigcup (C\cap E_m)}$也是连续的。这是因为，$g$限制在闭包互不相交的集合上都是连续的，那么这些集合并起来，$g$在其上仍然连续（可以用$\varepsilon&#x2F;\delta$语言，也可以用拓扑空间的语言证）</p>
+<li><p>全实轴的$g\vert_{C\cap E_m}$联合起来！得到$g\vert_{\bigcup (C\cap E_m)}$也是连续的。这是因为，$g$限制在闭包互不相交的集合上，各自都是连续的，那么这些集合并起来，$g$在其上仍然连续（可以用$\varepsilon&#x2F;\delta$语言，也可以用拓扑空间的语言证明这一点，在此不赘述）</p>
 </li>
-<li><p>但$\bigcup (C\cap E_m)$还不是闭集，不过显然是Borel集，整个证明还差临门一脚，利用定理“lebesgue可测集的等价定义”，存在一个闭集$F$比它小但又和它很接近（$\vert  \bigcup (C\cap E_m)-F \vert&lt;\frac{\varepsilon}{8}$），这个$F$就是所求</p>
+<li><p>但$\bigcup (C\cap E_m)$还不是闭集，整个证明还差临门一脚。注意到它显然是Borel集，利用定理“lebesgue可测集的等价定义”，存在一个闭集$F$比它小但又和它很接近（$\vert  \bigcup (C\cap E_m)-F \vert&lt;\frac{\varepsilon}{8}$），这个$F$就是所求</p>
 </li>
 </ol>
-<p>验证一下： $\vert \mathbb{R} - F\vert &#x3D; \vert\left(\mathbb{R}-\bigcup (C\cap E_m) \right)\cup \left(\bigcup (C\cap E_m)-F \right)\vert \leq \vert \mathbb{R}-\bigcup (C\cap E_m) \vert + \vert \left(\bigcup (C\cap E_m)-F \right)\vert $</p>
+<p>验证一下：</p>
+<p>$\vert \mathbb{R} - F\vert &#x3D; \vert\left(\mathbb{R}-\bigcup (C\cap E_m) \right)\cup \left(\bigcup (C\cap E_m)-F \right)\vert \leq \vert \mathbb{R}-\bigcup (C\cap E_m) \vert + \vert \left(\bigcup (C\cap E_m)-F \right)\vert $</p>
 <p>上式中第一项，可回溯构造过程，发现其大小不超过整数点集合$\mathbb{Z}$，并上$\bigcup\limits_{m\in \mathbb{Z}} ((m,m+1)-E_m)$，再并上$\mathbb{R}-C$。因此，$\vert \mathbb{R}-\bigcup (C\cap E_m) \vert \leq 0+ \frac{3\varepsilon}{8} +\frac{\varepsilon}{2}&#x3D;\frac{7\varepsilon}{8}$</p>
 <p>上式第二项又小于$\frac{\varepsilon}{8}$，因此$\vert\mathbb{R} - F\vert\leq \varepsilon$</p>
 <p>$\square$</p>
@@ -2804,7 +2806,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>这就是熟知的Tietze扩张定理，在实轴上的特殊版本（比一般情形的好证多了）。欲证明该实轴版本，只用把$\mathbb{R}-F$表示成无交开区间之并，每个开区间中，用一次函数架桥连接左右端就行了</p>
 </blockquote>
 <p>有了这个引理，思路就很清楚了：我们只用先把原本的函数改造成定义域在闭集上的连续函数，再用该引理扩张就行！</p>
-<p><strong>定理</strong> <strong>（Luzin ver.2）</strong><br>设$E\subset \mathbb{R}$且$g:E \to \mathbb{R}$是Borel可测的函数，那么对任意$\varepsilon&gt;0$，均可以找到闭集$F\subset E$满足$\vert E-F\vert&lt;\varepsilon$以及一个连续函数$h$，使得$h\vert_F &#x3D; g\vert_F$成立</p>
+<p><strong>定理</strong> <strong>（Luzin ver.2）</strong><br>设$E\subset \mathbb{R}$且$g:E \to \mathbb{R}$是Borel可测的函数，那么对任意$\varepsilon&gt;0$，均可以找到闭集$F\subset E$满足$\vert E-F\vert&lt;\varepsilon$以及一个连续函数$h:\mathbb{R}\to \mathbb{R}$，使得，$h\vert_F &#x3D; g\vert_F$成立</p>
 <blockquote>
 <p>先把函数$g$拓展成$\tilde{g}$满足：</p>
 <p>$$<br>\tilde{g}(x) &#x3D; \begin{cases}<br>  g(x) &amp; x\in E \\<br>  0 &amp; x\in \mathbb{R}-E \\<br>\end{cases}<br>$$<br>那么，容易验证这是Borel可测函数（稍稍分类一下），因此可以用Luzin定理ver.1，得知有一个闭集$C\subset\mathbb{R}$使得$\vert\mathbb{R}  -C\vert&lt;\frac{\varepsilon}{2}$且$\tilde{g}\vert_C$连续</p>
@@ -2837,10 +2839,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-01-29T22:03:36+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-04-13T20:56:39+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jan 29, 2025</p>
+    <p>更新于：Apr 13, 2025</p>
   </a>
 </div>
 
@@ -4353,7 +4355,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/实分析/","name":"实分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/01/28/MIRA3/","name":"可测函数收敛专题（MIRA）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"可测函数收敛专题（MIRA）","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/01/28/MIRA3/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/01/28/MIRA3/","wordCount":0,"datePublished":"2025-01-27T16:08:26.000Z","dateModified":"2025-01-29T14:03:36.491Z","articleSection":"实分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/实分析/","name":"实分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/01/28/MIRA3/","name":"可测函数收敛专题（MIRA）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"可测函数收敛专题（MIRA）","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/01/28/MIRA3/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/01/28/MIRA3/","wordCount":0,"datePublished":"2025-01-27T16:08:26.000Z","dateModified":"2025-04-13T12:56:39.133Z","articleSection":"实分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-01-30T15:41:49.000Z">
-<meta property="article:modified_time" content="2025-04-08T13:32:00.932Z">
+<meta property="article:modified_time" content="2025-04-13T12:54:00.456Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1744119252188),
+    lastupdate: new Date(1744549038688),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2757,18 +2757,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="性质的导出"><a href="#性质的导出" class="headerlink" title="性质的导出"></a>性质的导出</h3><h4 id="单调收敛定理"><a href="#单调收敛定理" class="headerlink" title="单调收敛定理"></a>单调收敛定理</h4><p>这个定理，给出了交换极限符号和积分符号的一种充分条件</p>
 <p><strong>定理</strong> <strong>（单调收敛）</strong><br>测度空间$(X,\mathcal{S},\mu)$上有一个递增的可测函数序列$0\leq f_1\leq f_2\dots$，定义$f:X\to[0,\infty]$为$f(x)&#x3D;\lim\limits_{k\to\infty} f_k(x)$，那么就有：<br>$$<br>\int f d\mu &#x3D; \lim_{k\to\infty}\int f_k d\mu<br>$$</p>
 <blockquote>
-<p>证明：对于任何一个固定的$k$，由“保序”得到$\int f_kd\mu\leq \int f d\mu$，因此$\lim\limits_{k\to\infty}\int f_k d\mu \leq \int f d\mu$下面只需证明另一边：</p>
-<p>对于$\mathcal{S}$中任意的一些无交集合$A_1,\dots A_m $以及$c_1,\dots c_m\in [0,\infty)$满足$f(x)\geq \sum\limits_{j&#x3D;1}^m c_j \chi_{A_j}(x)$，可以取一个$0&lt;t&lt;1$，这样子当然$f(x)&gt; t \sum\limits_{j&#x3D;1}^m c_j \chi_{A_j}(x)$</p>
-<p>由此，对于每个固定的$x_0$，都能找到$k$使得$f_k(x_0)\geq t \sum\limits_{j&#x3D;1}^m c_j \chi_{A_j}(x_0) $，记$E_k &#x3D; \set{x\in X: f_k(x)\geq t \sum\limits_{j&#x3D;1}^m c_j \chi_{A_j}(x)}$，那么就得到一个“单增”的集合序列：$E_1\subset E_2\subset \dots$，且其中所有成员之并就是$X$。因此，由定理（递增集合的测度极限）可得$\lim\limits_{k\to\infty}\mu(A_j\cap E_k)&#x3D;\mu(A_j)$</p>
-<p>根据定义，$f_k(x)\geq \sum\limits_{j&#x3D;1}^m t c_j \chi_{A_j\cap E_k}(x)$，所以$\int f_k d\mu \geq t\sum\limits_{j&#x3D;1}^m c_j\mu(A_j\cap E_k)$两边都是实数，取$k\to\infty$可以得到：$\lim\limits_{k\to\infty} f_k(x)\geq \sum\limits_{j&#x3D;1}^m t c_j \chi_{A_j\cap E_k}(x)$，所以 $\lim\limits_{k\to\infty}\int f_k d\mu \geq t\sum\limits_{j&#x3D;1}^m c_j\mu(A_j)$</p>
-<p>再取$t\to 1$即可得到$\lim\limits_{k\to\infty}\int f_k d\mu \geq \sum\limits_{j&#x3D;1}^m c_j\mu(A_j)$。注意到，我们没有对$A_j$怎么选取做任何假定，因此对于任何的$\mathcal{S}$分拆$P$，这个不等式都成立，因此：$\lim\limits_{k\to\infty}\int f_k d\mu \geq\sup\set{ \sum\limits_{j&#x3D;1}^m c_j\mu(A_j) : \forall \text{ partition }P}$，故$\lim\limits_{k\to\infty}\int f_k d\mu \geq \int f d\mu$</p>
+<p>证明：对于任何一个固定的$k$，由“保序”得到$\int f_kd\mu\leq \int f d\mu$，因此$\lim\limits_{k\to\infty}\int f_k d\mu \leq \int f d\mu$下面只需证明另一个方向：</p>
+<p>对于$\mathcal{S}$中任意的一些无交集合$A_1,\dots A_m $以及$c_1,\dots c_m\in [0,\infty)$满足$f(x)\geq \sum\limits_{j&#x3D;1}^m c_j \chi_{A_j}(x)$，可以取一个$0&lt;t&lt;1$，这样子，上式当然化为严格大于：$f(x)&gt; t \sum\limits_{j&#x3D;1}^m c_j \chi_{A_j}(x)$</p>
+<p>回顾$f(x)$的定义，上式即表明，对于每个固定的$x_0$，必能找到$k$使得$f_k(x_0)\geq t \sum\limits_{j&#x3D;1}^m c_j \chi_{A_j}(x_0) $，记$E_k &#x3D; \set{x\in X: f_k(x)\geq t \sum\limits_{j&#x3D;1}^m c_j \chi_{A_j}(x)}$，那么就得到一个“单增”的集合序列：$E_1\subset E_2\subset \dots$，且其中所有成员之并就是$X$。因此，由定理（递增集合的测度极限）可得$\lim\limits_{k\to\infty}\mu(A_j\cap E_k)&#x3D;\mu(A_j)$</p>
+<p>根据$E_k$的定义，就能知道，$f_k(x)\geq \sum\limits_{j&#x3D;1}^m t c_j \chi_{A_j\cap E_k}(x)$，所以$\int f_k d\mu \geq t\sum\limits_{j&#x3D;1}^m c_j\mu(A_j\cap E_k)$。不等式的两边都是实数，取$k\to\infty$可以得到：$\lim\limits_{k\to\infty}\int  f_k d\mu \geq \sum\limits_{j&#x3D;1}^m t c_j \chi_{A_j\cap E_k}(x)$，所以 $\lim\limits_{k\to\infty}\int f_k d\mu \geq t\sum\limits_{j&#x3D;1}^m c_j\mu(A_j)$</p>
+<p>由于一开始$t$是随便取的，那么取$t$非常接近于$1$，即可得到$\lim\limits_{k\to\infty}\int f_k d\mu \geq \sum\limits_{j&#x3D;1}^m c_j\mu(A_j)$。注意到，我们没有对$A_j$怎么选取做任何假定，因此对于任何的$\mathcal{S}$分拆$P$，这个不等式都成立，因此：$\lim\limits_{k\to\infty}\int f_k d\mu \geq\sup\set{ \sum\limits_{j&#x3D;1}^m c_j\mu(A_j) : \forall \text{ partition }P}$，故$\lim\limits_{k\to\infty}\int f_k d\mu \geq \int f d\mu$</p>
 <p>$\square$</p>
 </blockquote>
-<p><strong>定理</strong> <strong>（Fatou引理）</strong><br>测度空间$(X,\mathcal{S},\mu)$中，可测函数列$f_1,f_2\dots$且都是非负的$f_i:X\to[0,\infty],\forall i\in\mathbb{Z}$，则：<br>$$<br>\int \underset{n\to \infty}{\lim\inf} f_n \leq \underset{n\to \infty}{\lim\inf} \int f_n<br>$$</p>
+<p><strong>定理</strong> <strong>（Fatou引理）</strong><br>测度空间$(X,\mathcal{S},\mu)$中，可测函数列$f_1,f_2\dots$且每个$f_i:X\to[0,\infty]$都是非负的，则：<br>$$<br>\int \underset{n\to \infty}{\lim\inf} f_n \leq \underset{n\to \infty}{\lim\inf} \int f_n<br>$$</p>
 <blockquote>
 <p>证明：记$g_k(x) &#x3D; \inf\limits_{n\geq k} f_n(x)$，则显然$g_k\leq f_k$，故：$\int g_k d\mu \leq \int f_k d\mu$，考察$k$趋于无穷的情况，就会得到欲证不等式，下面是详细步骤：</p>
-<p>同时，$g_1,g_2\dots$形成一个单增序列，且$g_k$全是可测的（因为可测函数的inf仍可测），而且$\lim\limits_{k\to\infty}g_k &#x3D; \underset{n\to \infty}{\lim\inf} f_n$</p>
-<p>$k$趋于无穷时，根据定理（单调收敛），可知：$\lim\limits_{k\to\infty}\int g_k d\mu &#x3D;\int \lim\limits_{k\to\infty} g_k d\mu &#x3D;\int  \underset{n\to \infty}{\lim\inf} f_n d\mu$，得证</p>
+<p>注意到，$g_1,g_2\dots$形成一个单增序列（这为定理“单调收敛”的调用扫除了障碍），且$g_k$全是可测的（因为可测函数的inf仍可测），故$\lim\limits_{k\to\infty}g_k &#x3D; \underset{n\to \infty}{\lim\inf} f_n$也是可测的</p>
+<p>$\int g_k d\mu \leq \int f_k d\mu$式子的两边，都让$k$趋于无穷，根据定理（单调收敛），可知：$\lim\limits_{k\to\infty}\int g_k d\mu &#x3D;\int \lim\limits_{k\to\infty} g_k d\mu &#x3D;\int  \underset{n\to \infty}{\lim\inf} f_n d\mu$，得证</p>
 </blockquote>
 <!--
 下面这个定理解决了简单函数的表示方法不唯一的问题，因为不同表示实际上并不影响结果： -->
@@ -2785,17 +2785,17 @@ $$
 
 <h4 id="积分的可加性"><a href="#积分的可加性" class="headerlink" title="积分的可加性"></a>积分的可加性</h4><p><strong>定理</strong> <strong>（非负函数积分的可加性）</strong><br>测度空间$(X,\mathcal{S},\mu)$中，有两个可测的函数$f,g:X\to[0,\infty]$，那么：<br>$$<br>\int (f+g) d\mu &#x3D; \int f d\mu+\int g d \mu<br>$$</p>
 <blockquote>
-<p>证明：由于对于简单函数来说，$\int (\sum_{j&#x3D;1}^m c_j \chi_{E_j}) d\mu&#x3D;\sum_{j&#x3D;1}^m c_j \mu(E_j)$，所以，如果$f,g$都是简单函数，那么欲求证的式子只要左右各自展开，就发现是一样的</p>
+<p>证明：由于对于简单函数来说，$\int (\sum_{j&#x3D;1}^m c_j \chi_{E_j}) d\mu&#x3D;\sum_{j&#x3D;1}^m c_j \mu(E_j)$，所以，如果$f,g$都是简单函数，那么欲求证的式子只要左右各自展开，就发现是一样的，所以，“简单函数情形下，欲证式成立”</p>
 <p>那么，思路就是用简单函数<strong>递增</strong>逼近（构造参考定理“用简单函数近似可测函数”）：$f_1,f_2\dots \to f$以及$g_1,g_2\dots \to g$，那么根据定理 （单调收敛）即知：$\int (f+g) d\mu &#x3D; \lim\limits_{k\to\infty} \int (f_k+g_k) d\mu$</p>
 <p>从而，利用“简单函数情形下，欲证式成立”得到$\lim\limits_{k\to\infty} \int (f_k+g_k) d\mu &#x3D;\lim\limits_{k\to\infty} \int f_k d\mu+ \lim\limits_{k\to\infty}  \int g_k d\mu &#x3D;\int f+ \int g$（最后一步用了两个分别的单调收敛定理）</p>
 <p>$\square$</p>
 </blockquote>
 <h3 id="定义的拓展"><a href="#定义的拓展" class="headerlink" title="定义的拓展"></a>定义的拓展</h3><p>回顾：为了将一个实值函数用非负函数表示，定义$f$正部和负部：<br>$$<br>f^+ &#x3D; \begin{cases}<br>  f  &amp; f \geq 0\\<br>  0  &amp; \text{else}\\<br>\end{cases} \quad f^- &#x3D; \begin{cases}<br>  -f  &amp; f \leq 0\\<br>  0  &amp; \text{else}\\<br>\end{cases}<br>$$</p>
 <p>因此$f&#x3D;f^+ - f^-$，$\vert f\vert &#x3D; f^+ +f ^-$，用这个方法，很自然的将积分定义推而广之</p>
-<p>而且，由于我们早就已知$\vert f\vert$也是可测函数，因此，$f^+$与$f^-$都是可测函数！</p>
+<p>而且，由于我们早就已知：若$f$可测，则$\vert f\vert$也是可测函数。因此，$f^+$与$f^-$都是可测函数！</p>
 <p><strong>定义</strong> <strong>（实值函数积分）</strong><br>测度空间$(X,\mathcal{S},\mu)$，一个可测函数$f:X\to[-\infty,\infty]$，满足：$\int f^+ d\mu,\int f^- d \mu$中至少一个值是有限的，则$f$关于测度$\mu$的积分被定义为：<br>$$<br>\int f d\mu &#x3D; \int f^+ d\mu -\int f^- d\mu<br>$$</p>
 <blockquote>
-<p>注：今后的定理中，多次会“假设$\int f d\mu$有定义”，意思就是上面这段话，关注点在 — 两个积分值至少一个是有限的</p>
+<p>注：今后的定理中，多次会“假设$\int f d\mu$有定义”，意思就是上面这段话，关注点在于，两个积分值至少一个是有限的</p>
 </blockquote>
 <p><strong>定理</strong> <strong>（积分满足齐性）</strong><br>测度空间$(X,\mathcal{S},\mu)$中，有个可测函数$f:X\to[-\infty,\infty]$使得$\int f d\mu$有定义，$c\in \mathbb{R}$那么：<br>$$<br>\int c f d\mu &#x3D; c\int f d\mu<br>$$</p>
 <blockquote>
@@ -2823,15 +2823,15 @@ $$
 > 证明：按定义展开+积分绝对值不等式：
 > $\left\vert \int_E f d\mu\right\vert =\left\vert \int \chi_E f d\mu\right\vert  \leq \int \chi_E\left\vert f\right\vert d\mu \leq \int \chi_E \sup\limits_E\left\vert f\right\vert d\mu=\mu(E) \sup\limits_E \vert f\vert$ -->
 
-<p><strong>定理</strong> <strong>（积分有限非负函数，小集合上积分必定小）</strong><br>测度空间$(X,\mathcal{S},\mu)$中，$g:X\to[0,\infty]$是可测的且积分有定义且$\int g d\mu&lt;\infty$，则对于任何$\varepsilon&gt;0$均存在$\delta&gt;0$使得$\int _ B g d\mu&lt;\varepsilon$对于所有$B\in\mathcal{S}$且$\mu(B)&lt; \delta$的集合成立</p>
+<p><strong>定理</strong> <strong>（积分有限非负函数，小集合上积分必定小）</strong><br>测度空间$(X,\mathcal{S},\mu)$中，$g:X\to[0,\infty]$是可测的且积分有定义且$\int g d\mu&lt;\infty$，则对于任何$\varepsilon&gt;0$均存在$\delta&gt;0$，使得：$\int _ B g d\mu&lt;\varepsilon$对于所有$B\in\mathcal{S}$且$\mu(B)&lt; \delta$的集合都成立</p>
 <blockquote>
 <p>证明：整体思路是“用简单函数架桥”！</p>
-<p>根据定理（积分的等价定义）可知，能用可测的简单实值函数从“下面”逼近一个非负函数，且其积分也能用这个简单函数的积分近似，所以，找可测的简单实值函数$h$使得$\int gd\mu - \int h d \mu&lt;\frac{\varepsilon}{2}$</p>
-<p>然后，毕竟简单函数很简单（才有限个实值），因此找到最大的那个值$H$，找到足够小的$\delta$满足$H\delta&lt;\frac{\varepsilon}{2}$，则：$\int_B g d\mu &#x3D; \int_B (g-h)d \mu + \int_B h d\mu &lt;\frac{\varepsilon}{2}+H \delta&lt;\varepsilon$</p>
+<p>根据定理（积分的等价定义）可知，能用可测的简单实值函数从“下面”逼近一个非负函数，且其积分也能用这个简单函数的积分近似，所以，找可测的简单实值函数$h$，使得$\int gd\mu - \int h d \mu&lt;\frac{\varepsilon}{2}$</p>
+<p>然后，毕竟简单函数很简单（取值一共才有限个实值），因此找到有限个中最大的那个值$H$，取足够小的$\delta$满足$H\delta&lt;\frac{\varepsilon}{2}$，则：$\int_B g d\mu &#x3D; \int_B (g-h)d \mu + \int_B h d\mu &lt;\frac{\varepsilon}{2}+H \delta&lt;\varepsilon$</p>
 </blockquote>
 <p><strong>定理</strong> <strong>（积分有限的非负函数几乎住在有限测度集合里）</strong><br>测度空间$(X,\mathcal{S},\mu)$中，可测函数$g:X\to[0,\infty]$，且其积分有定义，满足$\int g d\mu&lt;\infty$。那么，对任何$\varepsilon&gt;0$，均存在一个$E\in\mathcal{S}$，满足$\mu(E)&lt;\infty$使得$\int_{X-E} gd \mu &lt;\varepsilon$</p>
 <blockquote>
-<p>证明：根据积分的定义，能找到一个$\mathcal{S}$分拆$P&#x3D;A_1,\dots,A_m$满足$\int g d\mu&lt;\varepsilon+\mathcal{L}(g,P)$</p>
+<p>证明：根据积分的定义，能找到一个“足够接近的”$\mathcal{S}$分拆$P&#x3D;A_1,\dots,A_m$，满足$\int g d\mu&lt;\varepsilon+\mathcal{L}(g,P)$</p>
 <p>下面，只保留那些$\inf\limits_{A_j} g&gt;0$的集合$A_j$，将这样的$A_j$并成集合$E$，即是所求，原因如下：</p>
 <ul>
 <li><p>$\mu(E)&lt;\infty$是必然的，否则的话，$\mathcal{L}(g,P)$会等于$\infty$，矛盾</p>
@@ -2840,21 +2840,21 @@ $$
 </li>
 </ul>
 </blockquote>
-<p><strong>定义</strong> <strong>（几乎处处）</strong><br>测度空间$(X,\mathcal{S},\mu)$中，有人说了某一个命题。然后，若能找到一个零测集$E\in\mathcal{S},\mu(E)&#x3D;0$，使得该命题在$X-E$上成立，就称该命题几乎处处成立</p>
-<p>在讨论积分的时候，“几乎处处”和“处处”其实效果一样（在零测集上修改函数值而积分不变），所以，我们经常可以把条件松弛到“几乎处处”，如下面这个关键定理</p>
+<p><strong>定义</strong> <strong>（几乎处处）</strong><br>测度空间$(X,\mathcal{S},\mu)$中，有人说了某一个命题。这时，我若能找到一个零测集$E\in\mathcal{S},\mu(E)&#x3D;0$，使得该命题在$X-E$上都成立，则称该命题几乎处处成立</p>
+<p>在讨论积分的时候，“几乎处处”和“处处”其实效果一样（在零测集上修改函数值而积分不变），所以，我们经常可以把条件松弛到“几乎处处”，比如，下面这个重要的定理</p>
 <p><strong>定理</strong> <strong>（控制收敛定理）</strong><br>测度空间$(X,\mathcal{S},\mu)$中，有个可测函数$f:X\to[-\infty,\infty]$，还有个序列$f_1,f_2\dots:X\to[-\infty,\infty]$，满足几乎处处$\lim\limits_{k\to\infty} f_k(x)&#x3D;f(x)$成立。现在，若能找到一个可测函数$g:X\to[0,\infty]$且$\int g d\mu&lt;\infty$，满足能够几乎处处控制（dominate）住序列$\vert f_k(x)\vert\leq g(x),\forall  k$，则：<br>$$<br>\int f d\mu &#x3D; \lim_{k\to\infty}\int f_k d\mu<br>$$</p>
 <blockquote>
 <p>证明：对于任何$E\in \mathcal{S}$都有<br>$$<br>\begin{align*}<br>&amp; \left\vert \int f_k d\mu -\int f d\mu  \right\vert &#x3D; \left\vert \int_{X-E} f_k d\mu -\int_{X-E} f d\mu + \int_{E} f_k d\mu -\int_{E} f d\mu  \right\vert \\<br>\leq &amp; \left\vert \int_{X-E} f_k d\mu  \right\vert +\left\vert \int_{X-E} f d\mu  \right\vert +  \left\vert \int_{E} f_k d\mu -\int_{E} f d\mu  \right\vert \\<br>\leq &amp; 2\int_{X-E} g d\mu + \left\vert \int_{E} f_k d\mu -\int_{E} f d\mu  \right\vert<br>\end{align*}<br>$$</p>
 <p><strong>1.</strong> $\mu(X)&lt;\infty$时</p>
 <p>根据定理（积分有限非负函数，小集合上积分必定小），能找到$\delta$使得$\int_B g d\mu &lt;\frac{\varepsilon}{4}$对任何测度小于$\delta$的集合$B$成立。再调用Egorov定理，能找到一个集合$E$使得$\mu(X-E)&lt;\delta$，且函数序列在$E$上一致收敛到$f$，这样，使用上面的式子时，能看出积分已被镇压下去：</p>
-<p>$2\int_{X-E} g d\mu + \left\vert \int_{E} f_k d\mu -\int_{E} f d\mu  \right\vert \leq \frac{\varepsilon}{2} +\left\vert \int_{E} (f_k  - f) d\mu  \right\vert$，后一项因一致收敛而消逝</p>
+<p>$2\int_{X-E} g d\mu + \left\vert \int_{E} f_k d\mu -\int_{E} f d\mu  \right\vert \leq \frac{\varepsilon}{2} +\left\vert \int_{E} (f_k  - f) d\mu  \right\vert$，前一项因为集合太小而很小，后一项因一致收敛而很小</p>
 <p><strong>2.</strong>  $\mu(X)&#x3D;\infty$时</p>
 <p>先用定理（积分有限的非负函数几乎住在有限测度集合里），那么存在一个可测集合$E$满足$\mu(E)&lt;\infty$且$\int _ {X-E} g d\mu&lt;\frac{\varepsilon}{4}$，因此，继续前头的式子有：</p>
 <p>$2\int_{X-E} g d\mu + \left\vert \int_{E} f_k d\mu -\int_{E} f d\mu  \right\vert&lt; \frac{\varepsilon}{2} +\left\vert \int_{E} (f_k  - f) d\mu  \right\vert$</p>
-<p>现在对于$\left\vert \int_{E} (f_k  - f) d\mu  \right\vert &#x3D; \left\vert \int (f_k\vert_E  - f\vert_E) d\mu  \right\vert$这一项应用 <strong>1.</strong> 中证明过的结果（因为$E$已经测度有限了呀！允许调用case1），即可</p>
+<p>现在对于$\left\vert \int_{E} (f_k  - f) d\mu  \right\vert &#x3D; \left\vert \int (f_k\vert_E  - f\vert_E) d\mu  \right\vert$这一项应用 <strong>1.</strong> 中证明过的结果（因为$E$已经测度有限了呀！允许调用$\mu(X)&lt;\infty$的情况），即可</p>
 <p>$\square$</p>
 </blockquote>
-<p>最后看看该定理的一个特例，就是：</p>
+<p>最后看看该定理的一个特例，在各种书上也会单独拿出来讲：</p>
 <p><strong>定理</strong> <strong>（有界收敛定理）</strong><br>其余和控制收敛定理一样，只不过$g(x)&#x3D;c$用常数压制罢了</p>
 
   </div>
@@ -2880,10 +2880,10 @@ $$
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-04-08T21:32:00+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-04-13T20:54:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 8, 2025</p>
+    <p>更新于：Apr 13, 2025</p>
   </a>
 </div>
 
@@ -4388,7 +4388,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/实分析/","name":"实分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/01/30/MIRA4/","name":"积分（MIRA）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"积分（MIRA）","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/01/30/MIRA4/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/01/30/MIRA4/","wordCount":0,"datePublished":"2025-01-30T15:41:49.000Z","dateModified":"2025-04-08T13:32:00.932Z","articleSection":"实分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/实分析/","name":"实分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/01/30/MIRA4/","name":"积分（MIRA）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"积分（MIRA）","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/01/30/MIRA4/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/01/30/MIRA4/","wordCount":0,"datePublished":"2025-01-30T15:41:49.000Z","dateModified":"2025-04-13T12:54:00.456Z","articleSection":"实分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
