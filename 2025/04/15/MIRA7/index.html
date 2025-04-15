@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-04-15T11:48:46.000Z">
-<meta property="article:modified_time" content="2025-04-15T11:59:25.776Z">
+<meta property="article:modified_time" content="2025-04-15T13:12:55.815Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1744718419923),
+    lastupdate: new Date(1744722784592),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2749,7 +2749,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><strong>定义</strong> <strong>（共轭指数）</strong><br>$1\leq p&lt;\infty$，则满足下式的$p’$被称为其共轭指数：$\frac{1}{p}+\frac{1}{p’}&#x3D;1$</p>
 <h3 id="重要不等式"><a href="#重要不等式" class="headerlink" title="重要不等式"></a>重要不等式</h3><p><strong>定理</strong> <strong>（H&ouml;lder不等式）</strong><br>测度空间$(X,\mathcal{S},\mu)$，满足$1\leq p\leq \infty$，且$f,h:X\to\mathbb{F}$是$\mathcal{S}$可测的，那么：<br>$$<br>\Vert fh\Vert_1 \leq \Vert f\Vert_p \Vert h\Vert_{p’}<br>$$</p>
 <blockquote>
-<p>下面先证明$1&lt;p&lt;\infty$这个较难的情形，首先得知道，此时，对于任何的$a,b\geq 0$，都有Young’s不等式成立：$ab\leq \frac{a^p}{p}+\frac{b^{p’}}{p’}$</p>
+<p>证明：</p>
+<p><strong>1.</strong> 下面先证明$1&lt;p&lt;\infty$这个较难的情形，首先得知道，此时，对于任何的$a,b\geq 0$，都有Young’s不等式成立：$ab\leq \frac{a^p}{p}+\frac{b^{p’}}{p’}$</p>
 <ul>
 <li><p>先假设$\Vert f\Vert_p&#x3D;\Vert h\Vert_{p’}&#x3D;1$，则应用Young’s不等式后，有：$\vert f(x)h(x)\vert\leq \frac{\vert f(x)\vert^p}{p}+\frac{\vert h(x)\vert^{p’}}{p’}$两边同时积分即可得到$\Vert f h \Vert_1 \leq 1$，因此在该特殊情况下成立</p>
 </li>
@@ -2758,7 +2759,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>故下面仅讨论两者都是有限正数的情形，此时定义$f_1 &#x3D; \frac{f}{\Vert f \Vert_p}$以及$h_1 &#x3D; \frac{h}{\Vert h \Vert_{p’}}$则利用刚才第一个bullet point中的结论：$\Vert f_1 h_1 \Vert_1\leq 1$，此即$\Vert f h\Vert_1\leq \Vert f\Vert_p \Vert h\Vert_{p’}$</p>
 </li>
 </ul>
-<p>再来看$p&#x3D;1$这个特殊情况，对应$p’&#x3D;\infty$（是这样约定的），原问题即：欲证明$\Vert f h\Vert_1\leq \Vert f \Vert_1\Vert h\Vert_\infty$。若$h$是无界的，显然成立，若$\vert h\vert$有上确界$H$，则利用$\vert f(x)h(x)\vert\leq \vert f\vert H$即可得证</p>
+<p><strong>2.</strong> 再来看$p&#x3D;1$这个特殊情况，对应$p’&#x3D;\infty$（是这样约定的），原问题即：欲证明$\Vert f h\Vert_1\leq \Vert f \Vert_1\Vert h\Vert_\infty$。若$h$是无界的，显然成立，若$\vert h\vert$有上确界$H$，则利用$\vert f(x)h(x)\vert\leq \vert f\vert H$即可得证</p>
 <p>$\square$</p>
 </blockquote>
 <!--
@@ -2777,15 +2778,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>再取sup，利用上一个定理（$\Vert f\Vert_p$的等价表述）即得证</p>
 <p>$\square$</p>
 </blockquote>
+<p>有了Minkowski不等式，也就有了度量空间的三角不等式，也就有了范数的三角不等式。这助力我们看清空间的结构</p>
 <h3 id="完备性讨论"><a href="#完备性讨论" class="headerlink" title="完备性讨论"></a>完备性讨论</h3><p><strong>定义</strong> <strong>（$L^p(\mu)$）</strong><br>测度空间$(X,\mathcal{S},\mu)$，$0&lt; p\leq \infty$，定义$\mathcal{Z}(\mu)$是几乎处处为零的函数的全体，定义$L^p(\mu) &#x3D; \mathcal{L}^p(\mu) &#x2F; \mathcal{Z}(\mu)$（商空间）</p>
 <blockquote>
 <p>注意这个商是有意义的，因为，$\mathcal{Z}(\mu)$是$\mathcal{L}^p(\mu)$的一个子空间</p>
-<p>为了加以区别，我们把$L^p(\mu)$中的元素记为$\tilde{f}$，代表$f\in\mathcal{L}^p(\mu)$这个元素“在一个零测集取值不同”的函数等价类</p>
+<p>为了加以区别，我们把$L^p(\mu)$中的元素记为$\tilde{f}$，代表$f\in\mathcal{L}^p(\mu)$这个元素所处的那个等价类，此处把仅在零测集上不同的函数都视为同个对象</p>
 <p>总之，$\mathcal{L}^p$中的一个成员就是一个函数，$L^p$中的一个成员是一族函数的全体</p>
 </blockquote>
-<p><strong>定理</strong> <strong>（$L^p(\mu)$是赋范线性空间）</strong><br>定义$\Vert \cdot\Vert_p$在$L^p(\mu)$中的含义如下：$\Vert \tilde{f}\Vert_p &#x3D; \Vert f \Vert$，则$\Vert \cdot\Vert_p$在$L^p$上成为一个真正的范数，被称之为p-范数</p>
+<p><strong>定理</strong> <strong>（$L^p(\mu)$是赋范线性空间）</strong><br>定义$\Vert \cdot\Vert_p$在$L^p(\mu)$中的含义如下：$\Vert \tilde{f}\Vert_p &#x3D; \Vert f \Vert_p$，则$\Vert \cdot\Vert_p$在$L^p$上成为一个真正的范数，被称之为p-范数</p>
 <blockquote>
-<p>证明略，验证范数的三条要求都满足就行</p>
+<p>证明略，验证范数的三条要求都满足就行（刚才的Minkowski已经把最难的三角不等式解决了）</p>
 <p>商掉“几乎处处为零的函数”的意义在于，本来的$\mathcal{L}^p(\mu)$这个空间中，$\Vert \cdot\Vert_p$并不是一个范数，原因是$\Vert f\Vert_p &#x3D; 0$并不能推出$f&#x3D;0$，因为他还有一个零测集随意取值的余地。为了克服这个问题，满足范数的“定性”（范数为零推出本身为零），就定义了$L^p$空间</p>
 </blockquote>
 <p><strong>定理</strong> <strong>（$L^p(\mu)$是Banach空间）</strong><br>测度空间$(X,\mathcal{S},\mu)$，$1\leq p\leq \infty$，假设$f_1,f_2\dots$是$\mathcal{L}^p(\mu)$中的Cauchy序列，则存在$f\in \mathcal{L}^p(\mu)$使得$\lim\limits_{k\to \infty}\Vert f_k -f \Vert_p&#x3D;0$</p>
@@ -2835,7 +2837,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-04-15T19:59:25+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-04-15T21:12:55+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Apr 15, 2025</p>
@@ -4356,7 +4358,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/实分析/","name":"实分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/04/15/MIRA7/","name":"Lp空间（MIRA）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Lp空间（MIRA）","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/04/15/MIRA7/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/04/15/MIRA7/","wordCount":0,"datePublished":"2025-04-15T11:48:46.000Z","dateModified":"2025-04-15T11:59:25.776Z","articleSection":"实分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/实分析/","name":"实分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/04/15/MIRA7/","name":"Lp空间（MIRA）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Lp空间（MIRA）","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/04/15/MIRA7/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/04/15/MIRA7/","wordCount":0,"datePublished":"2025-04-15T11:48:46.000Z","dateModified":"2025-04-15T13:12:55.815Z","articleSection":"实分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
