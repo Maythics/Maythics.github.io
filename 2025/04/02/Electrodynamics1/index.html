@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://maythics.github.io/2024/02/01/qm2/"/>
+  <link rel="canonical" href="http://maythics.github.io/2025/04/02/electrodynamics1/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>基本假设与一维问题 - (.O w O.)?</title>
+  <title>电动力学的数学技巧 - (.O w O.)?</title>
   <meta name="keywords" content="physics">
   <meta desc name="description" content="emmm - Maythics - (.O w O.)?">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="基本假设与一维问题">
-<meta property="og:url" content="http://maythics.github.io/2024/02/01/QM2/index.html">
+<meta property="og:title" content="电动力学的数学技巧">
+<meta property="og:url" content="http://maythics.github.io/2025/04/02/Electrodynamics1/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
-<meta property="og:description" content="Shankar_ch.4值得注意的是，在Postulate II 中，动量算子在坐标空间的“矩阵”其中元素为：$\bra{x}P\ket{x’}&#x3D;-i\hbar \delta’(x-x’)&#x3D;-i\hbar\frac{d}{dx}\delta(x-x’)&#x3D;i\hbar\frac{d}{dx’}\delta(x-x’)$，要小心求导是对$x$还是$x’$ Ex 4.2.1">
+<meta property="og:description" content="电动力学电动力学的数学技巧符号声明本篇中：仅考虑三维欧式空间，因此“逆变”“协变”都不必作区分，张量无需区分上下标（一律写成下标），且用$i,j,k$来表示。在之后讨论四维时，才会写成明确的$\mu.\nu$等字母 正交曲线坐标系特例—球坐标下的Laplace方程$$\frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 \frac{\partial">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-02-01T11:17:26.000Z">
-<meta property="article:modified_time" content="2024-11-07T13:12:47.886Z">
+<meta property="article:published_time" content="2025-04-02T04:06:01.000Z">
+<meta property="article:modified_time" content="2025-06-08T04:11:57.431Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -2652,7 +2652,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/02/01/QM2/">
+  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2025/04/02/Electrodynamics1/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="(.O w O.)?">
   </span>
@@ -2673,7 +2673,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        基本假设与一维问题
+        电动力学的数学技巧
       </h1>
       <div class='new-meta-box'>
         
@@ -2692,10 +2692,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a>
+    <a class="category-link" href="/categories/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/">电动力学</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/" itemprop="url"><span itemprop="name">量子力学</span></a>
+        <a href="/categories/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/" itemprop="url"><span itemprop="name">电动力学</span></a>
       </span>
     
   </div>
@@ -2704,10 +2704,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-02-01T19:17:26+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-04-02T12:06:01+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Feb 1, 2024</p>
+    <p>发布于：Apr 2, 2025</p>
   </a>
 </div>
 
@@ -2730,55 +2730,73 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="Shankar-ch-4"><a href="#Shankar-ch-4" class="headerlink" title="Shankar_ch.4"></a>Shankar_ch.4</h2><p>值得注意的是，在Postulate II 中，动量算子在坐标空间的“矩阵”其中元素为：$\bra{x}P\ket{x’}&#x3D;-i\hbar \delta’(x-x’)&#x3D;-i\hbar\frac{d}{dx}\delta(x-x’)&#x3D;i\hbar\frac{d}{dx’}\delta(x-x’)$，要小心求导是对$x$还是$x’$</p>
-<h3 id="Ex-4-2-1"><a href="#Ex-4-2-1" class="headerlink" title="Ex 4.2.1"></a>Ex 4.2.1</h3><p>(1) 三个本征值1,0,-1</p>
-<p>(2)该态为$\begin{pmatrix}<br>1 \\<br>0 \\<br>0 \\<br>\end{pmatrix}$ 所以计算期望值：<br>$$<br>  \langle L_x\rangle&#x3D;<br>  \begin{pmatrix}<br>    1 &amp; 0 &amp; 0 \\<br>  \end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix}<br>    0 &amp; 1 &amp; 0 \\<br>    1 &amp; 0 &amp; 1 \\<br>    0 &amp; 1 &amp; 0 \\<br>  \end{pmatrix}<br>  \begin{pmatrix}<br>  1 \\<br>  0 \\<br>  0 \\<br>  \end{pmatrix}&#x3D;0<br>$$<br>同理$L_x^2&#x3D;\frac{1}{2}\begin{pmatrix}<br>  1 &amp; 0 &amp; 1 \\<br>  0 &amp; 2 &amp; 0 \\<br>  1 &amp; 0 &amp; 1 \\<br>\end{pmatrix}$所以期望值为：<br>$$<br>  \langle L_x^2 \rangle&#x3D;<br>  \begin{pmatrix}<br>    1 &amp; 0 &amp; 0 \\<br>  \end{pmatrix}\frac{1}{2}\begin{pmatrix}<br>    1 &amp; 0 &amp; 1 \\<br>    0 &amp; 2 &amp; 0 \\<br>    1 &amp; 0 &amp; 1 \\<br>  \end{pmatrix}<br>  \begin{pmatrix}<br>  1 \\<br>  0 \\<br>  0 \\<br>  \end{pmatrix}&#x3D;\frac{1}{2}<br>$$<br>计算不确定度的平方：<br>$$<br>\Delta L_x^2&#x3D;\langle L_x^2\rangle-\langle L_x\rangle^2&#x3D;\frac{1}{2}<br>$$<br>或者按照书中的定义：<br>$$<br>\Delta L_x&#x3D;<br>\left(\begin{pmatrix}<br>  1 &amp; 0 &amp; 0 \<br>\end{pmatrix}<br>(L_x-0)^2<br>\begin{pmatrix}<br>  1 \\<br>  0 \\<br>  0 \\<br>\end{pmatrix}\right)^{1&#x2F;2}&#x3D;\frac{1}{\sqrt{2}}<br>$$<br>(3) 先计算$L_x$的本征问题：<br>$$<br>\begin{vmatrix}<br>  -\lambda &amp; 1 &amp; 0 \\<br>  1 &amp; -\lambda &amp; 1 \\<br>  0 &amp; 1 &amp; -\lambda \\<br>\end{vmatrix} &#x3D;0<br>$$<br>求得值为$0,\pm \sqrt{2}$本征向量在$\mathbb{R^3}$中的坐标表示为：<br>$$<br>\frac{1}{\sqrt{2}}<br>\begin{pmatrix}<br>  1\\<br>  0\\<br>  -1\\<br>\end{pmatrix}<br>\hspace{3em}<br>\frac{1}{2}<br>\begin{pmatrix}<br>  1\\<br>  \sqrt{2}\\<br>  1\\<br>\end{pmatrix}<br>\hspace{3em}<br>\frac{1}{2}<br>\begin{pmatrix}<br>  1\\<br>  -\sqrt{2}\\<br>  1\\<br>\end{pmatrix}<br>$$<br>发现$L_z$的基也即欧式空间的标准基，所以答案就是如上向量，记为$\ket{\psi_1},\ket{\psi_2},\ket{\psi_3}$</p>
-<p>(4) 对于$\begin{pmatrix}<br>  0\\<br>  0\\<br>  1\\<br>\end{pmatrix}$而言，通过$L_x$的基展开，有：<br>$$<br>\begin{pmatrix}<br>  0\\<br>  0\\<br>  1\\<br>\end{pmatrix}&#x3D;-\frac{1}{\sqrt{2}}\ket{\psi_1}+\frac{1}{2}\Ket{\psi_2}+\frac{1}{2}\Ket{\psi_3}<br>$$<br>注意这里的求解线性组合系数会自动归一化，因为这两个正交归一基之间的映射为等距同构。答案：得到三本征态之一，概率分别为$\frac{1}{2},\frac{1}{4},\frac{1}{4}$</p>
-<p>(5) 易知$L_z^2&#x3D;\begin{pmatrix}<br>  1 &amp; 0 &amp; 0\\<br>  0 &amp; 0 &amp; 0\\<br>  0 &amp; 0 &amp; 1\\<br>\end{pmatrix}$，其本征值为1对应的本征空间为$E(1,L_z^2)&#x3D;\text{span}\left( e_1, e_3\right)$因此测量后状态为$e_1$与$e_3$张成空间中的某个向量，计算落入该子空间而非$0$对应的子空间的概率可考虑：<br>$$<br>\ket{\psi}&#x3D;\frac{1}{2}e_2+\frac{\sqrt{3}}{2}v<br>$$<br>其中$v$指代$E(1,L_z^2)$中的某个单位模长的向量，注意上述表达式是唯一的，因为不同本征空间是直和关系。故测得本征值为$1$对应的就是坍缩到$v$态，概率$\frac{3}{4}$。</p>
-<p>若之后立刻进行$L_z$的测量，将该态$v$用$L_x$的本征向量$(e_1,e_2,e_3)$展开：<br>$$<br>v&#x3D;\frac{1}{2}e_1+\frac{1}{\sqrt{2}}e_3<br>$$<br>故$\frac{1}{3}$可能得到测量值$1$，对应$e_1$态，$\frac{2}{3}$可能得到测量值$-1$，对应$e_3$态。</p>
-<p>本题利用了一个巧妙的$L_z$将广义本征空间与本征空间联系在一起，（$L_z^2$的核空间即$L_z$的广义本征空间）</p>
-<p>(6) $\delta$之间的相对相位能够体现出不同结果，是有意义的，代表不同状态</p>
-<h3 id="4-2-notes"><a href="#4-2-notes" class="headerlink" title="4.2 notes"></a>4.2 notes</h3><p>P131 证明在非简并情况下，两个算子互易等价于有共有的一组本征向量能够组成基（注意，本证明只处理有限维向量空间，毕竟在无限维的空间中我连谱定理都不会）：</p>
-<ol>
-<li><p>$\Lambda$和$\Omega$共有的本征向量能够组成基$\Rightarrow$互易：<br>  设这组基为$v_1,v_2,v_3\dots v_n$，其中$n&#x3D;\text{dim}\mathbb{V}$。则$\forall v\in \mathbb{V}$有：<br>  $$<br>  \begin{align*}<br> \Lambda\Omega v&amp;&#x3D;\Lambda\Omega (\sum_{i&#x3D;1}^n c_i v_i)&#x3D;\Lambda \sum_{i&#x3D;1}^n c_i \Omega v_i<br> \newline<br> &amp;&#x3D;\Lambda \sum_{i&#x3D;1}^n c_i \omega_i v_i&#x3D;\sum_{i&#x3D;1}^n c_i\omega_i \Lambda v_i&#x3D;\sum_{i&#x3D;1}^n c_i \omega_i \lambda_i v_i<br>  \end{align*}<br>  $$  对于$\Omega \Lambda v$得到完全相同结果。</p>
+    <h1 id="电动力学"><a href="#电动力学" class="headerlink" title="电动力学"></a>电动力学</h1><h2 id="电动力学的数学技巧"><a href="#电动力学的数学技巧" class="headerlink" title="电动力学的数学技巧"></a>电动力学的数学技巧</h2><h3 id="符号声明"><a href="#符号声明" class="headerlink" title="符号声明"></a>符号声明</h3><p>本篇中：仅考虑三维欧式空间，因此“逆变”“协变”都不必作区分，张量无需区分上下标（一律写成下标），且用$i,j,k$来表示。在之后讨论四维时，才会写成明确的$\mu.\nu$等字母</p>
+<h3 id="正交曲线坐标系"><a href="#正交曲线坐标系" class="headerlink" title="正交曲线坐标系"></a>正交曲线坐标系</h3><h4 id="特例—球坐标下的Laplace方程"><a href="#特例—球坐标下的Laplace方程" class="headerlink" title="特例—球坐标下的Laplace方程"></a>特例—球坐标下的Laplace方程</h4><p>$$<br>\frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 \frac{\partial \phi}{\partial r}\right) + \frac{1}{r^2 \sin \theta}\frac{\partial}{\partial \theta}\left( \sin\theta \frac{\partial \phi}{\partial \theta} \right)+\frac{1}{r^2\sin^2\theta} \frac{\partial^2 \phi}{\partial \varphi^2}&#x3D;0<br>$$<br>假设$\phi(r,\theta,\varphi) &#x3D;R(r)Y(\theta,\varphi)$，分离变量得到：<br>$$<br>\frac{\partial}{\partial r}\left( r^2\frac{\partial R}{\partial r}\right)-l(l+1)R&#x3D;0<br>$$<br>这一项是Euler型ODE，解为：$R(r) &#x3D; C_+ r^l +C_- r^{-1-l}$</p>
+<p>得到的另一个方程是：<br>$$<br>\frac{1}{ \sin \theta}\frac{\partial}{\partial \theta}\left( \sin\theta \frac{\partial Y}{\partial \theta} \right)+\frac{1}{\sin^2\theta} \frac{\partial^2 Y}{\partial \varphi^2}+l(l+1)Y&#x3D;0<br>$$</p>
+<p>而关于角度的函数$Y$就是物理学、计算机视觉研究都很喜欢的球谐函数</p>
+<p>拆分成$Y(\theta,\varphi)&#x3D;P(\theta)F(\varphi)$<br>再得到：</p>
+<p>$$<br>\frac{1}{ \sin \theta}\frac{\partial}{\partial \theta}\left( \sin\theta \frac{\partial P}{\partial \theta} \right)+\left(l(l+1)-\frac{m^2}{\sin^2\theta} \right)P&#x3D;0<br>$$<br>以及<br>$$<br>\frac{\partial^2 F}{\partial \varphi^2} +m^2F&#x3D;0<br>$$</p>
+<h3 id="多级展开"><a href="#多级展开" class="headerlink" title="多级展开"></a>多级展开</h3><p><strong>问题陈述</strong> <strong>（多级展开）</strong><br>所有电荷都分布在一个以原点为中心，$\delta$为半径的球（记为$\Omega$）内，且假设电荷分布具有关于极轴的对称性，欲求解球外的电势分布</p>
+<p><strong>问题求解</strong><br>显然，电势符合Laplace方程，因此电势分布自然是各种模式下的$R(r)P(\theta)F(\varphi)$的线性叠加</p>
+<p>结合极轴对称性假设，球谐函数中$\varphi$这一项消失，那么只用考虑$r$以及$\theta$，连带Legendre方程化为Legendre方程，因此$\theta$对应的微分方程，其本征函数就是Legendre多项式，答案可以写为：<br>$$<br>\phi(\vec{x}) &#x3D;\sum_{l&#x3D;0}^\infty a_l(r) P_l(\cos\theta)<br>$$</p>
+<p>考察电势，假设源处于$\vec{x}’$处（$\vert\vec{x}’\vert\leq \delta$），而考察点位于$\vec{x}$处（$\vert\vec{x}\vert\gg \delta$），自然有：<br>$$<br>\phi(\vec{x})&#x3D;\frac{1}{4\pi \varepsilon_0}\int_\Omega \frac{\rho(\vec{x}’)}{\vert \vec{x}-\vec{x}’\vert} dV<br>$$</p>
+<p>接下来，我们介绍数理方法中的一个定理，它能用来展开上式</p>
+<p><strong>定理</strong> <strong>（Legendre多项式的生成函数）</strong><br>$$<br>\frac{1}{\sqrt{1-2tr+r^2}}&#x3D;\frac{1}{r}\sum_{l&#x3D;0}^\infty P_l(t)r^{-l} ,\quad r&gt;1<br>$$</p>
+<blockquote>
+<p>证明：略</p>
+</blockquote>
+<p>使用定理（Legendre多项式的生成函数），下面令$t&#x3D;\cos\theta &#x3D; \frac{\vec{x}’\cdot\vec{x}}{\vert\vec{x}’\vert\vert\vec{x} \vert}$以及$r&#x3D;\frac{\vert \vec{x}\vert}{\vert\vec{x}’\vert}$</p>
+<p>因此，引理的等式化为如下恒等式<br>$$<br>\frac{1}{\vert \vec{x}-\vec{x}’\vert}&#x3D;\frac{1}{\vert \vec{x}’\vert}\frac{1}{\sqrt{1-2tr+r^2}}&#x3D;\sum_{l&#x3D;0}^\infty \frac{\vert\vec{x}’\vert^l}{\vert\vec{x}\vert^{l+1}}P_l(\cos\theta) ,\quad \vert\vec{x}\vert&gt;\vert\vec{x}’\vert<br>$$</p>
+<p>这样的话，电势的表达式就为：</p>
+<p>$$<br>\frac{1}{4\pi \varepsilon_0}\int_\Omega \rho(\vec{x}’) \sum_{l&#x3D;0}^\infty \frac{\vert\vec{x}’\vert^l}{\vert\vec{x}\vert^{l+1}}P_l(\cos\theta) dV<br>$$</p>
+<p>这就是多级展开的全部内容！</p>
+<p>下面，把$l&#x3D;0,1,2\dots$这样的每一项单独拿出来看看</p>
+<p><strong>1.</strong> $l&#x3D;0$时：<br>$$<br>\frac{1}{4\pi \varepsilon_0}\int_\Omega \rho(\vec{x}’) \frac{1}{\vert\vec{x}\vert} dV&#x3D;\frac{1}{4\pi \varepsilon_0} \frac{Q_\Omega}{\vert\vec{x}\vert}<br>$$其中$Q_\Omega &#x3D; \int_\Omega \rho(\vec{x}’)dV$，这是最熟悉不过的！</p>
+<p><strong>2.</strong> $l&#x3D;1$时：<br>$$<br>\frac{1}{4\pi \varepsilon_0}\int_\Omega \rho(\vec{x}’) \frac{\vert\vec{x}’\vert}{\vert\vec{x}\vert^{2}}\cos\theta dV &#x3D; \frac{1}{4\pi \varepsilon_0} \frac{\vec{p} \cdot \vec{x}}{\vert \vec{x}\vert^3}&#x3D;\frac{1}{4\pi \varepsilon_0} \frac{p_j x_j}{\vert \vec{x}\vert^3}<br>$$（这个等号用到了$\cos\theta &#x3D; \frac{\vec{x}’\cdot\vec{x}}{\vert\vec{x}’\vert\vert\vec{x} \vert}$）其中$\vec{p} &#x3D; \int_\Omega  \rho(\vec{x}’)\vec{x}’ dV$，最后，故意把它写成一个一阶张量，为了与后文对应</p>
+<p><strong>3.</strong> $l&#x3D;2$时：<br>$$<br>\frac{1}{4\pi \varepsilon_0}\int_\Omega \rho(\vec{x}’) \frac{\vert\vec{x}’\vert^2}{\vert\vec{x}\vert^{3}}\frac{(3\cos^2\theta-1)}{2} dV &#x3D; \frac{1}{4\pi \varepsilon_0} \frac{p_{ij} x_i x_j}{\vert \vec{x}\vert^5}<br>$$ 其中$p_{ij}&#x3D;\left( \frac{1}{2}\int_\Omega \rho(\vec{x}’)dV (3x_i’ x_j’ - (\vec{x}’ \cdot \vec{x}’)\delta_{ij}) \right)$是一个二阶对称张量，且由于$\delta_{ij}\delta_{ij}&#x3D;3$，因此该二阶张量满足$p_{ij}\delta_{ij}&#x3D;0$，这就是“无迹性”（当然“迹”这件事在高阶张量中就推广为“缩并”，所以实质就是缩并后为零）</p>
+<p><strong>4.</strong> $l&#x3D;3$时：<br>$$<br>\frac{1}{4\pi \varepsilon_0}\int_\Omega \rho(\vec{x}’) \frac{\vert\vec{x}’\vert^3}{\vert\vec{x}\vert^{4}}\frac{(5\cos^3\theta-3\cos\theta)}{2} dV &#x3D; \frac{1}{4\pi \varepsilon_0} \frac{p_{ijk} x_i x_j x_k}{\vert \vec{x}\vert^7}<br>$$<br>其中$p_{ijk}&#x3D;\int_\Omega \rho(\vec{x}’)dV\frac{5x_i’x_j’x_k’ - (\vec{x}’\cdot\vec{x}’)(x_i’\delta_{jk} +x_j’ \delta_{ik}+x_k’ \delta_{ij})}{2}$也是一个三阶对称且无迹的张量（此处的“无迹”指的是任何两个指标缩并后为零，毕竟对称嘛，效果一样）</p>
+<p><strong>启发</strong><br>发现$l$对应的那一部分偶极子贡献，刚好可提出来一个$l$阶张量乘以$x_{i_1} x_{i_2}\dots x_{i_l}$，而且这个张量是对称且无迹的！因此，对于任何的$l$，其实可以根据对称性写出带有系数的公式，然后利用无迹性定下系数之间的关系……</p>
+<p>此外，关注一下这个$l$阶张量的“自由度”，正是$2l+1$</p>
+<h3 id="Green函数法"><a href="#Green函数法" class="headerlink" title="Green函数法"></a>Green函数法</h3><h4 id="动机与启发"><a href="#动机与启发" class="headerlink" title="动机与启发"></a>动机与启发</h4><ul>
+<li><p>来看一个显然成立的恒等式：<br>$$<br>\rho(\vec{x})&#x3D;\int dV \rho(\vec{x}’) \delta^3(\vec{x}-\vec{x}’)<br>$$</p>
 </li>
-<li><p>$\Lambda$和$\Omega$互易$\Rightarrow$共有的本征向量能够组成基：<br>只需要证明任一$\Lambda$的本征向量组成的基$\Ket{\lambda_1},\Ket{\lambda_2}\dots \Ket{\lambda_n}$也是$\Omega$的本征向量即可。找出使得$\Omega \ket{\lambda_i}\neq 0$的那个$\ket{\lambda_i}$：<br>$$<br>\Omega \Lambda \Ket{\lambda_i}&#x3D;\Lambda \Omega \Ket{\lambda_i}\iff \lambda_i \Omega \Ket{\lambda_i}&#x3D;\Lambda \Omega\Ket{\lambda_i}<br>$$   这说明非零向量$\Omega\ket{\lambda_i}$落在$E(\lambda_i,\Lambda)$中，在非简并的情况下，因为是一维不变子空间所以$\Omega\ket{\lambda_i}&#x3D;\omega\ket{\lambda_i}$</p>
-<p>对于$\Omega \ket{\lambda_j}&#x3D;0$ 的那些向量$\ket{\lambda_j}$而言，自然也是$\Omega$的本征向量，因为在$\text{null} \Omega&#x3D;E(0,\Omega)$中</p>
+<li><p>再来看一个新的书写方法，把$\frac{1}{4\pi}\frac{1}{\vert \vec{x}-\vec{x}’\vert}$记作$G(\vec{x},\vec{x}’)$，那么大家都熟知的电势公式，就写成了这个样子：<br>$$<br>\phi(\vec{x}) &#x3D; \int dV \frac{\rho(\vec{x}’)}{\varepsilon_0} G(\vec{x},\vec{x}’)<br>$$</p>
+</li>
+</ul>
+<p>把上面两个代入我们熟知的Poisson方程$\nabla^2 \phi(\vec{x}) &#x3D; -\frac{\rho(\vec{x}’)}{\varepsilon_0}$，然后观察左右两边相等的部分，提取出一个关于$G$的新等式如下，我们用它来替代Poisson方程：<br>$$<br>\nabla^2 G(\vec{x},\vec{x}’)+\delta^3(\vec{x}-\vec{x}’)&#x3D;0<br>$$<br>不禁要问，搞成这个样子有什么好处呢？原来的Poisson方程难道不够好吗？</p>
+<p>答：仔细比较这个新等式与Poisson方程相比，区别在于，这个新等式中，根本没有关于$\rho$的信息！</p>
+<p>这带来的启发是，我们也许可以把原始问题拆分成两步走：</p>
+<ol>
+<li><p>先求出$G$（无需利用$\rho$的信息）</p>
+</li>
+<li><p>将$\rho$与$G$相乘再积分，得到答案</p>
 </li>
 </ol>
-<p>P134 验证密度矩阵性质：<br>(1) 使用<a href="/2024/01/31/QM1/#1-6-notes">第一章</a>结论，以及$p_k\in\mathbb{R}$的事实（以下省略$\mathcal{M}$记号，不区分算子和其对应的矩阵）：<br>$$<br>\begin{align*}<br>  \bra{i}\rho^\dagger\ket{j}&amp;&#x3D;\bra{j}\rho\ket{i}^*&#x3D;\bra{j}(\sum_k p_k \ket{k}\bra{k})\ket{i}^*<br>  \newline<br>  &amp;&#x3D;\sum_k p_k(\langle j|k\rangle\langle k|i\rangle)^*&#x3D;\sum_k p_k\langle i|k\rangle\langle k|j\rangle<br>  \newline<br>  &amp;&#x3D;\bra{i}(\sum_k p_k \ket{k}\bra{k})\ket{j}&#x3D;\bra{i}\rho\ket{j}<br>\end{align*}<br>$$<br>(2)<br>$$<br>\begin{align*}<br>  \text{Tr}\rho&amp;&#x3D;\sum_i \rho_{ii}&#x3D;\sum_i \bra{i}\rho\ket{i}<br>  \newline<br>  &amp;&#x3D;\sum_i\bra{i}(\sum_k p_k \ket{k}\bra{k})\ket{i}<br>  \newline<br>  &amp;&#x3D;\sum_i \bra{i}p_i\ket{i}&#x3D;\sum_i p_i&#x3D;1<br>\end{align*}<br>$$<br>(5)<br>$$<br>\begin{align*}<br>  \text{Tr}\rho^2&amp;&#x3D;\text{Tr}\left(\sum_i\sum_k p_i\ket{i}\bra{i}p_k\ket{k}\bra{k}\right)<br>  \newline<br>  &amp;&#x3D;\text{Tr}\left( \sum_i p_i^2\ket{i}\bra{i}\right)<br>  \newline<br>  &amp;&#x3D;\sum_j \bra{j} \sum_i p_i^2\ket{i}\bra{i} \ket{j}<br>  \newline<br>  &amp;&#x3D;\sum_j p_j^2 \leq \left(\sum_j p_j\right)^2&#x3D;1<br>\end{align*}<br>$$</p>
-<p>P137 关于$\psi_p(x)$的归一化复习：<br>$$<br>\mathscr{F}[\delta(x-x’)]&#x3D;\int_{-\infty}^\infty \delta(x-x’)e^{-ikx}dx&#x3D;e^{-ikx’}<br>\newline<br>\delta(x-x’)&#x3D;\frac{1}{2\pi}\int_{-\infty}^\infty e^{ik(x-x’)} dk<br>$$<br>因此，若$\psi_p(x)&#x3D;\frac{1}{\sqrt{2\pi \hbar}}e^{ipx&#x2F;\hbar}$ 就有正交关系：<br>$$<br>\int_{-\infty}^\infty \psi_p^*(x)\psi_{p’}(x) dx&#x3D;\frac{1}{2\pi\hbar}\int_{-\infty}^\infty e^{ix(p’-p)&#x2F;\hbar}dx<br>\newline<br><br>\newline<br>&#x3D;\frac{1}{2\pi}\int_{-\infty}^\infty e^{ix(p’-p)&#x2F;\hbar}d\left(\frac{x}{\hbar}\right)&#x3D;\delta(p’-p)&#x3D;\delta(p-p’)<br>$$<br>这样就得到了坐标空间中动量算符的本征函数的表达式，书中的后续步骤是以坐标空间中的形式为桥梁，得到波函数在动量本征函数上的投影</p>
-<p>在计算$\langle p|\psi\rangle$的最后一步算了一个高斯型积分，但是之前学的都是实的情况，不涉及复的，出于数学的考量简要分析想法：<br>$$<br>\lim_{R\to \infty}\int_{-(1+ik)R}^{(1+ik)R} e^{x^2}dx&#x3D;\lim_{R\to \infty}\int_{-R}^R (1+ik) e^{(1+ik)^2 x^2} dx<br>$$ 变量代换是可行的，化为对实变量的积分，相当于把积分路线旋转到实轴上。该积分按照复变函数的积分定义拆分为实部虚部等等，就可以验证和实高斯型积分能一样操作</p>
-<p>下一段说$\braket{P}&#x3D;0$，原因是：<br>$$<br>\braket{P}&#x3D;\bra{\psi}P\ket{\psi}&#x3D;\int\langle \psi|P| p\rangle<br>\langle p|\psi\rangle dp&#x3D;\int p \langle \psi|p\rangle\langle p|\psi\rangle dp&#x3D;0<br>$$<br>最后一步是因为书中已经给出$\langle p|\psi\rangle$形式，因此积分一个奇函数为$0$</p>
-<h3 id="Ex-4-2-2"><a href="#Ex-4-2-2" class="headerlink" title="Ex 4.2.2"></a>Ex 4.2.2</h3><p>在坐标空间中看：<br>$$<br>\begin{align*}<br>  \braket{P}&amp;&#x3D;\bra{\psi}P\ket{\psi}&#x3D;\int\langle \psi|x’\rangle \langle x’|P|\psi\rangle dx’<br>  \newline<br>  &amp;&#x3D;\int \langle \psi|x’\rangle \int \langle x’|P|\xi \rangle \langle \xi|\psi\rangle d\xi dx’<br>  \newline<br>  &amp;&#x3D;|c|^2\int \psi_r^\ast (x’) \int -i\hbar \frac{d}{dx’}\delta(x’-\xi) \psi_r(\xi) d\xi dx’<br>  \newline<br>  &amp;&#x3D;|c|^2\int \psi_r^\ast(x’) \int -i\hbar \delta(x’-\xi) \frac{d}{d\xi}\psi_r(\xi) d\xi dx’<br>  \newline<br>  &amp;&#x3D;-i\hbar|c|^2\int \psi_r^\ast (x’)  \frac{d}{dx’}\psi_r(x’)dx’<br>  \newline<br>  &amp;&#x3D;-i\hbar|c|^2\int \psi_r^\ast(x’)d\psi_r(x’)<br>  \newline<br>  &amp;&#x3D;-i\hbar|c|^2\int \psi_r(x’)d\psi_r(x’)&#x3D;0<br>\end{align*}<br>$$ 最后一步用了左右边界处的值都趋于$0$的条件</p>
-<h3 id="Ex-4-2-3"><a href="#Ex-4-2-3" class="headerlink" title="Ex 4.2.3"></a>Ex 4.2.3</h3><p>$$<br>\begin{align*}<br>  \braket{P}’&amp;&#x3D;\bra{\psi’}P\ket{\psi’}&#x3D;\int\langle \psi’|x’\rangle \langle x’|P|\psi’\rangle dx’<br>  \newline<br>  &amp;&#x3D;\int e^{-ip_0 x’ &#x2F;\hbar}\psi^\ast(x’) (-i\hbar\frac{d}{dx’})e^{ip_0 x’ &#x2F;\hbar}\psi(x’)dx’<br>  \newline<br>  &amp;&#x3D;\int e^{-ip_0 x’ &#x2F;\hbar}\psi^\ast(x’)p_0 e^{ip_0 x’ &#x2F;\hbar}\psi(x’)dx’<br>  \newline<br>  &amp; +\int e^{-ip_0 x’ &#x2F;\hbar}\psi^\ast(x’) e^{ip_0 x’ &#x2F;\hbar}(-i\hbar\frac{d}{dx’})\psi(x’)dx’<br>  \newline<br>  &amp;&#x3D;\int \psi^\ast(x’)p_0 \psi(x’)dx’+\int \psi^\ast(x’)(-i\hbar\frac{d}{dx’})\psi(x’)dx’<br>  \newline<br>  &amp;&#x3D;p_0+\braket{P}<br>\end{align*}<br>$$</p>
-<h3 id="4-3-notes"><a href="#4-3-notes" class="headerlink" title="4.3 notes"></a>4.3 notes</h3><p>P146 对于$U(t)$的另一种写法的验证：<br>$$<br>\begin{align*}<br>  U(t)|\psi(0)\rangle&amp;&#x3D;\sum_j \frac{(-i\hbar t H)^j}{j!}|\psi(0)\rangle<br>  \newline<br>  &amp;&#x3D;\sum_j\sum_E \frac{(-i\hbar t H)^j}{j!}|E\rangle \langle E|\psi(0)\rangle<br>  \newline<br>  &amp;&#x3D;\sum_j\sum_E \frac{(-i\hbar t E)^j}{j!}|E\rangle \langle E|\psi(0)\rangle<br>  \newline<br>  &amp;&#x3D;\sum_E e^{-iEt&#x2F;\hbar}|E\rangle \langle E|\psi(0)\rangle<br>\end{align*}<br>$$<br>（已经使用了收敛半径为$\infty$以及Fubini定理）可见两种写法的统一。至于证明$U(t)$是等距同构：引用<a href="/2024/01/31/QM1/#Ex-1-9-2">习题1.9.2</a>即可。</p>
-<p>4.3.15又用了等距同构的性质$U^\dagger U&#x3D;I$，证明：<br>$$<br>\langle v|v\rangle&#x3D;\langle Uv|Uv\rangle&#x3D;\langle U^\dagger Uv|v\rangle<br>\newline<br><br>\newline<br>\therefore \langle (U^\dagger U-I)v|v\rangle&#x3D;0 \quad\text{for}\forall v\in \mathbb{V} \text{on} \mathbb{C}<br>\newline<br><br>\newline<br>\therefore U^\dagger U&#x3D;I<br>$$ 最后一步用的是复向量空间上作用在任意向量上使得该向量正交于原向量的都是零算子的结论。这暗示着归一性随时间变化一直成立。</p>
-<p>此外，等距同构是可以完全用两组规范正交基之间的线性映射$U v_i&#x3D;w_i$描述的，实质就是坐标架在空间的旋转</p>
-<p>4.3.16的最后一步：<br>$$<br>U^{-1}(t_2,t_1)&#x3D;(\prod_n H_n)^{-1}&#x3D;\prod_n H_n^{-1}&#x3D;U(t_1,t_2)<br>$$</p>
-<h2 id="Shankar-ch-5"><a href="#Shankar-ch-5" class="headerlink" title="Shankar_ch.5"></a>Shankar_ch.5</h2><p>P152 的propagator可以从$U(t)&#x3D;e^{iHt&#x2F;\hbar}$出发，注意要展开为$Ae^{iEt&#x2F;\hbar}$的形式需要$H$作用等于乘个$E$，因此展开基一定得是$H$的本征向量组成的，此处用$\ket{p}$更好，一是因为$\ket{p}$本身也是$H$的本征向量，二是因为$\text{dim}E(E_i,H)&#x3D;2$，因此用$E_i$展开有符号不便</p>
-<h3 id="Ex-5-1-1"><a href="#Ex-5-1-1" class="headerlink" title="Ex 5.1.1"></a>Ex 5.1.1</h3><p>$$<br>\begin{align*}<br>  U(t)&amp;&#x3D;\int_{-\infty}^{\infty}\ket{p}\bra{p}e^{-iEt&#x2F;\hbar}dp<br>  \newline<br>  &amp;&#x3D;\left(\int_{-\infty}^{0}+\int_0^\infty \right) \ket{p}\bra{p}e^{-iEt&#x2F;\hbar}dp<br>  \newline<br>  &amp;&#x3D;\sum_{\alpha&#x3D;\pm}\int_0^\infty \ket{E,\alpha}\bra{E,\alpha}e^{-iEt&#x2F;\hbar}dp<br>  \newline<br>  &amp;&#x3D;\sum_{\alpha&#x3D;\pm}\int_0^\infty \ket{E,\alpha}\bra{E,\alpha}e^{-iEt&#x2F;\hbar} \frac{m}{(2mE)^{\frac{1}{2}}}dE<br>\end{align*}<br>$$</p>
-<h3 id="Ex-5-1-2"><a href="#Ex-5-1-2" class="headerlink" title="Ex 5.1.2"></a>Ex 5.1.2</h3><p>解ode而已；当$E&lt;0$时由于指数，两项都会发散，不能描述真实物理情况</p>
-<hr>
-<p>P153 5.1.11式的由来：<br>$$<br>\psi(x,t)&#x3D;\langle x\ket{\psi(t)}&#x3D;\langle x |U(t) |\psi(0)\rangle<br>\newline<br><br>\newline<br>&#x3D;\int \langle x |U(t)|x’\rangle\langle x’ |\psi(0)\rangle dx’<br>\newline<br><br>\newline<br>&#x3D;\int U(x,t;x’) \langle x’ |\psi(0)\rangle dx’&#x3D;\dots<br>$$</p>
-<h3 id="Ex-5-1-3"><a href="#Ex-5-1-3" class="headerlink" title="Ex 5.1.3"></a>Ex 5.1.3</h3><p>$$<br>\sum_{n&#x3D;0}^\infty \frac{1}{n!}\left(\frac{i\hbar t}{2M}\right)^n \frac{d^{2n}}{dx^{2n}} \pi^{-1&#x2F;4}\sum_{m&#x3D;0}^\infty \frac{(-1)^m x^{2m}}{m!2^m}<br>$$<br>考虑单一项作用得到的级数：<br>$$<br>\frac{d^{2n}}{dx^{2n}}\sum_{m&#x3D;0}^\infty \frac{(-1)^m x^{2m}}{m!2^m}&#x3D;\sum_{m&#x3D;n}^\infty \frac{(2m)!}{(2m-2n)!}\frac{(-1)^m x^{2m-2n}}{m!2^m}<br>$$<br>代入：<br>$$<br>\begin{align*}<br>  &amp;&#x3D;\pi^{-\frac{1}{4}} \sum_{n&#x3D;0}^\infty \frac{1}{n!} \left(\frac{-i\hbar t}{2M}\right)^n \sum_{l&#x3D;0}^\infty \frac{(2n+2l)!}{(2l)!}\frac{(-1)^{l} x^{2l}}{(l+n)!2^{l+n}}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\pi^{-\frac{1}{4}} \sum_{l&#x3D;0}^\infty\sum_{n&#x3D;0}^\infty \frac{1}{n!} \left(\frac{-i\hbar t}{2M}\right)^n  \frac{(2n+2l)!}{(2l)!}\frac{(-1)^{l} x^{2l}}{(l+n)!2^{l+n}}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\pi^{-\frac{1}{4}} \sum_{l&#x3D;0}^\infty\sum_{n&#x3D;0}^\infty \frac{1}{n!} \left(\frac{-i\hbar t}{4M}\right)^n  \frac{(2n+2l)!}{(l+n)!}\frac{(-1)^{l} x^{2l}}{(2l)!2^{l}}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\pi^{-\frac{1}{4}} \sum_{l&#x3D;0}^\infty\sum_{n&#x3D;0}^\infty \frac{1}{n!} \left(\frac{-i\hbar t}{4M}\right)^n  \left[2^{2(n+l)}(n+l-\frac{1}{2})(n+l-\frac{3}{2})\dots\right]\frac{(-1)^{l} x^{2l}}{(2l)!2^{l}}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\pi^{-\frac{1}{4}} \sum_{l&#x3D;0}^\infty\sum_{n&#x3D;0}^\infty \frac{1}{n!} \left(\frac{-i\hbar t}{M}\right)^n  \left[(n+l-\frac{1}{2})(n+l-\frac{3}{2})\dots\right]\frac{(-2)^{l} x^{2l}}{(2l)!}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\sum_{l&#x3D;0}^\infty\frac{\pi^{-\frac{1}{4}}(-2)^{l} x^{2l}}{(2l)!}\sum_{n&#x3D;0}^\infty \frac{1}{n!} \left(\frac{-i\hbar t}{M}\right)^n  \left[(n+l-\frac{1}{2})(n+l-\frac{3}{2})\dots\right]<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\sum_{l&#x3D;0}^\infty\frac{\pi^{-\frac{1}{4}}(-2)^{l} x^{2l}}{(2l)!}\sum_{n&#x3D;0}^\infty \frac{1}{n!} \left(\frac{-i\hbar t}{M}\right)^n  \left[(n+l-\frac{1}{2})(n+l-\frac{3}{2})\dots(l+\frac{1}{2})\right]<br>  \newline<br>  &amp;\times\left[(l-\frac{1}{2})(l-\frac{3}{2})\dots \frac{1}{2}\right]<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\sum_{l&#x3D;0}^\infty\frac{\pi^{-\frac{1}{4}}(-2)^{l} x^{2l}}{(2l)!}(1+\frac{i\hbar t}{M})^{-l-1&#x2F;2}[\frac{(2l-1)!!}{2^l}]<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\sum_{l&#x3D;0}^\infty\frac{\pi^{-\frac{1}{4}}(-1)^{l} x^{2l}}{(2l)!!}(1+\frac{i\hbar t}{M})^{-l-1&#x2F;2}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\sum_{l&#x3D;0}^\infty\frac{\pi^{-\frac{1}{4}}(-\frac{1}{2}x^2)^{l}}{l!}(1+\frac{i\hbar t}{M})^{-l-1&#x2F;2}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\pi^{-\frac{1}{4}} (1+\frac{i\hbar t}{M})^{-1&#x2F;2} \sum_{l&#x3D;0}^\infty\frac{(-\frac{1}{2}x^2)^{l}}{l!}(1+\frac{i\hbar t}{M})^{-l}<br>  \newline<br>  <br>  \newline<br>  &amp;&#x3D;\pi^{-\frac{1}{4}} (1+\frac{i\hbar t}{M})^{-1&#x2F;2} \exp{\left(\frac{-\frac{1}{2}x^2}{1+\frac{i\hbar t}{M}}\right)}<br>\end{align*}<br>$$</p>
-<h3 id="Ex-5-2-1"><a href="#Ex-5-2-1" class="headerlink" title="Ex 5.2.1"></a>Ex 5.2.1</h3><p>需要注意undisturbed 不考虑之后的演化，相当于立即测量，求该函数在新基态上的分量大小，算$\langle n’| \psi\rangle$即可</p>
-<h3 id="Ex-5-2-2"><a href="#Ex-5-2-2" class="headerlink" title="Ex 5.2.2"></a>Ex 5.2.2</h3><p>(a)<br>$$<br>\bra{\psi}H\ket{\psi}&#x3D;\int\bra{\psi}H\ket{E}\langle E|\psi\rangle dE&#x3D;\int E \langle\psi|E\rangle \langle E|\psi\rangle dE<br>\newline<br><br>\newline<br>\geq \int E_0 \langle\psi|E\rangle \langle E|\psi\rangle dE&#x3D;E_0<br>$$</p>
-<p>(b) 在hint中之所以可以用$\bra{\psi_\alpha}H\ket{\psi_\alpha}$的方法去算能量$E(\alpha)$是因为$\psi_\alpha$已经是规范正交基了，具体计算略……最后得到一个$\alpha$的函数，可以取到$E(\alpha)&lt;0$</p>
-<h3 id="Ex-5-2-3"><a href="#Ex-5-2-3" class="headerlink" title="Ex 5.2.3"></a>Ex 5.2.3</h3><p>没有别的bound state了，此题参见顾樵数学物理方法 P76 例7，两边同时Fourier Transform</p>
-<p>$$<br>\frac{d^2 \psi}{dx^2}-k^2\psi&#x3D;-A\delta(x)\psi -\omega^2 \mathscr{F} [\psi] (\omega)- k^2 \mathscr{F}[\psi] (\omega)&#x3D;-A\psi(0)<br>$$</p>
-<p>其中$k&#x3D;\sqrt{-\frac{2mE}{\hbar^2}};A&#x3D;\frac{2m\alpha}{\hbar^2}$（注意是束缚态去掉分类讨论之嫌），这样算出$\mathscr{F}[\psi] (\omega)$后，再反解得到：<br>$$<br>\psi(x)&#x3D;\frac{A\psi(0)}{2k}e^{-k|x|}<br>$$ 这其实限制了$A$与$k$的关系，只有$E&#x3D;-\frac{m\alpha^2}{2\hbar^2}$一个能量的值</p>
-<h3 id="Ex-5-2-4"><a href="#Ex-5-2-4" class="headerlink" title="Ex 5.2.4"></a>Ex 5.2.4</h3><p>$$<br>\langle x|\psi\rangle&#x3D;\psi(x)&#x3D;\begin{cases}<br>  \left( \frac{2}{L}\right)^{1&#x2F;2}\cos\left(\frac{n\pi x}{L}\right) ,&amp;n&#x3D;1,3,5 \dots\\<br>  \left( \frac{2}{L}\right)^{1&#x2F;2}\sin\left(\frac{n\pi x}{L}\right) ,&amp;n&#x3D;2,4,6 \dots\\<br>\end{cases}<br>$$ 能量$E_n&#x3D;\frac{\hbar^2 \pi^2 n^2}{2mL^2}$，当$L$变化时：<br>$$<br>-\frac{\partial E}{\partial L}&#x3D;\frac{\hbar^2 \pi^2 n^2}{mL^3}&#x3D;\frac{2E_n}{L}<br>$$<br>经典考量一个小球，$2L&#x2F;v$的间隔发生碰撞产生动量变化$2mv$，则平均的力大小为$F&#x3D;mv^2&#x2F;L&#x3D;2E&#x2F;L$，对应</p>
-<h3 id="Ex-5-2-6"><a href="#Ex-5-2-6" class="headerlink" title="Ex 5.2.6"></a>Ex 5.2.6</h3><p>考虑定态方程$H\ket{\psi}&#x3D;E\ket{\psi}$<br>$$<br>\psi^2(x)+\frac{2m}{\hbar^2}(E-V)\psi&#x3D;0<br>$$ 注意分析中间区域时，和无限深方势阱一样有$E&gt;0$的要求，原因是如果$E&lt;0$，那在交接地带无法做到$\psi’(x)$连续。此外，在两边必须$E-V&lt;0$指数衰减，因为若不然，就是三角函数振荡，不符合可积要求<br>$$<br>\psi_2(x)&#x3D;A\cos kx<br>\quad<br>\psi_3(x)&#x3D;Be^{-\kappa x}<br>$$<br>其中$k&#x3D;\sqrt{\frac{2mE}{\hbar^2}}$，$\kappa&#x3D;\sqrt{-\frac{2m(E-V)}{\hbar^2}}$，衔接条件：<br>$$<br>A\cos \frac{Lk}{2}&#x3D;B e^{-\kappa L&#x2F;2}<br>\quad<br>-Ak\sin\frac{Lk}{2}&#x3D;-\kappa Be^{-\kappa L&#x2F;2}<br>$$ 相除就得到答案中的两个式子，奇的情况同（在数理方法中处理第三类边界条件很像）有意思的是：<br>$$<br>k^2+\kappa^2&#x3D;\frac{2mV_0}{\hbar^2}<br>$$ 采用图解法，换元如书中所述：<br>$$<br>\alpha^2+\beta^2&#x3D;\frac{2ma^2V_0}{\hbar^2}<br>$$<br>上述两个式子就成为：<br>$$<br>\beta&#x3D;\alpha \tan \alpha \quad ; \quad \beta&#x3D;-\alpha \cot \alpha<br>$$</p>
-<p>偶解：<br><img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm2.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="even" height="220" width="230"><br>奇解：<br><img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm1.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/qm1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="odd" height="200" width="240"><br>可以看出后一个图中，当半径小时有可能没有交点，对应（注意只关注第一象限，只用看x轴，在别的象限有交点是无所谓的）：<br>$$<br>\text{Radius}&#x3D;a\sqrt{\frac{2mV_0}{\hbar^2}}&#x3D;\frac{\pi}{2}<br>$$<br>此即临界势能</p>
-<h3 id="Ex-5-3-1"><a href="#Ex-5-3-1" class="headerlink" title="Ex 5.3.1"></a>Ex 5.3.1</h3><p>此处的复势函数即可用来描述粒子消失的情况。验证非自伴：<br>$$<br>\begin{align*}<br>  &amp;\int \psi^\ast \left(-\frac{\hbar^2}{2m}\nabla^2+V_r+iV_i\right)\psi dx<br>\newline<br><br>\newline<br>&#x3D;&amp;\int \psi^\ast \left(-\frac{\hbar^2}{2m}\nabla^2\right)\psi dx+\int \psi^\ast (V_r+iV_i)\psi dx<br>\newline<br><br>\newline<br>&#x3D;&amp;\int \left(\left(-\frac{\hbar^2}{2m}\nabla^2\right)\psi\right)^\ast \psi dx+\int V_r\psi^\ast \psi dx+\int (-iV_i\psi)^\ast \psi dx<br>\end{align*}<br>$$<br>最后一项出现负号不再和原来的算符一样。若势含虚部，在推导中会出现$2iV_i\psi^\ast \psi$整理等式两边时多出：<br>$$<br>\frac{\partial }{\partial t}(\psi^\ast \psi)&#x3D;\frac{2V_i}{\hbar} \psi^\ast \psi<br>$$ 解此附加项即得指数衰减形式</p>
-<h3 id="Ex-5-3-2"><a href="#Ex-5-3-2" class="headerlink" title="Ex 5.3.2"></a>Ex 5.3.2</h3><p>代入$j$表达式显然$\psi^\ast \nabla \psi-\psi\nabla \psi^\ast$一项消失</p>
-<h3 id="Ex-5-3-3"><a href="#Ex-5-3-3" class="headerlink" title="Ex 5.3.3"></a>Ex 5.3.3</h3><p>$$<br>\begin{align*}<br>P&amp;&#x3D;\psi^\ast\psi&#x3D;\frac{1}{(2\pi\hbar)^3}<br>\newline<br><br>\newline<br>\vec{j}&amp;&#x3D;\frac{\hbar}{2mi}(\psi^\ast \nabla \psi-\psi\nabla \psi^\ast)<br>\newline<br><br>\newline<br>&amp;&#x3D;\frac{\hbar}{2mi}\left(\frac{1}{(2\pi\hbar)^3}\frac{2i\vec{p}}{\hbar}\right)&#x3D;\frac{1}{(2\pi\hbar)^3}\frac{\vec{p}}{m}<br>\end{align*}<br>$$</p>
-<p>跳过散射一节</p>
-<p>Theorem 15 说的是一维束缚态无简并情况，这个简并指的是$H$的本征态</p>
-<p>Theorem 16 说的是采用实本征函数是可行的且不会因此丧失一般性</p>
-<h2 id="Shankar-ch-6"><a href="#Shankar-ch-6" class="headerlink" title="Shankar_ch.6"></a>Shankar_ch.6</h2><p>算子$\frac{-i}{\hbar}H$的共轭是$\frac{i}{\hbar}H$，因为$(AB)^\dagger&#x3D;B^\dagger A^\dagger$，且两者显然交换，且哈密顿算子自伴</p>
-<p>书中给出了一个广义的Ehrenfest Theorem：<br>$$<br>\frac{d}{dt}\braket{\Omega}&#x3D;\frac{-i}{\hbar}\braket{[\Omega, H]}<br>$$</p>
+<p>这种方案让人想到单位圆盘上的热稳定问题，在那个问题里，边界条件是单位圆周上的分布$u(1,\varphi)$，欲求的是圆盘内任意一点的值$u(r,\varphi)$。最后发现，$u(r,\varphi)$由Poisson核与$u(1,\varphi)$的卷积给出。讲这个故事是想告诉大家，Poisson核这个东西很关键（它就相当于Green函数$G$）。你可以把Poisson核想象成一个机器，输入任意一个边界上的函数，它就给你卷积一下，输出一个答案来。如果某人不知道Poisson核，他在求解热稳定问题时可能case by case去求解，那么，一旦边界条件换了一个表达式，他又得重头再算；但是，如果他知道Poisson核，就能以不变应万变，任你随便改边界上的表达式，都不用怕，因为他知道，就这样算一个卷积就完事了。也就是说，这种方法具备很好的泛化能力！之所以具备这么好的泛化能力，是因为把解题流程拆分成了两步，而且第一步在各种情况下都是一样的，换了一个表达式后，第一步不需要从头再算了</p>
+<h4 id="Green恒等式"><a href="#Green恒等式" class="headerlink" title="Green恒等式"></a>Green恒等式</h4><p><strong>定理</strong> <strong>（Green第一恒等式）</strong><br>$$<br>\int_V (\nabla \psi \cdot \nabla \varphi+ \psi \nabla^2 \varphi) d V &#x3D; \int_{\partial V} \psi (\nabla \varphi) \cdot d\vec{S}<br>$$</p>
+<blockquote>
+<p>证明：</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（Green第二恒等式）</strong><br>$$<br>\int_V (\varphi \nabla^2 \psi - \psi \nabla^2 \varphi )dV &#x3D; \int_{\partial V} \left(\varphi(\nabla\psi) - \psi(\nabla \varphi) \right)\cdot d\vec{S}<br>$$</p>
+<blockquote>
+<p>证明：</p>
+</blockquote>
+<h4 id="Green函数-系统性的方法"><a href="#Green函数-系统性的方法" class="headerlink" title="Green函数 系统性的方法"></a>Green函数 系统性的方法</h4><p><strong>问题陈述</strong> <strong>（Green函数法解题）</strong><br>空间$V$的边界$\partial V$上给定了边界条件（Dirichlet或Neumann型）后，欲求解满足Poisson方程，得到电势函数$\phi(\vec{x})$的表达式</p>
+<p><strong>问题求解</strong><br>首先，让定理（Green第二恒等式）中的积分针对参数$\vec{x}’$，$\varphi,\psi$都是关于$\vec{x}’$的函数，$\nabla$也是针对$\vec{x}’$，即$\nabla’ &#x3D; \hat{e} _ j\frac{\partial }{\partial x _ j ‘}$，那么一切都加个撇，Green第二恒等式就是：</p>
+<p>$$<br>\int_V (\varphi \nabla’^2 \psi - \psi \nabla’^2 \varphi )dV’ &#x3D; \int_{\partial V} \left(\varphi(\nabla’\psi) - \psi(\nabla’ \varphi) \right)\cdot d\vec{S}’<br>$$</p>
+<p>回顾一下最终目标，我们记$\phi(\vec{x})$是欲求的那个电势（也就是说，关键是要$\phi$的函数表达式）</p>
+<p>现在，令上式中出现的$\varphi(\vec{x}’)&#x3D;\phi(\vec{x}’)$，再令$\psi(\vec{x}’)&#x3D;G(\vec{x},\vec{x}’)$，而且人为强制规定一个$G$需要满足的要求：$\nabla’^2 G(\vec{x},\vec{x}’)+\delta^3(\vec{x}-\vec{x}’)&#x3D;0$</p>
+<p>因此，上式成为：<br>$$<br>\int_V \left( \phi(\vec{x}’) \delta^3(\vec{x}-\vec{x}’) +G(\vec{x},\vec{x}’)\frac{\rho(\vec{x}’)}{\varepsilon_0}\right) dV’ &#x3D; \int_{\partial V}\phi(\vec{x}’)\nabla’ G(\vec{x},\vec{x}’) \cdot d\vec{S} +\int_{\partial V} G(\vec{x},\vec{x}’) \vec{E}(\vec{x}’)\cdot d\vec{S}<br>$$</p>
+<p>发现$\delta$函数可以来帮忙了，直接积分出一个$\phi(\vec{x})$，整理一下：</p>
+<p>$$<br>\phi(\vec{x}) &#x3D; \int_V  G(\vec{x},\vec{x}’)\frac{\rho(\vec{x}’)}{\varepsilon_0} dV’ - \int_{\partial V}\phi(\vec{x}’)\nabla’ G(\vec{x},\vec{x}’) \cdot d\vec{S} -\int_{\partial V} G(\vec{x},\vec{x}’) \vec{E}(\vec{x}’)\cdot d\vec{S}<br>$$</p>
+<p>现在，回顾一下原始问题（就是解Poisson方程的问题），我们根据原始问题究竟是那种类型的边界条件，给出两种对策</p>
+<p><strong>1.</strong> 如果原始问题给的是Dirichlet边界条件，那么我们故意让$G$在边界上消失：<br>$$<br>G(\vec{x},\vec{x}’)&#x3D;0 \quad \forall \vec{x}’\in \partial V$$</p>
+<p>那么就得到：<br>$$<br>\phi(\vec{x}) &#x3D; \int_V  G(\vec{x},\vec{x}’)\frac{\rho(\vec{x}’)}{\varepsilon_0} dV’ - \int_{\partial V}\phi(\vec{x}’)\nabla’ G(\vec{x},\vec{x}’) \cdot d\vec{S}<br>$$</p>
+<p><strong>2.</strong> 如果原始问题给的是Neumann边界条件，那么我们故意让$G$法向分量为0：<br>$$<br>\nabla’ G(\vec{x},\vec{x}’) \cdot \vec{n}(\vec{x}’) &#x3D; 0\quad \forall \vec{x}’\in \partial V<br>$$</p>
+<p>那么就得到：<br>$$<br>\phi(\vec{x}) &#x3D; \int_V  G(\vec{x},\vec{x}’)\frac{\rho(\vec{x}’)}{\varepsilon_0} dV’  -\int_{\partial V} G(\vec{x},\vec{x}’) \vec{E}(\vec{x}’)\cdot d\vec{S}<br>$$</p>
+<p>这就是Green函数法解题的全部内容！</p>
+<p>我们需要着重关注最后的两个表达式，以Dirichlet边界条件为例（Neumann也一样）：<br>$$<br>\phi(\vec{x}) &#x3D; \int_V  G(\vec{x},\vec{x}’)\frac{\rho(\vec{x}’)}{\varepsilon_0} dV’ - \int_{\partial V}\phi(\vec{x}’)\nabla’ G(\vec{x},\vec{x}’) \cdot d\vec{S}<br>$$<br>由于Dirichlet边界条件，会直接给你$\phi(\vec{x}’)$在$\partial V$上的值，而且$\rho(\vec{x}’)$是题目给的（已知Poisson方程的表达式就是已知$\rho$！）所以一旦求出$G(\vec{x},\vec{x}’)$的表达式，套这个公式就解决了！而且，下次遇到的$\phi$或者$\rho$的表达式如果变动了，不用怕！因为$G$还是一样的，直接套这个公式依旧奏效，总之，用Green函数法，一次就解决了一整类问题！</p>
+<p>更加仔细地说，“一整类问题”指的是“几何+边界条件类型”都一样的所有问题：边界$V$以及其形状、边界条件的类型确定了，那么$G$就定了。下次遇到形状一样且同一类边界条件的问题，直接套同样的公式秒掉</p>
 
   </div>
   
@@ -2803,10 +2821,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-11-07T21:12:47+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-06-08T12:11:57+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Nov 7, 2024</p>
+    <p>更新于：Jun 8, 2025</p>
   </a>
 </div>
 
@@ -2825,7 +2843,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/02/01/QM2/&title=基本假设与一维问题 - (.O w O.)?&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2025/04/02/Electrodynamics1/&title=电动力学的数学技巧 - (.O w O.)?&summary="
           
           >
           
@@ -2837,7 +2855,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/02/01/QM2/&title=基本假设与一维问题 - (.O w O.)?&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2025/04/02/Electrodynamics1/&title=电动力学的数学技巧 - (.O w O.)?&summary="
           
           >
           
@@ -2849,7 +2867,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/02/01/QM2/&title=基本假设与一维问题 - (.O w O.)?&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2025/04/02/Electrodynamics1/&title=电动力学的数学技巧 - (.O w O.)?&summary="
           
           >
           
@@ -2885,19 +2903,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/02/02/Algebra1/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>基本概念与群初识</p>
-          <p class='content'>基本概念代数运算定义：有一个法则使得在集合$M$中任意两个有次序的元素，在$M$中都有唯一的元素对应，则该法则是$M$的一个代数运算
-含有代数运算的集合称为代数系统
-注意：由定义可知，“有代数运...</p>
+        <a class='prev' href='/2025/04/15/MIRA7/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Lp空间（MIRA）</p>
+          <p class='content'>Real AnalysisLp空间（MIRA）本篇核心内容梗概Lp空间本身是一个例子，并不是理论性的主线。但是它太重要了，对照着它能够理解很多主线的定理究竟在讲什么，或者利用它来思考反例
+本篇中...</p>
         </a>
       
       
-        <a class='next' href='/2024/01/31/QM1/'>
-          <p class='title'>前置基础与数学<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>Quantum Mechanics
-            Done Right中曾说物理学家喜欢在内积的定义中采用第二个位置的加性和齐性，原来是因为物理学中习惯用右矢
-            ...</p>
+        <a class='next' href='/2025/03/20/Complex-Analysis1-0/'>
+          <p class='title'>认识全纯<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Complex Analysis认识全纯本篇核心内容概要“复数的引入”、“指数表示”等部分直接省略，因为很熟悉了（个人喜欢Sheldon Axler以及Serge Lang书中的引入方法，感觉更...</p>
         </a>
       
     </div>
@@ -2913,7 +2928,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/02/01/QM2/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2025/04/02/Electrodynamics1/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2942,7 +2957,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <i class="fa-solid fa-atom fa-fw" aria-hidden="true"></i><span class='name'>Quantum Mechanics</span>
+      <i class="fa-solid fa-bolt-lightning fa-fw" aria-hidden="true"></i><span class='name'>Electrodynamics</span>
     
   </header>
 
@@ -2950,74 +2965,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='content'>
     <ul class="list entry navigation">
       
-        <li><a class="flat-box" title="/2024/01/31/QM-prelude/" href="/2024/01/31/QM-prelude/"
+        <li><a class="flat-box" title="/2025/04/02/Electrodynamics1/" href="/2025/04/02/Electrodynamics1/"
           
           
-          active-action="action-20240131QM-prelude"
+          active-action="action-20250402Electrodynamics1"
           >
           <div class='name'>
             
-            序言
+            电动力学的数学技巧
           </div>
           
         </a></li>
       
-        <li><a class="flat-box" title="/2024/01/31/QM1/" href="/2024/01/31/QM1/"
+        <li><a class="flat-box" title="/2025/06/03/Electrodynamics/" href="/2025/06/03/Electrodynamics/"
           
           
-          active-action="action-20240131QM1"
+          active-action="action-20250603Electrodynamics"
           >
           <div class='name'>
             
-            前置基础与数学
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/02/01/QM2/" href="/2024/02/01/QM2/"
-          
-          
-          active-action="action-20240201QM2"
-          >
-          <div class='name'>
-            
-            基本假设与一维问题
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/02/04/QM3/" href="/2024/02/04/QM3/"
-          
-          
-          active-action="action-20240204QM3"
-          >
-          <div class='name'>
-            
-            谐振子
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/02/05/QM4/" href="/2024/02/05/QM4/"
-          
-          
-          active-action="action-20240205QM4"
-          >
-          <div class='name'>
-            
-            费曼&海森堡登场
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="/2024/02/22/QM5/" href="/2024/02/22/QM5/"
-          
-          
-          active-action="action-20240222QM5"
-          >
-          <div class='name'>
-            
-            多自由度与全同粒子
+            电磁学的“公理体系”
           </div>
           
         </a></li>
@@ -3055,7 +3022,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Shankar-ch-4"><span class="toc-text">Shankar_ch.4</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-4-2-1"><span class="toc-text">Ex 4.2.1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-notes"><span class="toc-text">4.2 notes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-4-2-2"><span class="toc-text">Ex 4.2.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-4-2-3"><span class="toc-text">Ex 4.2.3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-notes"><span class="toc-text">4.3 notes</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shankar-ch-5"><span class="toc-text">Shankar_ch.5</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-1-1"><span class="toc-text">Ex 5.1.1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-1-2"><span class="toc-text">Ex 5.1.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-1-3"><span class="toc-text">Ex 5.1.3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-2-1"><span class="toc-text">Ex 5.2.1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-2-2"><span class="toc-text">Ex 5.2.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-2-3"><span class="toc-text">Ex 5.2.3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-2-4"><span class="toc-text">Ex 5.2.4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-2-6"><span class="toc-text">Ex 5.2.6</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-3-1"><span class="toc-text">Ex 5.3.1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-3-2"><span class="toc-text">Ex 5.3.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ex-5-3-3"><span class="toc-text">Ex 5.3.3</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shankar-ch-6"><span class="toc-text">Shankar_ch.6</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7"><span class="toc-text">电动力学的数学技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E5%A3%B0%E6%98%8E"><span class="toc-text">符号声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E4%BA%A4%E6%9B%B2%E7%BA%BF%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-text">正交曲线坐标系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E4%BE%8B%E2%80%94%E7%90%83%E5%9D%90%E6%A0%87%E4%B8%8B%E7%9A%84Laplace%E6%96%B9%E7%A8%8B"><span class="toc-text">特例—球坐标下的Laplace方程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E7%BA%A7%E5%B1%95%E5%BC%80"><span class="toc-text">多级展开</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Green%E5%87%BD%E6%95%B0%E6%B3%95"><span class="toc-text">Green函数法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%9C%BA%E4%B8%8E%E5%90%AF%E5%8F%91"><span class="toc-text">动机与启发</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Green%E6%81%92%E7%AD%89%E5%BC%8F"><span class="toc-text">Green恒等式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Green%E5%87%BD%E6%95%B0-%E7%B3%BB%E7%BB%9F%E6%80%A7%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">Green函数 系统性的方法</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -4337,7 +4304,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/量子力学/","name":"量子力学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/02/01/QM2/","name":"基本假设与一维问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基本假设与一维问题","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/02/01/QM2/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/02/01/QM2/","wordCount":0,"datePublished":"2024-02-01T11:17:26.000Z","dateModified":"2024-11-07T13:12:47.886Z","articleSection":"量子力学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/电动力学/","name":"电动力学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/04/02/Electrodynamics1/","name":"电动力学的数学技巧"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"电动力学的数学技巧","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/04/02/Electrodynamics1/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/04/02/Electrodynamics1/","wordCount":0,"datePublished":"2025-04-02T04:06:01.000Z","dateModified":"2025-06-08T04:11:57.431Z","articleSection":"电动力学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
