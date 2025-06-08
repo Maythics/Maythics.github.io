@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://maythics.github.io/2024/06/03/complex-analysis1/"/>
+  <link rel="canonical" href="http://maythics.github.io/2025/06/08/mira8/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>复分析旧版笔记 - (.O w O.)?</title>
+  <title>Banach空间 上篇（MIRA） - (.O w O.)?</title>
   <meta name="keywords" content="physics">
   <meta desc name="description" content="emmm - Maythics - (.O w O.)?">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="复分析旧版笔记">
-<meta property="og:url" content="http://maythics.github.io/2024/06/03/complex-analysis1/index.html">
+<meta property="og:title" content="Banach空间 上篇（MIRA）">
+<meta property="og:url" content="http://maythics.github.io/2025/06/08/MIRA8/index.html">
 <meta property="og:site_name" content="(.O w O.)?">
-<meta property="og:description" content="Complex Analysis基本概念Holomorphic如果$f(z)$在开集$U$中固定每一个点都可微，则称$f$在$U$上是全纯的（holomorphic） 保角性质（conformal）： 如果$f’(z_0)\neq 0$，那么曲线$\gamma,\eta$在$z_0$点的夹角和$f \circ \gamma$与$f\circ  \eta$在$f(z_0)$的夹角是一样的 积分Loc">
+<meta property="og:description" content="Real AnalysisGödel是Hahn的博士生 Banach空间 上篇（MIRA）本篇核心内容梗概先回顾度量空间以及赋范线性空间的概念，然后着重讨论有界&#x2F;连续线性映射……至此为止，一切都与线性空间的“维数”概念无关 接着，讨论线性空间的维数，适用于通常情况（含无限维）的一些定义 然后，发现有限维与无限维十分不同，比如，无限维赋范线性空间中，必定存在不连续的线性泛函！不过，我们更关">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-06-03T13:25:57.000Z">
-<meta property="article:modified_time" content="2025-03-20T09:28:09.646Z">
+<meta property="article:published_time" content="2025-06-08T03:50:11.000Z">
+<meta property="article:modified_time" content="2025-06-08T03:57:06.861Z">
 <meta property="article:author" content="Maythics">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
@@ -2652,7 +2652,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2024/06/03/complex-analysis1/">
+  <link itemprop="mainEntityOfPage" href="http://maythics.github.io/2025/06/08/MIRA8/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="(.O w O.)?">
   </span>
@@ -2673,7 +2673,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        复分析旧版笔记
+        Banach空间 上篇（MIRA）
       </h1>
       <div class='new-meta-box'>
         
@@ -2692,10 +2692,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a>
+    <a class="category-link" href="/categories/%E5%AE%9E%E5%88%86%E6%9E%90/">实分析</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E5%A4%8D%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">复分析</span></a>
+        <a href="/categories/%E5%AE%9E%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">实分析</span></a>
       </span>
     
   </div>
@@ -2704,10 +2704,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-06-03T21:25:57+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-06-08T11:50:11+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jun 3, 2024</p>
+    <p>发布于：Jun 8, 2025</p>
   </a>
 </div>
 
@@ -2730,56 +2730,182 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="Complex-Analysis"><a href="#Complex-Analysis" class="headerlink" title="Complex Analysis"></a>Complex Analysis</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="Holomorphic"><a href="#Holomorphic" class="headerlink" title="Holomorphic"></a>Holomorphic</h3><p>如果$f(z)$在开集$U$中固定每一个点都可微，则称$f$在$U$上是全纯的（holomorphic）</p>
-<p>保角性质（conformal）：</p>
-<p>如果$f’(z_0)\neq 0$，那么曲线$\gamma,\eta$在$z_0$点的夹角和$f \circ \gamma$与$f\circ  \eta$在$f(z_0)$的夹角是一样的</p>
-<h2 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h2><h3 id="Local-Primitive"><a href="#Local-Primitive" class="headerlink" title="Local Primitive"></a>Local Primitive</h3><p>先明确概念：称一个函数在任意一个集合$R$上全纯，其实指的是存在一个包含$R$的大的开集，而$f$在这个大的开集中全纯</p>
-<p><strong>定理 Goursat</strong> $R$是复平面中一个闭矩形，而$f$是一个在$R$上全纯的函数，那么<br>$$<br>\int_{\partial R}f&#x3D;0<br>$$</p>
+    <h1 id="Real-Analysis"><a href="#Real-Analysis" class="headerlink" title="Real Analysis"></a>Real Analysis</h1><p>Gödel是Hahn的博士生</p>
+<h2 id="Banach空间-上篇（MIRA）"><a href="#Banach空间-上篇（MIRA）" class="headerlink" title="Banach空间 上篇（MIRA）"></a>Banach空间 上篇（MIRA）</h2><h3 id="本篇核心内容梗概"><a href="#本篇核心内容梗概" class="headerlink" title="本篇核心内容梗概"></a>本篇核心内容梗概</h3><p>先回顾度量空间以及赋范线性空间的概念，然后着重讨论有界&#x2F;连续线性映射……至此为止，一切都与线性空间的“维数”概念无关</p>
+<p>接着，讨论线性空间的维数，适用于通常情况（含无限维）的一些定义</p>
+<p>然后，发现有限维与无限维十分不同，比如，无限维赋范线性空间中，必定存在不连续的线性泛函！不过，我们更关心连续的线性泛函。这又引发一个问题，那就是，连续的线性泛函一定存在吗？答案将在Hahn-Banach定理中给出</p>
+<h3 id="度量空间"><a href="#度量空间" class="headerlink" title="度量空间"></a>度量空间</h3><p>这种很熟悉的东西就不多提了，在<strong>度量空间的背景下</strong>，简单过一下几个结论：</p>
+<p>“序列引理”双向成立（见Munkres拓扑，定理21.2）：序列若收敛，则极限点在闭包中；闭包中一点，必能找到收敛于它的序列。</p>
+<p>连续函数的等价定义：</p>
+<ol>
+<li><p>开集的逆像仍开</p>
+</li>
+<li><p>闭集的逆像仍闭</p>
+</li>
+<li><p>$\varepsilon-\delta$定义</p>
+</li>
+<li><p>$\lim\limits_{k\to\infty} x_k &#x3D; x \implies \lim\limits_{k\to\infty} T(x_k) &#x3D; T(x)$</p>
+</li>
+</ol>
+<p>当然，第三条在度量空间的背景下才可能被“写出来”；第四条需在度量空间的大背景下，才和“连续”等价（见Munkres拓扑，定理21.3）</p>
+<p>约定：（如同子空间拓扑那里一样）今后，默认度量空间的子集上，取了从原空间那里继承下来的度量</p>
+<p><strong>定义</strong> <strong>（Cauchy列）</strong><br>度量空间$(V,d)$中的序列$f_1,f_2\dots$被称为Cauchy列，如果对于任何$\varepsilon&gt;0$，均存在$N\in\mathbb{Z^+}$满足：$\forall n,m \geq N$均有$d(f_m,f_n)&lt;\varepsilon$</p>
 <blockquote>
-<p>证明</p>
-<p>只需证$|\int_{\partial R} f|\leq 0$，所以先放大这个积分</p>
-<p>把矩形$R$一分为四，原积分变成四个环路积分叠加，中间重边相消。总有一个环路积分的模值最大，记这个环路为$\partial R^{(1)}$，这带来不等式：<br>$$<br>\frac{1}{4}|\int_{\partial R} f|\leq |\int_{\partial R^{(1)}} f|<br>$$<br>对$R^{(1)}$重复此操作，之后再不断重复，生成一个可数长方形序列，有：<br>$$<br>\frac{1}{4^n}|\int_{\partial R} f|\leq |\int_{\partial R^{(n)}} f|<br>$$</p>
-<p>所有长方形点集的交集只有一个点（因为完备且闭），记为$z_0$</p>
-<p>令$f(z)&#x3D;f(z_0)+f’(z_0)(z-z_0)+(z-z_0)h(z)$（因为$f(z)$在$z_0$点可微，因此该式合理），且根据可微的定义，$\lim\limits_{z\to z_0}h(z)&#x3D;0$，因此</p>
-<p>$$<br>\int_{\partial R^{(n)}} f &#x3D; \int_{\partial R^{(n)}} f(z_0)dz + f’(z_0)\int_{\partial R^{(n)}} (z-z_0) dz+\int_{\partial R^{(n)}}(z-z_0)h(z) dz<br>$$<br>前面两项，在任意的集合中都可以找到全纯原函数（primitive），积分为零，只剩下最后一项：</p>
-<p>$$<br>\frac{1}{4^n}|\int_{\partial R} f|\leq |\int_{\partial R^{(n)}} (z-z_0)h(z) dz|\leq \text{diam}R^{(n)} \sup|h(z)| L_n<br>$$<br>其中，$\text{diam} R^{(n)}$是$(z-z_0)$放大的结果，指的是$R^{(n)}$中的最远的两点距离的上确界，因此$&#x3D;\frac{1}{2^n}\text{diam} R$；$L_n$指的是$R^{(n)}$环路周长，因此和原始的$R$的周长$L$有联系$L_n&#x3D;\frac{1}{2^n}L$。上式即为：<br>$$<br>|\int_{\partial R} f|\leq \text{diam}R \sup|h(z)| L<br>$$<br>用一下$\lim\limits_{z\to z_0}h(z)&#x3D;0$，右边为零，得证</p>
+<p>显然，收敛序列必然是Cauchy列，反之则不一定</p>
 </blockquote>
-<p><strong>定理 Existence of Local Primitive</strong>：在上方定理的帮助下，可通过构造的方法，证明开圆盘中一个全纯函数存在原函数（$z_0$是圆盘中心），构造如下：<br>$$<br>g(z_1):&#x3D;\int _{z_0}^{z_1} f<br>$$<br>其中这个路径规定是从圆心$z_0$出发，横着走和竖着走到$z_1$（否则得不到Goursat的帮助）</p>
+<p><strong>定义</strong> <strong>（完备的度量空间）</strong><br>若该度量空间中的所有Cauchy列都收敛，那么该度量空间被称为完备的！</p>
+<p><strong>定理</strong> <strong>（完备与闭）</strong></p>
+<ol>
+<li>一个度量空间$(V,d)$的完备子集$(U,d\vert_U)$一定是闭子集</li>
+<li>一个完备的度量空间$(V,d)$中的闭子集$(U,d\vert_U)$是完备的</li>
+</ol>
 <blockquote>
-<p>证明提要：只要证一下$\lim\limits_{h\to 0}\frac{g(z_1+h)-g(z_1)}{h}$存在，且等于$f(z_1)$</p>
+<p>证明：</p>
+<ol>
+<li><p>先在$V$中取一个收敛列（因此在$d$看来是Cauchy的），使得，序列中的每一项都在$U$中（但极限不清楚在哪）。由于$U$取了继承下来的度量$d\vert_U$，因此该列在$U$中也是Cauchy的。由$U$的完备性，得，该序列在$U$中收敛。因此，整件事在$V$的视角下看，可以重述如下：$U$中元素组成的一个序列，若收敛，则极限在$U$中。故$U$为闭集（依据：Munkres定理21.2，序列引理）</p>
+</li>
+<li><p>在这个闭子集$U$里取一个Cauchy列，由度量的继承关系，在$V$里看仍然是Cauchy列，因此在$V$中收敛。由于$U$是$V$中的闭子集，因此，在$U$中序列的极限仍在$U$里。所以弄了半天，$U$里的Cauchy列收敛</p>
+</li>
+</ol>
 </blockquote>
-<h3 id="Integral-—-Another-Interpretation"><a href="#Integral-—-Another-Interpretation" class="headerlink" title="Integral — Another Interpretation"></a>Integral — Another Interpretation</h3><p>另一个有趣的积分理解建立在“局部原函数”的基础上：</p>
-<p>对于一个曲线$\gamma: [a,b]\to U$，可构造一个划分（partition）为：$a&#x3D;a_0\leq a_1\leq\dots\leq a_n&#x3D;b$，由于$\gamma\in C^1$，且定义在闭区间上，因此一致连续，有效果“只要划分够细$|a_i-a_{i+1}|&lt; \delta$，像点就够近$|\gamma(a_i)-\gamma(a_{i+1})|&lt; \epsilon&#x2F;2$”</p>
-<p>既然像点够近，就可以拿一个圆心在$\gamma(a_i)$，半径为$\epsilon$的开圆盘包裹住下一个点$\gamma(a_{i+1})$，对于每一个$a_i$都能如此操作（当然，能找到$\epsilon$使得圆盘不会超出$U$的范围是易论证的）</p>
-<img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/complexcircle.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/complexcircle.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="curve" height=180 width=200>
+<h3 id="赋范线性空间"><a href="#赋范线性空间" class="headerlink" title="赋范线性空间"></a>赋范线性空间</h3><p>线性空间（向量空间）的相关概念早已熟知不再复述，现在引入范数概念：</p>
+<p><strong>定义</strong> <strong>（范数）</strong><br>$\mathbb{F}$上线性空间$V$，其上的范数定义为，符合以下三条的一个映射$\Vert\cdot\Vert: V\to[0,\infty) $：</p>
+<ol>
+<li><p>正定：$\Vert f\Vert&#x3D;0\iff f&#x3D;0$</p>
+</li>
+<li><p>齐性：$\Vert \alpha f\Vert &#x3D; \vert \alpha\vert\Vert f \Vert$</p>
+</li>
+<li><p>三角不等式：$\Vert f+g\Vert\leq \Vert f\Vert+\Vert g\Vert$</p>
+</li>
+</ol>
+<p>赋予了范数结构的线性空间，成为赋范线性空间</p>
+<blockquote>
+<p>注意： $\mathcal{L}^1(\mathbb{R})$这个向量空间（回顾“微分”一篇）上，$\Vert\cdot\Vert_1$并不是一个范数！原因在于“正定性”不满足，$\Vert f\Vert_1 &#x3D; 0$不代表$f&#x3D;0$，因为他可以在一个零测集上自由发挥</p>
+</blockquote>
+<p>赋范线性空间，只用取$d(f,g) &#x3D; \Vert f-g\Vert$，即成为一个度量空间。从今往后，都默认这么取</p>
+<p><strong>定义</strong> <strong>（Banach空间）</strong><br>一个完备的赋范线性空间，就称为Banach空间</p>
+<p>下面这个定理给出了判别一个空间是Banach空间的方法，回顾学数列时的定理“一个绝对收敛的序列必定收敛”，现在回头看，原来这定理不是在随便哪个空间都成立的！</p>
+<p><strong>定理</strong> <strong>（Banach空间等价描述）</strong><br>一个空间 “是Banach空间”的充分必要条件是“$\sum\limits_{k&#x3D;1}^\infty\Vert g_k\Vert&lt;\infty \implies \sum\limits_{k&#x3D;1}^\infty g_k$收敛”</p>
+<blockquote>
+<p>证明：</p>
+<p><strong>1.</strong> 一方面，若是Banach空间，则任找一个满足$\sum\limits_{k&#x3D;1}^\infty\Vert g_k \Vert\leq \infty$的序列，则存在$n$使得$\sum\limits_{k&#x3D;n}^\infty \Vert g_k\Vert &lt; \varepsilon$，定义部分和记号$f_j&#x3D;g_1+\dots + g_j$，则显然$f_1,f_2\dots$是一个Cauchy列，因为任意的$k&gt;j&gt;n$都有$\Vert f_k -f_j\Vert$小于$\varepsilon$（用一下三角不等式），因此该空间中有其极限$f$，这就是说，$\sum\limits_{k&#x3D;1}^\infty g_k$收敛</p>
+<p><strong>2.</strong> 另一方面，任取一个Cauchy列$f_1,f_2\dots$，我们的计划就是，构造它的一个收敛子列，这样它就收敛了（这很容易验证，是证明一个Cauchy列收敛的常用套路），那如何构造收敛子列呢？如下呈现，这个构造技巧我称为“加速收敛技巧”：</p>
+<ul>
+<li><p>选取一个$n_1$，使得$\forall j,k&gt;n_1$时，都有$\Vert f_j -f_k \Vert &lt; \frac{1}{2}$成立，我们将该指标对应的元素$f_{n_1}$收入囊中</p>
+</li>
+<li><p>在$n_{i-1}$确定之后，在后面找到一个数$n_i$，使得$\forall j,k&gt;n_i$时，都有$\Vert f_j -f_k \Vert &lt; \frac{1}{2^i}$成立，这样，我们将该指标对应的元素$f_{n_i}$收入囊中……</p>
+</li>
+<li><p>于是，得到一个序列$\set{f_{n_0},f_{n_1},f_{n_2},\dots}$，其中$f_{n_0}&#x3D;0$是人为补的，于是$\sum\limits_{k&#x3D;1}^\infty (f_{n_k}-f_{n_{k-1}})$是绝对收敛的，因为$\sum\limits_{k&#x3D;1}^\infty \Vert f_{n_k}-f_{n_{k-1}}\Vert &lt; \sum\limits_{k&#x3D;1}^\infty \frac{1}{2^{k-1}}&lt;\infty$</p>
+</li>
+<li><p>根据假设，$\sum\limits_{k&#x3D;1}^\infty (f_{n_k}-f_{n_{k-1}})$收敛，即，$f_{n_1},f_{n_2}\dots$这一子序列收敛。这下就找到了原始序列的一个收敛子列了！证出该空间是Banach</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="有界线性映射"><a href="#有界线性映射" class="headerlink" title="有界线性映射"></a>有界线性映射</h3><p><strong>定义</strong> <strong>（线性映射的范数）</strong><br>两个向量空间之间的线性映射$T:V\to W$其范数定义为（注意以下公式中，虽然都用了$\Vert\cdot\Vert$符号，但实际是不同空间中的）：<br>$$<br>\Vert T\Vert&#x3D;\sup\set{\Vert T f\Vert :f\in V , \Vert f\Vert\leq 1}<br>$$<br>那些满足$\Vert T\Vert&lt;\infty$的就是有界线性映射，其全体即为$\mathcal{B}(V,W)$，$\Vert \cdot\Vert$是$\mathcal{B}(V,W)$上合法的范数！</p>
+<blockquote>
+<p>验证一下，关键是三角不等式：<br>$$<br>\begin{align*}<br>\Vert S+T\Vert  &amp; &#x3D;\sup\set{\Vert Tf+Sf \Vert:f\in V,\Vert f \Vert\leq 1} \leq \sup\set{\Vert Tf \Vert+ \Vert Sf \Vert:f\in V,\Vert f \Vert\leq 1} \\<br>&amp; \leq \sup\set{\Vert Tf \Vert:f\in V,\Vert f \Vert\leq 1} + \sup\set{\Vert Sf \Vert:f\in V,\Vert f \Vert\leq 1} &#x3D;\Vert  S\Vert + \Vert  T \Vert<br>\end{align*}<br>$$</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（打到Banach空间的有界线性映射构成Banach空间）</strong><br>假设$V,W$是赋范线性空间，且$W$是Banach空间，则$\mathcal{B}(V,W)$是Banach空间</p>
+<blockquote>
+<p>证明：随便取一个$\mathcal{B}(V,W)$中的Cauchy列，固定一个$f\in V$。由于$\Vert T_if -T_j f\Vert\leq \Vert T_i - T_j\Vert \Vert f \Vert$，因此$\set{T_i}_i$是Cauchy列就推出$\set{T_if}_i$也是Cauchy列</p>
+<p>正中下怀，$W$是Banach的性质在这里用上，推出$T_i f$收敛，可以定义其极限$T f$。对于任何$W$中的元素，都可以这样做，因此映射$T$就这样被定义出来了！</p>
+<p>验证$T$确实是线性的（因为$T_i$的线性，每一项都展开…略）再验证$T$确实是有界的：$\Vert Tf\Vert\leq \sup\set{\Vert T_k f\Vert: k\in \mathbb{Z_+}}\leq \sup\set{T_k:k\in \mathbb{Z_+}} \Vert f \Vert$，当然，Cauchy列必定是有界的，这也就说明$ \sup\set{T_k:k\in \mathbb{Z_+}} &lt;\infty$</p>
+<p>最后，我们要问$\set{T _ i} _ i$是否在$\mathcal{B}(V,W)$的范数意义下收敛到$T$？只需要根据Cauchy列定义，有$\Vert T _ j -T _ k \Vert&lt; \varepsilon$，对于$\forall j,k&gt;n$成立。因此，$\Vert (T _ j-T _ k)f\Vert \leq \varepsilon \Vert f \Vert$。取极限得到：$\lim\limits _ {k\to\infty} \Vert (T _ j-T _ k)f\Vert \leq \varepsilon \Vert f \Vert$，又由于$\lim\limits _ {k\to\infty} \Vert (T _ j-T _ k)f\Vert &#x3D; \Vert (T _ j -T) f\Vert$（回顾$T$是如何构造出来的，该等式就懂了）。因此$\Vert (T _ j- T)f\Vert\leq \varepsilon \Vert f \Vert$成立，此即说明$\Vert T _ j -T\Vert\leq \varepsilon$</p>
+<p>$\square$</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（线性映射有界即连续）</strong><br>从一个赋范线性空间到另一个赋范线性空间的线性映射，有界与连续等价</p>
+<blockquote>
+<p>证明：假设$T:V\to W$</p>
+<p><strong>一方面</strong>，若$T$不是有界的，则存在一个序列$f_1,f_2\dots$，满足$\Vert f_k \Vert \leq 1$，且$\Vert T f_k\Vert \to \infty$。这样的话，就有$\lim\limits_{k\to\infty} \frac{f_k}{\Vert T f_k \Vert} &#x3D;0$，但是$T(\frac{f_k}{\Vert T f_k \Vert}) &#x3D; \frac{T f_k}{\Vert T f_k \Vert} $不趋于0（范数为1），故$T$不是连续的</p>
+<p><strong>另一方面</strong>，假设$T$有界，则任取一个序列$f_1,f_2,\dots$收敛到$f\in V$，都有$\Vert Tf_k -Tf\Vert\leq \Vert T\Vert\Vert f_k -f\Vert$，因此随着$k\to \infty$，等式右边趋于零，故$Tf_k$依范数收敛到$Tf$，即$\lim\limits_{k\to \infty} T f_k &#x3D;Tf$，确实连续</p>
+<p>$\square$</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（有界线性泛函的等价条件）</strong><br>设$V$是一个赋范线性空间，$\varphi:V\to \mathbb{F}$是一个非零线性<strong>泛函</strong>，那么以下条件互相等价：</p>
+<p><strong>1.</strong> $\varphi$是有界线性泛函</p>
+<p><strong>2.</strong> $\varphi$是连续线性泛函</p>
+<p><strong>3.</strong> $\text{null} \varphi$是$V$的一个闭子空间</p>
+<p><strong>4.</strong> $\overline{\text{null}\varphi} \neq V$</p>
+<blockquote>
+<p>证明：1与2的等价直接来自上一个定理（线性映射有界即连续），而在$\mathbb{F}$的特殊性（有除法运算）的帮助下，能够推得后面两条也与之等价</p>
+<p>先看2推3，由于已经连续了，闭集的逆像是闭集，因此$\text{null}\varphi &#x3D; \varphi^{-1}(\set{0})$是闭集</p>
+<p>再看3推1，等价于证明“非1则非3”，假设$\varphi$无界，则存在一个$V$中的序列$f_1,f_2\dots$，它虽然每一项都$\Vert f _ k\Vert\leq 1$，但是$\vert \varphi(f _ k)\vert \geq k \text{ for }\forall k\in \mathbb{Z} _ +$。注意到$\varphi$作用到$\frac{f _ 1}{\varphi(f _ 1)}-\frac{f _ k}{\varphi(f _ k)}$这个式子上恰好为零，因此$\frac{f_1}{\varphi(f _ 1)}-\frac{f _ k}{\varphi(f _ k)}\in \text{null} \varphi$，但是运用连续函数的等价定义之一，$\lim\limits _ {k\to\infty} \left(\frac{f _ 1}{\varphi(f _ 1)}-\frac{f _ k}{\varphi(f _ k)}\right) &#x3D; \frac{f _ 1}{\varphi(f _ 1)}$，但是$\varphi(\frac{f _ 1}{\varphi(f _ 1)})&#x3D;1$所以$\frac{f _ 1}{\varphi(f _ 1)}$并非是$\text{null}\varphi$中的元素。总结一下，就是找到了一列$\text{null}\varphi$中的元素，但是其极限跑到外面去了，故不是闭的</p>
+<p>再看3推4。这点显然（回顾$\varphi$不是零映射的这条假设，立刻能懂）</p>
+<p>再看4推3。等价于证“非3则非4”，假设$\text{null}\varphi$不是闭的，那么能够在$\overline{\text{null}\varphi}-\text{null}\varphi$中找到一个成员$f$!我们企图利用这个$f$张成的子空间以及$\text{null}\varphi$来分解所有的$V$中元素，如下。$\forall g\in V$，有$g &#x3D; \left( g - \frac{\varphi(g)}{\varphi(f)}f\right)+\frac{\varphi(g)}{\varphi(f)}f$，大括号里的这项在$\text{null}\varphi$里，而大括号外那项在$\overline{\text{null}\varphi}$里。所以，等式右边两项全在$\overline{\text{null}\varphi}$里。又由于$\overline{\text{null}\varphi}$是一个子空间（子空间的闭包仍是子空间），所以根据加法封闭性，$g$也在$\overline{\text{null}\varphi}$里，那么$V\subseteq \overline{\text{null}\varphi}$，证毕</p>
+<p>$\square$</p>
+</blockquote>
+<h3 id="无穷维赋范线性空间"><a href="#无穷维赋范线性空间" class="headerlink" title="无穷维赋范线性空间"></a>无穷维赋范线性空间</h3><p>现在开始，要着重关注有限维与无限维向量空间的区别，切忌自动带入有限维向量空间的结论，切忌使用线性代数中得到的“直觉”</p>
+<p><strong>定义</strong> <strong>（基、线性无关、张成）</strong><br>如下定义中，$\set{e_k}_{k\in\Gamma}$是向量空间$V$中的一个（元素）族，注意这里的指标集$\Gamma$可以是任意的（有限集时，退化为以前学的）</p>
+<ol>
+<li><p>若找不到一个<strong>有限</strong>集合$\Omega\subset \Gamma$以及 $\set{\alpha _ j} _ {j\in \Omega}, \alpha _ j\in \mathbb{F}-{0}$，使得$\sum\limits _ {j\in \Omega} \alpha _ j e _ j &#x3D; 0$，那么$\set{e _ k} _ {k\in \Gamma}$被称为线性无关的</p>
+</li>
+<li><p>$\set{e_k} _ {k\in\Gamma}$的张成（span），记为$\text{span}\set{e_k} _ {k\in \Gamma}$，定义为：任一有限子集$\Omega\subset \Gamma$，以及任意$\set{\alpha_j} _ {j\in \Omega}$，全体$\sum\limits _ {k\in \Omega} \alpha _ k e _ k$的集合</p>
+</li>
+<li><p>若能找到一个有限集合$\Gamma$使得$\text{span}\set{e_k} _ {k\in \Gamma} &#x3D; V$ 这样的$V$称为有限维的向量空间。否则，称为无限维向量空间</p>
+</li>
+<li><p>若一个族满足，其本身线性无关，且张成既等于$V$，则被称为$V$的基</p>
+</li>
+</ol>
+<blockquote>
+<p>值得注意的是，这里的span定义仍然根据有限项求和！不涉及无限</p>
+</blockquote>
+<p>下面来回顾“极大元”定义：取<strong>包含关系</strong>为偏序关系为例，$\mathcal{A}$中的极大元$\Gamma$指的是：不存在$\Gamma’\in \mathcal{A}$，使得$\Gamma \subsetneq\Gamma’$的那种集合$\Gamma$</p>
+<p><strong>定理</strong> <strong>（基等价于极大元）</strong><br>给定向量空间$V$，一个子集能成为$V$的基，等价于它是全体“线性无关子集”形成的集族中的极大元</p>
+<blockquote>
+<p>证明：双向包含</p>
+</blockquote>
+<p><strong>定义</strong> <strong>（链）</strong><br>$\mathcal{C}$是一个集族，以$V$的子集为元素。若$\Gamma,\Omega\in \mathcal{C}$意味着要么$\Gamma \subset \Omega$要么$\Omega\subset \Gamma$，那么这样的$\mathcal{C}$被称为链（chain）</p>
+<p><strong>定理</strong> <strong>（Zorn引理）</strong><br>假设$V$是一个集合，$\mathcal{A}$是以$V$的子集为元素的集族，满足：对于任何一个链$\mathcal{C}\subseteq \mathcal{A}$，$\mathcal{C}$中成员全体之并都属于$\mathcal{A}$，那么，$\mathcal{A}$中存在极大元</p>
+<blockquote>
+<p>回顾之前更一般的Zorn引理：具有偏序关系的一个非空集合$\mathcal{A}$，如果，任何其全序子集都具有上界（就是说大于等于全序子集里每一个成员的元素），那么，$\mathcal{A}$便具有极大元</p>
+<p>在我们的需求中，偏序关系就是集合包含关系。上面的定理表述，其实就是我们用“链”这个名词，重新陈述Zorn引理的一个特例</p>
+<p>Zorn引理本质是选择公理，与其叫“定理”，不如把它当公理承认</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（基的存在性）</strong><br>任何向量空间都存在基</p>
+<blockquote>
+<p>这是Zorn引理的推论，充分展现Zorn引理的强大</p>
+<p>取$\mathcal{A}$为：所有$V$中线性无关子集组成的集族。那么，$\mathcal{A}$满足Zorn引理的要求：验证一下，关键是注意到定义 （基、线性无关、张成）中用的是有限和</p>
+<p>因此，使用Zorn引理并结合定理（基等价于极大元）即可</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（无穷维，不连续线性泛函存在）</strong><br>所有无穷维赋范线性空间中，都存在不连续的线性泛函</p>
+<blockquote>
+<p>证明：构造</p>
+</blockquote>
+<h3 id="Hahn–Banach定理"><a href="#Hahn–Banach定理" class="headerlink" title="Hahn–Banach定理"></a>Hahn–Banach定理</h3><p><strong>定理</strong> <strong>（延拓引理）</strong><br>假设$V$是一个$\mathbb{R}$上的赋范线性空间，$U$是其子空间，$\psi: U\to\mathbb{R}$是一个有界的线性泛函。假设$h\in V-U$，则$\psi$可以被延拓为另一个线性泛函$\varphi: U+ \mathbb{R} h \to \mathbb{R}$，且使得$\Vert \varphi \Vert &#x3D; \Vert \psi \Vert$</p>
+<blockquote>
+<p>证明：任取$c\in\mathbb{R}$，可以定义$\varphi(h) &#x3D; c$，接着，根据线性的要求，必须继续按照$\varphi(f+\alpha h)&#x3D;\psi(f)+\alpha c$的方法来定义（验证well defined，因为拆解方式唯一）</p>
+<p>那么显然$\varphi\vert_U &#x3D; \psi$，我们接下来只要证明，可选到一个合适的$c$，使得$\Vert \varphi \Vert&#x3D;\Vert \psi\Vert $得到满足。这只用证明，对于任意的$f\in U$以及$\alpha\in\mathbb{R}$都有：$\vert \psi(f) +\alpha c \vert\leq \Vert \psi\Vert \Vert f+\alpha h\Vert$成立（因为另一方向$\Vert\varphi\Vert\geq \Vert \psi\Vert$是显然的）</p>
+<p>等价于证明$\vert \psi(f) +c\vert\leq \Vert \psi\Vert \Vert f+h\Vert\text{ for }\forall f\in U$，把该式重写，就是$-\Vert \psi\Vert \Vert f+h\Vert -\psi(f)\leq c\leq \Vert \psi\Vert \Vert f+h\Vert -\psi(f)$</p>
+<p>因此，核心是说明存在一个这样的$c$满足上式。我们断言，当$f$取遍$U$中元素时，左边的上确界不超过右侧的下确界，这个断言一旦成立，$c$就能找到，定理也就证毕。现在来证明这个断言：</p>
+<p>设$f,g\in U$，则<br>$$<br>\begin{align*}<br>-\Vert \psi\Vert \Vert f+h\Vert -\psi(f)&amp;  \leq\Vert\psi\Vert(\Vert g+h\Vert-\Vert g-f\Vert)-\psi(f) \\<br>&amp;&#x3D;   \Vert\psi\Vert(\Vert g+h\Vert-\Vert g-f\Vert)+\psi(g-f) - \psi(g) \\<br>&amp;\leq \Vert\psi\Vert(\Vert g+h\Vert) - \psi(g)<br>\end{align*}<br>$$</p>
+<p>而这个关系对任何的$f,g$都成立，因此$\sup {-\Vert \psi\Vert \Vert f+h\Vert -\psi(f)} \leq\inf { \Vert\psi\Vert(\Vert g+h\Vert) - \psi(g)}$因此断言得证</p>
+</blockquote>
+<p><strong>定理</strong> <strong>（Hahn-Banach定理）</strong><br>一个赋范线性空间$V$，其子空间$U$，若$\psi: U\to \mathbb{F}$是一个有界的线性泛函，则，$\psi$可以被延拓成一个线性泛函$\varphi: V\to \mathbb{F}$使得：$\Vert \psi\Vert &#x3D; \Vert \varphi \Vert$</p>
+<blockquote>
+<p>证明：</p>
+<p><strong>实的情形</strong> 令$E$是$V\times\mathbb{R}$的一个子集，满足：</p>
+<ol>
+<li><p>存在一个定义在$V$的某个子空间上的线性泛函$\varphi$，使得$E&#x3D;\text{graph}(\varphi)$</p>
+</li>
+<li><p>$\text{graph}(\psi)\subset E$</p>
+</li>
+<li><p>$\vert \alpha\vert\leq \Vert \psi \Vert\Vert f\Vert \text{ for }\forall (f,\alpha)\in E$</p>
+</li>
+</ol>
+<p>然后把所有这样子的$E$收集起来，装在一个集族$\mathcal{A}$里头。现在，$\mathcal{A}$就满足Zorn引理的假设。因此，$\mathcal{A}$有一个极大元，那么这个极大元是否就是“一个定义在整个$V$上的线性泛函”的图呢？答案是yes，因为不然的话，根据定理（延拓引理），可以再增大，与“极大元”矛盾。此外，得到的“一个定义在整个$V$上的线性泛函”也与$\psi$有相同的范数，得证</p>
+<p><strong>复的情形</strong> 定义一个映射$\psi_1:U\to\mathbb{R}$，满足$\psi_1(f) &#x3D;\text{Re}\psi(f)$，那么，这是个实线性泛函，且显然$\Vert \psi_1\Vert\leq \Vert \psi\Vert$。</p>
+<p>现在，忘掉复数的标量乘法，仅仅聚焦于$V$上的实数标量乘法，考虑“实的情形”里面已经证明了$\psi_1$可以被延拓，延拓到一个定义在整个$V$上的实线性泛函$\varphi_1$</p>
+<p>接下来，注意到$\psi$的复线性将会强制要求这件事：</p>
+<p>$$<br>\begin{align*}<br>\psi(f) &amp;&#x3D; \text{Re}\psi(f) + i\text{Im} \psi(f) &#x3D; \text{Re}\psi(f) + i\text{Im} (-i\psi(if)) \\<br>&amp;&#x3D; \psi_1(f) - i \text{Re}(\psi(if)) &#x3D; \psi_1(f) -i\psi_1(if)<br>\end{align*}<br>$$</p>
+<p>inspired by this，定义$\varphi:V\to \mathbb{C}$满足$\varphi(f) &#x3D; \varphi_1(f) - i\varphi_1(if)$，那么，容易验证这个$\varphi$是满足复线性的，且的确是$\psi$的延拓</p>
+<p>最后，来验证$\Vert\varphi \Vert\le \Vert\psi\Vert$，注意到$\vert \varphi(f)\vert^2 &#x3D; \varphi(\overline{\varphi(f)}f)$由于这个东西是实数，所以又等于$\varphi_1(\overline{\varphi(f)}f)$，因此$\vert \varphi(f)\vert^2\leq \Vert\psi \Vert\Vert \overline{\varphi(f)} f\Vert &#x3D; \Vert\psi \Vert\vert \varphi(f)\vert\Vert f\Vert$，因此同除以$\vert \varphi(f)\vert$后，即得待证结果</p>
+<p>$\square$</p>
+</blockquote>
+<!--
 
-<p>按照这个方法，可以构造出一系列衔接的开圆盘，从曲线的一头$\gamma(a)$架桥到另一头$\gamma(b)$</p>
-<p>看看每个小圆盘，之前的“圆盘中全纯函数的原函数存在”不就在这里用上了嘛！即使$f$全局的原函数并不存在，但积分还是能算：因为每一个小圆盘里原函数存在，故每两个划分点之间一小段的积分值都可以算，它们累加起来，就是沿着整个曲线积分的值</p>
-<p>其实，这就可以视为曲线积分的一种定义（用局部的原函数定义曲线积分），当然，为了验证这种定义是well-defined，还需要检查划分的选取和圆盘的选取不会影响积分值</p>
-<h3 id="Two-Lemmas"><a href="#Two-Lemmas" class="headerlink" title="Two Lemmas"></a>Two Lemmas</h3><p><strong>定理 Close Together</strong> 两个都定义在$[a,b]$中，共起点与终点，且“挨得很近”的曲线，全纯函数$f$在它们上的曲线积分值是一样的：</p>
-<p>$$<br>\int_\eta f&#x3D;\int_\gamma f<br>$$</p>
-<p>这是“挨得很近”的定义：存在区间$[a,b]$的某一个划分$a&#x3D;a_0\leq a_1\leq\dots\leq a_n&#x3D;b$，在两个曲线上对应的每一段，即$\gamma([a_i,a_{i+1}])$与$\eta([a_i,a_{i+1}])$，都能包裹在同一个架桥圆盘$D_i$中，就称之为“挨得很近”</p>
-<img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/complexcueve.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/complexcueve.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="curve" height=120 width=240>
+### 对偶空间
 
-<blockquote>
-<p>按照上一节中曲线积分的定义分别算一下两个积分，两者都是同一个值，即$g_{n-1}(\gamma(b))-g_0(\gamma(a))$（其中，$g_i$代表在$D_i$中的局部原函数）</p>
-</blockquote>
-<p>同样有</p>
-<p><strong>定理 Close Together</strong> 两个都定义在$[a,b]$中，且“挨得很近”的<strong>闭合</strong>曲线，全纯函数$f$在它们上的曲线积分值是一样的</p>
-<h3 id="Homotopy"><a href="#Homotopy" class="headerlink" title="Homotopy"></a>Homotopy</h3><p>同伦（homotopy）是<strong>曲线塑性</strong>的艺术，定义如下：</p>
-<p>两个道路（path，即多段曲线相连）$\eta$与$\gamma$都定义在$[a,b]$上，称它们是同伦的，如果存在一个连续函数$\psi :[a,b]\times[c,d]\to U$，使得：$\psi(t,c)&#x3D;\gamma(t)$，$\psi(t,d)&#x3D;\eta(t)$，对于$\forall t\in [a,b]$成立</p>
-<p>可以看出，第一个变量$t$就是一条曲线的参数变量，而第二个变量$\in [c,d]$则是一个塑性变量，决定曲线的形状</p>
-<img src="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/homotopy.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Maythics/image/picgoimage/homotopy.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="curve" height=150 width=280>
+**定义** **（对偶空间）** -->
 
-<p>如上图，这么多曲线就是因为塑性参数的变化而生成的</p>
-<p>由于$\psi$是连续，因此这种塑性也是橡皮泥一样连续的塑性，这说明：塑性参数变化一点点，带来形状的变化也是微小的，变化前后两条曲线“挨得很近”，这样，两个引理就有用武之地：</p>
-<p><strong>定理 Homotopic functions’ Integral</strong> 令在开集$U$上定义的两个<strong>闭合</strong>道路$\eta$与$\gamma$是同伦的，则对于全纯函数$f$：<br>$$<br>\int_\gamma f&#x3D;\int_\eta f<br>$$</p>
-<blockquote>
-<p>证明：<br>根据“紧+连续”，知$\psi$也是一致连续的，这样子，只要划分够细：$a&#x3D;a_0\leq a_1 \dots\leq a_n&#x3D;b $以及$c&#x3D;c_0\leq c_1\dots \leq c_n&#x3D;d$满足两个分点距小于某个$\delta$，那么就有：</p>
-<p>$$<br>S_{ij}&#x3D;[a_i,a_{i+1}]\times [c_j,c_{j+1}] \quad \psi(S_{ij}) \subset D_{ij}<br>$$<br>其中$D_{ij}$是架桥小圆盘，那么，$\psi_{c_j}(t)&#x3D;\psi(t,c_j)$以及$\psi_{c_{j+1}}&#x3D;\psi(t,c_{j+1})$就是“挨得很近”的，引用前面的引理之一，即得<br>$$<br>\int_{\psi_{c_j}} f&#x3D;\int_{\psi_{c_{j+1}}} f<br>$$<br>然后随着$j$的变化，即可知随着塑性参数的变化，积分不变，得证</p>
-</blockquote>
-<p>同样平行的有（只不过证明中用了另一个引理）：</p>
-<p><strong>定理 Homotopic functions’ Integral</strong> 令在开集$U$上定义的两个同起始点与终点的道路$\eta$与$\gamma$是同伦的，则对于全纯函数$f$：<br>$$<br>\int_\gamma f&#x3D;\int_\eta f<br>$$</p>
 
   </div>
   
@@ -2804,10 +2930,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-03-20T17:28:09+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-06-08T11:57:06+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Mar 20, 2025</p>
+    <p>更新于：Jun 8, 2025</p>
   </a>
 </div>
 
@@ -2826,7 +2952,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2024/06/03/complex-analysis1/&title=复分析旧版笔记 - (.O w O.)?&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maythics.github.io/2025/06/08/MIRA8/&title=Banach空间 上篇（MIRA） - (.O w O.)?&summary="
           
           >
           
@@ -2838,7 +2964,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2024/06/03/complex-analysis1/&title=复分析旧版笔记 - (.O w O.)?&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://maythics.github.io/2025/06/08/MIRA8/&title=Banach空间 上篇（MIRA） - (.O w O.)?&summary="
           
           >
           
@@ -2850,7 +2976,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2024/06/03/complex-analysis1/&title=复分析旧版笔记 - (.O w O.)?&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://maythics.github.io/2025/06/08/MIRA8/&title=Banach空间 上篇（MIRA） - (.O w O.)?&summary="
           
           >
           
@@ -2886,16 +3012,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/06/10/statistic3/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>MCMC</p>
-          <p class='content'>统计学习方法MCMCMonte Carlo就是“用随机抽样进行模拟数值计算”，均匀撒点求面积、用样本均值计算总体均值，都算Monte Carlo方法，毕竟，Monte Carlo是赌城的名字而非...</p>
-        </a>
       
-      
-        <a class='next' href='/2024/06/01/statistics2/'>
-          <p class='title'>PCA<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>统计学习方法PCA声明：以下默认“主成分”均指总体主成分，而不是样本主成分
-你是什么成分？统计学中，处理的都是一堆随机变量，要从这些随机的东西中看出点什么，就是要把杂乱的关系“解耦”清楚。就像物...</p>
+        <a class='next' href='/2025/06/03/Electrodynamics/'>
+          <p class='title'>电磁学的“公理体系”<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>电动力学电磁学的“公理体系”本节需作为规则接受：
+1. 坐标与度规规定 （四维坐标） 规定时空中一点用四维坐标$(x^0,x^1,x^2,x^3)$来描述，它与时间$t$的关系是$x^0 &#x...</p>
         </a>
       
     </div>
@@ -2911,7 +3032,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/06/03/complex-analysis1/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2025/06/08/MIRA8/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2940,7 +3061,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <i class="fa-solid fa-c fa-fw" aria-hidden="true"></i><span class='name'>Complex Analysis</span>
+      <i class="fa-solid fa-r fa-fw" aria-hidden="true"></i><span class='name'>Real Analysis</span>
     
   </header>
 
@@ -2948,26 +3069,86 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='content'>
     <ul class="list entry navigation">
       
-        <li><a class="flat-box" title="/2024/06/03/complex-analysis1/" href="/2024/06/03/complex-analysis1/"
+        <li><a class="flat-box" title="/2025/01/20/MIRA1/" href="/2025/01/20/MIRA1/"
           
           
-          active-action="action-20240603complex-analysis1"
+          active-action="action-20250120MIRA1"
           >
           <div class='name'>
             
-            复分析旧版笔记
+            测度空间（MIRA）
           </div>
           
         </a></li>
       
-        <li><a class="flat-box" title="/2025/03/20/Complex-Analysis1-0/" href="/2025/03/20/Complex-Analysis1-0/"
+        <li><a class="flat-box" title="/2025/01/22/MIRA2/" href="/2025/01/22/MIRA2/"
           
           
-          active-action="action-20250320Complex-Analysis1-0"
+          active-action="action-20250122MIRA2"
           >
           <div class='name'>
             
-            认识全纯
+            Lebesgue测度（MIRA）
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2025/01/28/MIRA3/" href="/2025/01/28/MIRA3/"
+          
+          
+          active-action="action-20250128MIRA3"
+          >
+          <div class='name'>
+            
+            可测函数收敛专题（MIRA）
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2025/01/30/MIRA4/" href="/2025/01/30/MIRA4/"
+          
+          
+          active-action="action-20250130MIRA4"
+          >
+          <div class='name'>
+            
+            积分（MIRA）
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2025/02/07/MIRA5/" href="/2025/02/07/MIRA5/"
+          
+          
+          active-action="action-20250207MIRA5"
+          >
+          <div class='name'>
+            
+            微分（MIRA）
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2025/06/08/MIRA8/" href="/2025/06/08/MIRA8/"
+          
+          
+          active-action="action-20250608MIRA8"
+          >
+          <div class='name'>
+            
+            Banach空间 上篇（MIRA）
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2025/04/15/MIRA7/" href="/2025/04/15/MIRA7/"
+          
+          
+          active-action="action-20250415MIRA7"
+          >
+          <div class='name'>
+            
+            Lp空间（MIRA）
           </div>
           
         </a></li>
@@ -3005,7 +3186,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Holomorphic"><span class="toc-text">Holomorphic</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%AF%E5%88%86"><span class="toc-text">积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Local-Primitive"><span class="toc-text">Local Primitive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Integral-%E2%80%94-Another-Interpretation"><span class="toc-text">Integral — Another Interpretation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Two-Lemmas"><span class="toc-text">Two Lemmas</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Homotopy"><span class="toc-text">Homotopy</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Banach%E7%A9%BA%E9%97%B4-%E4%B8%8A%E7%AF%87%EF%BC%88MIRA%EF%BC%89"><span class="toc-text">Banach空间 上篇（MIRA）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%A0%B8%E5%BF%83%E5%86%85%E5%AE%B9%E6%A2%97%E6%A6%82"><span class="toc-text">本篇核心内容梗概</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4"><span class="toc-text">度量空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%8B%E8%8C%83%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4"><span class="toc-text">赋范线性空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E7%95%8C%E7%BA%BF%E6%80%A7%E6%98%A0%E5%B0%84"><span class="toc-text">有界线性映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E7%A9%B7%E7%BB%B4%E8%B5%8B%E8%8C%83%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4"><span class="toc-text">无穷维赋范线性空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hahn%E2%80%93Banach%E5%AE%9A%E7%90%86"><span class="toc-text">Hahn–Banach定理</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4090,6 +4271,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 <pjax>
 
         <script>
+  // https://www.micdz.cn/article/katex-on-volantis/
+  if (typeof renderMathInElement == "undefined") {
+    volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.css")
+    function pjax_katex() {
+      volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/contrib/auto-render.min.js").then(()=>{
+        renderMathInElement(document.body);
+      })
+    }
+    volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/katex/katex.min.js").then(pjax_katex)
+    volantis.pjax.push(pjax_katex)
+  }
+</script>
+        <script>
   // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
   if (typeof MathJax === 'undefined') {
     window.MathJax = {
@@ -4274,7 +4468,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/复分析/","name":"复分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2024/06/03/complex-analysis1/","name":"复分析旧版笔记"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"复分析旧版笔记","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2024/06/03/complex-analysis1/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2024/06/03/complex-analysis1/","wordCount":0,"datePublished":"2024-06-03T13:25:57.000Z","dateModified":"2025-03-20T09:28:09.646Z","articleSection":"复分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","sameAs":["https://github.com/volantis-x"],"description":"emmm"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maythics.github.io/","name":"(.O w O.)?"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maythics.github.io/categories/实分析/","name":"实分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maythics.github.io/2025/06/08/MIRA8/","name":"Banach空间 上篇（MIRA）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"(.O w O.)?","url":"http://maythics.github.io/","keywords":"physics","description":"emmm","author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/","description":"emmm"},"publisher":{"@type":"Organization","name":"(.O w O.)?","url":"http://maythics.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://maythics.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Banach空间 上篇（MIRA）","description":"emmm","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://maythics.github.io/2025/06/08/MIRA8/"},"author":{"@type":"Person","name":"Maythics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maythics.github.io/"},"publisher":{"@type":"Organization","name":"(.O w O.)?","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maythics.github.io/2025/06/08/MIRA8/","wordCount":0,"datePublished":"2025-06-08T03:50:11.000Z","dateModified":"2025-06-08T03:57:06.861Z","articleSection":"实分析","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
